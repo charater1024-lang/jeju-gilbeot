@@ -1,0 +1,82 @@
+{
+  "date_kst": "2026-11-06",
+  "source_id": "561",
+  "source_observation_end": "2025-10-19",
+  "test_start": "2025-06-22",
+  "test_end": "2025-10-19",
+  "training_cutoff": "2025-02-21",
+  "evaluation_codes": 250,
+  "evaluation_cells": 28092,
+  "relative_tolerance_percent": 20,
+  "source_cell_coverage_percent": 43.678768560988885,
+  "retrospective_test": true,
+  "promoted": false,
+  "models": [
+    {
+      "model": "가중 요일 중앙값",
+      "hits": 13535,
+      "denominator": 28092,
+      "hit_percent": 48.18097679054535,
+      "mae": 4.966360529688168,
+      "rmse": 7.518629859184388,
+      "wape_percent": 27.128640097069255,
+      "input_requirement": "검증된 과거 기록과 대상 요일",
+      "status": "운영"
+    },
+    {
+      "model": "LSTM",
+      "hits": 13739,
+      "denominator": 28092,
+      "hit_percent": 48.90716218140396,
+      "mae": 4.680178642272949,
+      "rmse": 7.069462776184082,
+      "wape_percent": 25.565378189086914,
+      "input_requirement": "7일 전까지의 승차 기록 21일치",
+      "status": "조건부 시험"
+    },
+    {
+      "model": "시차 부스팅 (1일)",
+      "hits": 14021,
+      "denominator": 28092,
+      "hit_percent": 49.91100669229674,
+      "mae": 4.607784471158294,
+      "rmse": 6.9721332035018495,
+      "wape_percent": 25.169925907647862,
+      "input_requirement": "1일 전까지의 승차 기록",
+      "status": "조건부 시험"
+    },
+    {
+      "model": "시차 부스팅 (7일)",
+      "hits": 13903,
+      "denominator": 28092,
+      "hit_percent": 49.490958279937345,
+      "mae": 4.666825559984003,
+      "rmse": 7.096093206083496,
+      "wape_percent": 25.492436615462367,
+      "input_requirement": "7일 전까지의 승차 기록",
+      "status": "조건부 시험"
+    },
+    {
+      "model": "시차 부스팅 (28일)",
+      "hits": 13740,
+      "denominator": 28092,
+      "hit_percent": 48.91072191371209,
+      "mae": 4.732135659275396,
+      "rmse": 7.179440422838729,
+      "wape_percent": 25.849191661292938,
+      "input_requirement": "28일 전까지의 승차 기록",
+      "status": "조건부 시험"
+    },
+    {
+      "model": "공휴일·달력 부스팅",
+      "hits": 13251,
+      "denominator": 28092,
+      "hit_percent": 47.17001281503631,
+      "mae": 4.914752360354692,
+      "rmse": 7.345736702049455,
+      "wape_percent": 26.8467315558856,
+      "input_requirement": "미리 확정된 공휴일과 달력 정보",
+      "status": "적중률 기준 미통과"
+    }
+  ]
+}

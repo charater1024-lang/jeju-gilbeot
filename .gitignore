@@ -28,6 +28,9 @@ tmp/
 !/docs/**/
 !/docs/**/*.md
 !/docs/모델다양화_v20/검증결과_v20.json
+!/docs/모델다양화_v21/승차_추가정보_결과.json
+!/docs/readme-screenshots/home.jpg
+!/docs/readme-screenshots/route-demand.jpg
 /FILE_MANIFEST.json
 /TRANSFER_*.json
 /release_report_*.json

@@ -27,8 +27,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 853,
-      "sha256": "e3471cef661e2e6e2d94392189d1f77060911ed2cac67866eb34d516a96e8bd0"
+      "bytes": 990,
+      "sha256": "4a9d2c7fe542fa434586b01b3d8b777b0f4fe9b64f72e0876aa1e5533f64c70d"
     },
     {
       "path": "AGENTS.md",
@@ -57,8 +57,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8338,
-      "sha256": "99744cf26860eb37f5e86aa0629eb61107cfcb96e4fbf3675eb90cb74b3a4b48"
+      "bytes": 9570,
+      "sha256": "4728eb04c737ae45ee03dbbd2bef171cd7821421a53da8d2ae86cfb7b4b85614"
     },
     {
       "path": "README_노트북이전.md",
@@ -2056,6 +2056,66 @@
       "sha256": "2bde5619df92faf00a4e27c7e3c2167cff0586e2087cfb5dc8e2ebc51ceb7c8a"
     },
     {
+      "path": "development_support/route_v21/calendar/calendar_experiment_report.json",
+      "bytes": 74437,
+      "sha256": "c08d004caa1ee3dabcc33ddb5a1f83d5810e4ec3ced59458986f5ede6e4b7a5b"
+    },
+    {
+      "path": "development_support/route_v21/calendar/calendar_freeze.json",
+      "bytes": 34640,
+      "sha256": "485a9daaf891907108ad744904a5604a0676f610226136294edba5b6b820aee5"
+    },
+    {
+      "path": "development_support/route_v21/calendar/calendar_protocol.json",
+      "bytes": 15474,
+      "sha256": "c3cbedda4674830dfc6ba6f92993a6795e31644bac7b4ad12f504b9620e437b8"
+    },
+    {
+      "path": "development_support/route_v21/lag/candidate_delay_1.json",
+      "bytes": 670141,
+      "sha256": "f56fe667ccc4c3b04a3e93de7eaeebceca1b68da31d98ea5431ad59b0ae3b5e0"
+    },
+    {
+      "path": "development_support/route_v21/lag/candidate_delay_28.json",
+      "bytes": 671422,
+      "sha256": "6de18add2dbdee978575dee194c7a83825e4bed53a4167996536c5451174d346"
+    },
+    {
+      "path": "development_support/route_v21/lag/candidate_delay_7.json",
+      "bytes": 665461,
+      "sha256": "a1e1d18236b8dc2f5a676d66fb950197d715708a0b9098f78dd9e26d35606210"
+    },
+    {
+      "path": "development_support/route_v21/lag/experiment_report.json",
+      "bytes": 3692,
+      "sha256": "3cb211eabe399fcc55df7eda16afb683559aebacb1c88ec95fe5c25f524a66a7"
+    },
+    {
+      "path": "development_support/route_v21/lag/protocol.json",
+      "bytes": 10775,
+      "sha256": "1d433e3657c45ca0f9a94f9598a522c6d0fa71e357a88adf7c3a67aa69411b34"
+    },
+    {
+      "path": "development_support/route_v21/lag/selection_freeze.json",
+      "bytes": 3895,
+      "sha256": "52f9ce95fff8ddb0581a315af4b1ccaed5a6f9f61df3c9e77a5dad9a0ab57697"
+    },
+    {
+      "path": "development_support/route_v21/lstm/lstm_protocol.json",
+      "bytes": 9005,
+      "sha256": "6f5a5301ca507a0209b746d1ed132a5738eff7bc3a92ab17a2f52d3167a3670d"
+    },
+    {
+      "path": "development_support/route_v21/lstm/lstm_report.json",
+      "bytes": 14731,
+      "sha256": "b15f76df71efdd3bc425f40af898e6a6cc9467c7d28c44ed52d88f8f72ad97e6"
+    },
+    {
+      "path": "development_support/route_v21/lstm/lstm_selection.json",
+      "bytes": 4102,
+      "sha256": "5b2da4a6a5684f0b4d8f844723fb787ca8ca7c080c12d8c690501b228f99015e"
+    },
+    {
       "path": "docs/01_기획서.md",
       "bytes": 21995,
       "sha256": "15f2e84ded76942dd7d2cfb5ac9cc837891e3dea0d9fea416a00e30db39500e6"
@@ -2431,6 +2491,16 @@
       "sha256": "a676d3c6a6a90eafd5b107a55871ef9cb9ac28c8ce82d6df9538bc5c1ef86e2c"
     },
     {
+      "path": "docs/readme-screenshots/home.jpg",
+      "bytes": 130801,
+      "sha256": "ebdddefa9f597fd945fd64eac29ea98b7e5e93d5dfa36e7e588cf3bf45834237"
+    },
+    {
+      "path": "docs/readme-screenshots/route-demand.jpg",
+      "bytes": 56242,
+      "sha256": "e0bfc4d75f6e732e35adc46ce2c774c7c891e1759d6854e13be3e0efc6da7811"
+    },
+    {
       "path": "docs/research_bigdata.md",
       "bytes": 11909,
       "sha256": "c556fb1c3458e188b0d8a0e110cab819a3d8d30484ecf6e4bc00949af1ad17c4"
@@ -2764,6 +2834,21 @@
       "path": "docs/모델다양화_v20/전체회귀검사.log",
       "bytes": 15623,
       "sha256": "cd82211944f7a7fa2333a0895e80211336351ca33c73eeff7dc8b4250946147b"
+    },
+    {
+      "path": "docs/모델다양화_v21/승차_추가정보_결과.json",
+      "bytes": 2508,
+      "sha256": "2cdbfe98e039ca3437f1b84db613570a5ddf80332cb7a461240e905c16b0d3c8"
+    },
+    {
+      "path": "docs/모델다양화_v21/승차_추가정보_실험.md",
+      "bytes": 3815,
+      "sha256": "901aa8cecb7ba504d1cca97ace9a386f25e490a69438c673602a092af80d4596"
+    },
+    {
+      "path": "docs/모델다양화_v21/추가자료_확인.md",
+      "bytes": 4076,
+      "sha256": "aaca2b735fccc1c1eaa76ce2ca07ec7e9a15d246636a58339c7e8aebe4e24016"
     },
     {
       "path": "docs/모델재학습_v11.json",
@@ -3856,6 +3941,11 @@
       "sha256": "e02e5bdee2efee46b713a5c480d7502b89a4a7eb530be8465fa16b1cc1c474aa"
     },
     {
+      "path": "scripts/calendar561.py",
+      "bytes": 5688,
+      "sha256": "2163e5195b05f62ccfdcb01981a8851f91c1af06766ae8c6600be5be031e3966"
+    },
+    {
       "path": "scripts/download_jeju_data.py",
       "bytes": 3627,
       "sha256": "a13a5b1404083166e91238926c08459802576464d2fa67159bd8757a2cf7a7e2"
@@ -3871,6 +3961,16 @@
       "sha256": "c15d87a43a143dc30b5759e73fa44dd642300bcf9613abe6e112114088f43ff6"
     },
     {
+      "path": "scripts/experiment_bus_calendar_v21.py",
+      "bytes": 16969,
+      "sha256": "a4b5c4d250449a206b08fe2efb47e7a588ea57a2dbeb1c66aca2968d7b95e14e"
+    },
+    {
+      "path": "scripts/experiment_bus_lag_v21.py",
+      "bytes": 21197,
+      "sha256": "c560237a8a4fd1571a2aba51a2d181e28ca49eaf8fa15b33e6373bc47ee4dfd7"
+    },
+    {
       "path": "scripts/experiment_bus_v20.py",
       "bytes": 24729,
       "sha256": "d143ab312ef95f4cbbfd7066d1b991ef98dfac6a7cbed10171d91f4dcff706e1"
@@ -3879,6 +3979,11 @@
       "path": "scripts/experiment_composition_v20.py",
       "bytes": 21873,
       "sha256": "3faefb1195e63748447413c2cb4daa698629da4cbbfc98b05d6e51eaf90c8c43"
+    },
+    {
+      "path": "scripts/experiment_route_lstm_v21.py",
+      "bytes": 12820,
+      "sha256": "de84655e4891a08dbdfb2ec00028b1bfb1e57baa9b79ced422e08df1cdfb160a"
     },
     {
       "path": "scripts/generate_demo.py",
