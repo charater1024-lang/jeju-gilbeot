@@ -1,0 +1,41 @@
+{
+  "protocol_version": 1,
+  "service_version": 20,
+  "date_kst": "2026-11-04",
+  "requested_target_percent": 93,
+  "runtime": "offline_stdlib_cpu_no_llm",
+  "data": "Preserved real sources only. Public interface authored query labels are evaluation fixtures, never fabricated service places or traffic observations.",
+  "regression_targets": {
+    "1048": {"tolerance_percentage_points": 1.0, "unit": "group_month_category_composition_cell"},
+    "1047": {"tolerance_percentage_points": 0.25, "unit": "month_category_composition_cell"},
+    "512": {"relative_tolerance_percent": 20, "unit": "day_timebucket_regular_ticket_observation"},
+    "561": {"relative_tolerance_percent": 20, "unit": "day_sourcecode_regular_ticket_observation", "evaluation_codes_fixed_to_incumbent": 250}
+  },
+  "selection": {
+    "candidates_and_folds_frozen_before_evaluation": true,
+    "search_and_intent_test_group_split": true,
+    "selection_uses_validation_only": true,
+    "regression_primary_objective": "fraction_inside_unchanged_tolerance",
+    "regression_mae_guard": "validation_MAE <= incumbent_validation_MAE * 1.02",
+    "regression_tie_break": "lower_MAE_then_simpler_model",
+    "test_used_for_retuning": false,
+    "old_test_scope": "retrospective_previously_seen_period_not_new_blind_evaluation"
+  },
+  "promotion": {
+    "evaluate_only_frozen_selected_candidate_on_test": true,
+    "incumbent_test_comparison_uses_identical_fit_and_rows": true,
+    "candidate_tolerance_hit_rate_at_least_incumbent": true,
+    "candidate_MAE_no_more_than_two_percent_worse": true,
+    "otherwise": "preserve_incumbent_without_searching_test_for_another_winner",
+    "search_intent": "promote_only_if_dev_selected_and_nonregressing_on_frozen_curated_test_and_existing_safety_tests",
+    "portable_artifact_parity_and_integrity_required": true
+  },
+  "reporting": {
+    "no_threshold_widening_to_reach_93": true,
+    "no_omission_of_difficult_groups_or_no_answers": true,
+    "coverage_and_denominator_required": true,
+    "curated_search_and_intent_metrics_are_not_field_accuracy": true,
+    "all_service_models_above_93_claim_requires_appropriate_independent_evidence": true,
+    "unmet_targets_reported_explicitly": true
+  }
+}

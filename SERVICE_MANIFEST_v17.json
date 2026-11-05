@@ -1,0 +1,3626 @@
+{
+  "schema_version": 1,
+  "service_version": 17,
+  "date_kst": "2026-11-04",
+  "scope": "Current service, preserved originals and historical proposals, functional checks and revision backups; caches and transient test directories excluded.",
+  "active_model_directories": [
+    "models_tourism",
+    "models_discovery",
+    "models_audience",
+    "models_mobility"
+  ],
+  "synthetic_service_enabled": false,
+  "runtime_llm": false,
+  "autonomous_tool_selection": false,
+  "automatic_place_candidates": 40,
+  "protected_original_artifact_count": 28,
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 156,
+      "sha256": "b6f2ce9db0ae58718be7457b28cee0434e117c3f1b1a2c8c78348edae9acc405"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 56,
+      "sha256": "2dfd2e49b99582a3011159c42d7d9a07b800163078be34d7072f46ceb66341f0"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 9274,
+      "sha256": "d24037fdecc1adf27e9191b0a33c6f7c54b812aa5d905c7653932639d800a121"
+    },
+    {
+      "path": "CODEX_HANDOFF.md",
+      "bytes": 3601,
+      "sha256": "744535c0f9a26f84c9c1a720ccc670161c5d34e62b4450212b48daf25402d4af"
+    },
+    {
+      "path": "CODEX_START_PROMPT.md",
+      "bytes": 1429,
+      "sha256": "41984ed8b0fe4473b530f9cc75065418d8ab058e0fa73b4533a6ce94e5c855ae"
+    },
+    {
+      "path": "FILE_MANIFEST.json",
+      "bytes": 102896,
+      "sha256": "ba6d4761bbe356b365c872fe4e39592d018fd36ef63b6a297148c478b544ce8a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6320,
+      "sha256": "87432c40b5cc8e9de46231f0564bfcc1eced532bbca02de47343d43fdc5eb564"
+    },
+    {
+      "path": "README_노트북이전.md",
+      "bytes": 4210,
+      "sha256": "e29213811a51a9f2a360f0f1f895131e8e61e34b9ebb9181e3401ea540480714"
+    },
+    {
+      "path": "SERVICE_CHANGELOG_v14.json",
+      "bytes": 2511,
+      "sha256": "d9eeb99bfef7fd267df602377a224f35e34b504d3cd297a32f4d3eb5676c8b58"
+    },
+    {
+      "path": "SERVICE_CHANGELOG_v15.json",
+      "bytes": 5040,
+      "sha256": "53d27d0bb763721d4b7e5bf65e5e3ba0f44662071e5e6960f12f6015094f2547"
+    },
+    {
+      "path": "SERVICE_CHANGELOG_v16.json",
+      "bytes": 2746,
+      "sha256": "bde0057c4dad07f18867d80fc4f77f5b8b480d2ef7fffd5a560baa038256f2f6"
+    },
+    {
+      "path": "SERVICE_MANIFEST_v14.json",
+      "bytes": 105742,
+      "sha256": "fc3055f59a51ff315a50abd6ab4d1e8c0b5de1af001af024fd42f5c5d0f9d470"
+    },
+    {
+      "path": "SERVICE_MANIFEST_v15.json",
+      "bytes": 116767,
+      "sha256": "a9a051743cfda2c57190f3aef807372979acd75d5c12e6adf8ce260dbf315952"
+    },
+    {
+      "path": "SERVICE_MANIFEST_v16.json",
+      "bytes": 127344,
+      "sha256": "eef989aaab823629f494a0319684c508468ab01ec56c1fcb6d78a56a2aba02e0"
+    },
+    {
+      "path": "TRANSFER_CONTENTS.json",
+      "bytes": 28232,
+      "sha256": "faacdbc9506da7654e9edb0e3a1467c51cb9d3c3c87f7e8c1a14f66cfa72e632"
+    },
+    {
+      "path": "TRANSFER_MANIFEST.json",
+      "bytes": 98222,
+      "sha256": "b49586c5a2b92afc73832d8b01443184800f5f8a6121191225a30d9da080dd86"
+    },
+    {
+      "path": "TRANSFER_VALIDATION.json",
+      "bytes": 1722,
+      "sha256": "6528e98faa7e33c39a6142d00efc5696b1c18db1315d3dc145fa071b428d7208"
+    },
+    {
+      "path": "center_app.py",
+      "bytes": 1109,
+      "sha256": "63de2897d51244d9bc56fdd507dce646512c457c78dcaf60947f7591e00d1973"
+    },
+    {
+      "path": "check_transfer.cmd",
+      "bytes": 303,
+      "sha256": "3520a37201a6f6949f33d4f571cd40b0b7ed65b4ac39bf73a9fa083cc8e389a6"
+    },
+    {
+      "path": "config/chatbot_faq.json",
+      "bytes": 15980,
+      "sha256": "a56fe3bd9e0dcd82294d15457f53dac2eac4ab3e526e39c7fc34d8570488cc4c"
+    },
+    {
+      "path": "config/download_manifest.json",
+      "bytes": 30463,
+      "sha256": "f5d309f98d82fb4473ab8d6a3b7b759f428eb5c507e520b5f8434ea24288634f"
+    },
+    {
+      "path": "config/hero_slides.json",
+      "bytes": 2046,
+      "sha256": "ede3709b867ac0f09b61763054b189a47ef91cf85c7cabb927f8e964ccec0473"
+    },
+    {
+      "path": "config/place_trust_policy_v15.json",
+      "bytes": 44024,
+      "sha256": "f9ace37bc2ad05b5381807174759e25bdcec4e39effbaf9dd627a8fb31ea66cf"
+    },
+    {
+      "path": "config/sources.json",
+      "bytes": 11436,
+      "sha256": "90aa6e2bfd354bff7cedbea1ebc5585b907f5519b6704934584c6379e7ae3cfe"
+    },
+    {
+      "path": "config/tourism_overlap_policy.json",
+      "bytes": 2282,
+      "sha256": "18a5af514e39407a502b4e52f52aac51e0af5eb869d2778358b982b4239cfa2b"
+    },
+    {
+      "path": "data/demand.csv",
+      "bytes": 233175,
+      "sha256": "b6a41896b57a49a9657bfb100e1076c723b05ea4feada14a6f1aeb7bd46085e6"
+    },
+    {
+      "path": "data/demo_metadata.json",
+      "bytes": 469,
+      "sha256": "15ff204e570d0baa654a1fd57d6502c6012fa5236d628b8ba4fbe36b39e638e9"
+    },
+    {
+      "path": "data/pois.csv",
+      "bytes": 5065,
+      "sha256": "1ab5b3b0a502ad378172229eb0d18a3435d11179e0d715438e79b4abd1070def"
+    },
+    {
+      "path": "data_raw/DOWNLOAD_MANIFEST.json",
+      "bytes": 50447,
+      "sha256": "6297681b01edd132f55f28a5a4a16f4171a5c6feb15a901c6d63c96b506f6d93"
+    },
+    {
+      "path": "data_raw/SUPPLEMENT_V3.json",
+      "bytes": 14045,
+      "sha256": "d7cc4608dd25da69f54601b9ea07196441debd7aa882f0a4f9abd4f061bfadff"
+    },
+    {
+      "path": "data_raw/api_docs/hub_597_2226.hwp",
+      "bytes": 68096,
+      "sha256": "0080fb225741a3f6b827e49200101ddecf4556c18addd64aad76f7faff497e56"
+    },
+    {
+      "path": "data_raw/api_docs/hub_604_1073.hwp",
+      "bytes": 72192,
+      "sha256": "f01d014a8679029126c2f246efb4c6555c25f7bbd52c7357c8704184a7266beb"
+    },
+    {
+      "path": "data_raw/api_docs/hub_605_1072.hwp",
+      "bytes": 72192,
+      "sha256": "dde123913e721cccae2323fbacf11df144fda724d0b76b06ebe6e51b9ef057be"
+    },
+    {
+      "path": "data_raw/api_docs/hub_607_1070.hwp",
+      "bytes": 72192,
+      "sha256": "43ee29a354016370272255e2613074d12d4ed00ff2b2c5f110beeb7998c99907"
+    },
+    {
+      "path": "data_raw/api_docs/hub_611_2225.hwp",
+      "bytes": 66560,
+      "sha256": "cbbeb81ed853f72c5e71546bfc875d5672b03922dc7cb48037542d06088a6b09"
+    },
+    {
+      "path": "data_raw/api_docs/hub_612_1064.hwp",
+      "bytes": 67584,
+      "sha256": "1469c8aee5a67e83977088d0d034b103cb25a720bcc5398866bd8ce37dee8e54"
+    },
+    {
+      "path": "data_raw/api_docs/hub_613_1062.hwp",
+      "bytes": 72192,
+      "sha256": "52d5ddd4df56dabb71f8f75a2ca11c8f697347741679c8c83048b229a4540224"
+    },
+    {
+      "path": "data_raw/api_docs/hub_614_1061.hwp",
+      "bytes": 72192,
+      "sha256": "2a24d1eabeeac3cfdb3301bbd89e12de741210e6a25f2f55bcde53e60eb3e4c9"
+    },
+    {
+      "path": "data_raw/hub/hub_1047_5831.csv",
+      "bytes": 820690,
+      "sha256": "5d258171920565e36f9d2c7f76f07c091e00fa4aaf93a824a799372789c88ff3"
+    },
+    {
+      "path": "data_raw/hub/hub_1048_5832.csv",
+      "bytes": 1998040,
+      "sha256": "518cd18e78141ede90cc5ee7639099282eae4c1557236e4eda6bd295b66e368d"
+    },
+    {
+      "path": "data_raw/hub/hub_1349_5802.csv",
+      "bytes": 857771,
+      "sha256": "b729e997619b7941f3744eedf86531733700146481bc03d5f6a8569d8d36c5b7"
+    },
+    {
+      "path": "data_raw/hub/hub_512_5856.csv",
+      "bytes": 1467297,
+      "sha256": "acecf3fa511c68def3b68c34c29610dbda1101070f38e4be856cdcb123a4a529"
+    },
+    {
+      "path": "data_raw/hub/hub_561_5842.csv",
+      "bytes": 498447214,
+      "sha256": "7941dce63a51e92313225cf2a5fb517c8b8058e0dda299b36c0b8ae17a7d381d"
+    },
+    {
+      "path": "data_raw/hub/hub_780_5723.csv",
+      "bytes": 8718,
+      "sha256": "1b4c2b70fc97f346addb501f5731cd3b36eb9aec3060328e5e5ba2ce4c4c89dd"
+    },
+    {
+      "path": "data_raw/hub/hub_784_5803.csv",
+      "bytes": 5749,
+      "sha256": "931ae9f68891bc695930e98eae92e5ef083e0e318f985d720cf97cfe49f6719f"
+    },
+    {
+      "path": "data_raw/hub/jeju_food_registry_780.csv",
+      "bytes": 8906430,
+      "sha256": "e96e47b9932e3f3559ec843155cf0ac67f6149e895732a5247078d777deb1dcc"
+    },
+    {
+      "path": "data_raw/hub/metadata_1047.json",
+      "bytes": 3960,
+      "sha256": "ebe029257b2a14496e58251545190cc2ed2de0ef7ea9699444c46007a42d071a"
+    },
+    {
+      "path": "data_raw/hub/metadata_1048.json",
+      "bytes": 4019,
+      "sha256": "ba6a1c0d8e773be036ce0c4c96262015847e40d8b8f2358502642311e4faf12c"
+    },
+    {
+      "path": "data_raw/hub/metadata_1349.json",
+      "bytes": 5720,
+      "sha256": "304bc44c133fccb2ad5dd711337a84097966a0831aab5a029c9174647b90639f"
+    },
+    {
+      "path": "data_raw/hub/metadata_512.json",
+      "bytes": 3156,
+      "sha256": "6bee0173bc8181024f8ff1e17236fe68a6a5401a6c587fe7531ed6df8f69365f"
+    },
+    {
+      "path": "data_raw/hub/metadata_561.json",
+      "bytes": 2966,
+      "sha256": "71ee739d2eb6f0a1e2bcb3234690f9ef20b9a91fad6e98bfac268ea56681f4b5"
+    },
+    {
+      "path": "data_raw/hub/metadata_597.json",
+      "bytes": 5226,
+      "sha256": "101ef98410dc431629035a4011fc72204a527ff5e844f8c24520d739844842be"
+    },
+    {
+      "path": "data_raw/hub/metadata_604.json",
+      "bytes": 3320,
+      "sha256": "f362ca7be921eb69664bceb9d1c87cc39e14c7e1c6211b41515605fc1f70c079"
+    },
+    {
+      "path": "data_raw/hub/metadata_605.json",
+      "bytes": 3946,
+      "sha256": "c31df09034119caf62e21612e1487b0abf48448148f24df577873e9f865144a0"
+    },
+    {
+      "path": "data_raw/hub/metadata_607.json",
+      "bytes": 3958,
+      "sha256": "752706b830ca15e555e98b9849f87af15ea9a3e5647221e3119bf10fab6abcbb"
+    },
+    {
+      "path": "data_raw/hub/metadata_611.json",
+      "bytes": 3659,
+      "sha256": "f01691c619dfa3f70c721099fb146b719cfc39507e75e25132a7ffa11f17c814"
+    },
+    {
+      "path": "data_raw/hub/metadata_612.json",
+      "bytes": 3378,
+      "sha256": "323c694287eaa747acc3633c37f9ea6ae45fefe7da60592c6e8b05f59c14bb57"
+    },
+    {
+      "path": "data_raw/hub/metadata_613.json",
+      "bytes": 3858,
+      "sha256": "a0ea764da32d9f72d9e823a92b2bd53f1839dd32d9ece949c2966140d481dc98"
+    },
+    {
+      "path": "data_raw/hub/metadata_614.json",
+      "bytes": 3851,
+      "sha256": "f1cc3332eb94e03afef915bc9cc72588521d0718aa8eb409ee6cc4d8c97ea45e"
+    },
+    {
+      "path": "data_raw/hub/metadata_659.json",
+      "bytes": 10404,
+      "sha256": "cba208c5f83ab4b585b91557e39100c6d5f679451b57be1486389b92a9624340"
+    },
+    {
+      "path": "data_raw/hub/metadata_665.json",
+      "bytes": 12350,
+      "sha256": "a804f9115f4d966efa66be7fde57c9154b740a91d429c1449ce21d495d7c6bc6"
+    },
+    {
+      "path": "data_raw/hub/metadata_743.json",
+      "bytes": 4817,
+      "sha256": "dc415214d6692bd5272d4de3aee35b276431cfe3f5a7bfc213c88e7bcaac91b2"
+    },
+    {
+      "path": "data_raw/hub/metadata_780.json",
+      "bytes": 8401,
+      "sha256": "525ce5c8a9737d21501673266116141426021c024d2dbe6b1a110125ad5fcf20"
+    },
+    {
+      "path": "data_raw/hub/metadata_784.json",
+      "bytes": 4139,
+      "sha256": "1f4a54527dd16bc9e154724c5038b91cf168790136de5d176520d585908bdba0"
+    },
+    {
+      "path": "data_raw/hub/metadata_931.json",
+      "bytes": 4285,
+      "sha256": "faec849c706199e897f91187b4eeea6e0d19c59e03b78f0eba437a195aad7412"
+    },
+    {
+      "path": "data_raw/hub/metadata_963.json",
+      "bytes": 16798,
+      "sha256": "94226f25a0ef43a79715b2d96e28e4222ccc6fc8372d763b92913f68758fc9e5"
+    },
+    {
+      "path": "data_raw/osm/LICENSE_NOTICE.txt",
+      "bytes": 432,
+      "sha256": "5ffebac8709bcddbf06bc4c0ba999e8ae491a67917c5fc412c24054fedabf9fb"
+    },
+    {
+      "path": "data_raw/osm/LICENSE_TOURISM_ROADS_v5.txt",
+      "bytes": 995,
+      "sha256": "42c80ff2b60e7d796313c648cdf842ec36615fa440b01c14994cc94d3a0d1171"
+    },
+    {
+      "path": "data_raw/osm/acquire_v5.py",
+      "bytes": 12041,
+      "sha256": "ef8662c32e55acb7ff20c0acb49d3fa7c0ecee97e20be0599997c72958f24cf0"
+    },
+    {
+      "path": "data_raw/osm/jeju_food_overpass.json",
+      "bytes": 2464819,
+      "sha256": "554c1eed694692681781877f0caa919bca5e3183df213cc104c4a2e48adf859d"
+    },
+    {
+      "path": "data_raw/osm/jeju_food_query.overpassql",
+      "bytes": 133,
+      "sha256": "34ee0fc39b664a5d886e6375efde50788d8356ee2e7024056ec2c80c8424fe7d"
+    },
+    {
+      "path": "data_raw/osm/jeju_roads_v5.json",
+      "bytes": 34524993,
+      "sha256": "eeebbcac54d8b500cb9f3452c8563774b6b73f1a94433b7a0b1c7d3c6f98f964"
+    },
+    {
+      "path": "data_raw/osm/jeju_roads_v5.overpassql",
+      "bytes": 275,
+      "sha256": "7fb9775a50b63bb9bb868236d861c514ac8ef46224b7aef8886f4e4bd2b96f5a"
+    },
+    {
+      "path": "data_raw/osm/jeju_roads_v5_manifest.json",
+      "bytes": 3818,
+      "sha256": "b936ea76c22e026b3d011dd18247aca44dee723caddc606ed3465e31e413acff"
+    },
+    {
+      "path": "data_raw/osm/jeju_tourism_v5.json",
+      "bytes": 737044,
+      "sha256": "c2b75b0d995538bde403169a9a22b4dde4a34e1938cb95dbeb66c6b2df637973"
+    },
+    {
+      "path": "data_raw/osm/jeju_tourism_v5.overpassql",
+      "bytes": 382,
+      "sha256": "72e7a36d7e7a7f468010dd983a89776e14d07717ec8bcd177ced6211dc8e0d17"
+    },
+    {
+      "path": "data_raw/osm/jeju_tourism_v5_manifest.json",
+      "bytes": 3452,
+      "sha256": "dd5432e57fbbef2b5b869dbcd9d2917b7173232857f0a0f9d047950e60dc33f2"
+    },
+    {
+      "path": "data_raw/osm/manifest.json",
+      "bytes": 2093,
+      "sha256": "cf13a9b47557055e4ce5466e8c97f9985f31ca8715a3681d8d7caf4a10a0d394"
+    },
+    {
+      "path": "data_raw/tourism/attractions_official.csv",
+      "bytes": 13745,
+      "sha256": "404cb5a98ee9737dbdfc19580f97090d5b22455c51ce8f4f34003d1dc1add901"
+    },
+    {
+      "path": "data_raw/tourism/attractions_official.json",
+      "bytes": 18697,
+      "sha256": "0a766a0d5e05bd08ca5ba6fd49b725e77d7d4c1cf72028e874feab926451fcb5"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/cheonjiyeon.html",
+      "bytes": 1025091,
+      "sha256": "8ec578db696fdd452ffa4cea83b82b86f865bbdfd3f9d7cd9abf5f23f3f13d52"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/cheonjiyeon_fields.json",
+      "bytes": 6376,
+      "sha256": "9dd2f359d9cde6b0b35ef17e646e8f131bb7425ce6a7930df090e9bb44fab3e4"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hallasan.html",
+      "bytes": 1052448,
+      "sha256": "a1b5ca4a1774994158553b68e0690a7d91892c6401f7548316ded3fe4426b32a"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hallasan_fields.json",
+      "bytes": 4436,
+      "sha256": "38c3fc6e5088c796b968693dfe12c35b72340a6162adbded7bc8bcdb4ac44372"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hamdeok.html",
+      "bytes": 1041781,
+      "sha256": "43b3d3107c3b473bab1449571bcb5c28afab4aad6cbce3d0c8dd5a31c0116bad"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hamdeok_fields.json",
+      "bytes": 5015,
+      "sha256": "dd996565c24a92055b1c6bfadf62e264c500367327a2e9f39db070b80bec7746"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hyeopjae.html",
+      "bytes": 1095996,
+      "sha256": "f9a0aa6462860fed47e2d94ed74b69821d3d46b5030f0df7484348980a735658"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/hyeopjae_fields.json",
+      "bytes": 4102,
+      "sha256": "e8fa04287a7ff7e2612dac1bc1989105aaa5dd685663ee6084db5c0bf0576394"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/jeongbang.html",
+      "bytes": 1022464,
+      "sha256": "dea96dfb1a394f7f153a9d39e693123cc64d35767f90d6ba34e3269272d7b901"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/jeongbang_fields.json",
+      "bytes": 5967,
+      "sha256": "bc28a1d7fce1175c80573437798155934cb4d81ae30ad4c49be7bfd7ff320d9d"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/osulloc.html",
+      "bytes": 1036796,
+      "sha256": "9d3d525a4b48cdcc31001b8c5d2c834b3534e0ab45b880de62a3bd4cfc48069f"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/osulloc_fields.json",
+      "bytes": 3839,
+      "sha256": "d94f3b4fcf52d72cf28dcf30e1f623f0f21a65aa7d403d319a52f99233a6148b"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/saryeoni.html",
+      "bytes": 1068846,
+      "sha256": "569373941521d14f4251c08013a33152a134c7444ea14746f212fe2066fffc63"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/saryeoni_fields.json",
+      "bytes": 3981,
+      "sha256": "954fbbfb41403027785fea45a913f187f990cb1d8d6c57a876c9304aea968f5b"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/seongsan.html",
+      "bytes": 1065378,
+      "sha256": "b9983d4663d2502a25b7fd8104eb21441c2746cd4cd79476eaaa9fd5d23305c5"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/seongsan_fields.json",
+      "bytes": 4998,
+      "sha256": "367db256cf585a2d71e47f965d6d917fd057b8635fc3eb7226b734662a17e17f"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/seopjikoji.html",
+      "bytes": 952736,
+      "sha256": "5fb9f2b240a88ac08f48e18d1c9b723363f02ffc43289c5b22530957bfa73d17"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/seopjikoji_fields.json",
+      "bytes": 4274,
+      "sha256": "ed5b8edcb8052eb5ab206f576672579141f78d880359194f5ddcb64d72f70279"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/udo.html",
+      "bytes": 1095966,
+      "sha256": "ed688cb4e7ecff32b391cc730c19c58f5e2a2f85397b9f497a7caf7954bbb74f"
+    },
+    {
+      "path": "data_raw/tourism/raw_official/udo_fields.json",
+      "bytes": 4954,
+      "sha256": "28035b61633f8f7ae2ca4bd2a2f2a55987626572c836e6e3cc7e8d457186ec33"
+    },
+    {
+      "path": "data_raw/tourism/v12/accepted_places.json",
+      "bytes": 13264,
+      "sha256": "f1af11984a681212c6bda0a595738cda62158f2696b84a02412732e9866956ab"
+    },
+    {
+      "path": "data_raw/tourism/v12/author_guides.py",
+      "bytes": 12677,
+      "sha256": "71d34d612ea77f9cc7435239a240ced61eb5569b55919d1b2700eca3e20454e9"
+    },
+    {
+      "path": "data_raw/tourism/v12/choose_sources.py",
+      "bytes": 2059,
+      "sha256": "b3ea03de3b087af8b05bd9f847e95fe54526469a4954c4a0d408a4f0823a49d5"
+    },
+    {
+      "path": "data_raw/tourism/v12/coverage_audit.json",
+      "bytes": 1705,
+      "sha256": "a11bb7a8ece694ae999229d639ffbd1ae99684edf00ddda6e982abe0d2cdfdda"
+    },
+    {
+      "path": "data_raw/tourism/v12/extra_south_west_guides.json",
+      "bytes": 11719,
+      "sha256": "68abe1a8f9b7783dbeb17e3e37adefeabd0db124fd39fcdc488a51a7211f3fc5"
+    },
+    {
+      "path": "data_raw/tourism/v12/fetch_kto_public.py",
+      "bytes": 2069,
+      "sha256": "a18666a558a08bc87a73ddc36a4f4cfabd921cc35c3b7f3f55342f5e4a54c5dc"
+    },
+    {
+      "path": "data_raw/tourism/v12/fetch_official.py",
+      "bytes": 2517,
+      "sha256": "fe6ce835253bb908ba6c7cbaf9bb6fd9b7e8147de602de09b78d38b310d3a497"
+    },
+    {
+      "path": "data_raw/tourism/v12/inspect_source.py",
+      "bytes": 870,
+      "sha256": "3680668109af9cb3ccc165604a92f14f34b180781fdde56de15f95ddd9a2f9cd"
+    },
+    {
+      "path": "data_raw/tourism/v12/merge_guides.py",
+      "bytes": 3823,
+      "sha256": "6906bcaa2758588283f76055c7cf7146fd0b79cd9e9a85e31efa5f232bcc0824"
+    },
+    {
+      "path": "data_raw/tourism/v12/north_east_guides.json",
+      "bytes": 37580,
+      "sha256": "0d29dbe12b290815feb61667ea9064790dde93e75588258ec70b0d048d0ebf63"
+    },
+    {
+      "path": "data_raw/tourism/v12/north_east_sources.json",
+      "bytes": 13665,
+      "sha256": "463f79265e43edfde1b8ec91c06dfc19aaec2896b7974a4e3f13ca046ea7d7b1"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/cheonjiyeon.json",
+      "bytes": 731,
+      "sha256": "4b7f7b6cbde7387f0037e256c3821d7b6d57891ae17c4d92383c8e6ac1ac1430"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/hamdeok.json",
+      "bytes": 705,
+      "sha256": "bd78576964049cc935f20f31d527e906b34ae82483fce134f3b68abeae15be88"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/hyeopjae.json",
+      "bytes": 675,
+      "sha256": "47e54b4ef53a85fab83077d8c1dbbb9334901ad9e4dfe37667ce39b6e3522ab1"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_10216545359.json",
+      "bytes": 758,
+      "sha256": "faf58490f549526d710fcfb8bf1ddf616cd86028804870cba009c38c24286ae0"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_12190653939.json",
+      "bytes": 824,
+      "sha256": "390e768782ba7af2675846f7b66bd9ad2a9b2421f6ee6ae2632269e67bc1df44"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_13931773845.json",
+      "bytes": 836,
+      "sha256": "d1d87fb2e177967cce337e89580b55811132380e2dedc58cbb3c5b38fb7eddd7"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_368735470.json",
+      "bytes": 688,
+      "sha256": "2a2ef93d015f6ff93ff92dbbd8142ee9d9a438845cfb7922fa73e97cd6837d44"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_368866237.json",
+      "bytes": 724,
+      "sha256": "bf6d4adfd90d4ff3221f5e20c638657b84544712f1a98511816186ed806c2675"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_3736657966.json",
+      "bytes": 659,
+      "sha256": "442e9f42bffb657f3c5619f8aeaa89a4bcc0191d5419fb44c86b9433965528ef"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_3741616919.json",
+      "bytes": 763,
+      "sha256": "9bd41058ec7694a4fd20d6f8f72ba9b88f62bc7b37b50bcacdc8019f6edb958b"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_3753655821.json",
+      "bytes": 680,
+      "sha256": "8f18138461710c92b5be231e41697fe9958b2e201dfa779b6dc8c54b1bc51d1d"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_3785584607.json",
+      "bytes": 529,
+      "sha256": "f712503e9db39348985dc4fda2a739668c485be6053f6c2512cbfe3dab709d17"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_3788545937.json",
+      "bytes": 670,
+      "sha256": "0f6ecb9432a702dd2528918ecec58a8075097e69dcaf6d24c2ccc6ba1c872211"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_4416285697.json",
+      "bytes": 689,
+      "sha256": "3fe0adc753654b5d749c093b3352ed2821e6bd2ed6e63993bcb6d7466d22d45f"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_4726228301.json",
+      "bytes": 677,
+      "sha256": "8656d87aad02f224dac0974bfa27877da8cadbb3097a95368c30fd103bf75366"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_4832613086.json",
+      "bytes": 683,
+      "sha256": "705c72f2c7108938104e6572969f97752b7226d99ef1d136f6f74e626e9fa99c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_538148519.json",
+      "bytes": 731,
+      "sha256": "8d71ff7f31a986d2f07096c52aa14dbd07b33f0790db0ea7fec4d1c462486831"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5507591794.json",
+      "bytes": 692,
+      "sha256": "22249e58af7397c1e665a375105f47f739169ddecb871e66dff207ecfbbdeaec"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5655320217.json",
+      "bytes": 673,
+      "sha256": "28192b4881cc4c68555435f11bcd0ee175f54daafb0006ac268ea37f927c46f1"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5656357630.json",
+      "bytes": 646,
+      "sha256": "67b4c78b94cd58b552e892559439ebd85cce81b06285d6d4f3b070836e70558f"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5658780218.json",
+      "bytes": 520,
+      "sha256": "fa30c0e50d8db0713967562e1c7d0ae14313f35f319c6a302486d1d9a46bcb11"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_569007779.json",
+      "bytes": 710,
+      "sha256": "fbe54d03b637068fb651bd54ca813285669071900cc528d630be7ac4e1eee657"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5712863794.json",
+      "bytes": 684,
+      "sha256": "b45a70c1d927d8c0cf6ff16ce9d791b8b9ac438c9b91b187ef93aee91551b88d"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5749644529.json",
+      "bytes": 789,
+      "sha256": "96fb123cc5aba44bd92ef2d0f66c00c5c0a759498a5f96cdc82625528240c52c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_5874608086.json",
+      "bytes": 715,
+      "sha256": "c3807ad58b2add81c7ad320c13c336509aa00419a8227a596ede1180e8e1e531"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_node_6731890115.json",
+      "bytes": 728,
+      "sha256": "8ea2417e9f86052e46311691e574c418beb54464e1cd014fdc3382e00d9a304a"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_relation_20364165.json",
+      "bytes": 679,
+      "sha256": "aa311622b7cedc7a5f58b4e07a82b8ac5f8ce3d7529289300a77d182bd134155"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_relation_9742044.json",
+      "bytes": 687,
+      "sha256": "d5053caa6e09b61f866db5857e52fbe387781c8bfc224e5048e65226614e419a"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_1075451809.json",
+      "bytes": 828,
+      "sha256": "dc7353db46c444d8a2b08b13fd0e5857ac37eb1ad19aee07482901f54ca4e228"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_1537196430.json",
+      "bytes": 615,
+      "sha256": "518a51e816a5142718902fbe33230e439f59439b25ebd92608dd1327ecf9527c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_1563942072.json",
+      "bytes": 685,
+      "sha256": "433b3e33dfe989c2d553ae7b1b4b065d028fc17a99abf9e54d300f55bf90fea6"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_242454273.json",
+      "bytes": 679,
+      "sha256": "f859d2fa1a922f13e655a602443cf501115e3dbe9e03ca29252a842e8dc96dde"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_243975557.json",
+      "bytes": 699,
+      "sha256": "26162345c6986b3c5129a0acf2431259ee684119531eb9f58cdf52cd82f54c21"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_246696661.json",
+      "bytes": 708,
+      "sha256": "ddddb076c405ffdfa2bb49ffe9fa9d0053eacb39446b54f70768e56402ee910c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_249857724.json",
+      "bytes": 748,
+      "sha256": "17e842c5ea8e1e63da3ce8db4be85738085027852c0cb55623abaa49bc7af3b0"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_250718041.json",
+      "bytes": 716,
+      "sha256": "178025b9e1df0a3a200d0f0cc7610e5af3d9e8e917def25403dde7636ac644e6"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_253976811.json",
+      "bytes": 711,
+      "sha256": "5d2dccae0cb6ae4379b5fa9d5a8405d7b859024bbb3ac686a522730997ab59fa"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_288933009.json",
+      "bytes": 745,
+      "sha256": "ab972ac18b68ee3ff16e2a81710024968061aed3525a619afde96f098d103391"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_289861442.json",
+      "bytes": 716,
+      "sha256": "bb6b24405f550ced1b014283d4f7d7499ebf9b8d1dc05c3a8bf6ee6e39cfb0c0"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_335845433.json",
+      "bytes": 707,
+      "sha256": "c5bf218d8f17b22a0fb57496dc51e166b84f03931af3465800fd84662c20214c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_370264619.json",
+      "bytes": 702,
+      "sha256": "18529e424066e550dd2061a4b61b277c279d21998ffbcd19319fae9874012078"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_370329624.json",
+      "bytes": 677,
+      "sha256": "687ad4b255abfd5da32a56508bcfbf57500f29cd606c5815592e72db4ef2b4db"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_370342656.json",
+      "bytes": 678,
+      "sha256": "c5d012661612e4118fe6fcf13175d0efa85aeb9a7a30cd0b2850fae69364ff54"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_372521658.json",
+      "bytes": 689,
+      "sha256": "0bd673d64186bb86152f791198239a6d5a4814bf54ffe708f07138962277c244"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_372701554.json",
+      "bytes": 718,
+      "sha256": "025f4fbfab345e46a570385a07afc80642022fab01df50bfe05f9aff7c653509"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_372948141.json",
+      "bytes": 668,
+      "sha256": "f1b20c8bc18b2b952fb604c15e02cea154851828d41cbc0ae3b8c1d8ab3601f6"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_373866673.json",
+      "bytes": 640,
+      "sha256": "a9fcc19b7299772b3c596a90fc86ad41bc08a20972b67a92cc54de5096bed788"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375049062.json",
+      "bytes": 678,
+      "sha256": "3dc4c56c298439cd0aef4464425b21de1c8dc28ad24831c7236ffd3583910b3a"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375169007.json",
+      "bytes": 575,
+      "sha256": "17477e2c203dc85d7fcbc4c4a0b53907c434b307864e19448fa9b948edd92aaa"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375193739.json",
+      "bytes": 663,
+      "sha256": "5ffc26da6df588fdb8f03565cab8e376183efe4baf0caa7c2a53af6b0b2b1f48"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375195356.json",
+      "bytes": 717,
+      "sha256": "a32c7ef2672ea1b159b2fbfaf6d05192fb31368b396c609e5276a384fe85375a"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375341085.json",
+      "bytes": 646,
+      "sha256": "5e5296950d84d3b2a9e45069c9b41f5a549b3e760a5c646f79547abece0e4385"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375480941.json",
+      "bytes": 639,
+      "sha256": "6ef8a3c63858b2d8741e3eb164c55b098398c9c607960138d7679b9d22d56d0c"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375498040.json",
+      "bytes": 727,
+      "sha256": "e81c883ef60732932e7a18a38bf753b6c97a236ddcb2d3d2dff655b66e50b285"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_375500447.json",
+      "bytes": 846,
+      "sha256": "81dd586a0a1b3251a4406f73ecdc403bf28f8133e5dd74ee8fb0bd7abc99d5c2"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_572783721.json",
+      "bytes": 853,
+      "sha256": "530a74eb256886cad31561b320648a02db57606a1f2b5a172d2a7452d10914ae"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_583831951.json",
+      "bytes": 659,
+      "sha256": "91c2b22932b15071bb8946314cce47018a0f16235da3950cbbb195a3cf820b9e"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_592735488.json",
+      "bytes": 666,
+      "sha256": "c58d4f6b3f4d9c9ae607886bc8af999a47c6010dd3d9179e93515bf79032c13a"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osm_tourism_way_645842845.json",
+      "bytes": 735,
+      "sha256": "e293b11233d6e96e18794ed36b01ac1f7aad859758696e2974d84a114b848869"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/osulloc.json",
+      "bytes": 700,
+      "sha256": "d9494361f499547bfde5ed06a20b6d79686b2c8a2c2f2f76a746656f61fa978f"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/seongsan.json",
+      "bytes": 733,
+      "sha256": "0f277776bad8c8a4e5fce37d3841bfc8d97498b8dcbd090a900f6baaa2fb6d2b"
+    },
+    {
+      "path": "data_raw/tourism/v12/official_fields/seopjikoji.json",
+      "bytes": 739,
+      "sha256": "6d6094694800d01d8f8036062429ff5942b81baf5163414ce57f2252d6108424"
+    },
+    {
+      "path": "data_raw/tourism/v12/read_facts.py",
+      "bytes": 777,
+      "sha256": "5ed631343516b48ac19e2b5e7abaf5351a7499c252f11f31c1be55154e031eac"
+    },
+    {
+      "path": "data_raw/tourism/v12/root_south_west_guides.json",
+      "bytes": 10310,
+      "sha256": "242ec5d1a487d332c0ed3dd6a78f7218f698f98464c01715b7a931ff3051e56d"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/hamdeok.json",
+      "bytes": 2964,
+      "sha256": "ec12bd91c0b11deb5cf818e5937bf71a595d698b9434e0c26f10bf81df56bc79"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_10216545359.json",
+      "bytes": 2140,
+      "sha256": "82207709f2957206946fc1f1b6788e3eda5cdc89d668a6d086c60517f3501520"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_13931773845.json",
+      "bytes": 1877,
+      "sha256": "f99b321f567044794cd5d8094adc459511c85490809dba12aa975ec8134ce547"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_368735470.json",
+      "bytes": 1451,
+      "sha256": "ec724ea79c0f4d0f55e0e476204043f1444f99c65d91e97d067f6735dfd9c617"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_368866237.json",
+      "bytes": 2444,
+      "sha256": "30a8a8107c81d77054ccadecdf3414e7731ac307e7b15fbf5724a3bd60ee022d"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_3788545937.json",
+      "bytes": 465,
+      "sha256": "9bb7677b9a9866514d7de555e8251fbd225369d7e7d996f5e279f09a02dc1595"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_4416285697.json",
+      "bytes": 982,
+      "sha256": "5d48197c077f115082de61318f9a0d8ac0bb28206b30c8ab6f8b02f1c54ff6cd"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_538148519.json",
+      "bytes": 2442,
+      "sha256": "bfeadab98d0deb47b970e2f89e26845181356d90cd8350bdbc39c3db450eff19"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5507591794.json",
+      "bytes": 1796,
+      "sha256": "f777a70e4ba08c6991270dbe639a7291f9279c3f538d1571118d80ec0a158b49"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5656357630.json",
+      "bytes": 819,
+      "sha256": "9f4fa8e4c67e4a91937c1543f224393355cccf646b52f1f4205fe69700198522"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5658780218.json",
+      "bytes": 465,
+      "sha256": "c4f81a55fa563364ebd8511d1781e93682baef6791ff676ecc9df6cf436b4dff"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5712863774.json",
+      "bytes": 448,
+      "sha256": "d768a63d41da6ed2455f498c1dc7fd00f7d6be24917c4954b80241d0bdec46f8"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5749644529.json",
+      "bytes": 602,
+      "sha256": "d83923aa3cebfe46cb760c3b35263044cf9c2aaeab1f76b9fe19eda0d642e3a1"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_5873595885.json",
+      "bytes": 327,
+      "sha256": "3a867e1a33baa928239d9c7f55151baac4565f3cf89d9262ff179c8e1de8877d"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_node_6731890115.json",
+      "bytes": 676,
+      "sha256": "c528331eee9e0e48deea0a34d78e4f2aada9b2bf3df1a52ccba8f1a9b6e5be6b"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_relation_20364165.json",
+      "bytes": 686,
+      "sha256": "5a879d123026b491ff8c3c82de8b12b49cf4869df80e671b5ac39c933e363d55"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_relation_9742044.json",
+      "bytes": 3085,
+      "sha256": "f9139d4aee79899f667150ffc985c5ea2c85b5836a00199f22a08722587a117a"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_1075451809.json",
+      "bytes": 665,
+      "sha256": "88b57e841ebf1498b7b3e302f43c2739bd82c6526ffbb522bdc6cedf7cc3d4d9"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_1537196430.json",
+      "bytes": 1178,
+      "sha256": "3b8c961a92526d5d7a405f719130b2a37fd688b036d052d8e9e9fb2502d6cea2"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_1563942072.json",
+      "bytes": 806,
+      "sha256": "d0a78229bef5da2ee456be6a0a1eb70b425ee113401b5d1bad9ff5cb159d2f29"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_243975557.json",
+      "bytes": 850,
+      "sha256": "f5a2c313fb7610774a00342c77bc950f588e09253599708e8646ba205fe2d792"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_246696661.json",
+      "bytes": 1018,
+      "sha256": "82cdfc958fe038ef24df5b92225ee5818313d9ad40affab62bc2b4f843b7048f"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_253976811.json",
+      "bytes": 1757,
+      "sha256": "b617dc7d1ad5b261faf226ce33431944626693073fc85dcddbf8f9d60b99bd43"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_256952833.json",
+      "bytes": 1024,
+      "sha256": "74f5d3b65469ae939f43b7902cbae2c867bb41951d2a337731eac5e85cb202b0"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_288933009.json",
+      "bytes": 2211,
+      "sha256": "9332fe1abfb828c5cdacb6bd030d41e5586e225b76d74a54f01dd515270c6b35"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_289861442.json",
+      "bytes": 2495,
+      "sha256": "81ea7e94bf58e88f09de36c0b24bcfb64e96c22b4fe6f8f29647102844009c39"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_335845433.json",
+      "bytes": 2389,
+      "sha256": "5aeca36ee11a072ec6101d7f4f0fb5daf87596e4941465c971f54d48a2d0d130"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_370264619.json",
+      "bytes": 1936,
+      "sha256": "17c86c8c1b751466b3210ff4e548354e49050b610c9e81af929eedd402f977c6"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_370329624.json",
+      "bytes": 686,
+      "sha256": "230e75a506a2a972e435accf728443e8d8353e5593b10f7bd87b5a637c7e8f2d"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_370342656.json",
+      "bytes": 2549,
+      "sha256": "7b5ca468821fc3a10c30c28e5ba6bc4f3c0299e88e9e82c942d2ac395a04a9df"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_372521658.json",
+      "bytes": 463,
+      "sha256": "d4409cc3dfc23aa803636f5f34c0747ff2bf8b5f7fdb0e4c8b9177d9c227d5b6"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_372701554.json",
+      "bytes": 705,
+      "sha256": "0e6cf3f23280191c45af2b71251a336a038307a521b091e614619c48d7e5502c"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_372948141.json",
+      "bytes": 1175,
+      "sha256": "515433f63c17f88cefb383ac9463dac0a4d30a4c5caa5b44ec2b4a1fc3af45ff"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_375341085.json",
+      "bytes": 843,
+      "sha256": "ce664721a89ef7cf4caebd9950b96033f95ef28462246c89047eb1f9d9bb30e3"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_375480941.json",
+      "bytes": 2128,
+      "sha256": "a030f320c42d6fe7cc75c041c5c2919ce70f8c818cbc89c0f4376c67c3501b16"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_375498040.json",
+      "bytes": 2416,
+      "sha256": "de69e6eba886a320533d61ff198544a25749d0b4d61d7f6e2fb324606d93290f"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_375500447.json",
+      "bytes": 2243,
+      "sha256": "0d984c6c4326f812ac1901a70d1bd0695325dc4e7379414dfa071eeafdf7e23f"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_375886795.json",
+      "bytes": 1022,
+      "sha256": "82d08710540fc06018d864c976100bbf664aa4fa28dd3e7e7db29ec844139ec2"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_572783721.json",
+      "bytes": 516,
+      "sha256": "c0ce087461fa65561da3b187b458bb3521e9a72b6d73db0015237cc7204b84fe"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_592735488.json",
+      "bytes": 2581,
+      "sha256": "1c26f51bc90c723853f007f0224683bbd7ece1c2d47105ade6fabdcd28585299"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/osm_tourism_way_592908124.json",
+      "bytes": 483,
+      "sha256": "d6f43f22a188132749ec413e627e737af1066917138f6724d0ab5c47cfdc0c12"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/seongsan.json",
+      "bytes": 2738,
+      "sha256": "341c51d9c4bf1cd95ff66415c733ca41792d8688b145b9b2a5b5ee71a1ab0e09"
+    },
+    {
+      "path": "data_raw/tourism/v12/search/seopjikoji.json",
+      "bytes": 2628,
+      "sha256": "a5d203b8bf716a1f2b6801351854cfbb0581f9e5ac14b5e99d31b10ca8df79ac"
+    },
+    {
+      "path": "data_raw/tourism/v12/search_official.py",
+      "bytes": 2201,
+      "sha256": "f6992238d4c7a7f31d63fd04ebb2d2642e414f98e217ba577228599bf3517ce8"
+    },
+    {
+      "path": "data_raw/tourism/v12/supplemental_guides.json",
+      "bytes": 1046,
+      "sha256": "d3c4159faf78163f2024b08b733607794b938f62361ad7c5d90680ada173ec0b"
+    },
+    {
+      "path": "data_raw/tourism/v12/verification_report.json",
+      "bytes": 1855,
+      "sha256": "798a850b7f621970cfdf51d44182494730f58fc9c1a1c8d176d2e22a3a51411a"
+    },
+    {
+      "path": "data_reference/beach_facilities_reference.json",
+      "bytes": 4550,
+      "sha256": "861640246eb89a17d40f1dd1339d282b26128f4f2bec805c4d5a6766bed29e08"
+    },
+    {
+      "path": "data_reference/card_industry_month.csv",
+      "bytes": 66624,
+      "sha256": "5fdff34680a854e234b53f0d798997406d1b052639dcc3d4701098a4387851ee"
+    },
+    {
+      "path": "data_reference/catalog.sqlite",
+      "bytes": 11030528,
+      "sha256": "c77938121b32a48db6ec4ac10dc7f0f792ad29a9cecb92b63f271fc4eed94847"
+    },
+    {
+      "path": "data_reference/catalog_profile.json",
+      "bytes": 705,
+      "sha256": "69974970df17929d2a5666bb95cd7bd5cb3efc373f8e02e510ebdefea824e60e"
+    },
+    {
+      "path": "data_reference/chatbot.sqlite",
+      "bytes": 51408896,
+      "sha256": "e83e0722f5af2784d1ad7248dea03c2c70797bf78e4aa97a7e58219a7235241a"
+    },
+    {
+      "path": "data_reference/chatbot_profile.json",
+      "bytes": 2089,
+      "sha256": "0fcf6d8dd19fde8be18494d6b31d85fb2d1819257985d61f4852c7a7079cfabe"
+    },
+    {
+      "path": "data_reference/destinations.json",
+      "bytes": 16106,
+      "sha256": "46469db1dfda2de390bfc9082e73ed007cbfecb92f68204531c2daf0b64f5d74"
+    },
+    {
+      "path": "data_reference/discovery.sqlite",
+      "bytes": 21774336,
+      "sha256": "f00d1fc23f31f0b0c735e722e0092340f0c5c0e990db49aa65fa7c49b38d5f7b"
+    },
+    {
+      "path": "data_reference/discovery_profile.json",
+      "bytes": 3545,
+      "sha256": "09813830bda5fcef8f2c66db954a0ddc60e5d65b52f4d798af2b80aff37af613"
+    },
+    {
+      "path": "data_reference/offline_roads.json",
+      "bytes": 2306646,
+      "sha256": "be4bddd1630d617a35014d94205dfb867fc1276ca1d79ffe2b0d45bfc79d66e3"
+    },
+    {
+      "path": "data_reference/osm_food_places.json",
+      "bytes": 4623615,
+      "sha256": "b6f43b9afda08485039f8fdc58c34037e433e776495170e94d7be7bab1156415"
+    },
+    {
+      "path": "data_reference/osm_tourism_places.json",
+      "bytes": 1571487,
+      "sha256": "fc2d04393467f6a332d336fc3db66bb240c14b6f6b85ae7c81b8a4699a3d18f2"
+    },
+    {
+      "path": "data_reference/parking_reference.json",
+      "bytes": 5706,
+      "sha256": "279ecbaf68e559444c476c3e5d3f2e2139f7566879b919aa85f086454a92cee0"
+    },
+    {
+      "path": "data_reference/real_model_report.json",
+      "bytes": 5209,
+      "sha256": "27cce672ac6dd58e91cce5ce3a1550df5110d17424acbb0f3c2f20d8e97fc415"
+    },
+    {
+      "path": "data_reference/restaurant_profile.json",
+      "bytes": 300,
+      "sha256": "af2b876bfc277f806f6e8eb0ebc314dce8ce88de029406b799c8147ea7fd7654"
+    },
+    {
+      "path": "data_reference/restaurants.json",
+      "bytes": 6116851,
+      "sha256": "175dd1e0728a05e9e84a4cb802fce8f861651c619c124f4487f78bc466c239ae"
+    },
+    {
+      "path": "data_reference/roads.sqlite",
+      "bytes": 36417536,
+      "sha256": "0b0d8d89499fe9c264e9163eba23452bfd130f9c94a300e5874d5f6440d891a5"
+    },
+    {
+      "path": "data_reference/roads_profile.json",
+      "bytes": 915,
+      "sha256": "69d5038bb5511aceb866a8bdaf1271c883e5c3a017799678fdd50f9a9d2c3e27"
+    },
+    {
+      "path": "data_reference/tourism.sqlite",
+      "bytes": 421888,
+      "sha256": "c0d62697136a0ddf39eff3fa8fc8b29d48276a07417e8a54fe7f4582d52e7b09"
+    },
+    {
+      "path": "data_reference/tourism_guides_v12.json",
+      "bytes": 67165,
+      "sha256": "711290e5d25794d9271115089295d1f3323e157ff196b08709bdbd971d73dd7c"
+    },
+    {
+      "path": "data_reference/tourism_overlap_audit.json",
+      "bytes": 370073,
+      "sha256": "9f8ab5206ea81941d06e9a58c961aedbcaac3d01184efaf611301cd7f27c218b"
+    },
+    {
+      "path": "data_reference/tourism_profile.json",
+      "bytes": 9083,
+      "sha256": "ad0dcdf54dc52d240bb94cd135794c35bf0a2c5c3b18898a435f2092e0cca36e"
+    },
+    {
+      "path": "dev.py",
+      "bytes": 5156,
+      "sha256": "4b4d823040e6feb8ab7b13478643b42b2d396a96b8abf83a91d33f3d86718872"
+    },
+    {
+      "path": "development_support/change_v14/source_v13_unchanged.zip",
+      "bytes": 7216054,
+      "sha256": "532338c68bd242ed86e468b95bc56a1bb2e6902fc6713c54bdeb89b0ac626127"
+    },
+    {
+      "path": "development_support/change_v15/finalize_v15.py",
+      "bytes": 4297,
+      "sha256": "65ad5c91711ea3721fe5404648753e2b8301fe45c53ac0d5b490b34dff32a360"
+    },
+    {
+      "path": "development_support/change_v15/protected_artifacts_before.json",
+      "bytes": 8443,
+      "sha256": "50a4c4465e7e3f34ccb42c9f8b29f7da9ef043f382d07da399f83e420e986b19"
+    },
+    {
+      "path": "development_support/change_v15/source_v14_unchanged.zip",
+      "bytes": 7230362,
+      "sha256": "498ff27cd5899df6af743238872372440a5cdb7ee4fd867a6134d9a187d7abe5"
+    },
+    {
+      "path": "development_support/change_v16/finalize_v16.py",
+      "bytes": 17212,
+      "sha256": "a2f47de969ce60f75ecbb76a9520f5976a5466724c57f6b6c7249d4a972b61fd"
+    },
+    {
+      "path": "development_support/change_v16/protected_artifacts_before.json",
+      "bytes": 4320,
+      "sha256": "e20fb27e7e920f03672f510dac7d0b0547abbe8988c5413088d1168b71979dcb"
+    },
+    {
+      "path": "development_support/change_v16/source_v15_unchanged.zip",
+      "bytes": 7275297,
+      "sha256": "ed21b811555980592373ee2d8f216550253304de63d44e1a8cd8af1ec9f186eb"
+    },
+    {
+      "path": "development_support/change_v16/verify_v16.py",
+      "bytes": 5391,
+      "sha256": "60d4a8b64c7c09c040f146bd0a997c9ad0f098c13232ecd1862c7eee91e5d96c"
+    },
+    {
+      "path": "development_support/change_v17/finalize_assistant.py",
+      "bytes": 8216,
+      "sha256": "71d6a381c851079dcbad89c7fe81685ce3818308b3713777ce64ac480d1f07b1"
+    },
+    {
+      "path": "development_support/change_v17/verify_assistant.py",
+      "bytes": 7330,
+      "sha256": "667f13278ef1583a7a98aa51843ce6d425d85b9946e353f93d58ca26d54143ab"
+    },
+    {
+      "path": "development_support/model_v14/audience_selection_freeze.json",
+      "bytes": 803,
+      "sha256": "94594e29b72811da885b0d5b866da189504664a15c5fdc7a0bf66d8b394207e7"
+    },
+    {
+      "path": "development_support/model_v14/audience_summary.md",
+      "bytes": 4513,
+      "sha256": "fac505101878df072f53c078aff5f003069a3a5f8e48a669556bced5604ee9c6"
+    },
+    {
+      "path": "development_support/model_v14/audience_training_report.json",
+      "bytes": 23322,
+      "sha256": "2011c378c5cd70dee6540ab20934c310a404d7520b313f14faad56fd380f53bc"
+    },
+    {
+      "path": "development_support/model_v14/audience_v13_metrics.json",
+      "bytes": 2512,
+      "sha256": "f13072bb5388c2d79081725dbf963fd59c8f21986dc9c4a196225bf9bcfc87eb"
+    },
+    {
+      "path": "development_support/model_v14/audience_v13_model.json",
+      "bytes": 12484,
+      "sha256": "c9dbcd2c3020f77a013279857594fb9df28285f431656277c0ebc58a5e4f3514"
+    },
+    {
+      "path": "development_support/model_v14/audience_validation_experiment.json",
+      "bytes": 114045,
+      "sha256": "30357c99a8bda48a813b8b8b6001dd57cf1aee6ae4573fc241343f3c066c048e"
+    },
+    {
+      "path": "development_support/model_v14/audience_validation_experiment.py",
+      "bytes": 2854,
+      "sha256": "10bf2e395e03fbad4c8eab3d9fe788aa5a3cdbc35f9f5ba8312c3d9b6b2203ed"
+    },
+    {
+      "path": "development_support/model_v14/mobility_first_frozen_test.json",
+      "bytes": 696,
+      "sha256": "8719dd0d5bebc9372d089142f759ecf92302b8a787eb4e1562c0436c6e0dcf90"
+    },
+    {
+      "path": "development_support/model_v14/mobility_v13_mobility_metrics.json",
+      "bytes": 4620,
+      "sha256": "240d1281ad166c4e8805097646015b1b8506c953765274f1715b169a8e2e8e4e"
+    },
+    {
+      "path": "development_support/model_v14/mobility_v13_mobility_model.json",
+      "bytes": 5514,
+      "sha256": "74d8300d3c49e9292b0b8dbb0fe0da6293b93823c7bca9205c98277157477c03"
+    },
+    {
+      "path": "development_support/model_v14/mobility_v13_module.py",
+      "bytes": 21558,
+      "sha256": "a0144ccb0570c3759c0f1a575cf32ab87a1a6a65eb7adb7203dc92d8b0fd4ae6"
+    },
+    {
+      "path": "development_support/model_v14/mobility_validation_exploration.json",
+      "bytes": 16061,
+      "sha256": "8cd984aae8898fff1b4863aa299d42d97ff7c3ab08ce87ec531e6b4a55d29dac"
+    },
+    {
+      "path": "development_support/proposal_20261031/baseline_review.md",
+      "bytes": 11518,
+      "sha256": "777046e0dc2989868f9b041600c371e960adfe1baa613034e55c2d2cfbdb6a8c"
+    },
+    {
+      "path": "development_support/proposal_20261031/build_proposal.py",
+      "bytes": 8437,
+      "sha256": "c11cf67ebead8e5d9da9dd09fe12339418e625f32d88b0dcab78b789e41c363d"
+    },
+    {
+      "path": "development_support/proposal_20261031/content.json",
+      "bytes": 39933,
+      "sha256": "f8b48aea81888d2722ed6cbb78530a225a68080c580fdee74183ae5e895cc1e5"
+    },
+    {
+      "path": "development_support/proposal_20261031/export_word.ps1",
+      "bytes": 1163,
+      "sha256": "a93ea38a09bd27014c837d9c3c84ee135fa14122dc9d843d1c9861cf89fd93ba"
+    },
+    {
+      "path": "development_support/proposal_20261031/external_research.md",
+      "bytes": 9525,
+      "sha256": "757f0ead65ad26d71390da8b8ce8aa52748e9a9495c6e07285f7f29cf55f122b"
+    },
+    {
+      "path": "development_support/proposal_20261031/inspect_proposal.py",
+      "bytes": 1964,
+      "sha256": "310593c06d2738e3d175ce09b29a38be7b213638d56f654205b340f3ebbc6651"
+    },
+    {
+      "path": "development_support/proposal_20261031/qa_report.json",
+      "bytes": 1509,
+      "sha256": "c0ddced27ddb775c31deefc6efc2ce73df9d9f83fee6fc5d6ac14630fe6011f2"
+    },
+    {
+      "path": "development_support/proposal_20261101/build_proposal.py",
+      "bytes": 30700,
+      "sha256": "c1604d29625f074e707917b80ffde4089f145963c25c1c35f952d19e553e116d"
+    },
+    {
+      "path": "development_support/proposal_20261101/figures/Agent처리흐름.png",
+      "bytes": 36460,
+      "sha256": "b10e1fe09d5cd6033a1a839970916b82a8be7af64a7dc446ea72f0130b567128"
+    },
+    {
+      "path": "development_support/proposal_20261101/figures/소비허용오차비교.png",
+      "bytes": 35388,
+      "sha256": "82f9d95c02e7a50e3128a951ddf1cf27393e7e5e5532680ffab32eefe82746c9"
+    },
+    {
+      "path": "development_support/proposal_20261101/figures/승차허용오차비교.png",
+      "bytes": 38231,
+      "sha256": "c69a61c4183612ffe72796684a9ff29b489ed31b439b5056589020b0d7efb774"
+    },
+    {
+      "path": "development_support/proposal_20261101/figures/이용흐름.png",
+      "bytes": 36214,
+      "sha256": "903229a09a170a22e064b462a322cceefd999a76408760925e49a7488bbdbe42"
+    },
+    {
+      "path": "development_support/proposal_20261101/metrics_method.md",
+      "bytes": 5303,
+      "sha256": "d0f53ae10a7f5a477753421f5ab900ad1af84635756de62d120d8fbb0189c6d2"
+    },
+    {
+      "path": "development_support/proposal_20261101/qa_report.json",
+      "bytes": 1829,
+      "sha256": "b45c86b5e90cde97c8320d3db307402e6f2c62b6d104e41ae1bafbf474222b43"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/SERVICE_MANIFEST_v16_before_proposal.json",
+      "bytes": 121127,
+      "sha256": "8adc6f323b2ab586882d89c6ca0ad26f8150c398321156c8d662c5e5c8843de4"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/build_proposal.py",
+      "bytes": 30057,
+      "sha256": "d3cb908189e62aa4232ca449adb21649100ee7c10749356a6ca05aafbd1f45af"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/build_record.json",
+      "bytes": 1020,
+      "sha256": "c77c550aa899cb91d1f0e77f0e8ef684c235a5d90742dc74aa7c2152fc4903ca"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/canonical_renderer_result.json",
+      "bytes": 1335,
+      "sha256": "f7ee8aba20acee334fd82acfe039b0ed1cf93e66359668380a7e01e95682c872"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/figures/모델_허용오차내비율.png",
+      "bytes": 44428,
+      "sha256": "1fc5023836f832696d6ae40140fa6e097e7da8e44f3443ba09cebea23fcfca49"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/figures/실제코스_방문순서.png",
+      "bytes": 24465,
+      "sha256": "e496c735debe38e280c25f3f16d88e602885d6d854785f12662845e893609be3"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/figures/추천워크플로.png",
+      "bytes": 39174,
+      "sha256": "70a896752266ec7b227453096ef80b72c2209991f6a23d6a0be1ea15fe16de3a"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/finalize_package.py",
+      "bytes": 7187,
+      "sha256": "f9fc35466faf161664695f4a7330929d04c3c4aa779b735c81b7b1922bb8f230"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-1.png",
+      "bytes": 315469,
+      "sha256": "e31ca17c32ca946b5935a34e2c78520d757ead831bab148ef1669f265d93b1c6"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-2.png",
+      "bytes": 328613,
+      "sha256": "792dea34f6b7a45e2838ad3e78196deecfbb8aae8f5fcbf0919f9c4a59f4db99"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-3.png",
+      "bytes": 304860,
+      "sha256": "5c89ec7c1ac96228c418377fc1864fce542affd5796e0f9188fae8a6b54acf0d"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-4.png",
+      "bytes": 292752,
+      "sha256": "9ed77c55c3d03265c8d8d8e4d1899c1cb88d038b254a24ff4a44fa7dfea4214a"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-5.png",
+      "bytes": 292813,
+      "sha256": "dfda4a3062cfe45e45eadfa735fbf215c560de16007fbdd9ebee17dccdc91613"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-6.png",
+      "bytes": 299344,
+      "sha256": "1a7e146635af1b8a7eb594198b093f679ecf4d8e30812fc1aa3ebc15e1f51344"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-7.png",
+      "bytes": 275190,
+      "sha256": "8f142695143475d06d52f5141f0a9c517a1cf6d706610306307b8f4b04bca053"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pages/page-8.png",
+      "bytes": 265078,
+      "sha256": "fc32da428739aa5ffd51b485a46ef7aef8351d218468828548c75c4109317c9f"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/pdf_text.txt",
+      "bytes": 18960,
+      "sha256": "ac774970a8fba11704e83ad8ac7c3345ff5a971372ef0ff3362049756baba05f"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/qa_proposal.py",
+      "bytes": 6825,
+      "sha256": "64360d20b82b97d4b4f7acac27ce011f7ce5f8dc8e7229605859355a404d3fe6"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/reference_sources.json",
+      "bytes": 3141,
+      "sha256": "25837967fd2b5e7db50371ae4e1c53aa7daf33c05f91f4f8f667c91e1ed4a732"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/render_proposal.ps1",
+      "bytes": 1791,
+      "sha256": "3c477a1c7a6d030011fc9a21475f1686f82123faec70adde11db039e3bee4023"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/visual_review.json",
+      "bytes": 1776,
+      "sha256": "36e54d3b8fbe82cdd44d02b1431646748394e57f10469015782019432fa0fdd9"
+    },
+    {
+      "path": "development_support/proposal_reference_20261103/word_render.json",
+      "bytes": 267,
+      "sha256": "6a399e5b7c4a30cf7895c68b004679fde4137951a9cf00d6c5b5c50c142d7ae2"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/build_proposal.py",
+      "bytes": 32726,
+      "sha256": "e540b19529ba9354cd849109554bd8c3aa1845330e0fdf0812c6adc84333ac7d"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/canonical_renderer_result.json",
+      "bytes": 575,
+      "sha256": "cc5eff54f2fc2e4aec18e7d8114868e7373e2b524255819195692d4527046ac8"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/figures/Agent처리흐름.png",
+      "bytes": 38509,
+      "sha256": "fcff69357791b631411ec8f49c7323529a3f307419b79ba99d85406d2e0dd94e"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/figures/소비허용오차비교.png",
+      "bytes": 35388,
+      "sha256": "82f9d95c02e7a50e3128a951ddf1cf27393e7e5e5532680ffab32eefe82746c9"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/figures/승차허용오차비교.png",
+      "bytes": 38231,
+      "sha256": "c69a61c4183612ffe72796684a9ff29b489ed31b439b5056589020b0d7efb774"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/figures/이용흐름.png",
+      "bytes": 35104,
+      "sha256": "88819bf2a274ee7fae11b80efabae75ceb4b48cd733c953f2c6d60bf02388345"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-01.png",
+      "bytes": 196917,
+      "sha256": "993a172e384f4c710b0d74cc239c0b187f16a1118d1b49280708b109624163bf"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-02.png",
+      "bytes": 203020,
+      "sha256": "0507fa9299a856f88fcc904fea97f23af8fa1e2851f1738accd5e24e46cb39a7"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-03.png",
+      "bytes": 226018,
+      "sha256": "7a72af263ba92ea8dc2dafb9dfe0679c01768d757daf2df77d4dd1b1b9c27a3d"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-04.png",
+      "bytes": 259496,
+      "sha256": "b69d8a4f1be9db8502925af351ffce5d249f6fc02a19e54b2e98c0b66b50d2d7"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-05.png",
+      "bytes": 212399,
+      "sha256": "5c361f698afbfd96b372bcb38aac87d97b25920a9a914db9013097cea70d651d"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-06.png",
+      "bytes": 212917,
+      "sha256": "a8160caa2904ad24b8b63674803ea456a850d6eb446be0bce7acd1fdd1255965"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-07.png",
+      "bytes": 230426,
+      "sha256": "1d4557eeadef026b42f13892fb728c3251b82842e01ab4faff64a88b16a91fe5"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-08.png",
+      "bytes": 206476,
+      "sha256": "16386c77ee858a1e382c3f2d89916860c1a44033f9a337c93c9afbd70d8efe04"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-09.png",
+      "bytes": 247339,
+      "sha256": "78c02fe674d7636c3a85c9e04a6d8b391636ed87246aa2631f157a7bf47065ab"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pages/page-10.png",
+      "bytes": 260060,
+      "sha256": "a1bc44ca891cc95b938ce898ecabde2cd6d8ac3fe3be85ce6f3ff743751d8e95"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/pdf_text.txt",
+      "bytes": 21412,
+      "sha256": "793c1441859ea90bcd3b878b89216d0b3fd5b0ebfa0db1186d40a3ea65ac1d1b"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/qa_proposal_v15.py",
+      "bytes": 8784,
+      "sha256": "bb829430969424fae0aa14c79b640aa66f125f895ed604baf6f2df560dee8758"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/render_proposal_v15.ps1",
+      "bytes": 1807,
+      "sha256": "7d8ef747c27b5e1c313c45f039ed010f48475cad0f03e2210b9707289fa8b1e6"
+    },
+    {
+      "path": "development_support/proposal_v15_20261101/word_render.json",
+      "bytes": 605,
+      "sha256": "6d9cfd102c1557f4736c379ff2588ec371eef0cc0cf796d767cae32ab4ed21c3"
+    },
+    {
+      "path": "development_support/route_v15/ui_v14_backup/jeju_agent/server.py",
+      "bytes": 10557,
+      "sha256": "9b8d48494683676f93207eb10bf64af406171e9b49d78d49a9481f34873d3a27"
+    },
+    {
+      "path": "development_support/route_v15/ui_v14_backup/ui/app.js",
+      "bytes": 58940,
+      "sha256": "08e838de1bfcbead8e196c86b89bde093e8a96f456e1620ab592c8e8029da438"
+    },
+    {
+      "path": "development_support/route_v15/ui_v14_backup/ui/discovery.js",
+      "bytes": 32444,
+      "sha256": "86b972976a396d03de0c23673fe94073f678a5665598efe60a4f588263ccd6de"
+    },
+    {
+      "path": "development_support/route_v15/ui_v14_backup/ui/index.html",
+      "bytes": 30647,
+      "sha256": "e865af16b0bd9153c65d4535b990b6bd64ed2b4ea4839e8c3804eed61124cd05"
+    },
+    {
+      "path": "development_support/route_v15/ui_v14_backup/ui/pages.css",
+      "bytes": 6387,
+      "sha256": "e69cd1b27432ee2c8fe4c9821122470637525d75aced062c90931be726e4d0b9"
+    },
+    {
+      "path": "docs/01_기획서.md",
+      "bytes": 21995,
+      "sha256": "15f2e84ded76942dd7d2cfb5ac9cc837891e3dea0d9fea416a00e30db39500e6"
+    },
+    {
+      "path": "docs/01_기획서.pdf",
+      "bytes": 196066,
+      "sha256": "3b5c51be38dc4787d54a205fc507058888433e05a524747de6d9bbc8416ac97f"
+    },
+    {
+      "path": "docs/02_데이터활용설계.md",
+      "bytes": 7798,
+      "sha256": "51e8670f050272f2d165cf9c17beed1bcbf0c94f46b59f1d377d4845624c5dd5"
+    },
+    {
+      "path": "docs/03_시스템과Agent설계.md",
+      "bytes": 6049,
+      "sha256": "f3142bc0f8205810380af0e3a00ff4401f33864619563dde851301c388efb046"
+    },
+    {
+      "path": "docs/04_머신러닝과검증.md",
+      "bytes": 6459,
+      "sha256": "1738179d5503320ae2b00708c5482095e805f16b6deaa957299a7d6be367480a"
+    },
+    {
+      "path": "docs/05_개발일정과제출준비.md",
+      "bytes": 4882,
+      "sha256": "0e07e58dcd14fee5e61ddbd8f83337680d314966455b81e2ccb302788b59a1c2"
+    },
+    {
+      "path": "docs/06_실행과데이터연결.md",
+      "bytes": 5882,
+      "sha256": "b1885c8a214fc43e085aeb1c89fb2d7ba0acca1898ef116b38e66e5039b41fcb"
+    },
+    {
+      "path": "docs/07_UI개편과실데이터.md",
+      "bytes": 6552,
+      "sha256": "d01d408600486bfe31173ee81f62d64fcd0e9f1c1b7eeb24a02b0ecdd612deb3"
+    },
+    {
+      "path": "docs/08_센터PC운영과서비스기획.md",
+      "bytes": 13627,
+      "sha256": "a421e09ea6bc88e64f23f24803097f36d1d5b190f0359702fe366ca73ba28c96"
+    },
+    {
+      "path": "docs/09_실데이터모델검증.md",
+      "bytes": 13354,
+      "sha256": "bfa6960976ee572b4a1580b8c14f18685bb7d041e9ca7c818657769997c2f980"
+    },
+    {
+      "path": "docs/10_관광슬라이드와위치취향추천.md",
+      "bytes": 6861,
+      "sha256": "4b2f08a42af29ad88ab37db34714fbcc8977663efb6f230fc523412cc6e60233"
+    },
+    {
+      "path": "docs/11_오프라인경로와관광모델.md",
+      "bytes": 7447,
+      "sha256": "72b9f8f486d83ecda306d4738fbb8783279f90e4e87ea5fd0def598422da0180"
+    },
+    {
+      "path": "docs/12_규칙기반상담챗봇.md",
+      "bytes": 4252,
+      "sha256": "309845591fc0eb0aed8a2a955ffaa6adaf0e0f54a63029879b930665d5c87e21"
+    },
+    {
+      "path": "docs/13_위치동의와브라우저설정.md",
+      "bytes": 7190,
+      "sha256": "199c484a413b919526444325594efc350c6bea3d51a7ef30d6904893fdc8e7f9"
+    },
+    {
+      "path": "docs/14_챗봇위치추천.md",
+      "bytes": 3801,
+      "sha256": "5c71afb193a2c53098ac1e60e4e35379fc21e16eee4401fa5f151e1ed40962ea"
+    },
+    {
+      "path": "docs/15_챗봇위치추천과페이지구성.md",
+      "bytes": 6960,
+      "sha256": "ce8e5203d84fb9e1fdc126d408f94527532f0503d08324ae58740bd4c3c07edb"
+    },
+    {
+      "path": "docs/ML도우미_v17/검증결과_v17.json",
+      "bytes": 316,
+      "sha256": "a44d6e83de4ab7a3b9047efbc740064c096123509c5c6afc5301bc1fe6d6258f"
+    },
+    {
+      "path": "docs/ML도우미_v17/도우미_HTTP검사.json",
+      "bytes": 1369,
+      "sha256": "0821d6dd0868481d319b1bc9fd718e3629e5093b31ab794c92d3e01c671430e5"
+    },
+    {
+      "path": "docs/ML도우미_v17/로컬서버.log",
+      "bytes": 850,
+      "sha256": "985a0a56194b8020bb924ebc9ed6b1dd2436a401c37475bc3b1b9db9954239f4"
+    },
+    {
+      "path": "docs/ML도우미_v17/사용과검증.md",
+      "bytes": 3997,
+      "sha256": "9e31a2909b9d80e02263a3e17bb2a6998f65484a535d07239b8d6a6162591326"
+    },
+    {
+      "path": "docs/ML도우미_v17/전체회귀검사.json",
+      "bytes": 16334,
+      "sha256": "794e2636c34e2a8877b930c9e70e3eca009a4ffff6554652138c29bc74bc772c"
+    },
+    {
+      "path": "docs/PHOTO_CREDITS.md",
+      "bytes": 4539,
+      "sha256": "5333cbcbf171ca1f7abdcc9a748866f30ee9e3fd161c04f8eb7b2d886906abb5"
+    },
+    {
+      "path": "docs/SOURCES_REPORT.md",
+      "bytes": 6442,
+      "sha256": "0803022861fc82441dff71dec0b4eace1db37b2adab4c4bdfe6b74df1864e37a"
+    },
+    {
+      "path": "docs/UIv10_상담버튼토글.jpg",
+      "bytes": 131795,
+      "sha256": "73ae2c98a425036f17365756bd1105fea0233b410f25064b020f7ee348f4ebb4"
+    },
+    {
+      "path": "docs/UIv11_관광지교차확인.jpg",
+      "bytes": 47362,
+      "sha256": "1903490dd07acf876ec9cd85ea8691be508026e0ecd2e483afe735246a01863c"
+    },
+    {
+      "path": "docs/UIv12_관광안내상세.jpg",
+      "bytes": 89599,
+      "sha256": "c3f1574c582f60c9ae6c0de6b72d9cd6ef1d01a89494d888c8ea4d95128f5b14"
+    },
+    {
+      "path": "docs/UIv12_지도묶음목록.jpg",
+      "bytes": 69123,
+      "sha256": "369f234d9192acdbc63a42a74ab0267ff0c6506be747d4af016a0827ba9e3fa1"
+    },
+    {
+      "path": "docs/UIv13_허브명칭우선.jpg",
+      "bytes": 66436,
+      "sha256": "49f84c9d9601b11c4ad93fb147a93effe255ffd6f18dd676f4766709648953a1"
+    },
+    {
+      "path": "docs/UIv2_모바일.png",
+      "bytes": 36278,
+      "sha256": "55207822872cedd18ea81e2a503c74c652f3da9674672ca36c23ff4f4c323083"
+    },
+    {
+      "path": "docs/UIv2_첫화면.png",
+      "bytes": 368518,
+      "sha256": "bb33e43a36375ebe0d6972257cfec17f5eaacf76c3fc4081513f479d2ef6463d"
+    },
+    {
+      "path": "docs/UIv3_모바일.png",
+      "bytes": 34383,
+      "sha256": "ef1f3d956aeafd97f843a49ede40dbb451c95aeb260d1dbb08cd3168ce1a7c93"
+    },
+    {
+      "path": "docs/UIv3_첫화면.png",
+      "bytes": 242712,
+      "sha256": "bc7034479d6b6faad8596b58cceaf189e220fd15717ffeb42d445f81eb1c8b2e"
+    },
+    {
+      "path": "docs/UIv4_관광지슬라이드.png",
+      "bytes": 101433,
+      "sha256": "662169ae38e297c4aaf94979cb8611d0e4910fc125f57b79722cab1ee31fb92c"
+    },
+    {
+      "path": "docs/UIv4_모바일_슬라이드.png",
+      "bytes": 45912,
+      "sha256": "5f52428e6b347f20f002d83e84ac1fcf133843f22e3151f071a13c2df018cdc6"
+    },
+    {
+      "path": "docs/UIv4_모바일_지도.png",
+      "bytes": 35635,
+      "sha256": "2a258f8eb99ddb929e220c355b2f370e4fb6d06cb2170d7920bb08c50e5399e3"
+    },
+    {
+      "path": "docs/UIv4_북부_5초전환.png",
+      "bytes": 119812,
+      "sha256": "55f4b32fc439767af753b5757ca72d33ccc686d28ce1096a54423be8db6c4930"
+    },
+    {
+      "path": "docs/UIv4_지도와음식추천.png",
+      "bytes": 89926,
+      "sha256": "57f348d3193d90d93eaf7b1ab357840e6691a354d3ca778c338068e6ebe9da71"
+    },
+    {
+      "path": "docs/UIv5_모바일_오프라인경로.png",
+      "bytes": 45530,
+      "sha256": "46427751a1dc83439a3f76f1918046f2674f285b2c2cf3c85ea99e4488807d8a"
+    },
+    {
+      "path": "docs/UIv5_오프라인도로경로.png",
+      "bytes": 74141,
+      "sha256": "efd14dc2f1f6d787ddf66013e8a372a4025ab64d1da57f08b0e37e74c85130ad"
+    },
+    {
+      "path": "docs/UIv5_장소상세.png",
+      "bytes": 65231,
+      "sha256": "ff1dcbc546c1ce3e926d59e3b84ead61de90061ae9e198059b867abcae7da3c7"
+    },
+    {
+      "path": "docs/UIv6_모바일상담.png",
+      "bytes": 43686,
+      "sha256": "c8406eee73412df37fbfcd481a20c13c2a0ab8b2fce87d3cba55bf164bd72759"
+    },
+    {
+      "path": "docs/UIv6_상담추천.png",
+      "bytes": 91958,
+      "sha256": "ae83e88331f36506ba2d5f94587cd52b7998afcf581fab7e964294758b5a057f"
+    },
+    {
+      "path": "docs/UIv7_모바일위치동의.png",
+      "bytes": 45305,
+      "sha256": "0d96b7e413df52ad697c3570537212934db1d66c76996b13d02e6ef1fdd3b131"
+    },
+    {
+      "path": "docs/UIv7_위치사용확인.png",
+      "bytes": 55346,
+      "sha256": "2959f23679bc02010f2d85a0b0895ab29f89d81538542b0741769f0755dfcc80"
+    },
+    {
+      "path": "docs/UIv8_메인페이지.jpg",
+      "bytes": 107603,
+      "sha256": "c7baf65f6847f85bfe624a58ccda180ad1a45d7fd626158c98dd9ac246dcdcad"
+    },
+    {
+      "path": "docs/UIv8_위치기반상담.jpg",
+      "bytes": 105435,
+      "sha256": "6ee9d8fc7ffde599471d400de35b851a029646282784ecd4865b447e3bfe49e3"
+    },
+    {
+      "path": "docs/UIv9_상담팝업복원.jpg",
+      "bytes": 86518,
+      "sha256": "c405ba07fdabf530cd34615a231ab3720f5de985efb76eff08a1c92377fb5935"
+    },
+    {
+      "path": "docs/chat_nearby_copy_v8.json",
+      "bytes": 1662,
+      "sha256": "36d9136ca6ad592e94a68e853ef0cf25e4713bbe639c77b3429db15c45e8d845"
+    },
+    {
+      "path": "docs/chat_tests_v8.txt",
+      "bytes": 6309,
+      "sha256": "68fcaff460f84fc79fec04544aa80caee5c6bcfec67b8944ff4c08f501e464e7"
+    },
+    {
+      "path": "docs/chatbot_build_v6.json",
+      "bytes": 1779,
+      "sha256": "0378464482fe9a6363ca31a8d14bd73085daa3cf798e44d75e2dde487552b551"
+    },
+    {
+      "path": "docs/chatbot_tests_v6.txt",
+      "bytes": 3556,
+      "sha256": "5792fff232170108ac843f2da1a49a252577d2ba9d4d14f3f1c7e5e486860a06"
+    },
+    {
+      "path": "docs/http_chat_nearby_v8.json",
+      "bytes": 637,
+      "sha256": "4e015741978126d14bfb276b07b62a7317bc46b73c985a4dd6a39dd0c22c0543"
+    },
+    {
+      "path": "docs/http_chat_v11.json",
+      "bytes": 7676,
+      "sha256": "dc52fdb5fe38bb645e7101f38048a08711108c61c3d789140d2d8e7fe9a122e7"
+    },
+    {
+      "path": "docs/http_chat_v6.json",
+      "bytes": 7372,
+      "sha256": "343e3d11d035970d576fd5b0b7e23cd04e86202e29c0fa5c51cdf97d478ea3d8"
+    },
+    {
+      "path": "docs/http_chat_v7.json",
+      "bytes": 7371,
+      "sha256": "ed4071840276d018b4eaa0ed3decc32d6d0a994ea4a0704deb5d2642db1de2c2"
+    },
+    {
+      "path": "docs/http_chat_v8.json",
+      "bytes": 7369,
+      "sha256": "aca059d01b95f189330eeb0670c017091cba8ab38620563a8dd91f66aed56473"
+    },
+    {
+      "path": "docs/http_nearby_v11.json",
+      "bytes": 637,
+      "sha256": "ec282bc5d23d6c683faaefc67dd7093b4d7a87feafa4ba5ff37f03a436c08246"
+    },
+    {
+      "path": "docs/http_pages_v8.json",
+      "bytes": 298,
+      "sha256": "a6de00f3dbcfb977ef267749412c46e27210c7e4f50049b44cd7459404d70196"
+    },
+    {
+      "path": "docs/http_pages_v9.json",
+      "bytes": 298,
+      "sha256": "a6de00f3dbcfb977ef267749412c46e27210c7e4f50049b44cd7459404d70196"
+    },
+    {
+      "path": "docs/http_regression_v6.json",
+      "bytes": 9793,
+      "sha256": "8de65a79d64dfe2f06937c548939f3abf9538a6301b91e1c0efa70518d96db6c"
+    },
+    {
+      "path": "docs/http_smoke_v5.json",
+      "bytes": 9576,
+      "sha256": "875961f035255b71ce2fa7e19fb889cf44163b9ed75507385fc6ee3ac9e2fe59"
+    },
+    {
+      "path": "docs/http_tourism_guides_v12.json",
+      "bytes": 586,
+      "sha256": "65483fa509628c534a5976dc44e7433419d43f58ca0231fb774a3aa4e1b4eae7"
+    },
+    {
+      "path": "docs/http_tourism_names_v13.json",
+      "bytes": 575,
+      "sha256": "4bf698f17ce8941e82e94cf9eadae5a0debae5d2eefa18c540e52076a1618ab0"
+    },
+    {
+      "path": "docs/http_travel_v11.json",
+      "bytes": 10942,
+      "sha256": "5f1cfbd106734cef6dad4593465a702eecaa4a58fce64ff65da6998a5e737513"
+    },
+    {
+      "path": "docs/http_travel_v7.json",
+      "bytes": 9797,
+      "sha256": "78263e7f755d10bee3d236f4089a4bb4acdc47df29d42d7412b8b8ee1ffbaa9f"
+    },
+    {
+      "path": "docs/http_travel_v8.json",
+      "bytes": 9794,
+      "sha256": "2ffccabae3d5368fdb475ec4593f999500393f01739d3d5aab3dd5aa16461dd4"
+    },
+    {
+      "path": "docs/image_manifest.json",
+      "bytes": 19399,
+      "sha256": "a676d3c6a6a90eafd5b107a55871ef9cb9ac28c8ce82d6df9538bc5c1ef86e2c"
+    },
+    {
+      "path": "docs/research_bigdata.md",
+      "bytes": 11909,
+      "sha256": "c556fb1c3458e188b0d8a0e110cab819a3d8d30484ecf6e4bc00949af1ad17c4"
+    },
+    {
+      "path": "docs/research_datahub.md",
+      "bytes": 17288,
+      "sha256": "d4710b17d1754258be7083d4cb3cde3715c8901d803f9f24e83844233ad6ee74"
+    },
+    {
+      "path": "docs/runtime/runtime_smoke.json",
+      "bytes": 818,
+      "sha256": "63a44d487966d7a88e72c22c77c3750d927ade2433ce2c985166f4e09ee74549"
+    },
+    {
+      "path": "docs/runtime/signatures.json",
+      "bytes": 17703,
+      "sha256": "9b99c284101a65485f69ed467d01c48dea746f04260f6a8e20a1b31edfb182b8"
+    },
+    {
+      "path": "docs/runtime/source_report.json",
+      "bytes": 11298,
+      "sha256": "eefc761ef59a3bfb074cb9bc7dc18becff1472f2e374c79e6c03c5d383f1af6d"
+    },
+    {
+      "path": "docs/개선_v16/API신뢰성.json",
+      "bytes": 10224,
+      "sha256": "04407b161571b4b62588d202d70951d77cea33c05f058991ad2dd3ad2f4217fd"
+    },
+    {
+      "path": "docs/개선_v16/개선결과_20261103.md",
+      "bytes": 4774,
+      "sha256": "b86beac12648e3f15fca9cac52e54cf961f1a342ed54dfa5fc9e5067e096bbf7"
+    },
+    {
+      "path": "docs/개선_v16/검증결과_v16.json",
+      "bytes": 659,
+      "sha256": "fc65f7bf989b2a0a72f193f581dfcbe3dee9dd73d984886e54db3fcb5e2a9104"
+    },
+    {
+      "path": "docs/개선_v16/공식소개_API.json",
+      "bytes": 587,
+      "sha256": "2603ed8bb6b6be1f6d28a1dfcba0cc886707c718253f5e01ea6dbb90c0a9cac8"
+    },
+    {
+      "path": "docs/개선_v16/기존기능_API.json",
+      "bytes": 12051,
+      "sha256": "1bc5343e844de08e322758d1b0f0012fac41106cd5d6663458a9f509abfc5b53"
+    },
+    {
+      "path": "docs/개선_v16/로컬API서버.log",
+      "bytes": 5435,
+      "sha256": "bf420dd4c24eeb7130c294194b5cf043f88d8b11ab3ae8c6eb8a1198fedaa460"
+    },
+    {
+      "path": "docs/개선_v16/자동코스_API.json",
+      "bytes": 6860,
+      "sha256": "e1327a90587e2cea6887377086d3b7c4e724727f2e00300fd4b9595ac9a5ab3b"
+    },
+    {
+      "path": "docs/개선_v16/전체회귀_stderr.txt",
+      "bytes": 339,
+      "sha256": "5b340839b39424cb415008371c6a81fc52a4338f15803562d3d328378e99b7e7"
+    },
+    {
+      "path": "docs/개선_v16/전체회귀_stdout.txt",
+      "bytes": 14271,
+      "sha256": "083f2205380d5bbeb6b9ca908568d0c16bc0de96e2adcba3a91522747432e569"
+    },
+    {
+      "path": "docs/개선_v16/전체회귀검사.json",
+      "bytes": 15875,
+      "sha256": "b4f4aec8cfb03cee239ca1f8d5e4840fe4655dafc9c18019b0ea2672d108f2a0"
+    },
+    {
+      "path": "docs/개선_v16/페이지_API.json",
+      "bytes": 298,
+      "sha256": "a6de00f3dbcfb977ef267749412c46e27210c7e4f50049b44cd7459404d70196"
+    },
+    {
+      "path": "docs/개선_v16/표시이름_API.json",
+      "bytes": 576,
+      "sha256": "ddb66cd331323f42e60de202ebb78f9538c1489681298b9c30d74aa0ccae5ffb"
+    },
+    {
+      "path": "docs/검증결과.md",
+      "bytes": 2658,
+      "sha256": "0e092ea1d6d96313e9a1a6de06d2432cf01e487f7134c5dcc4d815e8f1166e7b"
+    },
+    {
+      "path": "docs/검증결과_v2.md",
+      "bytes": 1624,
+      "sha256": "17b296b34b8e65009b83da9498a5b3aa4baa5bf31dc26a9eefc82180b11833c1"
+    },
+    {
+      "path": "docs/검증결과_v3.md",
+      "bytes": 4136,
+      "sha256": "eb770ba196cb3329028b569feee2c4070865a5d011a91eb208180982cb3d0b14"
+    },
+    {
+      "path": "docs/검증로그_v11.json",
+      "bytes": 10957,
+      "sha256": "c80540fe898a986dd537bce396b1a35bb64abe441a4e747a53946391048ecfe3"
+    },
+    {
+      "path": "docs/검증로그_v12.json",
+      "bytes": 12890,
+      "sha256": "1567d0494442dbf86a93b743388f1177338e8cc31ea4efdaba38bd874b3001c0"
+    },
+    {
+      "path": "docs/검증로그_v13.json",
+      "bytes": 12009,
+      "sha256": "a14c2f160506d09deaaa4a776ffbb9bf08823564388264c415c63e18ec6e5b62"
+    },
+    {
+      "path": "docs/검증로그_v2.txt",
+      "bytes": 4118,
+      "sha256": "fa78e4ef1a0f94b804e8d8e68af02b854948e714ec247068cadebd404f122bce"
+    },
+    {
+      "path": "docs/검증로그_v3.txt",
+      "bytes": 7250,
+      "sha256": "0946783c2ff7d0664e3ae1b0d84fa3e55d771471bb558e50915c89901416b4ab"
+    },
+    {
+      "path": "docs/검증로그_v4.txt",
+      "bytes": 170,
+      "sha256": "cf3427f8a2867f52c5c5ea44271b5e2d233263da96dfec9677c2892c20d7c3e5"
+    },
+    {
+      "path": "docs/검증로그_v5.txt",
+      "bytes": 11586,
+      "sha256": "4c02982ad645cc0fa7fab36ad956889acc8f136d4442a843c085a385e961a31a"
+    },
+    {
+      "path": "docs/검증로그_v6.txt",
+      "bytes": 15040,
+      "sha256": "b506e8acbac3bc13acd88d1a133fea559fc86375611015d4dde26464ca537e15"
+    },
+    {
+      "path": "docs/검증로그_v7.txt",
+      "bytes": 15039,
+      "sha256": "ac39d7fa8106c1a1dca12d9dc3b550cb131bc110ecd6408e621c726af5db8279"
+    },
+    {
+      "path": "docs/검증로그_v8.json",
+      "bytes": 9861,
+      "sha256": "4b122a64d97a6788fd0985c120a6efdb5cc7cdb9620230d5a38e8b7533640c8a"
+    },
+    {
+      "path": "docs/관광교차검증_자료검토_v11.json",
+      "bytes": 457803,
+      "sha256": "61bcdb8ce8b93c432ec86b2cc8d3bbbd9ce8290bb51a4740e0e8863e8fc1d4ad"
+    },
+    {
+      "path": "docs/관광교차검증_자료검토_v11.md",
+      "bytes": 8541,
+      "sha256": "7508304c2417b2940a5947a6bca5f034ccd39f583ac90715ac814beb39bed63a"
+    },
+    {
+      "path": "docs/관광교차확인정책_v11.md",
+      "bytes": 5106,
+      "sha256": "7e1d77cac1a27eaae8a3f2b9f4562f67936b41a9e103fcc2b5e02b5f62eaf349"
+    },
+    {
+      "path": "docs/관광데이터최종확인_v5.json",
+      "bytes": 13329,
+      "sha256": "04f925d05c47014c46514c9240b5988e084bb4d3fcac2f6e731593bfb0f445db"
+    },
+    {
+      "path": "docs/관광데이터확장_v5.md",
+      "bytes": 11767,
+      "sha256": "661a4ba3579adf97dca5ed4b3c33054858ffe78345635d8289c92db7c596719a"
+    },
+    {
+      "path": "docs/관광모델검증_v11.md",
+      "bytes": 3470,
+      "sha256": "14075d42bc7398fe0a23b7db4f6b6d123a1ddb1c6b471e46379073b415d39070"
+    },
+    {
+      "path": "docs/관광모델검증_v5.md",
+      "bytes": 2995,
+      "sha256": "b80703170724fcc57cf399595cf1c19219e70f4ee6b439cf6de3380f6d39e82d"
+    },
+    {
+      "path": "docs/관광소개_자료조사_v12.md",
+      "bytes": 7606,
+      "sha256": "089fee199e13d473e6519a348dafeb833a20ed967a590a6b066357db0da8ce58"
+    },
+    {
+      "path": "docs/관광중복행_대표카드검토_v11.json",
+      "bytes": 15903,
+      "sha256": "6358c4228db6dd78177b98bf71a261f176da506ab131efeaeb9b03ac082ec10c"
+    },
+    {
+      "path": "docs/기획서개선_20261031/제주길벗_서비스기획서_개선판_20261031.docx",
+      "bytes": 70398,
+      "sha256": "f5904df396fd31617d1f3cbb317d5e94ddd34cfe44812c1feedfe4a6d6d583e3"
+    },
+    {
+      "path": "docs/기획서개선_20261031/제주길벗_서비스기획서_개선판_20261031.md",
+      "bytes": 37397,
+      "sha256": "2ab12cf6412b0b363a66fd0aa6fa8734086b39acc2ebded52451c64d963b7a38"
+    },
+    {
+      "path": "docs/기획서개선_20261031/제주길벗_서비스기획서_개선판_20261031.pdf",
+      "bytes": 494561,
+      "sha256": "669c2477dd6daea76aef1917eeaff2ae933658ea4c3a0af7d059108f17c27985"
+    },
+    {
+      "path": "docs/데이터다운로드보고.md",
+      "bytes": 9474,
+      "sha256": "4fbea10834554c5cc2102f957c2bce73184a463c7a261968a8d0ed453a270b3e"
+    },
+    {
+      "path": "docs/모델개선_v14/http_guides_v14.json",
+      "bytes": 587,
+      "sha256": "77c548201c1d08ca35c7c43472922948a4e20811256f76f21b7de2caef8d9425"
+    },
+    {
+      "path": "docs/모델개선_v14/http_names_v14.json",
+      "bytes": 576,
+      "sha256": "d3fa989c257f38140e27294015a805bbe4d08258f7d9b0b40c49996b146a2e57"
+    },
+    {
+      "path": "docs/모델개선_v14/http_regression_v14.json",
+      "bytes": 11160,
+      "sha256": "ec8ce2f143dc109b9aaf85761ac872eb72c3b7099036bc88b4210d239806b910"
+    },
+    {
+      "path": "docs/모델개선_v14/검증결과_v14.json",
+      "bytes": 721,
+      "sha256": "2804112fd11ca63643fdf51e852b7746686a2fbc216ffaf62c3fdce95694c6d5"
+    },
+    {
+      "path": "docs/모델개선_v14/모델성능_결과보고.md",
+      "bytes": 8299,
+      "sha256": "47c098aa7dc0b7df913603ac42ff15ea55af505036022f9dc7f6702a5d12723e"
+    },
+    {
+      "path": "docs/모델개선_v14/성능요약_v14.json",
+      "bytes": 23109,
+      "sha256": "928c68c5a9596ab448a633f3e825c6a40d30151455ab82bc33a132e14930eeae"
+    },
+    {
+      "path": "docs/모델개선_v14/출처_최신파일확인.json",
+      "bytes": 2716,
+      "sha256": "8967cfadf8ac90585b69a57f5e67982982f8ad7d8cec331627149bb36f872380"
+    },
+    {
+      "path": "docs/모델재학습_v11.json",
+      "bytes": 5429,
+      "sha256": "aca2e495490bc1e991c3c432418cfc67db314d480b97863d01aac7908ffeaed8"
+    },
+    {
+      "path": "docs/배포ZIP독립검증_v3.json",
+      "bytes": 3528,
+      "sha256": "d6e57918bbc06d43ca1d8421209501ca3b421993950738d1cb6fd0599f91d1b4"
+    },
+    {
+      "path": "docs/브라우저확인_v11.json",
+      "bytes": 399,
+      "sha256": "a72158f7b8cfc4e5906df0ff41e177567800c6b48792eabbe647fda9058e5959"
+    },
+    {
+      "path": "docs/브라우저확인_v12.json",
+      "bytes": 631,
+      "sha256": "5f77006ceafbcf4bf96ff4b46ba13c104f4da2dd7589ffbb43e140fcc7485e6c"
+    },
+    {
+      "path": "docs/브라우저확인_v5.json",
+      "bytes": 1114,
+      "sha256": "315697c9a6e9d3f11b55a72e80cce2a5a21362dc9c333e0b4d151749b2414ca9"
+    },
+    {
+      "path": "docs/브라우저확인_v6.json",
+      "bytes": 1134,
+      "sha256": "1a2b7ff71c90379b6eb42290a58739f5640c09dd5d5fa73c33c230fe5fdb6ede"
+    },
+    {
+      "path": "docs/브라우저확인_v7.json",
+      "bytes": 1105,
+      "sha256": "dcf67f07cb004bd6971016512c14346ae86a93e972388a7faf14688adf6314a8"
+    },
+    {
+      "path": "docs/브라우저확인_v8.json",
+      "bytes": 986,
+      "sha256": "a58ed7e0d95b2c365fa02e94e603a7be7d5e0538ca36bf736c0a3dde68384239"
+    },
+    {
+      "path": "docs/상담버튼토글_v10.json",
+      "bytes": 4409,
+      "sha256": "c58c5c0afeb4024bb5ba664e576ee041ba86d747eb9725a51f8559d3a2c29caf"
+    },
+    {
+      "path": "docs/상담팝업복원_v9.json",
+      "bytes": 3808,
+      "sha256": "d2ef2e3a44fff3674032a4e76e3ae0e3b2f277f9554c5fdb5a50f021bb318e25"
+    },
+    {
+      "path": "docs/시제품화면.png",
+      "bytes": 197642,
+      "sha256": "c0b01a1bb62556fe9ece1256d823439942808fe4c2db3ac342252854a5382882"
+    },
+    {
+      "path": "docs/제안서개선_20261101/쉬운성능지표.json",
+      "bytes": 94229,
+      "sha256": "2b41f1d8bd577ecfaff6228f7c41b4e81949f7169842e5425ded6a09fb442e23"
+    },
+    {
+      "path": "docs/제안서개선_20261101/제주길벗_개인제안서_20261101.docx",
+      "bytes": 202720,
+      "sha256": "8691472b691b22ab7901be63b8951f7d5fecef56e32a79bcb6a5abd9d02de74c"
+    },
+    {
+      "path": "docs/제안서개선_20261101/제주길벗_개인제안서_20261101.md",
+      "bytes": 20220,
+      "sha256": "8450e27ce2e508b8696df727b7449f0ed51331d65c29959b54f6bbd6ac4f8da7"
+    },
+    {
+      "path": "docs/제안서개선_20261101/제주길벗_개인제안서_20261101.pdf",
+      "bytes": 576589,
+      "sha256": "773c31e693a75d4416d8744fa3104bd17165c3ebd1417c1122be8b826c6de31f"
+    },
+    {
+      "path": "docs/제안서개선_v15_20261101/개정내용_v15.md",
+      "bytes": 2033,
+      "sha256": "3d6882df5f66f19602bd81fb2a1e41e97162ff8a6b0afcfe92af58a114f4dedd"
+    },
+    {
+      "path": "docs/제안서개선_v15_20261101/문서검수_v15.json",
+      "bytes": 7121,
+      "sha256": "c3a8a7dcabdf686973797ba6e563b109f6491cef54478042a2f83be76e28465c"
+    },
+    {
+      "path": "docs/제안서개선_v15_20261101/제주길벗_개인제안서_v15_20261101.docx",
+      "bytes": 204791,
+      "sha256": "645693516c84d9f0761a2ffc0618ba99e05e34047fe1dcb9523c380cd4377f82"
+    },
+    {
+      "path": "docs/제안서개선_v15_20261101/제주길벗_개인제안서_v15_20261101.md",
+      "bytes": 21925,
+      "sha256": "d869cda418f89871bc1ee68958ac6abc08c2250addea543ca6169a113c13d8a6"
+    },
+    {
+      "path": "docs/제안서개선_v15_20261101/제주길벗_개인제안서_v15_20261101.pdf",
+      "bytes": 553577,
+      "sha256": "61c5210128e3238de592b916e770ddc836d724f745d5306259b44752f9ef0036"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/레퍼런스검토와개정내용.md",
+      "bytes": 9091,
+      "sha256": "e96a2a84552c9dace0bae44e6b7288308e7a9da430abe4b70636f9c9ad44a5de"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/문서검수_20261103.json",
+      "bytes": 2025,
+      "sha256": "345fe06b7c468091fefc5fce2b405f02acbec141bff9348108ec66521dc009c3"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/산출물명세.json",
+      "bytes": 1530,
+      "sha256": "539ef44bb10dbf8599252787424580e382f2b56a229a91a9a02a93093225b0d5"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/제주길벗_서비스제안서_레퍼런스반영_20261103.docx",
+      "bytes": 161062,
+      "sha256": "b2f1378b4462dac57fde0a407987d7421ab77b619c728aa7933748815befa887"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/제주길벗_서비스제안서_레퍼런스반영_20261103.md",
+      "bytes": 19246,
+      "sha256": "eb5cf068f91ef77aee96479da6de5a8ee348f91c4713b4b1db23e433e61a422d"
+    },
+    {
+      "path": "docs/제안서개선_레퍼런스반영_20261103/제주길벗_서비스제안서_레퍼런스반영_20261103.pdf",
+      "bytes": 605696,
+      "sha256": "69d2bcb70743a6c400738dd36324fdcf58e92f745c4543407c106176ace797de"
+    },
+    {
+      "path": "docs/지도API출처_v4.md",
+      "bytes": 15326,
+      "sha256": "6d3c089fc9faca99404b07126d4c63883ed3054524ef354775928c02915e500a"
+    },
+    {
+      "path": "docs/챗봇벤치마크_v6.json",
+      "bytes": 1272,
+      "sha256": "38c1bc980741d11372bc4972ca10216fa5a9a539465d1385f8ef1462dc371c15"
+    },
+    {
+      "path": "docs/챗봇응답명세_v6.md",
+      "bytes": 8607,
+      "sha256": "21343e0ef13ac705975d93d9d7cd5455843464c741e002dfb762238758fb9d00"
+    },
+    {
+      "path": "docs/챗봇품질검토_v6.json",
+      "bytes": 295883,
+      "sha256": "3c1c2f68ff2f840e7cfea993d612dcefbb1011e1aba8faf8083d95cd0bac9ebf"
+    },
+    {
+      "path": "docs/추가데이터검수_v3.json",
+      "bytes": 3376,
+      "sha256": "8f132e85d5a8ef303f9fd35509ea56d417a54dd6c9b4cfe9acbcae27300490ab"
+    },
+    {
+      "path": "docs/추천코스_v15/API검증.json",
+      "bytes": 6858,
+      "sha256": "5df69f7278f5158789e0068917accc6e8aa5316de38944738fdc4220fa2328d8"
+    },
+    {
+      "path": "docs/추천코스_v15/API통합요약.json",
+      "bytes": 358,
+      "sha256": "b86d08c2a810b8d03206ba75190313367f4afc34a8579cca47f90b06e640c6f1"
+    },
+    {
+      "path": "docs/추천코스_v15/검증결과_v15.json",
+      "bytes": 602,
+      "sha256": "ba16ed9a09331ed13edea367c27c87be89f4109ffed58badee1bdfc862729281"
+    },
+    {
+      "path": "docs/추천코스_v15/경로검증.json",
+      "bytes": 5371,
+      "sha256": "e18bddc227ea8cb7b7a8fb496b610254b58851a0fd52dd18d99320dae8a5f312"
+    },
+    {
+      "path": "docs/추천코스_v15/관광소개_API검증.json",
+      "bytes": 587,
+      "sha256": "2ba93b35ba9ff6e41cfda74823199f743def7fef5689b9ba114dd8ae629274f7"
+    },
+    {
+      "path": "docs/추천코스_v15/관광이름_API검증.json",
+      "bytes": 576,
+      "sha256": "1fe128aef2eb3d8f8b7d7a8ab53d65e611730ed7b144cb1961078c19143e4ea0"
+    },
+    {
+      "path": "docs/추천코스_v15/기존기능_API회귀.json",
+      "bytes": 11157,
+      "sha256": "982151af8542095770062141d10c0caf4d1ed989246d5c283167d4182926c93a"
+    },
+    {
+      "path": "docs/추천코스_v15/대표출처_재확인.json",
+      "bytes": 2479,
+      "sha256": "d0382c1b3dd1b2bd66595a289657d9e8ef44b2b36003972e73aced1bdd595151"
+    },
+    {
+      "path": "docs/추천코스_v15/신뢰성검토.json",
+      "bytes": 247398,
+      "sha256": "0e8305b1fbc4614d85b1952791ce50dc417c08c2a9db92ddd127922888261322"
+    },
+    {
+      "path": "docs/추천코스_v15/신뢰성검토.md",
+      "bytes": 9667,
+      "sha256": "19e7cce25509c154ea6ef58aa0975dfd5871d44f3b2e3895bfff01adce3f8a86"
+    },
+    {
+      "path": "docs/추천코스_v15/전체회귀검사.json",
+      "bytes": 15460,
+      "sha256": "43d559f0796fe4902cf25d805d5c79bffea362d67430ad19dd79338403a61422"
+    },
+    {
+      "path": "docs/추천코스_v15/통합Agent와추천코스.md",
+      "bytes": 7613,
+      "sha256": "71db970d9bcbfb2c22ca935680b5f3ebf43cf7c87812172f193d4830819c697c"
+    },
+    {
+      "path": "docs/휴대용런타임_검증로그_v3.txt",
+      "bytes": 156,
+      "sha256": "1218f5e6180b10cb8d7d1ce4feb978c8ba7b1307100db1810b2f8fba9dd9a429"
+    },
+    {
+      "path": "docs/히어로배너설정_v4.md",
+      "bytes": 3001,
+      "sha256": "b1d5db8bff8c2b26f43f3133122786bb2a9dc68e1603857b70906821dbb2f41c"
+    },
+    {
+      "path": "examples/actual_reference_route.json",
+      "bytes": 4163,
+      "sha256": "582a847297c8c6157e196f4e85f7b1c88f0c6ff9c6f5bc44a39f8b3a0a7f24f1"
+    },
+    {
+      "path": "examples/center_runtime_benchmark.json",
+      "bytes": 1444,
+      "sha256": "f73e79e7598404092fbbc334c652a6fe5c0f3fc0dd4d1cab2ffae04fe9809079"
+    },
+    {
+      "path": "examples/discovery_benchmark_v4.json",
+      "bytes": 1370,
+      "sha256": "e840b094e9c672914c0dfa4ce810c675251bbfc5898a872d3349c7987ee91ea5"
+    },
+    {
+      "path": "examples/hero_north_update.json",
+      "bytes": 463,
+      "sha256": "6f7d511d58b6b546ce5ab529e7651f8d99691a4c801b29e116b07f875acd38e8"
+    },
+    {
+      "path": "examples/http_smoke_v3.json",
+      "bytes": 1784,
+      "sha256": "ef75d97a2fe62e68404dd8b3c5470cc4a7b011e666efe492497fc8ebc5085acd"
+    },
+    {
+      "path": "examples/http_smoke_v4.json",
+      "bytes": 1772,
+      "sha256": "d85a52751b5b6e861a23da6ea8c2dcef18695c0fef78cabb613fa39f4b2615fc"
+    },
+    {
+      "path": "examples/itinerary_export_v4.json",
+      "bytes": 296,
+      "sha256": "1eedae44c2e88d93edabd6cd336ffe378a1ac4f102f991658dee9bce67f7cef2"
+    },
+    {
+      "path": "examples/location_ui_v4.json",
+      "bytes": 401,
+      "sha256": "1ba9cb951837760ecd2eaf39f539363995f80c626641602b063057dd9df60c99"
+    },
+    {
+      "path": "examples/location_ui_v5.json",
+      "bytes": 401,
+      "sha256": "1ba9cb951837760ecd2eaf39f539363995f80c626641602b063057dd9df60c99"
+    },
+    {
+      "path": "examples/location_ui_v7.json",
+      "bytes": 1017,
+      "sha256": "c11a1d3bc250fccca8d56f2b2fc03d0687efec65b4deff54a49ac5ff5e8f2fb7"
+    },
+    {
+      "path": "examples/recommendation_demo.json",
+      "bytes": 6758,
+      "sha256": "3172d594d941f1fe7df5a29db5472d61a334cb9b0c99233e72fcd7750cc91480"
+    },
+    {
+      "path": "examples/region_demand_example.csv",
+      "bytes": 11375,
+      "sha256": "8c6e22cba1141d7a44d54d3f3d29e6d250d31f4cfeb36900cfdc20d2a5eeec5b"
+    },
+    {
+      "path": "examples/region_forecast_demo.json",
+      "bytes": 1998,
+      "sha256": "f3d75cd5823e63edd0173d4602bec1c6f8152013133a4ad45e3abea7e5ddc127"
+    },
+    {
+      "path": "examples/request.json",
+      "bytes": 286,
+      "sha256": "ba1386ceb8c3ffa02f44ce76faebaf57df39479e89753538e56f74c132ab7cc8"
+    },
+    {
+      "path": "examples/runtime_smoke.json",
+      "bytes": 741,
+      "sha256": "3f219d7b09316e50b3a706a489cada1e050f3eb1b6d690d7d4d466392c52840f"
+    },
+    {
+      "path": "examples/source_manifest.template.json",
+      "bytes": 723,
+      "sha256": "78f06d2507c65b948e5bb2987be86e1e13e008dddb5dc63e65fd70d4842975b5"
+    },
+    {
+      "path": "examples/v2_runtime_smoke.json",
+      "bytes": 561,
+      "sha256": "5f5a974e5c21332bd605ee2bfc725b7f5381bd5db6a7060feffc13c273875104"
+    },
+    {
+      "path": "examples/다운로드일정_검증예시.html",
+      "bytes": 2599,
+      "sha256": "c9bbe3718363d7169c4606483a947bc4cef3b0e89a77f676f55a4263d1183269"
+    },
+    {
+      "path": "jeju_agent/__init__.py",
+      "bytes": 87,
+      "sha256": "a2c410637c2957809000b67f8e1a005c684d7fac0f7c7eefdb2fc6791ddc96dd"
+    },
+    {
+      "path": "jeju_agent/__main__.py",
+      "bytes": 2051,
+      "sha256": "2acfccc965faac2b35ba311d35cf3e28b26b3752d582bc902e189856a8e5f6b5"
+    },
+    {
+      "path": "jeju_agent/assistant.py",
+      "bytes": 18976,
+      "sha256": "ce859a7832cb67a2c4439828ebf99b6906ce520280940ea10c751154c9dcd283"
+    },
+    {
+      "path": "jeju_agent/assistant_intent.py",
+      "bytes": 25906,
+      "sha256": "977a64fcf391b85d6d4599a5d54a9288fd03c48f865f3450a8fc245f0b36dc96"
+    },
+    {
+      "path": "jeju_agent/assistant_search.py",
+      "bytes": 11899,
+      "sha256": "97acced961831441789f4c2acc41a861b2d7fd0402099722317d53f3703940e8"
+    },
+    {
+      "path": "jeju_agent/audience_model.py",
+      "bytes": 21414,
+      "sha256": "f1c96e6556a3998e1158d0ecfafce75bd4dc1b0b3e31d0a097e773d26bb6978d"
+    },
+    {
+      "path": "jeju_agent/catalog_store.py",
+      "bytes": 11300,
+      "sha256": "9703489808008872aa75f8399dda0721722443f42001c55b0c920c540ab83b15"
+    },
+    {
+      "path": "jeju_agent/chatbot.py",
+      "bytes": 34681,
+      "sha256": "4921408d5f05e9900521d55dbc06076d2e514acb90cbe69526427de51a40f72e"
+    },
+    {
+      "path": "jeju_agent/context_model.py",
+      "bytes": 11821,
+      "sha256": "3569ca2013e54f3699fc3229e5b48b3448a6478504c5a53a8d0d156e2ac1a416"
+    },
+    {
+      "path": "jeju_agent/data_contract.py",
+      "bytes": 6014,
+      "sha256": "3675a473188e8b8914a2ba0588472d992e7c26bbcab6311b2d7fbbb850b86f35"
+    },
+    {
+      "path": "jeju_agent/discovery.py",
+      "bytes": 36707,
+      "sha256": "22b8b6fdb72f765c2f143bd80f5d7d75e3a688b768e46f25b5ebf5f55a3b9496"
+    },
+    {
+      "path": "jeju_agent/engine.py",
+      "bytes": 24827,
+      "sha256": "a66410fd7c6b555351d4da68b5678c335c8a690758a8f07fcadd995b971d065c"
+    },
+    {
+      "path": "jeju_agent/insights.py",
+      "bytes": 2686,
+      "sha256": "a18a2165606986a2a391bdcbc717e892321aa6a736fb047ab21dbe3c635768f0"
+    },
+    {
+      "path": "jeju_agent/mobility_model.py",
+      "bytes": 33018,
+      "sha256": "75023aa099d688c6d1469a6c39c585b47b53f8161085a8db2f8c8523a8d78ac4"
+    },
+    {
+      "path": "jeju_agent/orchestrator.py",
+      "bytes": 18486,
+      "sha256": "283a2b1f6d7a5f7e5444e36f4beadd70b9f9d6411c5c9d62a69efef28d3d6789"
+    },
+    {
+      "path": "jeju_agent/place_details.py",
+      "bytes": 2419,
+      "sha256": "7629593098a6cd7f17e1cdda3b14ce7b8de015cd3682d5a031280fb2c01fb505"
+    },
+    {
+      "path": "jeju_agent/place_trust.py",
+      "bytes": 16354,
+      "sha256": "676341b9440e4be7ec81f66fce4534ebd614258a560bd6e37cb1b789cc4c188e"
+    },
+    {
+      "path": "jeju_agent/planning_input.py",
+      "bytes": 1711,
+      "sha256": "4ae63ff37d6c6046000124592a4d4ec3984b000740f91558c3a01cf318e7add8"
+    },
+    {
+      "path": "jeju_agent/reference.py",
+      "bytes": 13042,
+      "sha256": "d82e170058c0a5a6e5f08caf2f17b2b0a713c8abf9e773c4cdcf27f1f20e041b"
+    },
+    {
+      "path": "jeju_agent/roads.py",
+      "bytes": 10157,
+      "sha256": "d097f96a83178f1559bd042af512e15931736785d57a9c2c2b9685dfdd17dd31"
+    },
+    {
+      "path": "jeju_agent/server.py",
+      "bytes": 11719,
+      "sha256": "36c431f60ff63dfa872249c47812534619eca6fe5752fda74e5a12b27d90c85b"
+    },
+    {
+      "path": "jeju_agent/tourism.py",
+      "bytes": 36285,
+      "sha256": "3453d34c5c7fa06701abe696efe38bdbcb7046e01e1d0eeaeb83078db5205d61"
+    },
+    {
+      "path": "jeju_agent/tourism_access.py",
+      "bytes": 3711,
+      "sha256": "9a92b2a2074a33055d316002f29c2aa3a625dc1608256f38f44e750e7d57e38a"
+    },
+    {
+      "path": "jeju_agent/tourism_guides.py",
+      "bytes": 2676,
+      "sha256": "8ccc94da2a509e74edd9e572c7a5e30a5c0bc736d0575eae18f5ac15dd7f19f5"
+    },
+    {
+      "path": "jeju_agent/tourism_names.py",
+      "bytes": 831,
+      "sha256": "c4c248aee07a0196f963ffd4ed0094558f09e6d86dae6e2a2b67e9d7831110f7"
+    },
+    {
+      "path": "jeju_agent/tourism_overlap.py",
+      "bytes": 16820,
+      "sha256": "dfd7859470ed30b8bc7c062ad94dd802c46436e8f65d1f98b758a95e2cf7cf9c"
+    },
+    {
+      "path": "models/metrics.json",
+      "bytes": 1075,
+      "sha256": "b0d788c4f9aa820046a3f79a9bf6ffe260b93036a11fd9cb8c83fd322debf204"
+    },
+    {
+      "path": "models/metrics_context.json",
+      "bytes": 895,
+      "sha256": "b9da5e785b94c2aa2400bf54202f9d75dd4fc2781d4d5df51da1788d41ca9abe"
+    },
+    {
+      "path": "models/model.json",
+      "bytes": 2801,
+      "sha256": "b3500c10ca2aad1294241a628a83c87b0a362cdb6ce7a32ce86e75d947901fe1"
+    },
+    {
+      "path": "models/model_context.json",
+      "bytes": 1145,
+      "sha256": "b753f25a47fa859ff3122f7e784d14a78659ead926f873288c2c2dcbdd1efad8"
+    },
+    {
+      "path": "models_audience/audience_metrics.json",
+      "bytes": 124674,
+      "sha256": "c070f2f0a8b1c79ea6754629c04aabd6a9204dd9e9bdfee4d1f8c74b4da9571e"
+    },
+    {
+      "path": "models_audience/audience_model.json",
+      "bytes": 148113,
+      "sha256": "60b5d434dff07a2d6f72a3b77c2883a967efbe6f80db3c509e4cdd97932a4e8a"
+    },
+    {
+      "path": "models_discovery/tfidf_model.json",
+      "bytes": 2426064,
+      "sha256": "22a413e015fb07514b956ade97cd4a141f92ba1a43e7303cac5cf800fc7781d6"
+    },
+    {
+      "path": "models_mobility/mobility_metrics.json",
+      "bytes": 65551,
+      "sha256": "0d94d7d4c568cccdbcb5e68495eb5919d6bb3a76a65e8ef6571ff4dd7b946dda"
+    },
+    {
+      "path": "models_mobility/mobility_model.json",
+      "bytes": 9722,
+      "sha256": "7e6bd509d99971366b2bb437159999f37837767245e59869dd3bab70c2636380"
+    },
+    {
+      "path": "models_real_context/metrics_context.json",
+      "bytes": 885,
+      "sha256": "fea73807c11fd42542820c55bec24744e305d29661b3fa81fe52259563ad471a"
+    },
+    {
+      "path": "models_real_context/model_context.json",
+      "bytes": 1627,
+      "sha256": "9681f8d4d3cb943dbdb152b9af42882551b28baa08969836c88b6c90607b8acb"
+    },
+    {
+      "path": "models_tourism/tourism_tfidf.json",
+      "bytes": 19350,
+      "sha256": "1c435bb49fd376d5d4cf0422bf52808b8a2a91424bc0c9c33f4655f7fa43ee0a"
+    },
+    {
+      "path": "open_browser.cmd",
+      "bytes": 57,
+      "sha256": "df58be6dd58db9f61727b7fa5f6fb9d7d6cf813ce55d393e45847d0e5e2fae6b"
+    },
+    {
+      "path": "prompts/explainer.md",
+      "bytes": 837,
+      "sha256": "ee711977d7ddd14b18cb856b5135c26508a1802b92212ad5e023c2e77b9b274c"
+    },
+    {
+      "path": "prompts/orchestrator.md",
+      "bytes": 1238,
+      "sha256": "bd05ca75501ceff70dc30086af74d3affad80bc499d084066a4462c317389fc1"
+    },
+    {
+      "path": "release_report_v10.json",
+      "bytes": 478,
+      "sha256": "e747dfd07c7f6a67700aeea42808934c6dd648a50b2b2f53c230bbc552929b54"
+    },
+    {
+      "path": "release_report_v10_clean.json",
+      "bytes": 1091,
+      "sha256": "aa7eb06e683221fe0ba4c0f683890ea7ea11b429f2b044c34037cc5dbc759066"
+    },
+    {
+      "path": "release_report_v11.json",
+      "bytes": 481,
+      "sha256": "5fce8f5c5e42879464b5f4853a2ffc5e8bbe69cd26f519fcb8333c2fd879c1e0"
+    },
+    {
+      "path": "release_report_v11_clean.json",
+      "bytes": 1334,
+      "sha256": "0016f107d5d3f1a16d76337a03a1e4ba7cab81a5e9f884908cb454f9c7d88238"
+    },
+    {
+      "path": "release_report_v12.json",
+      "bytes": 487,
+      "sha256": "09a9bdedd9427117c9d9c2276ac40a76271ad0eeca50fffc35b03a012db8134b"
+    },
+    {
+      "path": "release_report_v12_clean.json",
+      "bytes": 1464,
+      "sha256": "ecbc4c87e1c96846fb38b9ebd7a49399759fc0d91a9b418691487ce6e129dd45"
+    },
+    {
+      "path": "release_report_v13.json",
+      "bytes": 478,
+      "sha256": "c8dc656c7a0ba41ea046cf8b465c0eaa9bf17a2910f6c2ccae01ea7c2071cad8"
+    },
+    {
+      "path": "release_report_v3.json",
+      "bytes": 873,
+      "sha256": "6b846055a68c32e146933310958f81ac127db68995701fda92382ff13f03d413"
+    },
+    {
+      "path": "release_report_v4.json",
+      "bytes": 461,
+      "sha256": "b3e65c178bb6e8405b2ee98b7772739922be6a5e368a243408117ae15425e0e8"
+    },
+    {
+      "path": "release_report_v5.json",
+      "bytes": 491,
+      "sha256": "5970ce30b4ee0ed95d001b0589ffbcbca7eff4907a28473e6cd980ff56a7ccc6"
+    },
+    {
+      "path": "release_report_v5_clean.json",
+      "bytes": 12471,
+      "sha256": "1fa317c31d386a86f77f0ceeb7b58b4e3315c06230b047cee748fdf4d9cfa804"
+    },
+    {
+      "path": "release_report_v5_live.json",
+      "bytes": 9588,
+      "sha256": "72cd4a1db72d3b21035c7814bdb0509f8f9b519597c7e22816d0f7df16de6ac6"
+    },
+    {
+      "path": "release_report_v6.json",
+      "bytes": 482,
+      "sha256": "b1e902469deb82f4bff745d1874d26d4f61d19b7b44457958626e15106b0e8db"
+    },
+    {
+      "path": "release_report_v6_clean.json",
+      "bytes": 929,
+      "sha256": "3ea50b682d86126ecd155331f1e11a5f4f473913ec248d5ee26c496db842c767"
+    },
+    {
+      "path": "release_report_v6_live.json",
+      "bytes": 7374,
+      "sha256": "939dba1a0352fade4eddbaab8b0cc3ac35a344dd341cf4b72cf7732701342362"
+    },
+    {
+      "path": "release_report_v6_travel.json",
+      "bytes": 9798,
+      "sha256": "77cf010c72c5938e56dbb0f8070c014dc389e851d940a4211d00a8bc2ccf0c8a"
+    },
+    {
+      "path": "release_report_v7.json",
+      "bytes": 485,
+      "sha256": "f9732ad1797100703a9f13fa5a19603ad845082aa3d8909ad9a847864e2c1c1a"
+    },
+    {
+      "path": "release_report_v7_clean.json",
+      "bytes": 932,
+      "sha256": "b35091382da8b678c7f3e2b6f5b94e521f151af93b5c0e8386337f21481bf6b4"
+    },
+    {
+      "path": "release_report_v8.json",
+      "bytes": 488,
+      "sha256": "990599b7edb3b6758fc5cd9c6921a71e014096700285d35db3efd7ae02f1d5e5"
+    },
+    {
+      "path": "release_report_v8_clean.json",
+      "bytes": 1341,
+      "sha256": "7b3b7ff172591d4ffd138729c61b5aba28166cf1c5a80a8932664abee00e29db"
+    },
+    {
+      "path": "release_report_v9.json",
+      "bytes": 476,
+      "sha256": "d843a13419cda132b27119ccd8777342b2dd7826ff7ae4200d88371c293cc0c2"
+    },
+    {
+      "path": "release_report_v9_clean.json",
+      "bytes": 1089,
+      "sha256": "0a882da7de98dc8c73c3eaab539c463da4596bd6624c437081d983f677247535"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 79,
+      "sha256": "057e8660d697991f8071d33b776cf647c37e863208e91715945e2d1982720484"
+    },
+    {
+      "path": "run_center.cmd",
+      "bytes": 280,
+      "sha256": "4d8d843f613acd17d1e0b6e4ba595a7f28a6b2557d2d5acef59d9babbedd132f"
+    },
+    {
+      "path": "run_center.ps1",
+      "bytes": 909,
+      "sha256": "8ccf0a40fe868d2b15b3f1e14413d0e9843cfffa961e20f75289d5af351123b9"
+    },
+    {
+      "path": "run_demo.ps1",
+      "bytes": 614,
+      "sha256": "b4d960932776ab931099bdab02ce723b57fa36375baa064ec46ee8a4571c5d34"
+    },
+    {
+      "path": "run_tests.cmd",
+      "bytes": 304,
+      "sha256": "d0835f7a29e2294c5964249f9e86e951b40262f73e1b10315d4448bd310fc1f0"
+    },
+    {
+      "path": "runtime/LICENSE.txt",
+      "bytes": 33861,
+      "sha256": "62bec384df47b0328307db41455ff6ea2559e5546b394ac69148561b21703120"
+    },
+    {
+      "path": "runtime/_asyncio.pyd",
+      "bytes": 72928,
+      "sha256": "0e53f227048492830bf0328bbc3bebc336268821c88c1da1ba1711855b51cd01"
+    },
+    {
+      "path": "runtime/_bz2.pyd",
+      "bytes": 86752,
+      "sha256": "0adf0680f54eec173401230df0aa561aa188c7f4d40e5f2ba790d333c6057d8d"
+    },
+    {
+      "path": "runtime/_ctypes.pyd",
+      "bytes": 134368,
+      "sha256": "487d9041455132d74ed26c0eae514675c31010a926db0cd6c6f391fcccc66c42"
+    },
+    {
+      "path": "runtime/_decimal.pyd",
+      "bytes": 286432,
+      "sha256": "7e8e5d026e22be2669b2ac6175fece6b7fbe2faf1e456fa4785130832d244955"
+    },
+    {
+      "path": "runtime/_elementtree.pyd",
+      "bytes": 136416,
+      "sha256": "5436c3d722e4b7709d20cb9bbb8385253337651417cc6a5d447f7b9e8a9da7a9"
+    },
+    {
+      "path": "runtime/_hashlib.pyd",
+      "bytes": 69344,
+      "sha256": "fc9075f3a836fdcbb826b541f4d1e9382d84c73f830f5f51f8ca3b9ccb9d42cb"
+    },
+    {
+      "path": "runtime/_lzma.pyd",
+      "bytes": 159456,
+      "sha256": "09596ee41dadfabe006429f1cbb7505a3006daa80206ae2dd2d0d8d5936b6229"
+    },
+    {
+      "path": "runtime/_multiprocessing.pyd",
+      "bytes": 38112,
+      "sha256": "56bc0f253e74f965d5565377e40737093ee084a8ca4b4347f2f6bb9c15661c6d"
+    },
+    {
+      "path": "runtime/_overlapped.pyd",
+      "bytes": 57568,
+      "sha256": "b2dcaefadf6194783f24184fd074b83983091d46c6b50e88dc8a652a8569d614"
+    },
+    {
+      "path": "runtime/_queue.pyd",
+      "bytes": 35552,
+      "sha256": "aa1bc394ac6ed619b2525e631665431e9fbd798cd7d8374755efed9c3d325539"
+    },
+    {
+      "path": "runtime/_socket.pyd",
+      "bytes": 86752,
+      "sha256": "03ac131ec3fa4c550d36fa7c5cad3601cbe6c8f18e1a65b9bd8a65ce1131f9e1"
+    },
+    {
+      "path": "runtime/_sqlite3.pyd",
+      "bytes": 131296,
+      "sha256": "721707b1a66b51e2c1a3be964f4d5d0c6eb89dc6671b8ea121a10d46f5041338"
+    },
+    {
+      "path": "runtime/_ssl.pyd",
+      "bytes": 190688,
+      "sha256": "74bfe7a396737cf5910cf4a789d9cf4263ba6ba93c994ce8d5e2f61fa972097d"
+    },
+    {
+      "path": "runtime/_uuid.pyd",
+      "bytes": 27872,
+      "sha256": "0d7589ac0965d1ad7b19bcdfddc726eefa5896aafa6702d68dc9ca6cd58820dc"
+    },
+    {
+      "path": "runtime/_wmi.pyd",
+      "bytes": 39648,
+      "sha256": "927aab8eef564d2dee1bbcf8e11f488789f664eafb4a0d2aacd99e224be2f10a"
+    },
+    {
+      "path": "runtime/_zoneinfo.pyd",
+      "bytes": 51424,
+      "sha256": "12603a4fd550248d86c41d6faef73c77b27e20ccf6a942cea1329ae393742e8b"
+    },
+    {
+      "path": "runtime/libcrypto-3.dll",
+      "bytes": 6021880,
+      "sha256": "75495fe0e079ab00d49be740d3c710a0b94e3f74f9648cb7cc9f768fc7f52319"
+    },
+    {
+      "path": "runtime/libffi-8.dll",
+      "bytes": 39696,
+      "sha256": "eff52743773eb550fcc6ce3efc37c85724502233b6b002a35496d828bd7b280a"
+    },
+    {
+      "path": "runtime/libssl-3.dll",
+      "bytes": 1308920,
+      "sha256": "8957182a9c385bfd9f3f790921de2ddc614cf91f99edbed4e9e5446a46504e32"
+    },
+    {
+      "path": "runtime/pyexpat.pyd",
+      "bytes": 200416,
+      "sha256": "4095f444c5d0fe9d24c1a46a8630459f8488c5392dc82be9af67f4045ea9c368"
+    },
+    {
+      "path": "runtime/python.cat",
+      "bytes": 578418,
+      "sha256": "5680216e77e9b59bb555284dd4a754706203ad1e7c617dd6dc5f4b4e94ec6c9f"
+    },
+    {
+      "path": "runtime/python.exe",
+      "bytes": 105696,
+      "sha256": "7c2fc2b303a4ee3cc14cc17b47bc6e8bca98c78792edd123b846a560da44b203"
+    },
+    {
+      "path": "runtime/python3.dll",
+      "bytes": 72416,
+      "sha256": "a45d898ba8b796f1883fc2fcd55e4736163dfb7cea825d52e3477f1957dfb45a"
+    },
+    {
+      "path": "runtime/python313._pth",
+      "bytes": 80,
+      "sha256": "35ddf94682ff9aa713a8d63557242ad00f3f28fdd39337f02c3bda4c0f791577"
+    },
+    {
+      "path": "runtime/python313.dll",
+      "bytes": 6142688,
+      "sha256": "26026530507a7389e7892ce130e7c1753b32a2df03ec3721d45ad8c1705d40eb"
+    },
+    {
+      "path": "runtime/python313.zip",
+      "bytes": 3837054,
+      "sha256": "58af5bf33dcfdedf72f60b0926fdb619cc2960c9d4200677531d35f626c8ee24"
+    },
+    {
+      "path": "runtime/pythonw.exe",
+      "bytes": 104160,
+      "sha256": "9c1437a2e692e9ec9d8b9eb0fd8a6432f8376510ac81b174437ad6a216c2c84b"
+    },
+    {
+      "path": "runtime/select.pyd",
+      "bytes": 32992,
+      "sha256": "f2b8f6008d9e8697700b73fd645a76d83e096e8214a6e31e644de32f56122f6a"
+    },
+    {
+      "path": "runtime/sqlite3.dll",
+      "bytes": 1584864,
+      "sha256": "9044e1dea980cd0514dc2e266e039320e35b00c6326fd2c2d14c6b3301c8518d"
+    },
+    {
+      "path": "runtime/unicodedata.pyd",
+      "bytes": 712416,
+      "sha256": "541f46cf1ab49239b008a563eee6762086c7288f64631cb5cf59451cf22fc70c"
+    },
+    {
+      "path": "runtime/vcruntime140.dll",
+      "bytes": 178616,
+      "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7"
+    },
+    {
+      "path": "runtime/vcruntime140_1.dll",
+      "bytes": 50112,
+      "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
+    },
+    {
+      "path": "runtime/winsound.pyd",
+      "bytes": 31968,
+      "sha256": "be5394496d9ef633dc6d81d95c7816f0b0ffa3e90763af3aa41270fba0c16fe6"
+    },
+    {
+      "path": "scripts/benchmark_center.py",
+      "bytes": 4179,
+      "sha256": "21473fce0d11768a60db2c3e5254de4f568c4867c8ccd57d93ff3a43916cd592"
+    },
+    {
+      "path": "scripts/benchmark_discovery.py",
+      "bytes": 2428,
+      "sha256": "78bab648c3b532de2a3a01c788517851b810790d4cab70491c372b513901f152"
+    },
+    {
+      "path": "scripts/benchmark_routes_v15.py",
+      "bytes": 5342,
+      "sha256": "d114aaa786e21cbe6623924e3c082b2e1b6a21921738f2caea69944e37789f76"
+    },
+    {
+      "path": "scripts/build_catalog.py",
+      "bytes": 253,
+      "sha256": "e100934b69019e567929bb09a62eb675427f5608491e6e92b90fbd2b81347dba"
+    },
+    {
+      "path": "scripts/build_chatbot.py",
+      "bytes": 554,
+      "sha256": "5dce1d6cb6db3ddc4b4943c36060ac3772fbd024a71cb9a1d1c455e106f6068d"
+    },
+    {
+      "path": "scripts/build_discovery.py",
+      "bytes": 649,
+      "sha256": "d0b248a77ad459f72d11493b47acdbec2df0e8219c8dd4654691f3c57c8187c8"
+    },
+    {
+      "path": "scripts/build_roads.py",
+      "bytes": 231,
+      "sha256": "26e4448d7402d77c971c92e689c4062af908658f5d77f5b29cb61516ea55df6a"
+    },
+    {
+      "path": "scripts/build_tourism.py",
+      "bytes": 641,
+      "sha256": "79ba850a2818ed3fbd653c829b22badb3a8ba2d6a7db4294a28747e20c46062d"
+    },
+    {
+      "path": "scripts/download_jeju_data.py",
+      "bytes": 3627,
+      "sha256": "a13a5b1404083166e91238926c08459802576464d2fa67159bd8757a2cf7a7e2"
+    },
+    {
+      "path": "scripts/evaluate_readable_metrics.py",
+      "bytes": 11515,
+      "sha256": "1351d2f7d9e6a62fa807ffaa273b734e0331ccc0bb56df61ef3296a54de1620c"
+    },
+    {
+      "path": "scripts/generate_demo.py",
+      "bytes": 3955,
+      "sha256": "895142d5aa379711edf77064c2cddc7887b6f4accc4173305d69eee378d05655"
+    },
+    {
+      "path": "scripts/prepare_reference_data.py",
+      "bytes": 5951,
+      "sha256": "17f2414af6248539089d48aa0190061f67f84cf478db51b223581e9f730af1e2"
+    },
+    {
+      "path": "scripts/report_models_v14.py",
+      "bytes": 12158,
+      "sha256": "92ea279dd04e2d9b9944296ce4a839175f5a280ea0c1840281b256079d0328b9"
+    },
+    {
+      "path": "scripts/train_audience.py",
+      "bytes": 1047,
+      "sha256": "a160b9b8541468c82f87fc10b6adb907bbb00beec2310313084b2a7307b413ca"
+    },
+    {
+      "path": "scripts/train_mobility.py",
+      "bytes": 1384,
+      "sha256": "fc4b25a4f4d4ee029d1ed0a4896dbeed72385c373dc374aee38bd1b3dd28643d"
+    },
+    {
+      "path": "tests/http_agent_v15.py",
+      "bytes": 5725,
+      "sha256": "3ed973679afe21a70631c6071a7d932ecdc98767ce74c52f26fe73dcfd3ff939"
+    },
+    {
+      "path": "tests/http_chat_nearby_v8.py",
+      "bytes": 4047,
+      "sha256": "c5112a25d71f72cecd2da421612ce5c812f9154ad5ed6508fcfb5b4011fd718d"
+    },
+    {
+      "path": "tests/http_chat_v6.py",
+      "bytes": 4525,
+      "sha256": "c293c5683da85e841cca4f08ddfae8de04b8959a337ce043f66e4270c4516b71"
+    },
+    {
+      "path": "tests/http_pages_v8.py",
+      "bytes": 1866,
+      "sha256": "c656c4bd944a211b641db120eb9ac0e6bf788037c072b039584315a54d6cd5ef"
+    },
+    {
+      "path": "tests/http_reliability_v16.py",
+      "bytes": 5822,
+      "sha256": "1523cf7cea0ea8dbc8e224cdfee54159ca478f5d70ef53a9930c4798d818deed"
+    },
+    {
+      "path": "tests/http_smoke_v5.py",
+      "bytes": 18836,
+      "sha256": "2a050c8c681927dd2be22de945238fa445b199f6a3a4a40773ffa03b1db7d3f6"
+    },
+    {
+      "path": "tests/http_tourism_guides_v12.py",
+      "bytes": 3313,
+      "sha256": "b26672fc7204bc27edad3fce8b2a59a4de988c81f5c46f935f6b2bf129c5282d"
+    },
+    {
+      "path": "tests/http_tourism_names_v13.py",
+      "bytes": 2894,
+      "sha256": "05666b8754e88da8237297d877079c4f276167a4f5a16c563a305d13c94581d6"
+    },
+    {
+      "path": "tests/test_agent_server_v15.py",
+      "bytes": 2094,
+      "sha256": "a4f3ff70bb834a4365da47b1a230d60337517a885910c5247c764455feb393ed"
+    },
+    {
+      "path": "tests/test_assistant_intent.py",
+      "bytes": 6818,
+      "sha256": "91b69be49bbbdd91233833e602a161d85ed9c0518b9c827c8c0b274f67a7f9e0"
+    },
+    {
+      "path": "tests/test_assistant_search.py",
+      "bytes": 3911,
+      "sha256": "1b9654f38b5f62459c35dcb631e249795ea849b34eefb6cdaaf90e010a32cae4"
+    },
+    {
+      "path": "tests/test_assistant_v17.py",
+      "bytes": 5000,
+      "sha256": "b7b977f2bc45728b0d48703b93f514b0c5a7d5057e1d914a342bea6f30122475"
+    },
+    {
+      "path": "tests/test_audience.py",
+      "bytes": 3119,
+      "sha256": "5711f5bc82ac53bd13bf2ee2488bf9f8653ab0e126e2af2da3b3fe86684d07f1"
+    },
+    {
+      "path": "tests/test_audience_v14.py",
+      "bytes": 2487,
+      "sha256": "a0ac9deb41f3e3631f17eee27c26a7c61b968a6d8313b2d5d99427a4dba5b39a"
+    },
+    {
+      "path": "tests/test_catalog_store.py",
+      "bytes": 3493,
+      "sha256": "868105146e8632a0c8abf67481895d5e696e17742be538553dde7b39883bdfa4"
+    },
+    {
+      "path": "tests/test_chat_nearby_v8.py",
+      "bytes": 10519,
+      "sha256": "fd439d0528b3f94bf47110c5b852a435e12991d5ee222ee167a1684cf1020962"
+    },
+    {
+      "path": "tests/test_chatbot.py",
+      "bytes": 15109,
+      "sha256": "19caf8d8ddacf8b8dd0e56230fc7627b54e82cd2e7d4b22c89dd98d68af101df"
+    },
+    {
+      "path": "tests/test_context_model.py",
+      "bytes": 5729,
+      "sha256": "1da564789d4c8fb31c6789692ae67c41803594c09f68967c69f8703db14babe8"
+    },
+    {
+      "path": "tests/test_data_contract.py",
+      "bytes": 3700,
+      "sha256": "f5e7f78af6d54cc45cbe7ab3e74c5a6efb192f0b1b4048d031fe9ab3dbbabbe7"
+    },
+    {
+      "path": "tests/test_discovery.py",
+      "bytes": 15732,
+      "sha256": "31c4ce2a033d7ee02e469a900f57c15ddfa6c5932a15fecc4bb8ccc5279a603e"
+    },
+    {
+      "path": "tests/test_engine.py",
+      "bytes": 8514,
+      "sha256": "38fb49d1813e8584538e861e163b0cac3c83edda9b73060fb6839704baf2ca38"
+    },
+    {
+      "path": "tests/test_hero_names_v13.py",
+      "bytes": 2386,
+      "sha256": "896d081d9d8964e8da13cd3dbf3133e66911fdb94921d34eac1e8fe4e0ae2037"
+    },
+    {
+      "path": "tests/test_mobility.py",
+      "bytes": 13390,
+      "sha256": "71ee8e1af116f57cb32bc1ecbd51a1492c951d4d14dd78284f688c7bd934af9b"
+    },
+    {
+      "path": "tests/test_orchestrator_v15.py",
+      "bytes": 8492,
+      "sha256": "c137d616731699f9a23a9c75762ab5120b024fc75a59ea2ed57a796748bee6c7"
+    },
+    {
+      "path": "tests/test_place_trust_v15.py",
+      "bytes": 6521,
+      "sha256": "cc4bff1f225ab2fc217306ac7ec5833a5339d337c902ab074d5c6d6a518e9af5"
+    },
+    {
+      "path": "tests/test_place_trust_v16.py",
+      "bytes": 10106,
+      "sha256": "4db82bee978763cdfec7c356e0ef91997d525ed5b1a06ffffcd441750c46357f"
+    },
+    {
+      "path": "tests/test_planning_input_v16.py",
+      "bytes": 5178,
+      "sha256": "f8e87b437dffdd7428ff1666cb8054dd3a27eca33b0f458cd42456330fd05616"
+    },
+    {
+      "path": "tests/test_query_v16.py",
+      "bytes": 3572,
+      "sha256": "5e390418e62dafd09dd9069a95429e297bc3f743e02776208d15d536aa81d816"
+    },
+    {
+      "path": "tests/test_real_only_service_v14.py",
+      "bytes": 3244,
+      "sha256": "c4f48941415d3897d0beba49c0ee82ec19f6f88bba8371081122dcd5cd8f09d9"
+    },
+    {
+      "path": "tests/test_reference.py",
+      "bytes": 4168,
+      "sha256": "70f6bc2a149dc310e09b350363df3b2a48fd10e58b95a9737ccea018652508b8"
+    },
+    {
+      "path": "tests/test_reference_v16.py",
+      "bytes": 8639,
+      "sha256": "8fe9fa62932067d7aa376979c18e597f989a3cc6f5a5b0df437d303b1ab2ca38"
+    },
+    {
+      "path": "tests/test_roads.py",
+      "bytes": 1460,
+      "sha256": "33447598c1e8b579c3f295c456bbb4ab7ca8b497207a6359de708cabd2462e74"
+    },
+    {
+      "path": "tests/test_tourism.py",
+      "bytes": 14684,
+      "sha256": "f03433a6114079a48f4d9ce2d60165f0574d095748a410f6e167d0f91a3c364d"
+    },
+    {
+      "path": "tests/test_tourism_guides_v12.py",
+      "bytes": 3819,
+      "sha256": "043f626332d30781e0f83f4a2bb6fb086ec8d00bf658680e4f8fce60dfa5afd2"
+    },
+    {
+      "path": "tests/test_tourism_names_v13.py",
+      "bytes": 7164,
+      "sha256": "b432693a73db9d34ca48006080695d3bc50fd20feecc9a1f24bc88c7d76b174e"
+    },
+    {
+      "path": "tests/test_tourism_overlap_v11.py",
+      "bytes": 6720,
+      "sha256": "5974809f46ee0c73909530a585bebedf612670c045d2878f7a6045c5814a6362"
+    },
+    {
+      "path": "tests/test_tourism_serving_v11.py",
+      "bytes": 6781,
+      "sha256": "45ed0b3687f20a5e5d766ce663a8f3dedb680e15e932385f409af0b55b60e437"
+    },
+    {
+      "path": "tests/ui_auto_planner_v15.cjs",
+      "bytes": 13081,
+      "sha256": "9dc244c2ef74b0db3208b752dd70a6f8ec99033380b3a852153d1349afa6e0a1"
+    },
+    {
+      "path": "tests/ui_chat_location_v8.cjs",
+      "bytes": 12952,
+      "sha256": "7fdea6567171cb7e79e2d2ea7d0b7cb79a2a25e1ff369c27d1b1c425b69175a8"
+    },
+    {
+      "path": "tests/ui_chatbot_v6.cjs",
+      "bytes": 13345,
+      "sha256": "62099f9463400ce5fbbddc8c4d392b78123414a8c7fd62e0fe26e65cbe7cb647"
+    },
+    {
+      "path": "tests/ui_detail_guide_v12.cjs",
+      "bytes": 6490,
+      "sha256": "f1081e12e092af30db71c9b2546f1d3b05adaaf240396277670154a370d8067f"
+    },
+    {
+      "path": "tests/ui_hero_names_v13.cjs",
+      "bytes": 1927,
+      "sha256": "015780de26cd882a3c57a61315a981b85ff109b34821fb19adde6e364becb4e0"
+    },
+    {
+      "path": "tests/ui_itinerary_export.cjs",
+      "bytes": 2366,
+      "sha256": "5c585f29471cbf3eba137c4597be31286eaed77975dde206415f679462324856"
+    },
+    {
+      "path": "tests/ui_location.cjs",
+      "bytes": 6848,
+      "sha256": "9df65a71967784851cd51fb9a05fd0f9ee35aae2237778768831d880b96e3dda"
+    },
+    {
+      "path": "tests/ui_location_context_v8.cjs",
+      "bytes": 8874,
+      "sha256": "26f5f7bf8a17631c6b0a6f50a19fe3704bfeae6f822278a1a754cb353d544da2"
+    },
+    {
+      "path": "tests/ui_location_service_v7.cjs",
+      "bytes": 13720,
+      "sha256": "1d861a155be3fd0c616bc7834282fb16e622a9cebdf4f69c6516dc896724ff10"
+    },
+    {
+      "path": "tests/ui_map_cluster_v12.cjs",
+      "bytes": 11466,
+      "sha256": "c19fef576f2823e2f25d58c22f6c11ea00cf6489b0d85f9cf798a7162b12b0d8"
+    },
+    {
+      "path": "tests/ui_map_v5.cjs",
+      "bytes": 12716,
+      "sha256": "35808c094d6c4c46cd74983b307623753121780b478dcbd7032487b8ab2390fb"
+    },
+    {
+      "path": "tests/ui_ml_assistant_v17.cjs",
+      "bytes": 8106,
+      "sha256": "17f09f19164866dc40445e9bf01c75be41a55e39dd0dcce4141b13f57977594c"
+    },
+    {
+      "path": "tests/ui_pages_v8.cjs",
+      "bytes": 6499,
+      "sha256": "cd2b3db138e138318078e97ad4aab7955fd15174c6706f7036c7809e5bc8ca98"
+    },
+    {
+      "path": "tests/ui_real_only_service_v14.cjs",
+      "bytes": 6463,
+      "sha256": "fd0aa6ffceadeb59e69122cdd79944472ce7c66ae1e321ab3a209b12ab9ebf12"
+    },
+    {
+      "path": "tests/ui_reliability_v16.cjs",
+      "bytes": 10285,
+      "sha256": "aa3f0baa82e8f6ce55d3b7d19ed05c7ad99786bb5b6366670a2c7955c2240b94"
+    },
+    {
+      "path": "tests/ui_tourism_restore_v11.cjs",
+      "bytes": 2675,
+      "sha256": "3bd74f8f051453795e3fbac7db07f5bb75db5eedb1ef83035951c24dfdc2fa76"
+    },
+    {
+      "path": "tests/ui_tourism_v5.cjs",
+      "bytes": 12683,
+      "sha256": "bffe034b1e3b21138a480205280b80f79f2c8e928c2902e5060fe2e4c1003bb9"
+    },
+    {
+      "path": "ui/app.js",
+      "bytes": 73065,
+      "sha256": "9ac2c2c08d40a77e28d6a1af94be30569199b11414164766ac84a2af68806dbb"
+    },
+    {
+      "path": "ui/assets/cheonjiyeon.jpg",
+      "bytes": 1078573,
+      "sha256": "8e754a985674923f32f32c1721ae9716fb5465e09ed2fd146584fcf4e1e3549c"
+    },
+    {
+      "path": "ui/assets/hallasan.jpg",
+      "bytes": 702827,
+      "sha256": "b62cd4a6c496b6f4f540101cba4eedde8ed35b26525afaf34eaf0564e7b7a76b"
+    },
+    {
+      "path": "ui/assets/hamdeok.jpg",
+      "bytes": 647212,
+      "sha256": "6c6289f4fed74dd1b3449867a9c180067ba523ca849bc510ad5fee8ad64a4038"
+    },
+    {
+      "path": "ui/assets/hero-jeju.jpg",
+      "bytes": 701868,
+      "sha256": "bc1b07ff49dcfda239d580472c12c162b383dfc7a67f260672bc0e2ad2677b7d"
+    },
+    {
+      "path": "ui/assets/hyeopjae.jpg",
+      "bytes": 382578,
+      "sha256": "e9acf9d0b753dc1a33f4599945a6efa8565e48d98cc950e4e21a5101d2f7c90c"
+    },
+    {
+      "path": "ui/assets/jeongbang.jpg",
+      "bytes": 637740,
+      "sha256": "a9051dfcb6b1ddd140843a2a05a506606733dec0a89eb88fb6bc55052d1eb9e0"
+    },
+    {
+      "path": "ui/assets/osulloc.jpg",
+      "bytes": 509693,
+      "sha256": "ffad7db7e4c849069c982bfcfe0927d7138657f5ade1c20a3627b00688e1db21"
+    },
+    {
+      "path": "ui/assets/saryeoni.jpg",
+      "bytes": 478341,
+      "sha256": "2c2cd1528e9716dbaa63b16ac67633d396201cb25f5168c712c1bddd935900b0"
+    },
+    {
+      "path": "ui/assets/seongsan.jpg",
+      "bytes": 701868,
+      "sha256": "bc1b07ff49dcfda239d580472c12c162b383dfc7a67f260672bc0e2ad2677b7d"
+    },
+    {
+      "path": "ui/assets/seopjikoji.jpg",
+      "bytes": 706071,
+      "sha256": "287eb881ce3d9fbffd2163cf5f8f3cc343d426725d9905f16ecdd82ea776f04c"
+    },
+    {
+      "path": "ui/assets/udo.jpg",
+      "bytes": 300615,
+      "sha256": "12376a45f7288582179b523b3f48d93b211bf518445b7b1dfb008d9e50163fb8"
+    },
+    {
+      "path": "ui/assistant.css",
+      "bytes": 3436,
+      "sha256": "d4bf8d8924f851b8e18af23b758c483826ada4f4a1af8cc0b8978d0e3187505f"
+    },
+    {
+      "path": "ui/assistant.js",
+      "bytes": 14340,
+      "sha256": "59320a3989a6d863947b8fe883c0a962d2254fac23d48738ad03dfce9e07b2de"
+    },
+    {
+      "path": "ui/chatbot.css",
+      "bytes": 8033,
+      "sha256": "522a719484e5ec4d6481b844ac9a01172ad1e5e2457978e5c2c6e319d68039ca"
+    },
+    {
+      "path": "ui/chatbot.js",
+      "bytes": 19611,
+      "sha256": "e9f521736334340c08443884983082bff40ccd21cf4a510634034286ce520644"
+    },
+    {
+      "path": "ui/credits.html",
+      "bytes": 6876,
+      "sha256": "42d7ba8e07f1c8a3b4236cdeb862ec1b5118925ed3bf53788eb42c929191c0f5"
+    },
+    {
+      "path": "ui/discovery.css",
+      "bytes": 5830,
+      "sha256": "0606d0e4cde742b85f507121c5077cf60f8c7c297b35de0e94047c78118df795"
+    },
+    {
+      "path": "ui/discovery.js",
+      "bytes": 33352,
+      "sha256": "8f5d725afb6874cd9c3a2f85a66ec14b2104d87b35a0688ab4aeb0234295bba9"
+    },
+    {
+      "path": "ui/explorer-v5.css",
+      "bytes": 6786,
+      "sha256": "3e6035628c7ad1a73be1cf779cbb4852d16003d79acd19df2aced9f784c140b3"
+    },
+    {
+      "path": "ui/hero-carousel.css",
+      "bytes": 5069,
+      "sha256": "02c126278a88b4f6ab853097685ed4ff8e6902162d91de8e066d29218dd46018"
+    },
+    {
+      "path": "ui/hero-carousel.js",
+      "bytes": 14740,
+      "sha256": "7148fc022bd78b69e73c3ba87608ba9943afd6e3ff273d24f1c3d362482d65af"
+    },
+    {
+      "path": "ui/index.html",
+      "bytes": 34986,
+      "sha256": "e980c94ddfded8162994a185e45b05855548fa219802c683d6940fbccca91363"
+    },
+    {
+      "path": "ui/jeju-map.css",
+      "bytes": 8629,
+      "sha256": "67157fcc7ba9164477cc7cec20c0e2151d50ae42d4bf6fb88f01dff3b53a6e71"
+    },
+    {
+      "path": "ui/jeju-map.js",
+      "bytes": 40774,
+      "sha256": "db4a8fee7ea7dc4c19f71feb25b3390a3c0b2cb3d19c36a08b7b63330f4dd6ef"
+    },
+    {
+      "path": "ui/location-context.js",
+      "bytes": 2863,
+      "sha256": "f6389ea0fdbf4bf2c26ac2c7cdb57084dba760244addf4056a281dcd42fb2841"
+    },
+    {
+      "path": "ui/location-service.css",
+      "bytes": 2688,
+      "sha256": "51933051f6dc123c8c443eab6e0177d07fb960f963d0681eee65d8ec23e2e87c"
+    },
+    {
+      "path": "ui/location-service.js",
+      "bytes": 13643,
+      "sha256": "700e6c4e335826992d89ec497191a75a2097c56f5b408eecceae6b691475728e"
+    },
+    {
+      "path": "ui/page-router.js",
+      "bytes": 6855,
+      "sha256": "79bddeb63e02cc9e275fbe51b421bad4c99a4b3f33a46ca48011c2cfc7c0f36d"
+    },
+    {
+      "path": "ui/pages.css",
+      "bytes": 8005,
+      "sha256": "2bd2fd59d2497f280bacaf02c7d8a25d8fde8ed50cd154858aae1fa9871e62d6"
+    },
+    {
+      "path": "ui/style.css",
+      "bytes": 54868,
+      "sha256": "e4b4f34a7ea86aa2f81787db02f554803e51dea5b0a63ed947904eee031c55ea"
+    },
+    {
+      "path": "ui/vendor/leaflet/LICENSE",
+      "bytes": 1395,
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+    },
+    {
+      "path": "ui/vendor/leaflet/NATURAL_EARTH_SOURCE.json",
+      "bytes": 1319,
+      "sha256": "d62003f640e0c24f55e853d0c4b81eccaffb3db9ba3bded17158508296a548f1"
+    },
+    {
+      "path": "ui/vendor/leaflet/VENDOR_MANIFEST.json",
+      "bytes": 2391,
+      "sha256": "80cbe3453d4f453f20ed383eac8439b694a1b2928b69c21441cb7a79d05558cd"
+    },
+    {
+      "path": "ui/vendor/leaflet/images/layers-2x.png",
+      "bytes": 1259,
+      "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf"
+    },
+    {
+      "path": "ui/vendor/leaflet/images/layers.png",
+      "bytes": 696,
+      "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6"
+    },
+    {
+      "path": "ui/vendor/leaflet/images/marker-icon-2x.png",
+      "bytes": 2464,
+      "sha256": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528"
+    },
+    {
+      "path": "ui/vendor/leaflet/images/marker-icon.png",
+      "bytes": 1466,
+      "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437"
+    },
+    {
+      "path": "ui/vendor/leaflet/images/marker-shadow.png",
+      "bytes": 618,
+      "sha256": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da"
+    },
+    {
+      "path": "ui/vendor/leaflet/jeju-land.geojson",
+      "bytes": 2091,
+      "sha256": "fff9ddb37e0bacc003616f6f32555a296f7a69dee20be23cac76b5a665fba61f"
+    },
+    {
+      "path": "ui/vendor/leaflet/leaflet.css",
+      "bytes": 14806,
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    {
+      "path": "ui/vendor/leaflet/leaflet.js",
+      "bytes": 147552,
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+    },
+    {
+      "path": "시작하기.md",
+      "bytes": 1383,
+      "sha256": "8a36d5e22f1b139383eb78cfd9f0dd0d56a036c94516cfa31af03358d702b3b6"
+    }
+  ],
+  "documentation_revision": "ml_assistant_v17",
+  "documentation_note": "Local intent classifier and source-grounded tools, with v16 snapshot preserved."
+}

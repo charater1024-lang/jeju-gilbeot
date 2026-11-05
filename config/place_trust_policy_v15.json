@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "policy_id": "jeju_place_trust_v15",
+  "reviewed_at": "2026-11-01",
+  "max_guide_age_days": 180,
+  "guide_age_rule_definition": "공식 소개 편집 근거의 재검토 관리기한이며 현재 영업의 신뢰확률·보장기간이 아닙니다.",
+  "guide_catalog_sha256": "711290e5d25794d9271115089295d1f3323e157ff196b08709bdbd971d73dd7c",
+  "approved_identity_sha256": {
+    "osm_tourism_node_5749644529": "5c5ef9bb251194fe66005431bcc582a8458a52d9545e811e3a0132159d45e8cd",
+    "osm_tourism_way_375498040": "c5702d88e19ef1968dd909a1912e17a2de579fb8e94e0bfa2cb246e5760e5a40",
+    "osm_tourism_way_1075451809": "a9567b75e8f3569784da08a110b542f4ed81bae04faa92f94476818b973c05be",
+    "osm_tourism_relation_9742044": "38f9a79c619245bb235ed0a47f672eff33303e0d7c6783aa8c62b8d2ffe3bdf3",
+    "osm_tourism_way_375886795": "c05f32b430b394acbd96808c71f7e1d69bae8092b3f817a2d82affbe253ead73",
+    "osm_tourism_way_370264619": "3ec85b2871052519aacacbc8123dbc0dac0aacee77f82dc70d623ac0a8284cef",
+    "osm_tourism_node_368735470": "5546d2cbbb92ba519f312690e8a84377a8d67f66ae5e6aad7f1203f276579a2b",
+    "osm_tourism_node_4416285697": "048d405927c39037824c32f1f1ccaba3ba9ad6645e9be326839b5d6f18662d79",
+    "osm_tourism_node_5656357630": "7e5734c6ff2d1687fe97bcbab979cc4c34eb9faef06b666c1e944051d2822be7",
+    "osm_tourism_node_5507591794": "39689b9808418e8db83a217431b00a9c965dc797699dccdf211eae4d78080845",
+    "seongsan": "39577de07e888a67bf8294882b4b00c3f40950690ced51347a65a599922e3d69",
+    "osm_tourism_way_572783721": "1c158ae697afb4ba8b4ebb3c075a690be4832e52c22277f1758bf877f8192abf",
+    "osm_tourism_way_372521658": "e132b978c01470c8774c4daae6f8489419ca4da408dcc7be5e877b49b6b45a9e",
+    "osm_tourism_way_370342656": "bc5cc6e62c1f3701460a1f07b5a34e401443634e2eb1838310cebab72ba896dd",
+    "osm_tourism_way_375500447": "1dc140536724d797fd20bfbfa6fbf1062afb881c73bc98d273e9e59ccf013da3",
+    "osm_tourism_way_592908124": "d6bfbebe1ad790ad88d7c3aa326ad2bf08b0cb88f4a4b57b5b95d61f82d6e878",
+    "osm_tourism_way_243975557": "fdf04f778d1f48c90b056357dc39f5284a230a848d6f30412d39942af38dd618",
+    "osm_tourism_way_592735488": "c3e69c664106f8d2f355d66b76f65e8dc4e5fcd162918ad2966c1aa64f1402ec",
+    "osm_tourism_way_335845433": "fe893287cd50942366955651c0df39264a32f50656af1972db9dcc31d429bb8e",
+    "seopjikoji": "37c263e35a1693366eb1a50b88f7c20ea7d2d1e320248d276c97787b4d92a6c0",
+    "osm_tourism_way_1563942072": "d0ddf39d977839c4f22b33632520335ce16ad986ea5a94e89d3d7fc521933427",
+    "osm_tourism_way_370329624": "967eb67056ff7f7b4e5955bb049684815967df16c5dcf9a1a484d13f41ed285c",
+    "osm_tourism_way_375480941": "6f515503bca5b4b8f9affad17a2d6f5c0a88a2862a7a4fccc019bcf16ec0fe44",
+    "osm_tourism_way_372948141": "c66d84b4c382343f1c1861b6bc6d6aeaa8ee1e86b476b5f5b7900c422deeeadf",
+    "osm_tourism_node_5873595885": "93974fbf913553feedcbdabaf16e7b949ea86442bc04c48024b34a3312f97e54",
+    "osm_tourism_node_6731890115": "3d9c086f01bb5de0fd8ade30245405c99991cfd8f87a9e82e563ae667de6c437",
+    "osm_tourism_relation_20364165": "8609993c1f16fafde0d963534d0bb3d8c0f87d73b93db0f51da105e77820694a",
+    "osm_tourism_way_375341085": "3a96fd0d5fe13f17edf6932c6981a9fe7173d43117804eb118df819e3cb18662",
+    "osm_tourism_way_1537196430": "1f07442996b865210011fb8a66fe39c3e1258a75748e11e48253cb06f9da3c47",
+    "osm_tourism_node_13931773845": "583e660ba16f7abf8291a820f2adae1ca2a64b46c2e83e96416dbfe4ced56941",
+    "osm_tourism_node_10216545359": "3d4ec959f110353275e097f1cbc6a6b08aa4563ca4ed14a47cda06897608959c",
+    "osm_tourism_node_5658780218": "a0924771479bec9c1dc30223063e9dcffb2b56686fad3591e9401d9c58e8ec65",
+    "osm_tourism_node_5712863774": "b9366549caf353b9a99c2b89f63ad68128d1d178fda17fb4250cbb388001388c",
+    "osm_tourism_node_538148519": "a3a7cc785bccaa420dfb1b4a516356d60a75cec1f626c7a6df2d82baed3932e1",
+    "osm_tourism_node_368866237": "e0d27e28368bb72fb4acb0df2be01c99aae6d242062bf3b79c331d22b5cfff22",
+    "osm_tourism_way_253976811": "2c7ea779dab2a2d68ecd1b0909cc0709d18d5efbf607063b30462532d5df7d36",
+    "osm_tourism_way_288933009": "f0e2bb2c48f0e55561bf3d8b41d4db7cbed0cd92f7f1bbd9011f0f56d3e992ee",
+    "osm_tourism_way_372701554": "33c2232a8ee7c44042d30f80a0b1af4d022b5a9548cc610ae6f141724017ea21",
+    "osm_tourism_way_246696661": "9903d56fe851dc88bbf668b324f6b7b5df8770c3ed98ec5c163eb5daa90a832c",
+    "osm_tourism_way_256952833": "9489694483dd3c5ad0e48b0d77c215f27dc863ab42fcfe8a8993a46b8af04111",
+    "osm_tourism_node_3788545937": "f9032cfd6aa13fa5d5b52de0489c1ea661724ac9b750fd3f31c372c74ef98d6f",
+    "osm_tourism_way_289861442": "ccb44810b93920d5e1322fac3a0566125f6d072f90c04095f77c7738e620d57e",
+    "hamdeok": "be628101f3f2b0fa346b6ef32e89a1650a95689e3381944158922bdf7e4fdb7a",
+    "osm_tourism_node_4726228301": "5f136d0363fd425e67b2a672d6fd52c77b8695937c11da0c73f607bcf80bfaa0",
+    "osm_tourism_way_250718041": "c0954c05afc2332dbef59099831b6e22a98b1241d36a6f0a0ef5de9df5392cab",
+    "osm_tourism_way_375049062": "b71721e129716da07f2385a1548fdc45fabefc1e580b5ff2bb88266dcd6f6141",
+    "osm_tourism_way_249857724": "60418159523fc9fcac3d7c19467e2d0514388c399efa93f6796a811fa4aeeaf7",
+    "osm_tourism_node_3785584607": "918990ffdacd7544707b81ab5243b8e56132e41bdd88d3d1ec79066987598903",
+    "osm_tourism_node_569007779": "3b8459ab6e3fc62d27aac73f21aa2b9c2b67ec38cfbac59e93086b555094c741",
+    "osm_tourism_node_3753655821": "2b49a6a3709846f947f0e51a50b5a68989e994ab5985c1bc622a8efba089bb7c",
+    "osm_tourism_way_373866673": "d90de14c90810ff320e1324131077f7cf0696b2984567f861bfdd8f9de06d02c",
+    "cheonjiyeon": "2ee8a498f5e2e0b139cea222da9fe7e912879b4e5a1f3ab19d28447a609274ae",
+    "osm_tourism_node_4832613086": "7fc65d3925ec601aac69a8dab02db85c4c93ce6b36cc0d7827f78b35ed279291",
+    "osm_tourism_way_242454273": "df2b2a522f1e6c651e91c28c6bdddab4425f8585929b53ee87740c6aabcc1a6b",
+    "osm_tourism_way_597287359": "252ba29296345f906998e90b96b785f997676a8b34ef407e98bfcd21c169222a",
+    "osulloc": "3399386313d67fcd2228cd0b5842625504069de312c30fc11bc72d4a26e1129f",
+    "osm_tourism_way_645842845": "b4af3df1d72de7a2f1fc2e9d42884208ffd30cb6f9cb318ac3c1a0680c86cc0c",
+    "osm_tourism_node_5874608086": "1f2d4b5e0631d17e915a68ca5c146200577693225f9e1d8ffcfdff9d11459f6d",
+    "osm_tourism_node_3736657966": "0e076fa4275a5a2de1f01a110d97b25663423857663ce64ff634d3d6005bb9a4",
+    "osm_tourism_node_12190653939": "041042176bc1ef1ab0e81b47f7d3a00bbbc8ec2bc72cd64a769398691465b5b9",
+    "osm_tourism_node_5712863794": "2b40ccea6ee41542aa02da639cbe148762ae6f8a4bdc5bf8945515e97dc3445d",
+    "osm_tourism_node_5655320217": "d73463245922e93b5abe7a788bf96a6f4f07ad81c2d2c8f71a377ea37e502f5b",
+    "osm_tourism_node_3741616919": "ca1b10c77fd0e372c0e783e4a630370d055ac301dc18d70d09ddc5a3c5aca21e",
+    "osm_tourism_way_375195356": "e02bb786cb862dd1a0974d6834b2a835f86adad30dccff9e291c2c47ec4907d4",
+    "osm_tourism_way_375193739": "aa1fc7325b8ab1de49bbabbae61a62b1f93579ec65e169ebc9514696ebf5ea03",
+    "osm_tourism_way_375169007": "05eeb7fde4fe179a82018f707d0ce212078078f5d1124d83b31676bed8c7b59b",
+    "osm_tourism_way_583831951": "085c0c37a2a409d0240417f21da67317036467686f43f81c4f290e1dff7ed2c3",
+    "hyeopjae": "e9a7cf673c9807b4755967b776485a1b2531e41ca51074defc240eff456dd92e"
+  },
+  "guide_records": {
+    "osm_tourism_node_5749644529": {
+      "guide_record_sha256": "e345ee7f99ea839ab50d6bab3c7d8c715bb7632d44118825c105489caa08281f",
+      "cache_file_sha256": "96fb123cc5aba44bd92ef2d0f66c00c5c0a759498a5f96cdc82625528240c52c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5749644529.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "7852eb1bfea3ba260299565cc6cfc2d49e8460b46005c9a4ac1adc0c95bec653"
+    },
+    "osm_tourism_way_375498040": {
+      "guide_record_sha256": "ccaaff814eefde8fd213d0c64c19dcfa63d03cf19ddbf19c5abbbaaf27125ccc",
+      "cache_file_sha256": "e81c883ef60732932e7a18a38bf753b6c97a236ddcb2d3d2dff655b66e50b285",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375498040.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "06d8cc3c5d8b0dabb2a47426f97e69463b299d2aed4db8a5314e07261f0bc581"
+    },
+    "osm_tourism_way_1075451809": {
+      "guide_record_sha256": "dc6f8b601bb15699ce0f9da0c8a2e28ec06f75fb5f1d20ffa28154c711d3e347",
+      "cache_file_sha256": "dc7353db46c444d8a2b08b13fd0e5857ac37eb1ad19aee07482901f54ca4e228",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_1075451809.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "0b6ff3955d0ae7f6efc9d75050b7acaded11e987c55a045bd2c124820e0b451e"
+    },
+    "osm_tourism_relation_9742044": {
+      "guide_record_sha256": "7dec0fa9ded879f8c596fc9752e7dd1b2065fb98bc64d0e93304a9e2ad13b43d",
+      "cache_file_sha256": "d5053caa6e09b61f866db5857e52fbe387781c8bfc224e5048e65226614e419a",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_relation_9742044.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "068f5faa4e8df00933cddf0821ead5dbf019b26ccfef9179287fdccae6e7c73f"
+    },
+    "osm_tourism_way_370264619": {
+      "guide_record_sha256": "89b107e82829f79151777654aefcdc6e308380f96299c8c2b555832f702a41b3",
+      "cache_file_sha256": "18529e424066e550dd2061a4b61b277c279d21998ffbcd19319fae9874012078",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_370264619.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "40a72ccf53bc7d0c40f8cab168de1da7a59d55d5ee5df73bf28a11bb221d6ad7"
+    },
+    "osm_tourism_node_368735470": {
+      "guide_record_sha256": "ecb852365d4b140f7a1eb5ffc11fbec5ea9e6dca810ba6bd881d82414a9beca7",
+      "cache_file_sha256": "2a2ef93d015f6ff93ff92dbbd8142ee9d9a438845cfb7922fa73e97cd6837d44",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_368735470.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "12837629e5782a9d6fb120ab4f2ece5d8638cddb93c04b21d95fccf11463a2cb"
+    },
+    "osm_tourism_node_4416285697": {
+      "guide_record_sha256": "255da9bae200f81402a6fbb1ba671be2e081e86adfbc4d86157e6ca9f3a656ef",
+      "cache_file_sha256": "3fe0adc753654b5d749c093b3352ed2821e6bd2ed6e63993bcb6d7466d22d45f",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_4416285697.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "d5de113cab82ce10560742d4a8e5700395752799bc6747bd62d9fa5a2500de8b"
+    },
+    "osm_tourism_node_5656357630": {
+      "guide_record_sha256": "ef27ff2b8a6bcef93a44877508c157b62358ccae6da5eb82f09a3bc0ec5e614f",
+      "cache_file_sha256": "67b4c78b94cd58b552e892559439ebd85cce81b06285d6d4f3b070836e70558f",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5656357630.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "469b8322e8a11a04c1b53938df957c6d4242615eaba696787067c5da8511245d"
+    },
+    "osm_tourism_node_5507591794": {
+      "guide_record_sha256": "157c5fc83d7f53082f2ec0a248a28ba9915a898c703ba4df4e69152ef1a0fe43",
+      "cache_file_sha256": "22249e58af7397c1e665a375105f47f739169ddecb871e66dff207ecfbbdeaec",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5507591794.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "a37589c41128c71085b2091ede6407667218f4af02d4796b154bac9d94b239c5"
+    },
+    "seongsan": {
+      "guide_record_sha256": "4f84ea5d1ae528adff1c1a8430e2183bc4a93e6810756b754fde9080a32ec060",
+      "cache_file_sha256": "0f277776bad8c8a4e5fce37d3841bfc8d97498b8dcbd090a900f6baaa2fb6d2b",
+      "source_cache": "data_raw/tourism/v12/official_fields/seongsan.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "f913c50aabb20eff16cec46c50be55c3d6c5481c8b393f289badf6aa79b50965"
+    },
+    "osm_tourism_way_572783721": {
+      "guide_record_sha256": "99bbdcdd44c0af9a26a89f3ae0b0877a08e0e6490a7ff9a32fa7179eebd9e522",
+      "cache_file_sha256": "530a74eb256886cad31561b320648a02db57606a1f2b5a172d2a7452d10914ae",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_572783721.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "06638f630e71ef4edeedf7fdf96038ac7c9a4525d208888d79c10b331ab0cc35"
+    },
+    "osm_tourism_way_372521658": {
+      "guide_record_sha256": "d4b3178f6929dbb4fb9a8ce1af2966e967bbe6c22d62003ccfcbed1edfc86b10",
+      "cache_file_sha256": "0bd673d64186bb86152f791198239a6d5a4814bf54ffe708f07138962277c244",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_372521658.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "dc2f00da32b9963e3df3e581806c05bb40a4f7ea3c4cae1823b68068cdaf69d2"
+    },
+    "osm_tourism_way_370342656": {
+      "guide_record_sha256": "ac286498ecd52f666d56e8aab302ab8e07f0fcff54e6597d594035e368a95cb5",
+      "cache_file_sha256": "c5d012661612e4118fe6fcf13175d0efa85aeb9a7a30cd0b2850fae69364ff54",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_370342656.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "480466d81242b210fcc62785f2656be85625b985aca0886b40dea8deb6f56ca7"
+    },
+    "osm_tourism_way_375500447": {
+      "guide_record_sha256": "eca974283e394fb187a1a86463ebb232a393660c49a80ac6b448be8973c121a8",
+      "cache_file_sha256": "81dd586a0a1b3251a4406f73ecdc403bf28f8133e5dd74ee8fb0bd7abc99d5c2",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375500447.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "ea5d51b5edf704555879e1a45eea816829d03841bdd3d6238020135eced9449c"
+    },
+    "osm_tourism_way_243975557": {
+      "guide_record_sha256": "321fe076893163aa75e8e5f7399f6cbf90a9ee9bc15fb407d1cc4a02fdb10d9f",
+      "cache_file_sha256": "26162345c6986b3c5129a0acf2431259ee684119531eb9f58cdf52cd82f54c21",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_243975557.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "53292e96f7e9b22aa6d041007f6706e630109cd2b2bcff813bdf5177a471a696"
+    },
+    "osm_tourism_way_592735488": {
+      "guide_record_sha256": "ca79b6f22c08bdb487c5ed70c408f1481294b407dcd01f7d000d40d1bda04722",
+      "cache_file_sha256": "c58d4f6b3f4d9c9ae607886bc8af999a47c6010dd3d9179e93515bf79032c13a",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_592735488.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "5b3f0fd998aca51b4e6991f9901bee620cc85c2d6bff530a09a80371503fdbac"
+    },
+    "osm_tourism_way_335845433": {
+      "guide_record_sha256": "1507477c0e5f511fd330866db822638619a881fe8e42dac35ed56731f097f89c",
+      "cache_file_sha256": "c5bf218d8f17b22a0fb57496dc51e166b84f03931af3465800fd84662c20214c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_335845433.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "faef6f49c9a203fd2a17e0e65343a55c94f016790bc56074a2c934659009ffe9"
+    },
+    "seopjikoji": {
+      "guide_record_sha256": "66bf4fa987bcd985a01a4f2b2189d8a6d7b261b9503ce21923b77612acc118fe",
+      "cache_file_sha256": "6d6094694800d01d8f8036062429ff5942b81baf5163414ce57f2252d6108424",
+      "source_cache": "data_raw/tourism/v12/official_fields/seopjikoji.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "97d5ae3fe87de03eb82bb3ec494065ce56040c9f3c7762e377a3b70af3569f6b"
+    },
+    "osm_tourism_way_1563942072": {
+      "guide_record_sha256": "e00d468818960fe51defa40cc43a03743d4df06aaaf135b95d2a656b19017794",
+      "cache_file_sha256": "433b3e33dfe989c2d553ae7b1b4b065d028fc17a99abf9e54d300f55bf90fea6",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_1563942072.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "4d07b09795c9edd5c2682f0a4bd91d034cdf5223bf359d935658887b6c86abfe"
+    },
+    "osm_tourism_way_370329624": {
+      "guide_record_sha256": "439c3907e178c1245c48a4415dfabfc00be832e7a569dbb6a61b481d8f5d1f1e",
+      "cache_file_sha256": "687ad4b255abfd5da32a56508bcfbf57500f29cd606c5815592e72db4ef2b4db",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_370329624.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "474ece0be2b773dc8cba2f3fcf9bfb1e551138aaa2aedc80fdcb91b7addf2fa6"
+    },
+    "osm_tourism_way_375480941": {
+      "guide_record_sha256": "628f08e9df918cb8742df7427f5bcb7c926d2198cfe1d92a7fee1b7f4a729bf3",
+      "cache_file_sha256": "6ef8a3c63858b2d8741e3eb164c55b098398c9c607960138d7679b9d22d56d0c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375480941.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "278668660755a9980d1e7a8b69ee9e3640e832c80c902f53e1568e531a1fcdee"
+    },
+    "osm_tourism_way_372948141": {
+      "guide_record_sha256": "a0728ee9a625ed6adbc5e117699e11f5dce61a535def92910f62e3e1bca2d5e6",
+      "cache_file_sha256": "f1b20c8bc18b2b952fb604c15e02cea154851828d41cbc0ae3b8c1d8ab3601f6",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_372948141.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "bc03ad34b9420984466600df806055e6e9caf031f83b2295a5d77efdd0a6ffe8"
+    },
+    "osm_tourism_node_6731890115": {
+      "guide_record_sha256": "ae9e04025ffa82814af9be4c8ccf89cbc13f2d44ff55783768662900877bfab1",
+      "cache_file_sha256": "8ea2417e9f86052e46311691e574c418beb54464e1cd014fdc3382e00d9a304a",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_6731890115.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "ca302513d34a5fb6e2a1c416644bda5636f5cdcc9d2ce7f7fd6848e266e660b4"
+    },
+    "osm_tourism_relation_20364165": {
+      "guide_record_sha256": "3557fd61c854a71247c0a92397ec2418c9d46a8391459cecc62ed82e518130f3",
+      "cache_file_sha256": "aa311622b7cedc7a5f58b4e07a82b8ac5f8ce3d7529289300a77d182bd134155",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_relation_20364165.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "3c57b250963686cc5d3c8fecdba805f8464893729c1713bdb5051cb20f5a238e"
+    },
+    "osm_tourism_way_375341085": {
+      "guide_record_sha256": "279ed65d6a224d62d815edda6531f841619fc1d886e30700349c80bd1d0b53b8",
+      "cache_file_sha256": "5e5296950d84d3b2a9e45069c9b41f5a549b3e760a5c646f79547abece0e4385",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375341085.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "28a70ddebecfa7c5609eff4ad71d0f5c05cfcfe5f8211e607ad3ad9707efcac2"
+    },
+    "osm_tourism_way_1537196430": {
+      "guide_record_sha256": "70774e1e33ee6d8b0e349efca1d44fa767a68c006920c675df879ae9ebe755b5",
+      "cache_file_sha256": "518a51e816a5142718902fbe33230e439f59439b25ebd92608dd1327ecf9527c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_1537196430.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "9ae8fe5911983e334b2de4fc8cb0827b2eaed5698e2a3a9f768f308200ae3de2"
+    },
+    "osm_tourism_node_13931773845": {
+      "guide_record_sha256": "0a315fdf12e2eb77f89c9049adff29efdc1731405f43060508a87d68465d9b14",
+      "cache_file_sha256": "d1d87fb2e177967cce337e89580b55811132380e2dedc58cbb3c5b38fb7eddd7",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_13931773845.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "8903abc7ab9d9b2cfdc7f296331c089b4ac7033eb6836ccd5a9722223a972cbe"
+    },
+    "osm_tourism_node_10216545359": {
+      "guide_record_sha256": "613f8cf5b8ab381565d990c84448d73ce8627b57b2c675eeb0a09bd4c4a5443d",
+      "cache_file_sha256": "faf58490f549526d710fcfb8bf1ddf616cd86028804870cba009c38c24286ae0",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_10216545359.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "6c703533dfde6bc017247d7128b69f202744d69b5c1ac79178e6204db2b9f047"
+    },
+    "osm_tourism_node_5658780218": {
+      "guide_record_sha256": "4e4f3973980c3ec85ae0184f81cba9009367929758b146084a9dfe0b7589ca0f",
+      "cache_file_sha256": "fa30c0e50d8db0713967562e1c7d0ae14313f35f319c6a302486d1d9a46bcb11",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5658780218.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "9116d454871aeca300cc197206466827da01a1d474165997d6de1693aea07a0a"
+    },
+    "osm_tourism_node_538148519": {
+      "guide_record_sha256": "bdc0b8c56b7deb26f56f299336538a26ec9625fa7746d0ba344db3124a636320",
+      "cache_file_sha256": "8d71ff7f31a986d2f07096c52aa14dbd07b33f0790db0ea7fec4d1c462486831",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_538148519.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "e96e84212e45a1dafdf3c61d8d9829e9dd733a19439d5a8b0b0ec03b5051b18e"
+    },
+    "osm_tourism_node_368866237": {
+      "guide_record_sha256": "1607de1a81812027a967ed881db0a13f604d432eda68f20728853a5a20b6eeb6",
+      "cache_file_sha256": "bf6d4adfd90d4ff3221f5e20c638657b84544712f1a98511816186ed806c2675",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_368866237.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "59197bac77dbb4a15666e95f1299f4cee45d06a86d0e9b885ba867da1ab71df6"
+    },
+    "osm_tourism_way_253976811": {
+      "guide_record_sha256": "77dbb9d60af98f64ec64300842a628565c790f1413206436695a06e6aa2b272e",
+      "cache_file_sha256": "5d2dccae0cb6ae4379b5fa9d5a8405d7b859024bbb3ac686a522730997ab59fa",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_253976811.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "e0e2f46b625af166fe9e04c07406a6338b5ec768f2f66768d7c1c5d5a10e9b2b"
+    },
+    "osm_tourism_way_288933009": {
+      "guide_record_sha256": "f8c263cafc6495f638ca4376d69b3318ad165807b0f6d3c912c39599b18f94ce",
+      "cache_file_sha256": "ab972ac18b68ee3ff16e2a81710024968061aed3525a619afde96f098d103391",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_288933009.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "873836bc6a25a838a3ef877ae54cbac7a5e1695116cba89bdaa07c19f3bedacc"
+    },
+    "osm_tourism_way_372701554": {
+      "guide_record_sha256": "e9c1db820ea6fb5f98d59aac6204e4ca418d8f1df5f35dc367af07edb6ff9f3e",
+      "cache_file_sha256": "025f4fbfab345e46a570385a07afc80642022fab01df50bfe05f9aff7c653509",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_372701554.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "ab2e1cd82ea36da9aacf6034f113c7961fb11457867ba17a3f8672af2b447842"
+    },
+    "osm_tourism_way_246696661": {
+      "guide_record_sha256": "afce3f8dccb6fea43df9b3526204cd6101d545a7b746411420760f4e939598cd",
+      "cache_file_sha256": "ddddb076c405ffdfa2bb49ffe9fa9d0053eacb39446b54f70768e56402ee910c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_246696661.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "dae2bea754203d1185d2f0132eac68f6fde5d0fb29c3050a567a3a66325f06f5"
+    },
+    "osm_tourism_node_3788545937": {
+      "guide_record_sha256": "c75444e4161e2de041727794aee398bf815f9061666c0ff44076497eae113c9b",
+      "cache_file_sha256": "0f6ecb9432a702dd2528918ecec58a8075097e69dcaf6d24c2ccc6ba1c872211",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_3788545937.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "4d97d65cff1bf1d26401f4717687c9d7b308261a99ab8a5f56d375f624f1bd9b"
+    },
+    "osm_tourism_way_289861442": {
+      "guide_record_sha256": "5ac7eadd59a8809a82b19f1c14ab65d1dbe510b97be400f8a2983d0169cd65d3",
+      "cache_file_sha256": "bb6b24405f550ced1b014283d4f7d7499ebf9b8d1dc05c3a8bf6ee6e39cfb0c0",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_289861442.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "d509fd14022959a07a9422d843266f29b550cf6def898c792a75edc158d7d4a9"
+    },
+    "hamdeok": {
+      "guide_record_sha256": "9b120f2273b9e783dce8b9f845db69181eb9b0efe64fb375ccaf96478bd932f9",
+      "cache_file_sha256": "bd78576964049cc935f20f31d527e906b34ae82483fce134f3b68abeae15be88",
+      "source_cache": "data_raw/tourism/v12/official_fields/hamdeok.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "24f637d06ef39126de3d7f06716738130337381f180f7fd1e91cf0dca9251e11"
+    },
+    "osm_tourism_node_4726228301": {
+      "guide_record_sha256": "9697cea0572435326691f0d67edc113748310a177b35a333d93db70cdf841a86",
+      "cache_file_sha256": "8656d87aad02f224dac0974bfa27877da8cadbb3097a95368c30fd103bf75366",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_4726228301.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "384c54995ea8e90181cb26db7a9fc508f529169a04ff169d014a575dde0253e9"
+    },
+    "osm_tourism_way_250718041": {
+      "guide_record_sha256": "056f8150bb165ce8355e1440d38d07b549b0347152f720e1cc605f6a69461ce9",
+      "cache_file_sha256": "178025b9e1df0a3a200d0f0cc7610e5af3d9e8e917def25403dde7636ac644e6",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_250718041.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "fc5c43e5d2ffe2bb2b2d56191f1fea9d88694d4168cf7a899a0a9c9da4b90b14"
+    },
+    "osm_tourism_way_375049062": {
+      "guide_record_sha256": "d8890e7a51c15f353eb65fdd8df286aabc7f605ebe7211ff58a6eca677d44631",
+      "cache_file_sha256": "3dc4c56c298439cd0aef4464425b21de1c8dc28ad24831c7236ffd3583910b3a",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375049062.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "3611e3d8b0917bfe1fa16d6f16f2284a939f49b0cdf5565786ce4c4918d7066e"
+    },
+    "osm_tourism_way_249857724": {
+      "guide_record_sha256": "b496687b8027baebb5663129327299b9432822c40b6d7beecf686ae26ed9ebba",
+      "cache_file_sha256": "17e842c5ea8e1e63da3ce8db4be85738085027852c0cb55623abaa49bc7af3b0",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_249857724.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "e5f0733d9ecfc2697aafd9324c67c7ff05b1cc30540ed0331c93827e1f437b13"
+    },
+    "osm_tourism_node_3785584607": {
+      "guide_record_sha256": "087af243a420e1491e36a51e9bf51c1ade89df14b55c3894cc1a1dc7be1b6dd8",
+      "cache_file_sha256": "f712503e9db39348985dc4fda2a739668c485be6053f6c2512cbfe3dab709d17",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_3785584607.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "96b7810cb4a9e76c0c71d515d03c35e55e656df3836c48feed8b627350ce18ee"
+    },
+    "osm_tourism_node_569007779": {
+      "guide_record_sha256": "65eb037a04675052ea2d708dba5deb00fecc6f08fc630ed71f223b750d65ea8a",
+      "cache_file_sha256": "fbe54d03b637068fb651bd54ca813285669071900cc528d630be7ac4e1eee657",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_569007779.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "966fb96e55d0754e7de98b8d935336889032218ca4c2e17760109f2e382998a1"
+    },
+    "osm_tourism_node_3753655821": {
+      "guide_record_sha256": "3950f5842e2bfc133fb3b0f85e49cbee6658b05584267f48e9a7df84f089fc54",
+      "cache_file_sha256": "8f18138461710c92b5be231e41697fe9958b2e201dfa779b6dc8c54b1bc51d1d",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_3753655821.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "45e52c44b6e0e9d9b90bbc57550d5959670b32bb9ee71e2c22900f65098747e2"
+    },
+    "osm_tourism_way_373866673": {
+      "guide_record_sha256": "44696dc5bb14f19c676a4460251b3b3b6195d17a2b27649be4545c694c116ae6",
+      "cache_file_sha256": "a9fcc19b7299772b3c596a90fc86ad41bc08a20972b67a92cc54de5096bed788",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_373866673.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "c5798a0fffe61487daf99ea0587d5808b1a04b91bb22b0ae182ae89881d4a1b9"
+    },
+    "cheonjiyeon": {
+      "guide_record_sha256": "fb4aac5b362b6074284d501631653945144d94a77afb4877cb564c82cdc5c622",
+      "cache_file_sha256": "4b7f7b6cbde7387f0037e256c3821d7b6d57891ae17c4d92383c8e6ac1ac1430",
+      "source_cache": "data_raw/tourism/v12/official_fields/cheonjiyeon.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "9770c2c94e3c90464c8c0320effe715bd84ecad63c24363b3966e6bc7366de92"
+    },
+    "osm_tourism_node_4832613086": {
+      "guide_record_sha256": "4f8d689c5133ca69405dda79d44e367b57522e25584503c8c50c25ca87435ffa",
+      "cache_file_sha256": "705c72f2c7108938104e6572969f97752b7226d99ef1d136f6f74e626e9fa99c",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_4832613086.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "fc87d90f45cccec28cc79cba13f7cc5f3c5cf226822f5dcd3a11a8340b78cb49"
+    },
+    "osm_tourism_way_242454273": {
+      "guide_record_sha256": "223c22b387096d13f45e26fc5d5c9ca5c57667eb6902077717d037b42fc40ec3",
+      "cache_file_sha256": "f859d2fa1a922f13e655a602443cf501115e3dbe9e03ca29252a842e8dc96dde",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_242454273.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "3ac79c3288f8eab9dcd4092b33788dad71f05210ab55522c2b37c0b76cbb2958"
+    },
+    "osulloc": {
+      "guide_record_sha256": "850fdf38aa6d588f4e4ad424927d996fd6c203c242fc3cec7d9938dd2ec1d712",
+      "cache_file_sha256": "d9494361f499547bfde5ed06a20b6d79686b2c8a2c2f2f76a746656f61fa978f",
+      "source_cache": "data_raw/tourism/v12/official_fields/osulloc.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "6b52daecb43d08b7f692e2e8ea7c440bdd9df13d481d2c8507eccfe0697eb4a1"
+    },
+    "osm_tourism_way_645842845": {
+      "guide_record_sha256": "1dc779a823daf8ce3cfaaed7ab88cdf02f12f0a191088bf73b2e5dfad23e3100",
+      "cache_file_sha256": "e293b11233d6e96e18794ed36b01ac1f7aad859758696e2974d84a114b848869",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_645842845.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "390bd541252900602489385a3905dbc1de129bd6874c43eb298abf086249086e"
+    },
+    "osm_tourism_node_5874608086": {
+      "guide_record_sha256": "f8a726389521dffd72ed36d024628283228040e3421bb90313e14c2fb61a976f",
+      "cache_file_sha256": "c3807ad58b2add81c7ad320c13c336509aa00419a8227a596ede1180e8e1e531",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5874608086.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "5b7f28b4398c8dd3cdfaa6131d05beb5a2373b8de68e922d279f6277f4f0d247"
+    },
+    "osm_tourism_node_3736657966": {
+      "guide_record_sha256": "ffa8f77184d009cc30c0d822978ca3ac08702bf191940adbfde5a232914420ad",
+      "cache_file_sha256": "442e9f42bffb657f3c5619f8aeaa89a4bcc0191d5419fb44c86b9433965528ef",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_3736657966.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "3793a5e69fc4a2b1d4c1a1bac454360ce9cedfb54ff5bd8cba4815668f987425"
+    },
+    "osm_tourism_node_12190653939": {
+      "guide_record_sha256": "f6008c0c3d1c694997710e747c40cdfc15aad3a5615b077303eb2bbcca9dfdaa",
+      "cache_file_sha256": "390e768782ba7af2675846f7b66bd9ad2a9b2421f6ee6ae2632269e67bc1df44",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_12190653939.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "9a1b6b39d493ccf9571a3acdfaa9d5c41780fdb04eb8aef585e00d68e297357f"
+    },
+    "osm_tourism_node_5712863794": {
+      "guide_record_sha256": "d67f467ea7abf8081d6d3ea9b34455426b8fe0bec89ee33d08b9222523d12413",
+      "cache_file_sha256": "b45a70c1d927d8c0cf6ff16ce9d791b8b9ac438c9b91b187ef93aee91551b88d",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5712863794.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "779c2579fc727ebd6bb8f2d78fef8a358f961637bd7fd913d3a97de12c9752e8"
+    },
+    "osm_tourism_node_5655320217": {
+      "guide_record_sha256": "403f6e948e3ebb88de299644e74b5cddb4c1a312f370dba589aae7b6c8dfa7b5",
+      "cache_file_sha256": "28192b4881cc4c68555435f11bcd0ee175f54daafb0006ac268ea37f927c46f1",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_5655320217.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "754e8b88a1d200e89c91df4fc090231c69ffe4e4684bbdd0257239cea99ea37f"
+    },
+    "osm_tourism_node_3741616919": {
+      "guide_record_sha256": "e03f2f8e8f40350e98ff9d8327f637afe2723e579d78daa488a656527cbd72e1",
+      "cache_file_sha256": "9bd41058ec7694a4fd20d6f8f72ba9b88f62bc7b37b50bcacdc8019f6edb958b",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_node_3741616919.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "8bfc7ac5604e8a89ec1baec35cd843b2a70ab412bb214663584ef991fb4ae994"
+    },
+    "osm_tourism_way_375195356": {
+      "guide_record_sha256": "a708a0ef173ff7b54dc45ff249adc067c938d721987b150a5513592322b5b0c3",
+      "cache_file_sha256": "a32c7ef2672ea1b159b2fbfaf6d05192fb31368b396c609e5276a384fe85375a",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375195356.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "b6c58d8fa67e4ca48a0a9daf879074d7396691ccedca05a87189d1100569c761"
+    },
+    "osm_tourism_way_375193739": {
+      "guide_record_sha256": "25c7939bdd8214a977e58e91fbdd7044aa1562e0a333a3bf92d02c62f13f1ce9",
+      "cache_file_sha256": "5ffc26da6df588fdb8f03565cab8e376183efe4baf0caa7c2a53af6b0b2b1f48",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375193739.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "752b06fee04fbcf3b22e2918de7b88bfee4c65fbd710137f02bb94384572ca58"
+    },
+    "osm_tourism_way_375169007": {
+      "guide_record_sha256": "221767997b6c21d0adef3b17a911cabccd911e426b94ceca14ee0cc6ee41c286",
+      "cache_file_sha256": "17477e2c203dc85d7fcbc4c4a0b53907c434b307864e19448fa9b948edd92aaa",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_375169007.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "98a114729af3329909f8ab86b047ac0199540bef8109403c6cab334329791cb8"
+    },
+    "osm_tourism_way_583831951": {
+      "guide_record_sha256": "863b5af7bf168c61c5f0ae872ae6986bb6b826da3be25bb1825db4dc3fce2b86",
+      "cache_file_sha256": "91c2b22932b15071bb8946314cce47018a0f16235da3950cbbb195a3cf820b9e",
+      "source_cache": "data_raw/tourism/v12/official_fields/osm_tourism_way_583831951.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "be6aa8cf4e47498c9f3d7ef3859aceba715683ff60bd46ce158fa4bc111a0554"
+    },
+    "hyeopjae": {
+      "guide_record_sha256": "2b426e73f9de9adc2fcd66eeca70b7b3fdc55e213e14560b14dd025d28fef746",
+      "cache_file_sha256": "47e54b4ef53a85fab83077d8c1dbbb9334901ad9e4dfe37667ce39b6e3522ab1",
+      "source_cache": "data_raw/tourism/v12/official_fields/hyeopjae.json",
+      "guide_reviewed_at": "2026-10-29",
+      "original_page_sha256": "f64a9998c78c2837fea0cf80c9a788aaece67f7cdf617645833ea6ebd4a252e1"
+    }
+  },
+  "automatic_exclusions": {
+    "osm_tourism_node_4832613086": {
+      "name": "선녀탕",
+      "code": "recorded_access_control",
+      "reason": "공식 안내에 낙석에 따른 접근 통제 기록이 있고 해제 여부를 실시간 확인하지 못해 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018383",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_583831951": {
+      "name": "하모해수욕장",
+      "code": "recorded_beach_closure",
+      "reason": "공식 안내의 해수욕장 폐장 기록과 현재 이용 가능 범위를 구분해야 하므로 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020931",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_288933009": {
+      "name": "만장굴",
+      "code": "cave_entrance_pending_review",
+      "reason": "동굴 관람의 실제 입구와 방문일 개방 조건을 별도 검수하지 못해 자동 코스에서 제외합니다. 현재 폐쇄를 확정한 뜻은 아닙니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500182",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_375049062": {
+      "name": "이중섭미술관",
+      "code": "temporary_exhibition_location",
+      "reason": "공식 안내의 공사·임시 전시 기록과 기존 지도 좌표의 실제 관람 장소를 재확인해야 하므로 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500509",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_375169007": {
+      "name": "유리의성",
+      "code": "historical_article_only",
+      "reason": "관광 소개의 근거가 2020년 과거 여행기사여서 현재 체험 운영을 확인하지 못해 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": null,
+      "review_kind": "saved_guide_metadata_review",
+      "source_url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=37f3a8c6-5280-45a6-be3e-cfce6f2471e6",
+      "current_operation_verified": false
+    },
+    "osm_tourism_node_6731890115": {
+      "name": "사려니숲길입구",
+      "code": "specific_entrance_not_reviewed",
+      "reason": "공식 안내는 숲길 전체를 설명하며 이 지도점의 실제 입구·주차·반환 동선을 검수하지 못해 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": null,
+      "review_kind": "saved_guide_metadata_review",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_375195356": {
+      "name": "금능식물원",
+      "code": "registry_name_discrepancy",
+      "reason": "명부의 금능식물원과 공식 금능석물원의 표기 차이·실제 입구를 추가 검수해야 하므로 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019446",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_250718041": {
+      "name": "박물관은 살아있다",
+      "code": "renamed_exhibition_pending_review",
+      "reason": "기존 명부명과 현 공식 전시명이 다르며 현재 전시·입장 정보와 기존 대표 좌표의 연결을 다시 검수해야 하므로 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500216",
+      "current_operation_verified": false
+    },
+    "osm_tourism_node_3741616919": {
+      "name": "용머리 해안",
+      "code": "daily_coastal_control_unavailable",
+      "reason": "공식 안내의 만조·파도·기상에 따른 당일 출입 조건을 조회하지 못하므로 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500471",
+      "current_operation_verified": false
+    },
+    "osm_tourism_way_246696661": {
+      "name": "제주러브랜드",
+      "code": "admission_audience_not_reviewed",
+      "reason": "공식 안내의 관람 대상과 입장 조건을 일정 요청 조건에 맞게 검수하지 못해 자동 코스에서 제외합니다.",
+      "reviewed_at": "2026-11-01",
+      "source_reviewed_at": "2026-10-29",
+      "public_page_rechecked_at": "2026-11-01",
+      "review_kind": "official_public_page_and_saved_guide",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500550",
+      "current_operation_verified": false
+    }
+  },
+  "name_notices": {
+    "osm_tourism_way_375341085": {
+      "message": "명부 이름은 넥슨컴퓨터박물관이며 공식 관광 안내는 넥슨뮤지엄으로도 소개합니다. 현재 전시·입장 조건은 원문에서 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500099",
+      "source_reviewed_at": "2026-10-29"
+    }
+  },
+  "policy_scope": "Conservative eligibility for automatic sightseeing drafts. Existing catalogue and manual search remain unchanged. No network requests at runtime.",
+  "limitations": [
+    "원자료의 대표 좌표와 공식 소개 연결을 검사하며 실제 입구·현재 영업·운영시간·요금·예약을 전수 확인한 결과가 아닙니다.",
+    "metadata receipt의 SHA256과 그 안의 원본 페이지 해시를 보존하지만 전체 원문 HTML을 보관한 것은 아닙니다.",
+    "통제·폐장·공사 기록은 출처 기록이며 현재 상태를 실시간 확인한 것으로 표시하지 않습니다.",
+    "음식점은 별도 출처 검색으로 유지하고 자동 관광 코스의 후보 집합에 섞지 않습니다."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "interval_ms": 5000,
+  "autoplay": true,
+  "slides": [
+    {
+      "id": "seongsan",
+      "name": "성산일출봉",
+      "caption": "성산일출봉",
+      "region_label": "성산 동부",
+      "image": "/assets/seongsan.jpg",
+      "href": "#destinations",
+      "source_id": "visitjeju_CONT_000000000500349",
+      "focal_x": 50,
+      "focal_y": 54
+    },
+    {
+      "id": "hamdeok",
+      "name": "함덕해수욕장",
+      "caption": "함덕해수욕장",
+      "region_label": "조천 북동부",
+      "image": "/assets/hamdeok.jpg",
+      "href": "#destinations",
+      "source_id": "visitjeju_CONT_000000000500693",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "id": "hyeopjae",
+      "name": "협재해수욕장",
+      "caption": "협재해수욕장",
+      "region_label": "한림 서부",
+      "image": "/assets/hyeopjae.jpg",
+      "href": "#destinations",
+      "source_id": "visitjeju_CONT_000000000500697",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "id": "cheonjiyeon",
+      "name": "천지연폭포",
+      "caption": "천지연폭포",
+      "region_label": "서귀포 남부",
+      "image": "/assets/cheonjiyeon.jpg",
+      "href": "#destinations",
+      "source_id": "visitjeju_CONT_000000000500618",
+      "focal_x": 65,
+      "focal_y": 50
+    },
+    {
+      "id": "seopjikoji",
+      "name": "섭지코지",
+      "caption": "섭지코지",
+      "region_label": "성산 동부",
+      "image": "/assets/seopjikoji.jpg",
+      "href": "#destinations",
+      "source_id": "visitjeju_CONT_000000000500343",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "id": "osulloc",
+      "name": "오설록 티 뮤지엄",
+      "region_label": "안덕 서부",
+      "image": "/assets/osulloc.jpg",
+      "source_id": "visitjeju_CONT_000000000500457",
+      "caption": "오설록 티 뮤지엄",
+      "href": "#destinations",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ]
+}

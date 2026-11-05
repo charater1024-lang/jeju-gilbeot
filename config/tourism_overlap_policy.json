@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "policy_id": "jeju_hub_osm_exact_name_250m_v1",
+  "max_distance_m": 250,
+  "name_normalization": "NFKC_casefold_alphanumeric_only_no_alias_no_fuzzy_no_substring",
+  "hub_ambiguity": "existence_intersection_preserve_all_supporting_rows_without_asserting_unique_identity_or_address_accuracy",
+  "deduplicate": "same_normalized_name_map_group_max_pairwise_distance_250m_no_chain_merges",
+  "separated_map_ambiguity": "exclude_separated_map_groups_sharing_the_same_supporting_hub_id",
+  "curated_enrichment_max_distance_m": 1000,
+  "curated_enrichment": "metadata_only_after_map_hub_acceptance_unique_exact_name_preserve_map_coordinate",
+  "allowed_tourism": ["attraction", "museum", "gallery", "artwork", "viewpoint", "zoo", "aquarium", "theme_park", "picnic_site"],
+  "allowed_natural": ["beach", "peak", "volcano", "cave_entrance", "waterfall", "wood", "spring", "cape", "cliff", "bay", "rock", "stone", "arch", "sand"],
+  "allowed_leisure": ["park", "garden", "nature_reserve", "water_park"],
+  "excluded_tourism": ["hotel", "hostel", "guest_house", "motel", "apartment", "chalet", "camp_site", "caravan_site", "wilderness_hut", "alpine_hut"],
+  "excluded_amenity": ["restaurant", "cafe", "fast_food", "food_court", "bar", "pub", "biergarten", "ice_cream", "bbq", "school", "kindergarten", "university", "college", "parking", "parking_space", "parking_entrance", "fuel", "charging_station", "bus_station", "taxi", "toilets", "shelter", "bench", "waste_basket", "bank", "atm", "hospital", "clinic", "doctors", "pharmacy", "vending_machine", "car_rental", "car_wash"],
+  "excluded_infrastructure_keys": ["highway", "railway", "aeroway", "power"],
+  "allowed_man_made": ["lighthouse", "observatory"],
+  "food_permit_collision": "hold_generic_attraction_or_viewpoint_only_without_strong_natural_museum_historic_evidence",
+  "missing_evidence": "fail_closed_no_fallback_to_osm_or_unclassified_hub",
+  "limitation": "허브 1349는 식당·숙박도 포함된 분류 미확인 여행장소 명부입니다. 같은 명칭의 중복 기록과 좌표·주소 불일치가 있어 명칭·250m 범위 교집합의 근거로만 사용합니다. 행의 고유 장소성·명부 주소 정확도·공식 지정 관광지·현재 운영을 보증하지 않습니다."
+}

@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "service_version": 20,
+  "date_kst": "2026-11-06",
+  "python_tests": 298,
+  "ui_test_files": 18,
+  "javascript_syntax_files": 11,
+  "http_checks": 43,
+  "retained_model_files_hash_verified": 6,
+  "legacy_examples_restored": true,
+  "actual_browser_visual_review": false,
+  "center_hardware_review": false,
+  "runtime_llm": false,
+  "synthetic_service_enabled": false
+}

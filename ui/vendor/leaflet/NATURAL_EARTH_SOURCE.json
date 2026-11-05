@@ -1,0 +1,18 @@
+{
+  "name": "Natural Earth 1:10m Land (Jeju vicinity subset)",
+  "version": "5.1.1",
+  "downloaded_at": "2026-10-28",
+  "source_url": "https://naturalearth.s3.amazonaws.com/10m_physical/ne_10m_land.zip",
+  "official_page": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/",
+  "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "license": "Public domain",
+  "source_zip_bytes": 3269070,
+  "source_zip_sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc",
+  "derived_file": "jeju-land.geojson",
+  "derived_sha256": "fff9ddb37e0bacc003616f6f32555a296f7a69dee20be23cac76b5a665fba61f",
+  "ring_count": 2,
+  "point_count": 73,
+  "extraction": "Read ESRI polygon rings; retain complete rings entirely within [126.05,33.0,127.05,33.65]; round WGS84 longitude/latitude to 6 decimals; no road, administrative or legal boundary added. Coordinates also embedded in jeju-map.js for no-fetch offline use.",
+  "crs_source": "GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+  "warning": "Small-scale global coastline. Not a survey, administrative boundary, road network, nautical chart, terrain/elevation model, or validated entrance."
+}

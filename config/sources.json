@@ -1,0 +1,309 @@
+{
+  "checked_at": "2026-10-28",
+  "raw_data_acquired": true,
+  "note": "실제 다운로드와 CSV 열·관측기간은 data_raw/DOWNLOAD_MANIFEST.json 참조. 미취득 API 후보는 구분하며 허브와 센터의 같은 원본은 중복 계산하지 않습니다.",
+  "datasets": [
+    {
+      "source_id": "H01",
+      "title": "내국인 관광객 지역 업종 성별 연령대별 카드 이용 데이터",
+      "verification_url": "https://www.data.go.kr/data/15094857/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/597",
+      "verification_level": "A",
+      "logical_granularity": "month_region_industry",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H02",
+      "title": "관광지 및 상업지구 이용자 유형별 카드 데이터",
+      "verification_url": "https://www.data.go.kr/data/15094889/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/604",
+      "verification_level": "A",
+      "logical_granularity": "area_user_type",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H03",
+      "title": "관광지 및 상업지구 업종별 카드 데이터",
+      "verification_url": "https://www.data.go.kr/data/15094890/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/605",
+      "verification_level": "A",
+      "logical_granularity": "area_industry",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H04",
+      "title": "관광지 및 상업지구 시간대별 카드 데이터",
+      "verification_url": "https://www.data.go.kr/data/15094892/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/607",
+      "verification_level": "A",
+      "logical_granularity": "area_time_category",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H05",
+      "title": "음식점 목록 통합",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-780",
+      "source_url": "https://www.jejudatahub.net/data/view/data/780",
+      "verification_level": "B",
+      "logical_granularity": "place_registry",
+      "access_status": "downloaded",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H06",
+      "title": "버스 노선 기본정보",
+      "verification_url": "https://www.data.go.kr/data/15074254/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/611",
+      "verification_level": "A",
+      "logical_granularity": "route_registry",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H07",
+      "title": "버스 정류소 기본정보",
+      "verification_url": "https://www.data.go.kr/data/15074255/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/612",
+      "verification_level": "B",
+      "logical_granularity": "stop_registry",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H08",
+      "title": "일일 노선별 버스 이용자 정보",
+      "verification_url": "https://www.data.go.kr/data/15074260/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/614",
+      "verification_level": "A",
+      "logical_granularity": "route_day",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "H09",
+      "title": "일일 정류소별 버스 이용자 정보",
+      "verification_url": "https://www.data.go.kr/data/15074262/openapi.do",
+      "source_url": "https://www.jejudatahub.net/data/view/data/613",
+      "verification_level": "B",
+      "logical_granularity": "stop_day",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "see_source_metadata"
+    },
+    {
+      "source_id": "C01",
+      "title": "업종별 성별 외식업 이용 정보",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1047",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1047",
+      "verification_level": "B",
+      "logical_granularity": "industry_gender_unknown_period",
+      "access_status": "downloaded",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "jeju_bigdata_center"
+    },
+    {
+      "source_id": "C02",
+      "title": "업종별 성별 카드 이용 정보",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1048",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1048",
+      "verification_level": "B",
+      "logical_granularity": "industry_gender_unknown_period",
+      "access_status": "downloaded",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "jeju_bigdata_center"
+    },
+    {
+      "source_id": "C03",
+      "title": "이용자 유형별 버스정류소 이용 인원",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-743",
+      "source_url": "https://www.jejudatahub.net/data/view/data/743",
+      "verification_level": "B",
+      "logical_granularity": "stop_user_type_unknown_period",
+      "access_status": "not_acquired",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "jeju_bigdata_center"
+    },
+    {
+      "source_id": "C04",
+      "title": "일별 시간대별 버스 승차 인원",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-512",
+      "source_url": "https://www.jejudatahub.net/data/view/data/512",
+      "verification_level": "B",
+      "logical_granularity": "day_time_category",
+      "access_status": "downloaded",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "jeju_bigdata_center"
+    },
+    {
+      "source_id": "C05",
+      "title": "일별 버스 승차 인원",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-561",
+      "source_url": "https://www.jejudatahub.net/data/view/data/561",
+      "verification_level": "B",
+      "logical_granularity": "day",
+      "access_status": "downloaded",
+      "data_period": null,
+      "license_status": "recheck_original",
+      "provider": "jeju_bigdata_center"
+    },
+    {
+      "source_id": "HUB_784",
+      "title": "제주특별자치도 해수욕장 정보",
+      "source_url": "https://www.jejudatahub.net/data/view/data/784",
+      "access_status": "downloaded",
+      "data_period": {
+        "field": "기준일(년)",
+        "min": "2016",
+        "max": "2023",
+        "data_reference_date_min": "2023-12-31",
+        "data_reference_date_max": "2023-12-31"
+      },
+      "license_status": "CC0_on_official_education_linked_metadata_original_terms_not_read",
+      "provider": "공공데이터포털 유통 제주 해수욕장 정보"
+    },
+    {
+      "source_id": "HUB_1349",
+      "title": "제주관광공사 제주관광정보시스템(VISIT JEJU) 여행장소",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "access_status": "downloaded",
+      "data_period": {
+        "field": "수정일시",
+        "min": "2025-09-18 00:00",
+        "max": "2025-09-18 23:59"
+      },
+      "license_status": "CC0_on_official_education_metadata_for_original_dataset_original_terms_not_read",
+      "provider": "제주관광공사 VISIT JEJU"
+    },
+    {
+      "source_id": "OSM-food",
+      "title": "OpenStreetMap community food POIs",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "access_status": "downloaded",
+      "data_period": {
+        "snapshot_at": "2026-10-28T10:47:02Z"
+      },
+      "license_status": "ODbL-1.0; separate source and notices preserved",
+      "provider": "© OpenStreetMap contributors"
+    },
+    {
+      "source_id": "OSM-tourism",
+      "title": "OpenStreetMap 제주 관광·자연 장소 기록",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "access_status": "downloaded",
+      "data_period": {
+        "snapshot_at": "2026-10-28T12:14:10Z",
+        "individual_element_edit_min": "2016-11-27T10:54:33Z",
+        "individual_element_edit_max": "2026-10-27T05:53:33Z"
+      },
+      "license_status": "ODbL-1.0; separate raw and normalized/source records and notices preserved",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "provider": "© OpenStreetMap contributors",
+      "local_path": "data_reference/osm_tourism_places.json",
+      "raw_path": "data_raw/osm/jeju_tourism_v5.json",
+      "raw_sha256": "c2b75b0d995538bde403169a9a22b4dde4a34e1938cb95dbeb66c6b2df637973",
+      "source_manifest_path": "data_raw/osm/jeju_tourism_v5_manifest.json",
+      "record_count": 1138,
+      "record_count_unit": "named_normalized_osm_tourism_records"
+    },
+    {
+      "source_id": "OSM-roads",
+      "title": "OpenStreetMap 제주 차량 도로·좌표 노드 원자료",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "access_status": "downloaded",
+      "data_period": {
+        "snapshot_at": "2026-10-28T12:16:18Z"
+      },
+      "license_status": "ODbL-1.0; separate raw and normalized/source records and notices preserved",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "provider": "© OpenStreetMap contributors",
+      "local_path": "data_raw/osm/jeju_roads_v5.json",
+      "raw_path": "data_raw/osm/jeju_roads_v5.json",
+      "raw_sha256": "eeebbcac54d8b500cb9f3452c8563774b6b73f1a94433b7a0b1c7d3c6f98f964",
+      "source_manifest_path": "data_raw/osm/jeju_roads_v5_manifest.json",
+      "record_count": 313983,
+      "record_count_unit": "osm_nodes_plus_ways"
+    },
+    {
+      "source_id": "V18_hub871",
+      "title": "제주데이터허브 올레길 위치 정보 공개 미리보기",
+      "verification_url": "https://www.jejudatahub.net/data/view/data/871",
+      "source_url": "https://www.jejudatahub.net/data/view/data/871",
+      "verification_level": "B",
+      "logical_granularity": "dated_source_records",
+      "access_status": "partial_downloaded",
+      "data_period": "2021-11-02",
+      "license_status": "교육부·KERIS 연결 카탈로그 CC0 표기",
+      "provider": "jeju_datahub"
+    },
+    {
+      "source_id": "V18_hub858",
+      "title": "제주데이터허브 무장애 여행지 정보(통합)",
+      "verification_url": "https://www.jejudatahub.net/data/view/data/858",
+      "source_url": "https://www.jejudatahub.net/data/view/data/858",
+      "verification_level": "B",
+      "logical_granularity": "dated_source_records",
+      "access_status": "downloaded",
+      "data_period": "2021-09-30",
+      "license_status": "교육부·KERIS 연결 카탈로그 CC0 표기",
+      "provider": "jeju_datahub"
+    },
+    {
+      "source_id": "V18_hub497_origin",
+      "title": "서귀포시 숲길산책로현황(허브497 연결 원출처 최신본)",
+      "verification_url": "https://www.jejudatahub.net/data/view/data/497",
+      "source_url": "https://www.data.go.kr/data/3082951/fileData.do",
+      "verification_level": "B",
+      "logical_granularity": "dated_source_records",
+      "access_status": "downloaded",
+      "data_period": "2025-02-19",
+      "license_status": "공공데이터포털 이용허락범위 제한 없음",
+      "provider": "public_origin_linked_from_hub"
+    },
+    {
+      "source_id": "V18_public15109369",
+      "title": "제주관광공사 마을편의시설(허브 외 보완 공공자료)",
+      "verification_url": "https://www.data.go.kr/data/15109369/fileData.do",
+      "source_url": "https://www.data.go.kr/data/15109369/fileData.do",
+      "verification_level": "B",
+      "logical_granularity": "dated_source_records",
+      "access_status": "downloaded",
+      "data_period": "2022-09-30",
+      "license_status": "공공데이터포털 이용허락범위 제한 없음",
+      "provider": "public_supplement_not_confirmed_in_hub"
+    }
+  ],
+  "v2_note": "허브·센터 CSV 원자료 6개 파일, API 기술문서 8개, 공식 관광지 참조 10곳과 실사진 10장을 확보했습니다.",
+  "v5_note": "대표 관광 하이라이트 10곳, OSM 관광·자연 1,138건, 허브1349 분류 미확인 참조 5,381건을 구분합니다. 합계 6,529는 중복 제거한 고유 관광지 수가 아닌 출처별 학습 기록 수입니다. OSM 관광·도로 원본과 ODbL 고지를 별도 보존하며 기존 허브·센터의 이용·배포 승인 상태는 변경하지 않았습니다.",
+  "v5_tourism_source_counts": {
+    "featured_visitjeju": 10,
+    "openstreetmap_tourism": 1138,
+    "hub1349_unclassified_reference": 5381
+  },
+  "additional_checked_at": "2026-11-04",
+  "additional_source_manifest": "data_raw/hub_v18/SOURCE_MANIFEST.json"
+}

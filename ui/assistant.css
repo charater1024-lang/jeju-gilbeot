@@ -1,0 +1,99 @@
+.assistant-section {
+  margin-bottom: clamp(32px, 5vw, 64px);
+  scroll-margin-top: 90px;
+}
+
+.assistant-panel {
+  padding: clamp(18px, 4vw, 42px);
+  border: 1px solid #d8e0d2;
+  border-radius: 8px;
+  background: #f2f5ec;
+  color: #283d33;
+  overflow-wrap: anywhere;
+}
+
+.assistant-header, .assistant-form-actions, .assistant-confirm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+}
+
+.assistant-header { justify-content: space-between; }
+.assistant-header h2 { font-size: clamp(22px, 3vw, 31px); line-height: 1.35; }
+.assistant-header p { margin-top: 7px; font-size: 14px; line-height: 1.7; }
+.assistant-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.assistant-examples button, .assistant-link {
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid #9bad9c;
+  border-radius: 5px;
+  background: #fff;
+  color: #284d3d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.assistant-link { display: inline-flex; align-items: center; }
+.assistant-examples button:hover, .assistant-link:hover { background: #e7eee5; }
+.assistant-panel :focus-visible { outline: 2px solid #365e77; outline-offset: 3px; }
+.assistant-form label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+.assistant-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid #9bad9c;
+  border-radius: 5px;
+  background: #fff;
+  color: #1b332a;
+  font: inherit;
+  line-height: 1.7;
+}
+.assistant-form-actions { margin-top: 12px; }
+.assistant-panel .button { min-height: 42px; padding: 9px 15px; font-size: 13px; }
+.assistant-panel button:disabled { cursor: wait; opacity: .58; }
+.assistant-status { margin-top: 12px; font-size: 14px; line-height: 1.75; white-space: pre-line; }
+.assistant-status:empty { margin-top: 0; }
+.assistant-response[hidden] { display: none; }
+.assistant-response { margin-top: 14px; font-size: 14px; line-height: 1.7; }
+.assistant-output { padding: 15px 0; border-top: 1px solid #d0dbce; }
+.assistant-output h3 { font-size: 17px; margin-bottom: 8px; }
+.assistant-output h4 { font-size: 15px; }
+.assistant-conditions, .assistant-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 8px;
+}
+.assistant-conditions div, .assistant-card {
+  min-width: 0;
+  padding: 9px 12px;
+  background: #fff;
+  border: 1px solid #dde4d8;
+  border-radius: 5px;
+}
+.assistant-conditions dt { font-weight: 600; }
+.assistant-conditions dd { margin: 2px 0 0; }
+.assistant-confirm-actions { margin: 3px 0 14px; }
+.assistant-route-summary { color: #224b3a; font-weight: 600; }
+.assistant-visits, .assistant-notes { margin: 8px 0; padding-left: 23px; }
+.assistant-visits > li { margin: 6px 0; }
+.assistant-source, .assistant-note { color: #40594b; font-size: 13px; }
+.assistant-source a { color: #244e67; text-decoration: underline; }
+.assistant-evidence { margin: 6px 0; }
+.assistant-output .assistant-link { margin-top: 8px; }
+.assistant-table-scroll { overflow-x: auto; margin-bottom: 9px; }
+.assistant-table-scroll table { width: 100%; border-collapse: collapse; background: #fff; }
+.assistant-table-scroll th, .assistant-table-scroll td { padding: 6px 9px; border: 1px solid #dde4d8; text-align: left; }
+.assistant-table-scroll th { background: #e5eee1; }
+.assistant-cards { margin-top: 8px; }
+.food-results-wrap .unmapped-food-details { margin-bottom: 12px; }
+.assistant-details { margin-top: 8px; padding: 8px 10px; border: 1px solid #d8e0d2; border-radius: 5px; background: #fafcf7; }
+.assistant-details > summary { cursor: pointer; color: #2a5140; font-size: 13px; font-weight: 600; padding: 3px 0; }
+.assistant-details[open] > summary { margin-bottom: 8px; }
+.assistant-details .assistant-notes { margin-bottom: 0; }
+.assistant-panel tr[hidden], .assistant-panel .assistant-card[hidden] { display: none; }
+.assistant-table-scroll td { vertical-align: top; }
+.assistant-table-scroll td > .assistant-note { margin: 0 0 6px; }
+.assistant-table-scroll .assistant-details { min-width: 180px; max-width: 380px; }
+@media (max-width: 600px) { .assistant-cards { grid-template-columns: 1fr; } .assistant-table-scroll th, .assistant-table-scroll td { min-width: 85px; } }

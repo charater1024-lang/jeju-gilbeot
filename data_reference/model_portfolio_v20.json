@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "service_version": 20,
+  "date_kst": "2026-11-06",
+  "target_percent": 93,
+  "all_service_models_93_proven": false,
+  "goal_note": "네 예측 모델 모두 고정한 허용오차에서 93% 목표에 미달했습니다. 561은 허용오차 내 비율이 1.19퍼센트포인트 높아졌고 평균 절대오차는 0.85% 증가했습니다.",
+  "notes": [
+    "평균 절대오차는 실제값과 예측값 차이의 크기를 평균한 값입니다. 회귀 비율은 표의 허용오차 안에 든 관측의 비율입니다.",
+    "검색 성공에는 정답이 첫 결과인 질의와 미지원 질의에 결과가 비어 있는 경우가 포함됩니다. 작성 질의와 문장으로 평가했습니다.",
+    "561은 평가 250개 통계 코드와 운영 202개 코드의 범위가 다릅니다. 현재 운행 노선·좌석 정보는 별도로 확인해야 합니다."
+  ],
+  "models": [
+    {
+      "id": "audience_distribution",
+      "title": "집단별 8업종 소비 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1048",
+      "fixed_tolerance": 1.0,
+      "promoted": false,
+      "metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5
+      },
+      "error": {
+        "mae": 0.4261105438795293,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2024-01",
+        "end": "2025-06"
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교"
+    },
+    {
+      "id": "mobility_pattern",
+      "title": "제주 전체 시간대별 일반승차",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "512",
+      "fixed_tolerance": 20,
+      "promoted": false,
+      "metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 699,
+        "total": 847,
+        "percent": 82.52656434474616
+      },
+      "error": {
+        "mae": 80.9194434273895,
+        "rmse": 161.47599382707583,
+        "wape_percent": 13.274856229987803,
+        "unit": "명/시간"
+      },
+      "test_period": {
+        "start": "2025-06-28",
+        "end": "2025-10-26"
+      },
+      "cohort": {
+        "evaluated_cells": 847,
+        "source_cells": 847
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 일별·시간대별 승차 관측값"
+    },
+    {
+      "id": "dining_detail",
+      "title": "세부 외식업종 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1047",
+      "fixed_tolerance": 0.25,
+      "promoted": false,
+      "metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1790,
+        "total": 1974,
+        "percent": 90.67882472137791
+      },
+      "error": {
+        "mae": 0.09719669340424895,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2023-01",
+        "end": "2024-12"
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교"
+    },
+    {
+      "id": "route_demand",
+      "title": "통계 노선코드별 하루 일반승차",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "561",
+      "fixed_tolerance": 20,
+      "promoted": true,
+      "metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 13535,
+        "total": 28092,
+        "percent": 48.18097679054535
+      },
+      "error": {
+        "mae": 4.966360529688168,
+        "rmse": 7.518629859184388,
+        "wape_percent": 27.128640097069255,
+        "unit": "명/통계코드·일"
+      },
+      "test_period": {
+        "start": "2025-06-22",
+        "end": "2025-10-19"
+      },
+      "cohort": {
+        "evaluated_cells": 28092,
+        "source_cells": 64315,
+        "evaluation_codes": 250,
+        "serving_codes": 202,
+        "cell_coverage_percent": 43.678768560988885
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 250개 통계 코드. 전체 시험 관측 중 43.68%를 평가",
+      "artifact_sha256": "4aa7f655f0e4218035401e6c918ea05751923bf0b9488e3d3a9603b27e0053d6",
+      "algorithm": "recency_weighted_route_weekday_median_v20",
+      "half_life_days": 60
+    },
+    {
+      "id": "tourism_tfidf",
+      "title": "관광지 TF-IDF 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": true,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 15,
+        "total": 22,
+        "percent": 68.18181818181819
+      },
+      "evaluation_scope": "검색어가 있고 명시 위치가 없는 첫 페이지의 5개 이상 결과 요청에서 기존 상위 5개만 재정렬"
+    },
+    {
+      "id": "food_tfidf",
+      "title": "음식점 TF-IDF 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": null,
+      "evaluation_scope": "검증·시험 정답 ID 132개가 겹치고 비교기의 그룹 순서·범위가 운영과 달라 별도 탐색 결과로 기록"
+    },
+    {
+      "id": "assistant_guide_tfidf",
+      "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "evaluation_scope": "출처를 확인한 도우미 가이드 검색의 작성 질의 시험"
+    },
+    {
+      "id": "travel_context_tfidf",
+      "title": "걷기·해변·접근성·편의시설 자료 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 13,
+        "total": 18,
+        "percent": 72.22222222222223
+      },
+      "evaluation_scope": "해변·접근성·걷기·편의시설 기록 검색의 작성 질의 시험"
+    },
+    {
+      "id": "assistant_intent",
+      "title": "여행 도우미 요청 종류 분류",
+      "type": "classification_and_rules",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "규칙을 포함한 기존 전체 파서 정답률",
+        "hits": 49,
+        "total": 60,
+        "percent": 81.66666666666667
+      },
+      "evaluation_scope": "6개 요청 종류의 작성 문장 60건. 분류 모델과 입력 조건을 해석하는 규칙의 합산 결과",
+      "classifier_only_metric": {
+        "name": "기존 나이브 베이즈 분류기 정답률",
+        "hits": 54,
+        "total": 60,
+        "percent": 90.0
+      }
+    }
+  ],
+  "experiments": [
+    {
+      "id": "audience_distribution",
+      "title": "집단별 8업종 소비 구성비",
+      "candidate_count": 472,
+      "family_count": 13,
+      "candidate_metric_percent": 87.15277777777777,
+      "candidate_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 251,
+        "total": 288,
+        "percent": 87.15277777777777
+      },
+      "comparator_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5
+      },
+      "selected_config": {
+        "family": "weighted_mean",
+        "window": 6,
+        "half_life": 3
+      },
+      "promoted": false,
+      "decision_reason": "고정 시험에서 기존 모델보다 허용오차 내 비율이 낮고 평균 절대오차가 컸습니다.",
+      "candidate_error": {
+        "mae": 0.4306532561671149,
+        "unit": "퍼센트포인트"
+      },
+      "incumbent_error": {
+        "mae": 0.4261105438795293,
+        "unit": "퍼센트포인트"
+      },
+      "validation_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223
+      }
+    },
+    {
+      "id": "mobility_pattern",
+      "title": "제주 전체 시간대별 일반승차",
+      "candidate_count": 94,
+      "family_count": 7,
+      "candidate_metric_percent": 83.23494687131051,
+      "candidate_metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 705,
+        "total": 847,
+        "percent": 83.23494687131051
+      },
+      "comparator_metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 699,
+        "total": 847,
+        "percent": 82.52656434474616
+      },
+      "selected_config": {
+        "id": "c001",
+        "family": "weekday_summary",
+        "half_life": 30,
+        "statistic": "median"
+      },
+      "promoted": false,
+      "decision_reason": "허용오차 내 비율은 높아졌으나 평균 절대오차가 2%를 초과해 증가했습니다.",
+      "candidate_error": {
+        "mae": 89.85989767807949,
+        "unit": "명/시간"
+      },
+      "incumbent_error": {
+        "mae": 80.9194434273895,
+        "unit": "명/시간"
+      }
+    },
+    {
+      "id": "dining_detail",
+      "title": "세부 외식업종 구성비",
+      "candidate_count": 484,
+      "family_count": 14,
+      "candidate_metric_percent": 90.0709219858156,
+      "candidate_metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1778,
+        "total": 1974,
+        "percent": 90.0709219858156
+      },
+      "comparator_metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1790,
+        "total": 1974,
+        "percent": 90.67882472137791
+      },
+      "selected_config": {
+        "family": "weighted_mean",
+        "window": 6,
+        "half_life": 0
+      },
+      "promoted": false,
+      "decision_reason": "고정 시험에서 기존 모델보다 허용오차 내 비율이 낮고 평균 절대오차가 컸습니다.",
+      "candidate_error": {
+        "mae": 0.10096144066999771,
+        "unit": "퍼센트포인트"
+      },
+      "incumbent_error": {
+        "mae": 0.09719669340424895,
+        "unit": "퍼센트포인트"
+      },
+      "validation_metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1582,
+        "total": 1692,
+        "percent": 93.49881796690308
+      }
+    },
+    {
+      "id": "route_demand",
+      "title": "통계 노선코드별 하루 일반승차",
+      "candidate_count": 97,
+      "family_count": 8,
+      "candidate_metric_percent": 48.18097679054535,
+      "candidate_metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 13535,
+        "total": 28092,
+        "percent": 48.18097679054535
+      },
+      "comparator_metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 13200,
+        "total": 28092,
+        "percent": 46.98846646732166
+      },
+      "selected_config": {
+        "id": "c006",
+        "family": "weekday_summary",
+        "half_life": 60,
+        "statistic": "median"
+      },
+      "promoted": true,
+      "decision_reason": "허용오차 내 비율이 높아졌고 평균 절대오차 증가가 사전 허용한 2% 범위 안입니다.",
+      "candidate_error": {
+        "mae": 4.966360529688168,
+        "unit": "명/통계코드·일"
+      },
+      "incumbent_error": {
+        "mae": 4.9247207298410975,
+        "unit": "명/통계코드·일"
+      }
+    },
+    {
+      "id": "tourism_tfidf",
+      "title": "관광지 TF-IDF 검색",
+      "candidate_count": 48,
+      "family_count": 3,
+      "candidate_metric_percent": 68.18181818181819,
+      "candidate_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 15,
+        "total": 22,
+        "percent": 68.18181818181819
+      },
+      "comparator_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 13,
+        "total": 22,
+        "percent": 59.09090909090909
+      },
+      "selected_config": {
+        "family": "rrf",
+        "mode": "char",
+        "rrf_k": 30,
+        "field_boost": 0,
+        "coverage_gate": 1
+      },
+      "promoted": true,
+      "decision_reason": "같은 후보 집합에서 첫 결과가 개선됐습니다.",
+      "full_index_prototype_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      }
+    },
+    {
+      "id": "food_tfidf",
+      "title": "음식점 TF-IDF 검색",
+      "candidate_count": 48,
+      "family_count": 3,
+      "candidate_metric_percent": null,
+      "candidate_metric": null,
+      "comparator_metric": null,
+      "selected_config": {
+        "family": "rrf",
+        "mode": "char",
+        "rrf_k": 30,
+        "field_boost": 0.4,
+        "coverage_gate": 0
+      },
+      "promoted": false,
+      "decision_reason": "검증·시험 정답 ID 132개가 겹치고 비교기의 그룹 순서·범위가 운영과 달라 별도 탐색 결과로 기록",
+      "exploratory_candidate_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 10,
+        "total": 18,
+        "percent": 55.55555555555556
+      },
+      "exploratory_comparator_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 8,
+        "total": 18,
+        "percent": 44.44444444444444
+      },
+      "full_index_prototype_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 15,
+        "total": 18,
+        "percent": 83.33333333333333
+      }
+    },
+    {
+      "id": "assistant_guide_tfidf",
+      "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+      "candidate_count": 48,
+      "family_count": 3,
+      "candidate_metric_percent": 100.0,
+      "candidate_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "comparator_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "selected_config": {
+        "family": "tfidf",
+        "mode": "char"
+      },
+      "promoted": false,
+      "decision_reason": "같은 후보 집합에서 개선 폭이 0입니다.",
+      "full_index_prototype_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      }
+    },
+    {
+      "id": "travel_context_tfidf",
+      "title": "걷기·해변·접근성·편의시설 자료 검색",
+      "candidate_count": 48,
+      "family_count": 3,
+      "candidate_metric_percent": 72.22222222222223,
+      "candidate_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 13,
+        "total": 18,
+        "percent": 72.22222222222223
+      },
+      "comparator_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 13,
+        "total": 18,
+        "percent": 72.22222222222223
+      },
+      "selected_config": {
+        "family": "tfidf",
+        "mode": "char"
+      },
+      "promoted": false,
+      "decision_reason": "같은 후보 집합에서 개선 폭이 0입니다.",
+      "full_index_prototype_metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 18,
+        "total": 18,
+        "percent": 100.0
+      }
+    },
+    {
+      "id": "assistant_intent",
+      "title": "여행 도우미 요청 종류 분류",
+      "candidate_count": 36,
+      "family_count": 4,
+      "candidate_metric_percent": 86.66666666666667,
+      "candidate_metric": {
+        "name": "작성 문장 분류기 정답률",
+        "hits": 52,
+        "total": 60,
+        "percent": 86.66666666666667
+      },
+      "comparator_metric": {
+        "name": "기존 나이브 베이즈 분류기 정답률",
+        "hits": 54,
+        "total": 60,
+        "percent": 90.0
+      },
+      "selected_config": {
+        "id": 30,
+        "family": "logreg",
+        "ngram_range": [
+          1,
+          3
+        ],
+        "alpha_or_C": 0.1,
+        "dev_accuracy_percent": 97.22222222222221,
+        "dev_macro_f1": 0.9720279720279721
+      },
+      "promoted": false,
+      "decision_reason": "같은 문장의 분류기 단독 비교에서 기존 나이브 베이즈의 정답 수가 더 많았습니다."
+    }
+  ],
+  "snapshot_sha256": "86f76eaf88c7cb2309739a4070832ab9b16ff6779101bdaed6c1c352ff0fcb7e"
+}
