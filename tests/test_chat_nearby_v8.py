@@ -50,12 +50,18 @@ class NearbyChatTests(unittest.TestCase):
         distances=[card['distance_km'] for card in result['cards']]
         self.assertEqual(distances,sorted(distances))
 
-    def test_plain_menus_recommend_after_consent(self):
-        for message,topic in [('관광지 추천','tourism'),('맛집 추천','food'),('먹거리 찾기','food'),('음식 추천','food')]:
+    def test_plain_menus_and_explicit_regions_do_not_use_shared_location(self):
+        for message, intent in [('관광지 추천','tourism_menu'), ('맛집 추천','food_menu'),
+                                ('먹거리 찾기','food_menu'), ('음식 추천','food_menu'),
+                                ('남부 해변 추천','tourism_search')]:
             with self.subTest(message=message):
-                result=self.ask(message,AIRPORT)
-                self.assert_nearby(result)
-                self.assertEqual(result['intent'],topic+'_search')
+                result = self.ask(message, AIRPORT)
+                self.assertFalse(result['location_used'])
+                self.assertFalse(result['needs_location'])
+                self.assertEqual(result['intent'], intent)
+                self.assertTrue(all(card.get('distance_km') is None for card in result['cards']))
+                if intent == 'tourism_search':
+                    self.assertTrue(result['cards'])
 
     def test_nearby_food_never_appends_unmapped_permits(self):
         result=self.ask('내 근처 고기국수 추천',AIRPORT)
@@ -105,7 +111,7 @@ class NearbyChatTests(unittest.TestCase):
                 self.assertIn('제주 범위 밖',result['reply'])
 
     def test_invalid_locations_and_flags_are_rejected(self):
-        invalid=[[],{}, {'latitude':True,'longitude':126.5},{'latitude':'33.5','longitude':126.5},{'latitude':float('nan'),'longitude':126.5},{'latitude':33.5,'longitude':float('inf')},{'latitude':91,'longitude':126.5},{'latitude':33.5,'longitude':-181},{**AIRPORT,'accuracy_m':-1},{**AIRPORT,'accuracy_m':float('inf')}]
+        invalid=[[],{}, {'latitude':True,'longitude':126.5},{'latitude':'33.5','longitude':126.5},{'latitude':float('nan'),'longitude':126.5},{'latitude':33.5,'longitude':float('inf')},{'latitude':91,'longitude':126.5},{'latitude':33.5,'longitude':-181},{**AIRPORT,'accuracy_m':-1},{**AIRPORT,'accuracy_m':float('inf')},{**AIRPORT,'latitude':10**400},{**AIRPORT,'accuracy_m':10**400}]
         for location in invalid:
             with self.subTest(location=location):
                 with self.assertRaises(ValueError):self.ask('관광지 추천',location)
@@ -124,7 +130,7 @@ class NearbyChatTests(unittest.TestCase):
         self.assertIn('선택한 기준 장소',result['reply'])
         self.assertNotIn('기기 위치',result['reply'])
         self.assertNotIn('label',result['state'])
-        device=self.ask('관광지 추천',AIRPORT)
+        device=self.ask('근처 관광지 추천',AIRPORT)
         self.assertEqual(device['location_source'],'device')
         self.assertIn('동의한 기기 위치',device['reply'])
         for location in [{**AIRPORT,'source':'unsupported'},{**AIRPORT,'source':[]},{**AIRPORT,'label':'가'*101},{**AIRPORT,'label':True}]:
@@ -157,6 +163,45 @@ class NearbyChatTests(unittest.TestCase):
         self.assertFalse(result['needs_location'])
         self.assertEqual(result['cards'],[])
         self.assertIn('이름으로 적은 장소',result['reply'])
+
+    def test_landmark_name_and_vicinity_words_do_not_request_a_device_origin(self):
+        for question in ['제주공항 근처 카페 추천', '함덕해수욕장 가까운 카페 추천',
+                         '제주공항 부근 카페 추천', '그곳 주위 카페 추천']:
+            for location in (None, AIRPORT):
+                with self.subTest(question=question, location=location):
+                    result = self.ask(question, location)
+                    self.assertEqual(result['intent'], 'nearby_help')
+                    self.assertFalse(result['needs_location'])
+                    self.assertFalse(result['location_used'])
+                    self.assertEqual(result['cards'], [])
+
+    def test_explicit_radius_and_count_are_applied_to_followups_and_restart(self):
+        question = '내 근처 반경 1km 카페 2곳 추천'
+        consent = self.ask(question)
+        self.assertTrue(consent['needs_location'])
+        self.assertEqual(consent['radius_km'], 1)
+        first = self.ask(question, AIRPORT)
+        self.assertEqual(len(first['cards']), 2)
+        self.assertEqual(first['radius_km'], 1)
+        self.assertTrue(all(card['distance_km'] <= 1 for card in first['cards']))
+        second = self.ask('다른 곳 추천', AIRPORT, first['state'])
+        self.assertEqual(second['state']['offset'], 2)
+        self.assertEqual(second['radius_km'], 1)
+        self.assertFalse({card['id'] for card in first['cards']} & {card['id'] for card in second['cards']})
+        restarted = chat_reply(ROOT, {'message':'다른 곳 추천', 'state':first['state'],
+                                     'location':AIRPORT, 'restart_page':True})
+        self.assertEqual(restarted['state']['offset'], 0)
+        self.assertEqual(restarted['state']['choice_ids'], first['state']['choice_ids'])
+        declined = self.ask(question, declined=True)
+        self.assertEqual(declined['cards'], [])
+        self.assertIn('기준 위치가 필요', declined['reply'])
+
+    def test_refining_proximity_preserves_previous_theme_and_region(self):
+        first = self.ask('북부 해변 추천')
+        closer = self.ask('더 가까운 곳', AIRPORT, first['state'])
+        self.assertTrue(closer['location_used'])
+        self.assertEqual(closer['state']['region'], 'north')
+        self.assertEqual(closer['state']['last_query'], '해변')
 
     def test_live_and_negative_questions_keep_existing_boundaries(self):
         for message,intent in [('내 근처 현재 영업하는 식당','realtime_unavailable'),('해변 말고 주변 박물관','clarify_negation')]:

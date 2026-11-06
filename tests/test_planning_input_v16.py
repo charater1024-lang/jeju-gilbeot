@@ -4,7 +4,7 @@ import io
 import json
 from pathlib import Path
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from jeju_agent import orchestrator, reference, server
 from jeju_agent.planning_input import validate_confirmed_origin
@@ -69,13 +69,15 @@ class PlanningOriginHttpTests(unittest.TestCase):
     def handler(self,path,body):
         captured=[]
         class FakeServer:
-            def __init__(self,address,handler):captured.append(handler)
+            def __init__(self,address,handler):captured.append((self,handler))
             def serve_forever(self):pass
             def server_close(self):pass
         with patch.object(server,'ThreadingHTTPServer',FakeServer),patch.object(server,'service_status',return_value={}),contextlib.redirect_stdout(io.StringIO()):
             server.serve(port=8765)
         payload=json.dumps(body).encode('utf-8')
-        handler=object.__new__(captured[0]);handler.path=path
+        instance,handler_type=captured[0]
+        handler=object.__new__(handler_type)
+        handler.connection=Mock();handler.server=instance;handler.path=path
         handler.headers={'Origin':'http://127.0.0.1:8765','Content-Length':str(len(payload))}
         handler.rfile=io.BytesIO(payload);handler.responses=[]
         handler.json_response=lambda value,status=200:handler.responses.append((status,value))

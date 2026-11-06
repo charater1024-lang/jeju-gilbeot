@@ -33,6 +33,9 @@ async function render(item){
   checks.push('the same tourism original is linked once when it is also the record source');
   ({html}=await render({...fixture,id:'food_123',kind:'food',source_overlap_verified:false,source_platform:'jeju_datahub',source_url:'https://www.jejudatahub.net/data/view/data/780',description:'인허가 명부에 있는 업소 기록',description_provenance:'permit_record',tourism_guide:null}));assert(html.includes('인허가 명부에 있는 업소 기록'));assert(html.includes('명부 원문 ↗'));assert(!html.includes('관광 소개문을 아직 연결하지 못했어요.'));
   checks.push('food details keep their own record description and registry source without a missing-tourism notice');
+  ({html}=await render({...fixture,visit_review:{required:true,reasons:[{message:'공식 접근 통제 <img>'}],source_url:'https://www.visitjeju.net/visit-check'}}));
+  assert(html.includes('공식 접근 통제 &lt;img&gt;'));assert(html.includes('방문 조건 출처 ↗'));assert(!html.includes('id="detail-save"'));
+  checks.push('restricted recommendations preserve the public source on detail and cannot be added from that screen');
   const discovery=fs.readFileSync(__dirname+'/../ui/discovery.js','utf8');const functions=discovery.slice(discovery.indexOf('  function guideFor('),discovery.indexOf('  function overlapMarkup('));
   const ctx={URL,escape:escaped,safeURL:safeLink};vm.createContext(ctx);vm.runInContext(functions,ctx);
   const source=ctx.sourceLink(fixture);assert(source.includes('관광 안내 원문'));assert(source.includes('지도 원문'));const card=ctx.guideCardMarkup(fixture);assert(card.includes('&lt;img'));assert(!card.includes('<img'));assert.equal(ctx.guideCardMarkup({...fixture,tourism_guide:{...fixture.tourism_guide,source_url:sourceURL}}),'');

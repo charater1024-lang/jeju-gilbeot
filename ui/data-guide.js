@@ -7,7 +7,7 @@
   const duration = byId('guide-duration'), result = byId('guide-result'), status = byId('guide-status');
   const tabs = [...document.querySelectorAll('[data-guide-kind]')];
   const submit = byId('guide-submit');
-  let kind = 'route', pending = null;
+  let kind = tabs[0]?.dataset.guideKind || 'dining', pending = null;
   const scopes = {
     route: '과거 통계 노선코드별 하루 승차 집계에서 학습한 요일 참고치입니다. 현재 운행 노선·차량 혼잡·도착 시간을 안내하는 자료와 구분해 주세요.',
     dining: '제주 전체 세부 외식업종의 이용건수 구성비를 추정합니다. 결제 건당 금액은 과거 집계 참고치이며, 식당별 메뉴 가격과 다릅니다.',
@@ -26,7 +26,7 @@
   function select(next) {
     cancel(); kind = next; result.replaceChildren(); status.textContent = ''; query.value = '';
     for (const tab of tabs) tab.setAttribute('aria-pressed', String(tab.dataset.guideKind === kind));
-    byId('guide-date-field').hidden = kind !== 'route'; day.required = kind === 'route';
+    if (day) { byId('guide-date-field').hidden = kind !== 'route'; day.required = kind === 'route'; }
     byId('guide-month-field').hidden = kind !== 'dining';
     byId('guide-duration-field').hidden = kind !== 'walk';
     byId('guide-query-label').textContent = kind === 'route' ? '원자료 통계 노선코드 (비우면 주요 기록 비교)' : kind === 'dining' ? '세부 업종 또는 중분류 (선택)' : '코스·장소·시설 이름이나 특징 (선택)';
@@ -168,7 +168,7 @@
     event.preventDefault(); cancel(); result.replaceChildren();
     const job = {controller: new AbortController()}; pending = job; submit.disabled = true; status.textContent = '자료를 비교하고 있어요.';
     const params = new URLSearchParams({kind, query: query.value.trim()});
-    if (kind === 'route') params.set('date', day.value);
+    if (kind === 'route' && day) params.set('date', day.value);
     if (kind === 'dining') params.set('month', month.value);
     if (kind === 'walk' && duration.value) params.set('max_minutes', duration.value);
     const timeout = setTimeout(() => job.controller.abort(), 30000);
@@ -184,12 +184,18 @@
   }
   const now = new Date(), parts = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(now);
   const part = type => parts.find(value => value.type === type).value;
-  day.value = `${part('year')}-${part('month')}-${part('day')}`;
+  if (day) day.value = `${part('year')}-${part('month')}-${part('day')}`;
   for (let value = 1; value <= 12; value++) { const option = node('option', `${value}월`); option.value = String(value); month.append(option); }
   month.value = String(Number(part('month')));
   for (const tab of tabs) tab.addEventListener('click', () => select(tab.dataset.guideKind));
   form.addEventListener('submit', load);
-  for (const control of [query, day, month, duration]) control.addEventListener('input', () => { cancel(); result.replaceChildren(); status.textContent = ''; });
+  for (const control of [query, day, month, duration].filter(Boolean)) control.addEventListener('input', () => { cancel(); result.replaceChildren(); status.textContent = ''; });
+  window.addEventListener('jeju:reset', () => {
+    form.reset();
+    if (day) day.value = `${part('year')}-${part('month')}-${part('day')}`;
+    month.value = String(Number(part('month')));
+    select(tabs[0]?.dataset.guideKind || 'dining');
+  });
   window.addEventListener('pagehide', cancel);
-  select('route');
+  select(kind);
 })();

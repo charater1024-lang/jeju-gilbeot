@@ -54,7 +54,7 @@ def _integer(value, minimum, maximum, label, default=None):
     return value
 
 
-def data_guide(root, params):
+def data_guide(root, params, *, learned_search=True):
     """Return the same reviewable table to the UI and to assistant tool calls."""
     root = Path(root)
     kind = params.get('kind', 'route')
@@ -118,7 +118,7 @@ def data_guide(root, params):
     minutes = _integer(raw, 1, 1440, '걷기 시간 한도') if raw not in (None, '') else None
     if minutes is not None and kind != 'walk':
         raise ValueError('시간 한도는 걷기 코스에 적용해 주세요.')
-    data = search_travel_context(root, kind=kind, query=query, max_minutes=minutes, limit=12)
+    data = search_travel_context(root, kind=kind, query=query, max_minutes=minutes, limit=12, learned=learned_search)
     titles = {'walk': '시간과 거리에 맞는 걷기 코스', 'beach': '해변 편의시설 비교',
               'accessible': '접근성 자료에 기록된 여행지', 'amenity': '마을 편의시설 참고'}
     rows = [[item.get('name'), _known(item.get('known', {})), item.get('source_date'),
@@ -126,7 +126,7 @@ def data_guide(root, params):
     notes = _notes(data)
     if data.get('message'):
         notes.append(data['message'])
-    if data.get('model'):
+    if learned_search and data.get('model'):
         notes.append('검색 관련도는 실제 자료의 문자 TF-IDF로 계산합니다. 검색 정확도와 현장 이용 만족도는 아직 평가하지 않았습니다.')
     return {'status': data.get('status', 'ok'), 'title': titles[kind],
             'columns': ['코스·시설', '기록된 항목', '자료 기준일', '설명과 확인할 내용'],

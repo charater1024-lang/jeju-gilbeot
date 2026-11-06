@@ -3,7 +3,7 @@ import contextlib
 import io
 from pathlib import Path
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from jeju_agent import server
 from jeju_agent.place_trust import TrustPolicyError
@@ -15,12 +15,14 @@ class AgentServerTests(unittest.TestCase):
     def handler(self):
         captured=[]
         class FakeServer:
-            def __init__(self,address,handler):captured.append(handler)
+            def __init__(self,address,handler):captured.append((self,handler))
             def serve_forever(self):pass
             def server_close(self):pass
         with patch.object(server,'ThreadingHTTPServer',FakeServer),patch.object(server,'service_status',return_value={}),contextlib.redirect_stdout(io.StringIO()):
             server.serve(port=8765)
-        handler=object.__new__(captured[0])
+        instance,handler_type=captured[0]
+        handler=object.__new__(handler_type)
+        handler.connection=Mock();handler.server=instance
         handler.path='/api/agent/plan'
         handler.headers={'Origin':'http://127.0.0.1:8765','Content-Length':'2'}
         handler.rfile=io.BytesIO(b'{}');handler.responses=[]

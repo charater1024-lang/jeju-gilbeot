@@ -1,5 +1,6 @@
 """Entry point for the unmodified isolated Windows embeddable runtime."""
 import argparse
+import os
 from pathlib import Path
 import sys
 
@@ -11,8 +12,11 @@ def main():
     p=argparse.ArgumentParser(description='Jeju Gilbeot local center app')
     p.add_argument('--port',type=int,default=8765)
     p.add_argument('--no-browser',action='store_true')
+    p.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
     a=p.parse_args()
     if not 1024<=a.port<=65535:p.error('port must be between 1024 and 65535')
+    if a.road_gpu:
+        os.environ['JEJU_ROAD_GPU'] = '1'
     from jeju_agent.server import serve
     if not a.no_browser:
         import webbrowser

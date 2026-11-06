@@ -17,7 +17,7 @@ import re
 import sqlite3
 import time
 
-from .discovery import _distance, _normalized, _point, _tokens
+from .discovery import _distance, _normalized, _point, _reference_profile, _reference_terms, _tokens
 from .catalog_store import access_flags, region_for
 from .tourism_overlap import POLICY_ID, build_overlap_records
 from .tourism_names import prefer_hub_name
@@ -160,7 +160,7 @@ def _load_model(path: str, mtime: int, database: str, database_mtime: int) -> di
 
 
 def _number(value, minimum, maximum, label):
-    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not minimum <= value <= maximum:
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not minimum <= value <= maximum:
         raise ValueError(f"{label} 값이 올바르지 않습니다.")
     return float(value)
 
@@ -217,11 +217,30 @@ def _cursor(offset, model):
     return base64.urlsafe_b64encode(json.dumps({"offset": offset, "version": model["model_version"], "model": model["model_sha256"][:16]}, separators=(",", ":")).encode()).decode().rstrip("=")
 
 
-def search_tourism(root: Path, body=None) -> dict:
+def _reference_match(item, terms):
+    observed = item.get("observed_tags", {})
+    hub_name = (item.get("cross_source") or {}).get("hub", {}).get("name")
+    names = [item["name"], item.get("map_name"), hub_name]
+    fields = [*names, item.get("address"), item["category"],
+              *(observed.get(key) for key in ("tourism", "natural", "leisure", "historic", "description", "description:ko"))]
+    text = tuple(_normalized(value) for value in fields)
+    if not terms or any(not any(_normalized(alias) in value for value in text for alias in THEMES.get(term, [term])) for term in terms):
+        return None
+    name_match = any(all(term in _normalized(name) for term in terms) for name in names)
+    return name_match, [{"term": term, "feature": "record_text_or_theme"} for term in terms[:8]]
+
+
+def search_tourism(root: Path, body=None, *, learned: bool = True) -> dict:
     root = Path(root)
     request = _request({} if body is None else body)
     database, path = root / "data_reference" / "tourism.sqlite", root / "models_tourism" / "tourism_tfidf.json"
-    model = _load_model(str(path.resolve()), path.stat().st_mtime_ns, str(database.resolve()), database.stat().st_mtime_ns)
+    if learned:
+        model = _load_model(str(path.resolve()), path.stat().st_mtime_ns, str(database.resolve()), database.stat().st_mtime_ns)
+    else:
+        profile = _reference_profile(database, root / "data_reference" / "tourism_profile.json")
+        if profile.get("schema_version") != SCHEMA_VERSION or profile.get("candidate_policy_id") != POLICY_ID or profile.get("source_overlap_verified") is not True:
+            raise ValueError("관광 출처 교차확인 기록을 확인하세요.")
+        model = dict(profile, model_version="verified_tourism_reference_lookup_v23", model_sha256=profile["database_sha256"])
     if request["cursor"]:
         try:
             cursor = json.loads(base64.urlsafe_b64decode(request["cursor"] + "=" * (-len(request["cursor"]) % 4)))
@@ -230,7 +249,11 @@ def search_tourism(root: Path, body=None) -> dict:
             request["offset"] = cursor["offset"]
         except (ValueError, TypeError, KeyError, UnicodeError) as exc:
             raise ValueError("cursor가 유효하지 않거나 다른 모델 버전의 값입니다.") from exc
-    vector, expanded = _vector(request["query"], model)
+    terms = [] if learned else _reference_terms(request["query"])
+    if learned:
+        vector, expanded = _vector(request["query"], model)
+    else:
+        vector, expanded = {}, sorted({alias for term in terms for alias in THEMES.get(term, [])})
     scores = {}
     clauses, params = [], []
     for field in ["kind", "region", "category"]:
@@ -250,7 +273,7 @@ def search_tourism(root: Path, body=None) -> dict:
         candidates = []
         for row in db.execute("SELECT doc_id,data_json FROM places" + (" WHERE " + " AND ".join(clauses) if clauses else ""), params):
             score = scores.get(row["doc_id"], 0.0)
-            if request["query"] and score <= 0:
+            if learned and request["query"] and score <= 0:
                 continue
             item = json.loads(row["data_json"])
             if not _approved(item):continue
@@ -267,25 +290,41 @@ def search_tourism(root: Path, body=None) -> dict:
                 # because both happen to contain the English bigram "ea".
                 if not any(_normalized(term) in theme_text for term in expanded):
                     continue
-            name_match = bool(request["query"] and _normalized(request["query"]) in _normalized(item["name"]))
-            training = _training_terms(item)
-            intersect = sorted((term for term in training if term in model["vocabulary"] and model["vocabulary"][term] in vector and (term.startswith("w:") or re.search(r"[가-힣]", term))), key=lambda term: (not term.startswith("w:"), -model["idf"][model["vocabulary"][term]], term))
-            evidence, seen_terms = [], set()
-            for term in intersect:
-                if term[2:] in seen_terms:
+            if learned:
+                name_match = bool(request["query"] and _normalized(request["query"]) in _normalized(item["name"]))
+                training = _training_terms(item)
+                intersect = sorted((term for term in training if term in model["vocabulary"] and model["vocabulary"][term] in vector and (term.startswith("w:") or re.search(r"[가-힣]", term))), key=lambda term: (not term.startswith("w:"), -model["idf"][model["vocabulary"][term]], term))
+                evidence, seen_terms = [], set()
+                for term in intersect:
+                    if term[2:] in seen_terms:
+                        continue
+                    seen_terms.add(term[2:])
+                    evidence.append({"term": term[2:], "feature": "word" if term.startswith("w:") else "character_bigram", "idf": round(model["idf"][model["vocabulary"][term]], 4)})
+                    if len(evidence) >= 8:
+                        break
+            elif request["query"]:
+                match = _reference_match(item, terms)
+                if match is None:
                     continue
-                seen_terms.add(term[2:])
-                evidence.append({"term": term[2:], "feature": "word" if term.startswith("w:") else "character_bigram", "idf": round(model["idf"][model["vocabulary"][term]], 4)})
-                if len(evidence) >= 8:
-                    break
+                name_match, evidence = match
+            else:
+                name_match, evidence = False, []
             tier = (0 if theme_classification_match else 1 if name_match else 2) if expanded else (0 if name_match else 1)
-            item.update(plan_place_id=item["id"], similarity_score=round(score, 6) if request["query"] else None, score_definition="TF-IDF 문자 관련도이며 인기도·만족도 확률이 아닙니다.", evidence_terms=evidence, match_reason="관측 분류와 검색 테마가 일치" if theme_classification_match else "장소명에 검색어 직접 일치" if name_match else "실제 이름·관측 분류의 학습된 문자 표현과 검색어가 관련됩니다." if request["query"] else "위치가 있으면 직선거리순, 없으면 공식 참조와 이름순입니다.", ranking_tier=tier, theme_classification_match=theme_classification_match, distance_km=round(distance, 3) if distance is not None else None)
+            if theme_classification_match:
+                match_reason = "관측 분류와 검색 테마가 일치"
+            elif name_match:
+                match_reason = "장소명에 검색어 직접 일치"
+            elif request["query"]:
+                match_reason = "실제 이름·관측 분류의 학습된 문자 표현과 검색어가 관련됩니다." if learned else "교차확인 기록의 명칭·주소·분류·원문에서 검색어를 확인했습니다."
+            else:
+                match_reason = "위치가 있으면 직선거리순, 없으면 공식 참조와 이름순입니다."
+            item.update(plan_place_id=item["id"], similarity_score=round(score, 6) if learned and request["query"] else None, score_definition="TF-IDF 문자 관련도이며 인기도·만족도 확률이 아닙니다." if learned else "출처 기록의 명시 일치와 지역·거리 조건", evidence_terms=evidence, match_reason=match_reason, ranking_tier=tier, theme_classification_match=theme_classification_match, distance_km=round(distance, 3) if distance is not None else None)
             candidates.append(prefer_hub_name(item))
         category_rows = [dict(row) for row in db.execute("SELECT category AS value,category AS label,COUNT(*) AS count FROM places" + (" WHERE kind=?" if request["kind"] != "all" else "") + " GROUP BY category ORDER BY category", [request["kind"]] if request["kind"] != "all" else [])]
     if request["query"] and request["point"]:
-        candidates.sort(key=lambda item: (item["ranking_tier"], item["distance_km"], -item["similarity_score"], item["name"], item["id"]))
+        candidates.sort(key=lambda item: (item["ranking_tier"], item["distance_km"], -(item["similarity_score"] or 0), item["name"], item["id"]))
     elif request["query"]:
-        candidates.sort(key=lambda item: (item["ranking_tier"], -item["similarity_score"], item["name"], item["id"]))
+        candidates.sort(key=lambda item: (item["ranking_tier"], -(item["similarity_score"] or 0), item["name"], item["id"]))
     elif request["point"]:
         candidates.sort(key=lambda item: (item["distance_km"], item["name"], item["id"]))
     else:
@@ -294,6 +333,8 @@ def search_tourism(root: Path, body=None) -> dict:
     items = candidates[offset:offset + request["limit"]]
     next_offset = offset + len(items) if offset + len(items) < total else None
     warnings = ["빅데이터 명부와 지도 기록의 명칭·위치를 교차확인한 관광 후보만 표시합니다. 명부·지도 한쪽에만 있는 장소는 관광 추천에서 제외합니다.", "허브 1349는 분류 미확인 여행장소 명부이며 교차확인 결과가 공식 지정 관광지나 현재 영업 검증을 뜻하지 않습니다.", "검색 관련도는 문자 표현이며 관광객 인기도·만족도·방문량을 예측한 점수가 아닙니다.", "공개 분류와 대표 좌표는 실제 입구·개방·예약·요금·도로 접근을 검증한 정보가 아닙니다."]
+    if not learned:
+        warnings[2] = "교차확인 기록에 명시된 이름·주소·관측 분류와 검색어가 일치하는 결과를 보여줍니다."
     if request["kind"] == "reference":warnings.append("분류 미확인 여행장소 명부는 관광 검색에서 제공하지 않습니다. 교차확인 관광지를 선택하세요.")
     if request["location_status"] == "outside_jeju":
         warnings.append("제공 위치가 제주 범위 밖이므로 거리 정렬과 반경 필터를 적용하지 않았습니다.")
@@ -302,7 +343,14 @@ def search_tourism(root: Path, body=None) -> dict:
     radius_applied = request["point"] is not None and request["radius"] is not None
     from .tourism_guides import enrich_tourism
     items=[enrich_tourism(root,item) for item in items]
-    return {"status": "tourism_reference_search", "items": items, "total": total, "offset": offset, "limit": request["limit"], "next_offset": next_offset, "next_cursor": _cursor(next_offset, model) if next_offset is not None else None, "has_more": next_offset is not None, "available_categories": category_rows, "location_status": request["location_status"], "radius_km": request["radius"], "radius_applied": radius_applied, "distance_basis": "provided_location_straight_line" if request["point"] is not None else "not_available", "applied_filters": {"query": request["query"], "region": request["region"], "category": request["category"], "kind": request["kind"], "bbox_applied": request["bbox"] is not None, "radius_applied": radius_applied}, "model": {"algorithm": ALGORITHM, "model_version": model["model_version"], "training_rows": model["training_rows"], "training_rows_unit": model["training_rows_unit"], "kind_counts": model["kind_counts"], "source_counts": model["source_counts"], "candidate_policy_id": model["candidate_policy_id"], "source_overlap_verified": True, "overlap_validation": model["overlap_validation"], "source_period": model["source_period"], "vocabulary_terms": len(model["vocabulary"]), "learned_component": "corpus_document_frequency_idf_and_l2_document_vectors", "query_expansion_rules": expanded, "retrieval_accuracy_evaluated": False, "predicts_popularity": False, "predicts_satisfaction": False}, "attributions": [{"text": "© OpenStreetMap contributors", "license": "ODbL-1.0", "copyright_url": "https://www.openstreetmap.org/copyright"}] if "osm" in model["sources"] else [], "privacy": {"precise_location_persisted": False, "precise_location_echoed": False}, "warnings": warnings}
+    if learned:
+        model_info = {"algorithm": ALGORITHM, "model_version": model["model_version"], "training_rows": model["training_rows"], "training_rows_unit": model["training_rows_unit"], "kind_counts": model["kind_counts"], "source_counts": model["source_counts"], "candidate_policy_id": model["candidate_policy_id"], "source_overlap_verified": True, "overlap_validation": model["overlap_validation"], "source_period": model["source_period"], "vocabulary_terms": len(model["vocabulary"]), "learned_component": "corpus_document_frequency_idf_and_l2_document_vectors", "query_expansion_rules": expanded, "retrieval_accuracy_evaluated": False, "predicts_popularity": False, "predicts_satisfaction": False}
+    else:
+        model_info = {"algorithm": "verified_tourism_reference_lookup", "learned_component": None,
+                      "model_version": model["model_version"], "source_records": model["training_rows"],
+                      "source_period": model["source_period"], "candidate_policy_id": model["candidate_policy_id"],
+                      "source_overlap_verified": True, "query_expansion_rules": expanded}
+    return {"status": "tourism_reference_search", "items": items, "total": total, "offset": offset, "limit": request["limit"], "next_offset": next_offset, "next_cursor": _cursor(next_offset, model) if next_offset is not None else None, "has_more": next_offset is not None, "available_categories": category_rows, "location_status": request["location_status"], "radius_km": request["radius"], "radius_applied": radius_applied, "distance_basis": "provided_location_straight_line" if request["point"] is not None else "not_available", "applied_filters": {"query": request["query"], "region": request["region"], "category": request["category"], "kind": request["kind"], "bbox_applied": request["bbox"] is not None, "radius_applied": radius_applied}, "model": model_info, "attributions": [{"text": "© OpenStreetMap contributors", "license": "ODbL-1.0", "copyright_url": "https://www.openstreetmap.org/copyright"}] if "osm" in model["sources"] else [], "privacy": {"precise_location_persisted": False, "precise_location_echoed": False}, "warnings": warnings}
 
 
 def _approved(item):

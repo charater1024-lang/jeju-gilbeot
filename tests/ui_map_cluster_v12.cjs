@@ -12,13 +12,14 @@ class Element{
   matches(s){return s.startsWith('.')?this.classList.contains(s.slice(1)):this.tagName===s;}
   querySelectorAll(selector){const selectors=selector.split(',').map(s=>s.trim()),found=[];const visit=n=>{for(const child of n.children){if(selectors.some(s=>child.matches(s)))found.push(child);visit(child);}};visit(this);return found;}
   querySelector(selector){return this.querySelectorAll(selector)[0]||null;}
+  focus(){Element.activeElement=this;}
   closest(selector){const selectors=selector.split(',').map(s=>s.trim());for(let n=this;n;n=n.parentElement)if(selectors.some(s=>n.matches(s)))return n;return null;}
   getBoundingClientRect(){return {width:500,height:310,left:0,top:0};}setPointerCapture(){}
 }
 const point=(id,latitude=33.45,longitude=126.5)=>({id,name:'장소 '+id,latitude,longitude,category:'관광 후보',source_url:'https://example.test/'+id});
 function setup({online=false,onSelect,onOpenDetail}={}){
   const log={maps:0,tiles:0,markers:[],events:new Map(),resizes:[],fits:[],removed:0};
-  const document={createElement:t=>new Element(t),createElementNS:(_,t)=>new Element(t),createTextNode:text=>{const node=new Element('#text');node.textContent=text;return node;}};
+  const document={get activeElement(){return Element.activeElement;},createElement:t=>new Element(t),createElementNS:(_,t)=>new Element(t),createTextNode:text=>{const node=new Element('#text');node.textContent=text;return node;}};
   const window={setTimeout:()=>1,clearTimeout(){},ResizeObserver:class{constructor(cb){log.resizes.push(cb);}observe(){}disconnect(){}}};
   if(online){const map={setView(){return this;},fitBounds(coords){log.fits.push(coords);log.events.get('zoomend moveend')?.();return this;},on(k,fn){log.events.set(k,fn);return this;},remove(){log.removed++;},invalidateSize(){log.events.get('zoomend moveend')?.();},latLngToContainerPoint:([lat,lon])=>({x:(lon-126)*1000,y:(34-lat)*1000})};
     window.L={map(){log.maps++;return map;},tileLayer(){log.tiles++;return{addTo(){return this;},on(){return this;}};},layerGroup(){return{layers:[],addTo(){return this;},clearLayers(){this.layers=[];}};},divIcon:o=>o,marker(coords,options){const marker={coords,options,events:{},addTo(group){group.layers.push(this);return this;},bindTooltip(){return this;},on(k,fn){this.events[k]=fn;return this;}};log.markers.push(marker);return marker;},polyline(){return{addTo(){return this;}};}};
@@ -37,7 +38,7 @@ const checks=[];
     assert.equal(host.querySelector('.jm-cluster').querySelector('text').textContent,'2곳');
     host.querySelector('.jm-cluster').fire('click');
     assert.deepEqual(Array.from(m.getState().clusterIds),['a','b']);assert.equal(host.querySelector('.jm-cluster-list').children.length,2);
-    host.querySelector('.jm-place-choice').fire('click');assert.equal(m.getState().activeId,'a');assert.equal(m.getState().clusterCount,1,'choosing/saving an equal-coordinate place cannot split a cluster into overlapping markers');assert.equal(host.querySelector('.jm-cluster-list').children.length,2);
+    const firstChoice=host.querySelector('.jm-place-choice');firstChoice.focus();firstChoice.fire('click');assert.equal(m.getState().activeId,'a');assert.equal(m.getState().clusterCount,1,'choosing/saving an equal-coordinate place cannot split a cluster into overlapping markers');assert.equal(host.querySelector('.jm-cluster-list').children.length,2);assert.equal(Element.activeElement,host.querySelector('.jm-place-choice'),'selecting a place restores focus to its new button');
     host.querySelectorAll('.jm-place-choice')[1].fire('click');assert.equal(m.getState().activeId,'b');assert.equal(host.querySelector('.jm-detail-name').textContent,'장소 b');host.querySelector('.jm-detail-button').fire('click');assert.deepEqual(opened,['b']);assert.deepEqual(picked,['a','b']);
     m.refresh();log.resizes.forEach(fn=>fn());host.querySelector('.jm-zoom-out').fire('click');m.fit();assert.equal(host.querySelector('.jm-cluster-list').children.length,2);assert.equal(m.getState().activeId,'b');
     host.querySelector('.jm-show-all').fire('click');assert.equal(m.getState().clusterIds.length,0);assert.equal(host.querySelector('.jm-place-listing').open,true,'explicit show-all opens the full list');assert.equal(host.querySelectorAll('.jm-place-choice').length,2);
@@ -48,7 +49,7 @@ const checks=[];
     const found=new Set();let pages=0;
     do{host.querySelectorAll('.jm-place-choice').forEach(b=>found.add(b.textContent));pages++;if(host.querySelector('.jm-list-next').disabled)break;host.querySelector('.jm-list-next').fire('click');}while(pages<30);
     assert.equal(found.size,500);assert.equal(pages,25);assert.equal(m.getState().detailPage,24);assert.equal(host.querySelector('.jm-list-pagination').textContent.includes('481–500 / 500곳'),true);
-    host.querySelector('.jm-list-previous').fire('click');m.refresh();assert.equal(m.getState().detailPage,23);assert.equal(m.getState().detailPlaceCount,500);
+    const previous=host.querySelector('.jm-list-previous');previous.focus();previous.fire('click');assert.equal(Element.activeElement,host.querySelector('.jm-place-choice'),'pagination moves focus to the new first place');m.refresh();assert.equal(m.getState().detailPage,23);assert.equal(m.getState().detailPlaceCount,500);
     m.setPlaces([point('different',33.3,126.7)]);assert.equal(m.getState().clusterIds.length,0);assert.equal(m.getState().activeId,null);assert.equal(host.querySelectorAll('.jm-place-choice').length,1);assert.equal(host.querySelector('.jm-marker').querySelector('text').textContent,'#1');assert(!host.querySelector('.jm-place-detail').textContent.includes('p499'));
     checks.push('all 500 cluster members are reachable through 20-place pages and a new search discards stale cluster names and pagination');
   }

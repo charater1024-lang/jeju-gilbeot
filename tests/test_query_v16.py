@@ -23,14 +23,30 @@ class GroundedQueryTests(unittest.TestCase):
                              ('제주목관아', '제주목관아 추천해 주세요'),
                              ('협재해수욕장', '협재해수욕장에 가고 싶어'),
                              ('오설록티뮤지엄', '오설록티뮤지엄을 추천해줘')]:
-            with self.subTest(phrase=phrase):
-                direct = orchestrator.run_agent(ROOT, request(name))
-                polite = orchestrator.run_agent(ROOT, request(phrase))
-                self.assertEqual(direct['status'], 'ok')
-                self.assertEqual(polite['status'], 'ok')
-                self.assertEqual([p['poi_id'] for p in direct['stops']],
-                                 [p['poi_id'] for p in polite['stops']])
-                self.assertTrue(all(p['trust']['automatic_eligible'] for p in polite['stops']))
+            for learned_search in (True, False):
+                with self.subTest(phrase=phrase, learned_search=learned_search):
+                    direct = orchestrator.run_agent(ROOT, request(name), learned_search=learned_search)
+                    polite = orchestrator.run_agent(ROOT, request(phrase), learned_search=learned_search)
+                    self.assertEqual(direct['status'], 'ok')
+                    self.assertEqual(polite['status'], 'ok')
+                    self.assertEqual(polite['request']['query'], phrase)
+                    self.assertEqual([p['poi_id'] for p in direct['stops']],
+                                     [p['poi_id'] for p in polite['stops']])
+                    self.assertTrue(all(p['trust']['automatic_eligible'] for p in polite['stops']))
+
+    def test_reference_search_keeps_visit_restrictions_and_extra_conditions(self):
+        phrase = '성산일출봉 추천'
+        restricted = orchestrator.run_agent(ROOT, request(phrase), learned_search=False)
+        self.assertEqual(restricted['status'], 'infeasible')
+        self.assertEqual(restricted['stops'], [])
+        self.assertEqual(restricted['request']['query'], phrase)
+        self.assertTrue(any(item['id'] == 'seongsan' for item in restricted['exclusions']))
+
+        for query in ['섭지코지 실시간 개방 확인', '섭지코지와 성산일출봉 추천']:
+            with self.subTest(query=query):
+                result = orchestrator.run_agent(ROOT, request(query), learned_search=False)
+                self.assertEqual(result['stops'], [])
+                self.assertEqual(result['request']['query'], query)
 
     def test_negative_requests_are_not_silently_changed_to_positive_queries(self):
         for phrase in ['해변 빼고 박물관', '섭지코지 제외하고 추천', '협재해수욕장 말고',

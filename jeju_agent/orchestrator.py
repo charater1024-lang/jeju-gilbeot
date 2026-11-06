@@ -11,8 +11,10 @@ import time
 
 from .engine import _travel, _validate_request
 from .discovery import _normalized
+from .itinerary_travel import ROAD_BASIS, constraint_check, estimate_itinerary, estimate_note, itinerary_totals, road_search_legs
 from .reference import plan_destinations
 from .model_runtime_v20 import active_tourism_search as search_tourism
+from .tourism import search_tourism as search_place_records
 from .planning_input import validate_confirmed_origin
 
 REGIONS = {'all', 'east', 'west', 'south', 'north'}
@@ -38,9 +40,52 @@ def _named_query_match(query, item):
                for name in names)
 
 
-def _request(body):
+def _reference_query(root, query):
+    """Remove a supported request ending only after matching a known full name."""
+    key = _normalized(query)
+    stems = [key[:-len(ending)] for ending in NAME_REQUEST_ENDINGS
+             if key.endswith(ending) and len(key) > len(ending)]
+    if not stems:
+        return query
+    from .tourism_access import approved_places
+    known_names = {_normalized(place.get(field)) for place in approved_places(root)
+                   for field in ('name', 'map_name')}
+    return next((stem for stem in stems if stem in known_names), query)
+
+
+def _request(root, body):
+    if not isinstance(body, dict):
+        raise ValueError('요청은 JSON 객체여야 합니다.')
+    return_only = body.get('return_only', False)
+    if not isinstance(return_only, bool):
+        raise ValueError('return_only는 true 또는 false여야 합니다.')
+    if return_only:
+        required = {'origin_place_id', 'date', 'transport', 'start_minute', 'end_minute', 'budget_krw'}
+        if not required <= body.keys() or body.get('destination_ids'):
+            raise ValueError('직접 복귀에는 확인한 공개 출발지와 기존 도착지, 날짜, 수단, 출발·마감 시각, 남은 이동비가 필요합니다.')
+    origin_place_id = None
+    if 'origin_place_id' in body:
+        requested_id = body['origin_place_id']
+        if body.get('origin_confirmed') is not True or body.get('origin_source') != 'landmark':
+            raise ValueError('이어서 여행하려면 이전 코스의 공개 장소를 출발지로 확인해 주세요.')
+        if not isinstance(requested_id, str) or not 1 <= len(requested_id) <= 120:
+            raise ValueError('이어서 출발할 공개 장소 ID를 확인해 주세요.')
+        from .place_trust import place_trust
+        from .tourism_access import approved_place
+
+        place = approved_place(root, requested_id)
+        if place is None or place_trust(root, place, purpose='automatic')['automatic_eligible'] is not True:
+            raise ValueError('자동 코스 기준을 충족하는 공개 관광지에서 이어서 출발할 수 있습니다.')
+        origin_place_id = place['id']
+        body = dict(body, start_lat=place['latitude'], start_lon=place['longitude'],
+                    origin_label=place['name'])
     origin = validate_confirmed_origin(body)
-    req = _validate_request({key: body[key] for key in REQUEST_FIELDS if key in body})
+    request_values = {key: body[key] for key in REQUEST_FIELDS if key in body}
+    if return_only and type(request_values.get('max_stops', 0)) is int and request_values.get('max_stops', 0) == 0:
+        request_values['max_stops'] = 1  # Shared validation expects a positive sightseeing limit.
+    req = _validate_request(request_values)
+    if return_only:
+        req.update(return_only=True, max_stops=0)
     query, region = body.get('query', ''), body.get('region', 'all')
     if not isinstance(query, str) or len(query) > 100:
         raise ValueError('관심 검색어는 100자 이내 문자열이어야 합니다.')
@@ -53,23 +98,30 @@ def _request(body):
     include_geometry = body.get('include_geometry', True)
     if not isinstance(include_geometry, bool):
         raise ValueError('include_geometry는 true 또는 false여야 합니다.')
+    excluded = set(excluded)
+    if origin_place_id is not None:
+        excluded.add(origin_place_id)
+        if len(excluded) > 68:
+            raise ValueError('출발지를 포함한 제외 장소는 공개 ID 최대 68개까지 지정할 수 있습니다.')
+        req['origin_place_id'] = origin_place_id
     req.update(origin)
-    req.update(query=query.strip(), region=region, excluded_ids=sorted(set(excluded)),
+    req.update(query=query.strip(), region=region, excluded_ids=sorted(excluded),
                include_geometry=include_geometry)
     return req
 
 
-def _assumptions(mode):
+def _assumptions(mode, estimate=None):
     if mode == 'bus':
         return [{'item': '이동수단', 'basis': '운행일·환승·막차 근거가 없어 버스 코스는 계산하지 않음'}]
+    road = estimate is not None and estimate['basis'] == ROAD_BASIS
     return [
-        {'item': '이동시간', 'basis': '직선거리 보정과 가정 속도',
-         'distance_factor': 1.35 if mode == 'car' else 1.2,
+        {'item': '이동시간', 'basis': 'OSM 자동차 도로 거리와 가정 속도' if road else '직선거리 보정과 가정 속도',
+         'distance_factor': 1.0 if road else (1.35 if mode == 'car' else 1.2),
          'speed_kmh': 35 if mode == 'car' else 4,
          'verified_road_travel_time': False},
         {'item': '체류시간', 'basis': '장소의 계획용 값 또는 기본 90분',
          'observed_visit_duration': False},
-        {'item': '비용', 'basis': '자동차는 보정거리 1km당 250원, 도보는 0원인 이동비 가정',
+        {'item': '비용', 'basis': '자동차는 도로 거리 1km당 250원인 이동비 가정' if road else '자동차는 보정거리 1km당 250원, 도보는 0원인 이동비 가정',
          'includes_admission_food_parking_rental': False},
         {'item': '방문 가능 조건', 'basis': '알려진 접근 제한은 제외하되 현재 개방·운영은 미확인',
          'current_operation_verified': False},
@@ -77,7 +129,8 @@ def _assumptions(mode):
 
 
 def _base(req):
-    return {'status': 'infeasible', 'data_mode': 'reference', 'selection_mode': 'automatic',
+    return {'status': 'infeasible', 'data_mode': 'reference',
+            'selection_mode': 'direct_return' if req.get('return_only') else 'automatic',
             'message': '조건을 만족하는 실제 장소 코스를 찾지 못했습니다.',
             'request': req, 'stops': [], 'totals': {}, 'trace': [], 'warnings': [],
             'selected_place_evidence': [], 'exclusions': [],
@@ -93,14 +146,15 @@ def _base(req):
                       'forecast_scope': 'no_popularity_or_demand_forecast'}}
 
 
-def _bounded_select(candidates, req):
+def _bounded_select(candidates, req, legs=None):
     """Use a small deterministic beam; never claim a global optimum."""
     start = (req['start_lat'], req['start_lon'])
     end = (req['end_lat'], req['end_lon'])
     points = [start] + [(p['latitude'], p['longitude']) for p in candidates] + [end]
     terminal = len(points) - 1
-    legs = {(a, b): _travel(points[a], points[b], req['transport'])
-            for a in range(terminal) for b in range(1, terminal+1) if a != b}
+    if legs is None:
+        legs = {(a, b): _travel(points[a], points[b], req['transport'])
+                for a in range(terminal) for b in range(1, terminal + 1) if a != b}
     stays = {i: int(p.get('planning_stay_minutes', 90)) for i, p in enumerate(candidates, 1)}
     if any(not 1 <= stay <= 1440 for stay in stays.values()):
         raise ValueError('장소의 계획용 체류시간이 올바르지 않습니다.')
@@ -124,7 +178,9 @@ def _bounded_select(candidates, req):
                 if index in route:
                     continue
                 considered += 1
-                leg, back = legs[last, index], legs[index, terminal]
+                leg, back = legs.get((last, index)), legs.get((index, terminal))
+                if leg is None or back is None:
+                    continue
                 new = (route+(index,), travel+leg[0], visit+stays[index], cost+leg[1])
                 if new[1]+new[2]+back[0] > available or new[3]+back[1] > req['budget_krw']:
                     continue
@@ -141,11 +197,31 @@ def _bounded_select(candidates, req):
     return ([candidates[index-1]['id'] for index in best[0]] if best else []), considered
 
 
-def run_agent(root, body):
+def _direct_return(root, req, response, trace):
+    step = time.perf_counter()
+    points = [(req['start_lat'], req['start_lon']), (req['end_lat'], req['end_lon'])]
+    legs, estimate, geometry = estimate_itinerary(root, req, [], points)
+    check = constraint_check(req, legs)
+    assumptions = [item for item in _assumptions(req['transport'], estimate) if item['item'] in {'이동시간', '비용'}]
+    response.update(travel_estimate=estimate, constraint_check=check, planning_assumptions=assumptions,
+                    warnings=[estimate_note(estimate), '복귀 이동비는 계획용 추정이며 주차비·렌터카 비용은 별도로 확인해 주세요.'])
+    if not (check['within_deadline'] and check['within_budget']):
+        response.update(message='기존 도착지까지 바로 이동해도 입력한 도착 마감 또는 이동비 한도를 넘습니다.',
+                        suggestions=['입력한 재출발 시각과 남은 이동비를 확인하고 실제 이동 조건을 별도로 확인해 주세요.'])
+        trace('직접 복귀 조건 검사', step, '방문 없이 기존 도착지까지의 거리로 계산한 시간·이동비가 입력한 조건을 넘습니다.', 'infeasible')
+        return response
+    response.update(status='ok', message='추가 방문 없이 기존 도착지로 이동하는 초안입니다.',
+                    totals=itinerary_totals(req, legs, estimate, check, 0),
+                    route_geometry=geometry if req['include_geometry'] else None)
+    trace('직접 복귀 조건 검사', step, '추가 방문을 넣지 않고 기존 도착지까지의 시간과 이동비를 검사했습니다.')
+    return response
+
+
+def run_agent(root, body, *, learned_search=True):
     """Validate -> retrieve -> trust -> select -> schedule -> route -> explain."""
     root = Path(root)
     started = time.perf_counter()
-    req = _request(body)
+    req = _request(root, body)
     response = _base(req)
 
     def trace(name, stage_started, detail, status='completed'):
@@ -154,7 +230,7 @@ def run_agent(root, body):
 
     trace('요청과 출발 기준 확인', started,
           '사용자가 확인한 출발·복귀 위치와 시간·수단·이동비 조건을 검사했습니다.')
-    if any(term in _normalized(req['query']) for term in (
+    if not req.get('return_only') and any(term in _normalized(req['query']) for term in (
             '빼고', '빼줘', '빼주', '제외', '말고', '싫', '아닌', '아니고',
             '안가', '안갈', '가지않', '원하지', '불포함', '비선호', '피하고', '피해서')):
         response.update(status='needs_clarification',
@@ -170,9 +246,13 @@ def run_agent(root, body):
                         suggestions=['자동차 또는 도보 조건을 선택해 주세요.'])
         trace('지원 범위 확인', time.perf_counter(), '운행 근거가 부족한 이동수단의 계산을 중단했습니다.', 'unsupported')
         return response
+    if req.get('return_only'):
+        return _direct_return(root, req, response, trace)
 
     step = time.perf_counter()
-    result = search_tourism(root, {'query': req['query'], 'region': req['region'],
+    search = search_tourism if learned_search else lambda root, body: search_place_records(root, body, learned=False)
+    search_query = req['query'] if learned_search else _reference_query(root, req['query'])
+    result = search(root, {'query': search_query, 'region': req['region'],
                                   'kind': 'attraction', 'limit': 100,
                                   'location': {'latitude': req['start_lat'], 'longitude': req['start_lon']},
                                   'radius_km': 100})
@@ -221,7 +301,7 @@ def run_agent(root, body):
     response['selection_statistics'] = {'matched_candidates': len(result['items']), 'policy_eligible': len(eligible),
                                          'searched_candidates': len(candidates), 'candidate_limit': MAX_CANDIDATES,
                                          'excluded_candidates': len(exclusions), 'beam_width': BEAM_WIDTH,
-                                         'objective': '방문 가능한 장소 수를 우선하고, 같은 수에서는 복귀 포함 추정 이동시간과 이동비가 작은 조합을 비교',
+                                         'objective': '방문 수와 이동시간·이동비를 비교하고, 보정 거리 초안이 맞지 않으면 자동차 도로 거리로 후보를 다시 탐색',
                                          'personalization_or_diversity_optimized': False}
     if not candidates:
         response.update(message='검색 조건과 신뢰성 기준을 함께 충족하는 자동 추천 장소가 없습니다.',
@@ -230,25 +310,45 @@ def run_agent(root, body):
         return response
     step = time.perf_counter()
     selected, considered = _bounded_select(candidates, req)
+    car = req['transport'] == 'car'
+    if car and len(candidates) == 1:
+        selected = [candidates[0]['id']]
+    planned = plan_destinations(root, dict(req, destination_ids=selected)) if selected else None
+    if car and len(candidates) > 1 and (planned is None or planned['status'] == 'infeasible'):
+        points = ([(req['start_lat'], req['start_lon'])]
+                  + [(p['latitude'], p['longitude']) for p in candidates]
+                  + [(req['end_lat'], req['end_lon'])])
+        minimum_stay = min(int(p.get('planning_stay_minutes', 90)) for p in candidates)
+        road_legs = road_search_legs(root, req, points, minimum_stay)
+        if road_legs:
+            alternative, road_considered = _bounded_select(candidates, req, road_legs)
+            considered += road_considered
+            if alternative and set(alternative) != set(selected):
+                verified = plan_destinations(root, dict(req, destination_ids=alternative))
+                if planned is None or verified['status'] == 'ok':
+                    selected, planned = alternative, verified
     response['selection_statistics']['considered_extensions'] = considered
     trace('장소 선택과 코스 탐색', step,
           f"실제 {len(candidates)}개 후보에서 복귀 시간·계획용 체류·추정 이동비를 검사해 {len(selected)}곳을 선택했습니다.")
-    if not selected:
+    if planned is None:
         response.update(message='신뢰성 기준을 통과한 장소를 방문하고 복귀하기에는 시간 또는 추정 이동비 조건이 부족합니다.',
                         suggestions=['이용 시간을 늘리거나 출발·복귀 지점을 조정해 주세요.', '도보라면 가까운 지역으로 범위를 좁혀 주세요.'])
         trace('근거와 조건 조정 안내', time.perf_counter(), '시간·이동비를 초과한 코스를 성공으로 표시하지 않고 조건 조정안을 제공합니다.', 'infeasible')
         return response
 
     step = time.perf_counter()
-    planned = plan_destinations(root, dict(req, destination_ids=selected))
-    # Existing planner performs a complete permutation check for only this small set.
     response.update(status=planned['status'], message=planned['message'],
                     stops=planned['stops'], totals=planned['totals'],
                     request=dict(req, destination_ids=selected), warnings=planned['warnings'])
-    trace('일정과 복귀 재검사', step, '선택된 장소의 순서를 비교하고 시간·이동비·복귀 조건을 다시 검사했습니다.',
+    for key in ('travel_estimate', 'constraint_check', 'route_geometry'):
+        if key in planned:
+            response[key] = planned[key]
+    if 'travel_estimate' in response:
+        response['planning_assumptions'] = _assumptions(req['transport'], response['travel_estimate'])
+    trace('일정과 복귀 재검사', step, '선택한 순서의 이동시간·이동비와 복귀 조건을 다시 검사했습니다.',
           'completed' if planned['status'] == 'ok' else planned['status'])
     if planned['status'] != 'ok':
-        response['suggestions'] = ['장소 수 또는 이용 시간을 조정하고 다시 요청해 주세요.']
+        response['suggestions'] = planned.get('suggestions') or ['장소 수 또는 이용 시간을 조정하고 다시 요청해 주세요.']
         return response
     indexed = {item['id']: item for item in candidates}
     for stop in response['stops']:
@@ -270,15 +370,9 @@ def run_agent(root, body):
         response['warnings'].append(f'검색 관련도와 거리순의 상위 {MAX_CANDIDATES}개 후보 안에서 코스를 탐색했습니다.')
     step = time.perf_counter()
     if req['include_geometry']:
-        from .roads import route_geometry
-        try:
-            geometry = route_geometry(root, {'destination_ids': [p['poi_id'] for p in response['stops']],
-                'transport': req['transport'],
-                'origin': {'latitude': req['start_lat'], 'longitude': req['start_lon']},
-                'destination': {'latitude': req['end_lat'], 'longitude': req['end_lon']}})
-            response['route_geometry'] = geometry
-            trace('로컬 지도 연결', step, '공개 OSM 도로의 연결 참고 경로 또는 방문 순서 직선을 준비했습니다. 실제 통행·실시간 소요시간은 미확인입니다.')
-        except (ValueError, FileNotFoundError, OSError):
+        if response['route_geometry'] is not None:
+            trace('로컬 지도 연결', step, '선정 순서의 자동차 도로 또는 방문 순서 직선 참고 지도를 준비했습니다.')
+        else:
             response['warnings'].append('로컬 도로 연결을 확인하지 못해 일정의 방문 순서만 제공합니다.')
             trace('로컬 지도 연결', step, '도로 연결 자료가 없거나 조건에 맞지 않아 지도 연결 참고 경로를 생략했습니다.', 'unavailable')
     else:

@@ -24,6 +24,7 @@ function fixture({initialLocation=null,pathname='/',chatRequested=false}={}){
   const document={body,activeElement:null,createElement:tag=>new Element(tag),getElementById:id=>all.find(n=>n.id===id)};
   const blocked=new Proxy({}, {get(){throw new Error('storage forbidden');},set(){throw new Error('storage forbidden');}});
   const response={reply:'가까운 해변 기록입니다.',cards:[{id:'test_beach',plan_place_id:'test_beach',name:'시험 해변',latitude:33.51,longitude:126.5,distance_km:1.25,category:'해변'}],quick_replies:[],state:{topic:'tourism',region:'all',nearby:true,choice_ids:['test_beach'],latitude:DEVICE.latitude,longitude:DEVICE.longitude,location:{latitude:DEVICE.latitude}},intent:'tourism_nearby'};
+  const needsLocation={reply:'주변 검색에 위치가 필요합니다.',needs_location:true,state:{nearby:true},cards:[]};
   function emit(type,detail){for(const fn of listeners.get(type)||[])fn({detail});}
   function setLocation(point){current=point?{...point}:null;emit('jeju:locationchange',{location:current?{...current}:null});}
   const locationContext={get:()=>current?{...current}:null,request(){return new Promise(resolve=>consents.push({resolve,done:false}));},clear(){setLocation(null);},cancel(){cancelled++;for(const consent of consents)if(!consent.done){consent.done=true;consent.resolve({status:'cancelled'});}}};
@@ -32,7 +33,11 @@ function fixture({initialLocation=null,pathname='/',chatRequested=false}={}){
     navigator:{geolocation:{getCurrentPosition(){throw new Error('chat must use consent service rather than native GPS');}}},
     addEventListener(type,fn){(listeners.get(type)||listeners.set(type,[]).get(type)).push(fn);},
     JejuPages:{navigate:path=>navigated.push(path),reveal:node=>navigated.push(node.id==='planner'?'/planner':'/explore'),consumeChatRequest(){const requested=chatRequested;chatRequested=false;return requested;}},JejuTripBridge:{getRoute:()=>null,openPlace(){},addPlace:()=>true},JejuExplore:{showPlaces(){},showRoute(){}},
-    async fetch(url,options){requests.push({url,options});if(url==='/api/chat/status')return {ok:true,json:async()=>({prepared_answers:33585,faq_count:26})};assert.equal(url,'/api/chat');posted.push(JSON.parse(options.body));const next=scripted.length?scripted.shift():response;if(hold)return new Promise(resolve=>held.push(()=>resolve({ok:true,json:async()=>next})));return {ok:true,json:async()=>next};}};
+    async fetch(url,options){requests.push({url,options});if(url==='/api/chat/status')return {ok:true,json:async()=>({prepared_answers:33585,faq_count:26})};assert.equal(url,'/api/chat');const body=JSON.parse(options.body);posted.push(body);const nearby=/주변|가까운|다른 곳/.test(body.message);
+      const next=scripted.length ? scripted.shift()
+        : !body.location&&!body.location_declined&&nearby ? needsLocation
+        : {...response,location_used:!!body.location,state:{...response.state,nearby:!!body.location,radius_km:5,result_limit:2}};
+      if(hold&&body.location)return new Promise(resolve=>held.push(()=>resolve({ok:true,json:async()=>next})));return {ok:true,json:async()=>next};}};
   sandbox.window=sandbox;vm.createContext(sandbox);vm.runInContext(SOURCE,sandbox);
   const node=id=>document.getElementById(id),text=node=>[node?.textContent||'',...(node?.children||[]).map(text)].join('\n');
   async function submit(message){if(!node('jeju-chat-dialog').open)sandbox.JejuChat.open();node('jeju-chat-input').value=message;all.find(n=>n.className==='jc-form').listeners.submit({preventDefault(){}});await tick();}
@@ -45,22 +50,37 @@ function fixture({initialLocation=null,pathname='/',chatRequested=false}={}){
     const f=fixture();await tick();assert.equal(f.node('jeju-chat-dialog').tagName,'DIALOG');assert.equal(f.node('jeju-chat-dialog').parentElement.tagName,'BODY');assert.equal(f.node('jeju-chat-dialog').open,false);assert.equal(f.consents.length,0);assert.equal(f.posted.length,0);assert.equal(f.requests.length,0);await f.submit('함덕해수욕장 주소');assert.equal(f.requests[0].url,'/api/chat/status');assert.equal(f.node('jeju-chat-dialog').open,true);assert.equal(f.consents.length,0);assert.equal(f.posted.length,1);assert.equal(f.posted[0].location,undefined);checks.push('floating dialog stays closed on load and opening/status/details never request device position or consent');
   }
   {
-    const f=fixture();await f.submit('내 주변 관광지 추천');assert.equal(f.consents.length,1);assert.equal(f.posted.length,0);assert.equal(f.node('jeju-chat-input').disabled,true);await f.consent('success');assert.equal(f.posted.length,1);assert.equal(f.posted[0].location.latitude,DEVICE.latitude);assert.equal(f.posted[0].location.longitude,DEVICE.longitude);assert.equal(f.posted[0].state.latitude,undefined);assert.match(f.text(f.node('jeju-chat-log')),/직선 1\.3km/);assert(!f.text(f.node('jeju-chat-log')).includes(String(DEVICE.latitude)));const moved={...DEVICE,latitude:33.55123456};f.setLocation(moved);await f.submit('영업시간 알려줘');assert.equal(f.posted.at(-1).state.latitude,undefined);assert.equal(f.posted.at(-1).state.longitude,undefined);assert.equal(f.posted.at(-1).state.location,undefined);assert.equal(f.posted.at(-1).location.latitude,moved.latitude);assert(f.requests.every(row=>row.url==='/api/chat'||row.url==='/api/chat/status'));checks.push('recommendations wait for consent and send fresh top-level coordinates only; cards show straight-line distance and conversation state omits private coordinates');
+    const f=fixture();await f.submit('북부 해변 추천');await f.submit('성산일출봉 근처 카페');assert.equal(f.consents.length,0);assert.equal(f.posted.length,2);assert(f.posted.every(body=>!body.location));checks.push('regional and named-place queries reach the server without a location prompt');
   }
   {
-    for(const status of ['cancelled','error','unavailable','outside-jeju']){const f=fixture();await f.submit('가까운 맛집 추천');await f.consent(status);assert.equal(f.posted[0].location,undefined);assert.equal(f.posted[0].location_declined,true);await f.submit('관광지도 추천');assert.equal(f.consents.length,1);assert.equal(f.posted.at(-1).location,undefined);assert.equal(f.posted.at(-1).location_declined,true);}checks.push('decline, failure and outside-Jeju positions continue without location and do not repeatedly prompt on every recommendation');
+    const f=fixture();await f.submit('내 주변 관광지 추천');assert.equal(f.consents.length,1);assert.equal(f.posted.length,1);assert.equal(f.posted[0].location,undefined);assert.equal(f.node('jeju-chat-input').disabled,true);await f.consent('success');assert.equal(f.posted.length,2);assert.equal(f.posted[1].location.latitude,DEVICE.latitude);assert.equal(f.posted[1].location.longitude,DEVICE.longitude);assert.equal(f.posted[1].state.latitude,undefined);assert.match(f.text(f.node('jeju-chat-log')),/직선 1\.3km/);assert(!f.text(f.node('jeju-chat-log')).includes(String(DEVICE.latitude)));const moved={...DEVICE,latitude:33.55123456};f.setLocation(moved);await f.submit('영업시간 알려줘');assert.equal(f.posted.at(-1).state.latitude,undefined);assert.equal(f.posted.at(-1).state.longitude,undefined);assert.equal(f.posted.at(-1).state.location,undefined);assert.equal(f.posted.at(-1).location,undefined);assert(f.requests.every(row=>row.url==='/api/chat'||row.url==='/api/chat/status'));checks.push('only server-confirmed nearby searches request consent; conversation state omits private coordinates');
   }
   {
-    const f=fixture();await f.submit('맛집 추천');await f.consent('cancelled');const retry=f.node('chat-use-location').click();await tick();assert.equal(f.consents.length,2);await f.consent('success');await retry;assert.equal(f.posted.length,1,'toolbar consent should not invent a question');await f.submit('내 주변 맛집 추천');assert.equal(f.consents.length,2);assert.equal(f.posted.at(-1).location.latitude,DEVICE.latitude);assert.equal(f.posted.at(-1).location_declined,undefined);checks.push('the location toolbar explicitly retries after a decline and successful retry enables subsequent nearby recommendations');
+    for(const status of ['cancelled','error','unavailable','outside-jeju']){const f=fixture();await f.submit('가까운 맛집 추천');await f.consent(status);assert.equal(f.posted[1].location,undefined);assert.equal(f.posted[1].location_declined,true);await f.submit('관광지도 추천');assert.equal(f.consents.length,1);assert.equal(f.posted.at(-1).location,undefined);assert.equal(f.posted.at(-1).location_declined,true);}checks.push('decline, failure and outside-Jeju positions continue without location and do not repeatedly prompt on every recommendation');
   }
   {
-    const manual={latitude:33.506,longitude:126.492,source:'manual',label:'제주공항'};const f=fixture({initialLocation:manual});await f.submit('관광지 추천');assert.equal(f.consents.length,0);assert.equal(f.posted[0].location.latitude,manual.latitude);assert.match(f.text(f.node('chat-location-status')),/제주공항.*실제 내 위치가 아닙니다/);checks.push('a shared manual landmark is reused without GPS and clearly labelled as a reference rather than device position');
+    const f=fixture();await f.submit('가까운 맛집 추천');await f.consent('cancelled');const retry=f.node('chat-use-location').click();await tick();assert.equal(f.consents.length,2);await f.consent('success');await retry;assert.equal(f.posted.length,2,'toolbar consent should not invent a question');await f.submit('내 주변 맛집 추천');assert.equal(f.consents.length,2);assert.equal(f.posted.at(-1).location.latitude,DEVICE.latitude);assert.equal(f.posted.at(-1).location_declined,undefined);checks.push('the location toolbar explicitly retries after a decline and successful retry enables subsequent nearby recommendations');
   }
   {
-    for(const reason of ['clear','revoke']){const f=fixture({initialLocation:DEVICE});f.hold=true;await f.submit('내 주변 관광지 추천');assert.equal(f.held.length,1);const signal=f.requests.find(item=>item.url==='/api/chat').options.signal;f.context.clear(reason);assert.equal(signal.aborted,true);f.held.shift()();await tick();assert.equal(f.node('jeju-chat-log').children.length,2,'late private-origin reply must not be appended');assert.equal(f.node('jeju-chat-input').disabled,false);}checks.push('clearing or revoking the active origin aborts a pending request and ignores a late reply');
+    const manual={latitude:33.506,longitude:126.492,source:'manual',label:'제주공항'};const f=fixture({initialLocation:manual});await f.submit('남부 해변 추천');
+    assert.equal(f.posted[0].location,undefined);
+    await f.submit('내 주변 관광지 추천');
+    assert.equal(f.consents.length,0);
+    assert.equal(f.posted[1].location,undefined);
+    assert.equal(f.posted[2].location.latitude,manual.latitude);
+    f.setLocation({...manual,latitude:33.2468});
+    await f.submit('다른 곳 보기');
+    assert.equal(f.posted[3].location,undefined);
+    assert.equal(f.posted[4].location.latitude,33.2468);
+    assert.equal(f.posted[4].restart_page,true);
+    assert.equal(f.posted[4].state.radius_km,5);
+    assert.equal(f.posted[4].state.result_limit,2);assert.match(f.text(f.node('chat-location-status')),/제주공항.*실제 내 위치가 아닙니다/);checks.push('a shared manual landmark is reused without GPS and clearly labelled as a reference rather than device position');
   }
   {
-    const f=fixture();await f.submit('가까운 관광지 추천');assert.equal(f.consents.length,1);f.sandbox.JejuChat.reset();await tick();assert.equal(f.cancelled,1);assert.equal(f.posted.length,0);assert.equal(f.node('jeju-chat-log').children.length,1);assert.equal(f.node('jeju-chat-input').disabled,false);checks.push('reset during consent cancels the shared request and prevents the abandoned question from being submitted');
+    for(const reason of ['clear','revoke']){const f=fixture({initialLocation:DEVICE});f.hold=true;await f.submit('내 주변 관광지 추천');assert.equal(f.held.length,1);const signal=f.requests.at(-1).options.signal;f.context.clear(reason);assert.equal(signal.aborted,true);f.held.shift()();await tick();assert.equal(f.node('jeju-chat-log').children.length,2,'late private-origin reply must not be appended');assert.equal(f.node('jeju-chat-input').disabled,false);}checks.push('clearing or revoking the active origin aborts a pending request and ignores a late reply');
+  }
+  {
+    const f=fixture();await f.submit('가까운 관광지 추천');assert.equal(f.consents.length,1);f.sandbox.JejuChat.reset();await tick();assert.equal(f.cancelled,1);assert.equal(f.posted.length,1);assert.equal(f.posted[0].location,undefined);assert.equal(f.node('jeju-chat-log').children.length,1);assert.equal(f.node('jeju-chat-input').disabled,false);checks.push('reset during consent cancels the shared request and prevents replay of the abandoned question');
   }
   {
     const f=fixture();f.scripted=[{reply:'주변 검색에 위치가 필요합니다.',needs_location:true,state:{nearby:true},cards:[]},f.response];await f.submit('여기 어때');assert.equal(f.posted.length,1);assert.equal(f.consents.length,1);await f.consent('success');assert.equal(f.posted.length,2);assert.equal(f.posted[0].location,undefined);assert.equal(f.posted[1].location.latitude,DEVICE.latitude);assert.equal(f.posted[0].message,f.posted[1].message);assert.equal(f.node('jeju-chat-log').children.filter(n=>n.className==='jc-turn jc-user').length,1);assert.equal(f.node('jeju-chat-log').children.length,3);checks.push('server needs_location metadata opens consent and replays the same question once without duplicating the user turn');
@@ -70,6 +90,27 @@ function fixture({initialLocation=null,pathname='/',chatRequested=false}={}){
   }
   {
     const f=fixture({chatRequested:true});await tick();assert.equal(f.node('jeju-chat-dialog').open,true);assert.equal(f.navigated.length,0);assert.equal(f.consents.length,0);assert.equal(f.requests.length,1);checks.push('a deferred direct chat entry opens the same popup without requesting location');
+  }
+  {
+    const f=fixture();
+    const item=f.response.cards[0];
+    const visit_review={required:true,reasons:[{message:'기록된 접근 통제'}],source_url:'https://www.visitjeju.net/'};
+    f.scripted=[{...f.response,cards:[{...item,visit_review}]}];
+    await f.submit('남부 해변 추천');
+    assert.match(f.text(f.node('jeju-chat-log')),/기록된 접근 통제/);
+    assert.equal(f.node('jeju-chat-log').querySelectorAll('.jc-place-add').length,0);
+    assert(f.node('jeju-chat-log').querySelectorAll('.jc-place-source').some(node=>node.href===visit_review.source_url));
+    checks.push('visit restrictions show source and block itinerary add on the recommendation card');
+  }
+  {
+    const f=fixture();
+    await f.submit('해변 추천');
+    const add=f.node('jeju-chat-log').querySelectorAll('.jc-place-add')[0];
+    f.emit('jeju:saved',{items:[{id:f.response.cards[0].id}]});
+    assert.equal(add.disabled,true);
+    f.emit('jeju:saved',{items:[]});
+    assert.equal(add.disabled,false);
+    checks.push('saving or removing a place elsewhere updates the existing chat card');
   }
   console.log(JSON.stringify({passed:true,checks,real_device_location_requested:false,external_network:false,storage_used:false}));
 })().catch(error=>{console.error(error);process.exitCode=1;});

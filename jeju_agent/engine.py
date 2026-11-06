@@ -54,7 +54,7 @@ def _number(value: Any, field: str, minimum: float, maximum: float) -> float:
         raise ValueError(f"{field}: 숫자를 입력하세요.")
     try:
         result = float(value)
-    except (TypeError, ValueError) as exc:
+    except (TypeError, ValueError, OverflowError) as exc:
         raise ValueError(f"{field}: 숫자를 입력하세요.") from exc
     if not math.isfinite(result) or not minimum <= result <= maximum:
         raise ValueError(f"{field}: {minimum} 이상 {maximum} 이하의 유한한 값이어야 합니다.")

@@ -208,7 +208,13 @@ def place_trust(root,item,purpose='automatic',*,as_of=None):
     elif guide and age>policy['max_guide_age_days']:checks['official_guide']['status']='review_overdue'
     if guide:sources.append({'kind':'tourism_guide','name':guide.get('source_name') or '공식 관광 안내','url':guide['source_url'],'checked_at':guide.get('retrieved_at'),'date_kind':'guide_review'})
     if item.get('requires_ferry'):reject('ferry_not_supported','배편과 섬 안 이동 조건이 확인되지 않아 자동 코스에서 제외합니다.')
-    if item.get('requires_access_point'):reject('entrance_required','대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다.')
+    if item.get('requires_access_point'):
+        if purpose == 'manual':
+            natural = (item.get('observed_tags') or {}).get('natural')
+            point_description = '지도 좌표가 탐방 입구가 아닌 정상 지점을 가리킵니다.' if natural == 'peak' else '지도에 기록된 대표 위치만 확인했습니다.'
+            reject('entrance_required', f'{point_description} 실제 탐방 입구를 확인해야 일정을 계산할 수 있습니다.')
+        else:
+            reject('entrance_required','대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다.')
     explicit=policy['automatic_exclusions'].get(ident)
     if explicit:
         reject(explicit['code'],explicit['reason'])

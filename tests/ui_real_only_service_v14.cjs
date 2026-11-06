@@ -37,8 +37,8 @@ assert(metrics.modelMetricText({mae_per_hour:80.9194,wape_bucket_counts:0.133081
   assert(cardsHTML.includes((mobilityMetrics.test.model.wape_bucket_counts*100).toFixed(2)+'%'));
   assert(cardsHTML.includes('평가 기간'));assert(!cardsHTML.includes('SHOULD_NOT_APPEAR'));
   const calls=[],rendered=[];
-  const planner={$:node,formRequest:()=>({start_minute:540,end_minute:1080}),destinations:[{id:'seongsan'}],saved:new Set(['seongsan']),itemID:p=>p.id,getJSON:async(path,options)=>{calls.push({path,body:JSON.parse(options.body)});return {status:'ok',data_mode:'reference',stops:[]}},renderRoute:r=>rendered.push(r),updatePlanningMode(){},tripRequest:0,lastTripRequest:null};
-  vm.createContext(planner);vm.runInContext(fragment('$("#planner-form").addEventListener("submit"','// V3 feature declarations'),planner);
+  const planner={$:node,formRequest:()=>({start_minute:540,end_minute:1080,max_stops:4}),destinations:[{id:'seongsan'}],saved:new Set(['seongsan']),itemID:p=>p.id,getJSON:async(path,options)=>{calls.push({path,body:JSON.parse(options.body)});return {status:'ok',data_mode:'reference',stops:[]}},renderRoute:r=>rendered.push(r),updatePlanningMode(){},tripRequest:0,lastTripRequest:null};
+  vm.createContext(planner);vm.runInContext(fragment('function addSavedDestinations(', '// V15 planner origin')+fragment('$("#planner-form").addEventListener("submit"','// V3 feature declarations'),planner);
   await node('#planner-form').submit({preventDefault(){}});
   assert.equal(calls.length,1);assert.equal(calls[0].path,'/api/plan-destinations');assert.deepEqual(calls[0].body.destination_ids,['seongsan']);assert.equal(rendered.length,1);
   planner.saved.clear();await node('#planner-form').submit({preventDefault(){}});assert.equal(calls.length,1);assert.equal(node('#planner-error').hidden,false);

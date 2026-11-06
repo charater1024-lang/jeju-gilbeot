@@ -57,8 +57,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9570,
-      "sha256": "4728eb04c737ae45ee03dbbd2bef171cd7821421a53da8d2ae86cfb7b4b85614"
+      "bytes": 9655,
+      "sha256": "e291bd58675cfa646e7eb4f766b7a92fbd3d293d96385cc50d83b75cbf6b59ae"
     },
     {
       "path": "README_노트북이전.md",
@@ -2116,6 +2116,41 @@
       "sha256": "5b2da4a6a5684f0b4d8f844723fb787ca8ca7c080c12d8c690501b228f99015e"
     },
     {
+      "path": "development_support/weather_v22/gfs_jeju_archive.json",
+      "bytes": 527209,
+      "sha256": "3acb9b17e695b62bf19b425abc33e1d5363ed21cbb39c83824f2083e5bfbf2d4"
+    },
+    {
+      "path": "development_support/weather_v22/gfs_jeju_archive.receipt.json",
+      "bytes": 771,
+      "sha256": "d1adc8ec456106e5183f128b22033aaec0b48f4be47d59b400bf66753e8b7c89"
+    },
+    {
+      "path": "development_support/weather_v22/gfs_jeju_current_probe.json",
+      "bytes": 2055,
+      "sha256": "85d28c765a6b1d0b129bf3b8a3282b4bb82aa6e3a16243fb95bc78f6185d5519"
+    },
+    {
+      "path": "development_support/weather_v22/gfs_jeju_current_probe.receipt.json",
+      "bytes": 760,
+      "sha256": "31299a1a4821edf7406287dc91abb6af18cc3cc2fd3af2a2c466188d143d7286"
+    },
+    {
+      "path": "development_support/weather_v22/protocol.json",
+      "bytes": 11535,
+      "sha256": "8d16c4252e0c7b184fbc4679951fbc815f5788216279dab4a587148660557186"
+    },
+    {
+      "path": "development_support/weather_v22/result.json",
+      "bytes": 3970,
+      "sha256": "09e49468152c3f1bab28d8b79344a8a04fbbe866de0a5d280a4a1522dc47f878"
+    },
+    {
+      "path": "development_support/weather_v22/selection_freeze.json",
+      "bytes": 29716,
+      "sha256": "4a87a000e32fc7fdebe3200ed288a3db29533bf14a37a3e8c6dd071a81029c36"
+    },
+    {
       "path": "docs/01_기획서.md",
       "bytes": 21995,
       "sha256": "15f2e84ded76942dd7d2cfb5ac9cc837891e3dea0d9fea416a00e30db39500e6"
@@ -2194,6 +2229,11 @@
       "path": "docs/15_챗봇위치추천과페이지구성.md",
       "bytes": 6960,
       "sha256": "ce8e5203d84fb9e1fdc126d408f94527532f0503d08324ae58740bd4c3c07edb"
+    },
+    {
+      "path": "docs/AI사용과_API검증.md",
+      "bytes": 8776,
+      "sha256": "1ac911aed37c53b325b34156d9584b8bd0faeaa6d2c6027f13ad2e3a2f123fbc"
     },
     {
       "path": "docs/ML도우미_v17/검증결과_v17.json",
@@ -3984,6 +4024,16 @@
       "path": "scripts/experiment_route_lstm_v21.py",
       "bytes": 12820,
       "sha256": "de84655e4891a08dbdfb2ec00028b1bfb1e57baa9b79ced422e08df1cdfb160a"
+    },
+    {
+      "path": "scripts/experiment_route_weather_v22.py",
+      "bytes": 11569,
+      "sha256": "f1cf4e7de4a1332dbe694c6c4d872580e9c9cdb88069bb3fb325065e392d4ccd"
+    },
+    {
+      "path": "scripts/fetch_jeju_forecast_v22.py",
+      "bytes": 2440,
+      "sha256": "82de0cba31b85f0fba54b199f1c739296ea9eb8037e46749c808ef45691aa8c3"
     },
     {
       "path": "scripts/generate_demo.py",

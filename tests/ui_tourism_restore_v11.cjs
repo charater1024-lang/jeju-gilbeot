@@ -5,7 +5,7 @@ function fragment(start,end){const a=source.indexOf(start),b=source.indexOf(end,
 const point={name:'교차확인 해변',latitude:33.5,longitude:126.5,region:'north',category:'해변',kind:'attraction',source_overlap_verified:true};
 const calls=[];
 const responses={approved:{...point,id:'approved-current'},food:{...point,id:'food',kind:'food',source_overlap_verified:false},maponly:{...point,id:'maponly',source_overlap_verified:false},generic:{...point,id:'generic',kind:'reference',source_overlap_verified:false}};
-const context={URL,URLSearchParams,Number,Object,Array,Promise,Set,MAX_SAVED:8,regions:{all:'전체',north:'북부'},location:{origin:'http://127.0.0.1:8765'},getJSON:async path=>{assert(path.startsWith('/api/place-details?'));const id=new URL(path,'http://127.0.0.1:8765').searchParams.get('id');calls.push(id);if(!(id in responses))throw Error('unavailable');return {item:responses[id]};}};
+const context={URL,URLSearchParams,Number,Object,Array,Promise,Set,MAX_SAVED:8,regions:{all:'전체',north:'북부'},location:{origin:'http://127.0.0.1:8765'},getJSON:async path=>{assert(path.startsWith('/api/place-details?'));const id=new URL(path,'http://127.0.0.1:8765').searchParams.get('id');calls.push(id);if(!(id in responses))throw Object.assign(Error('not found'), {status:404});return {item:responses[id]};}};
 vm.createContext(context);
 vm.runInContext(fragment('const safeLink =','const safeImage =')+fragment('function normalizeTourismGuide(raw)','function sourceOverlapMarkup(item)')+fragment('function normalizeOverlapEvidence(raw)','function renderAudience()')+fragment('async function revalidateSavedExtras(items)','async function loadDestinations()'),context);
 (async()=>{

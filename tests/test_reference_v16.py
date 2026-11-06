@@ -106,6 +106,42 @@ class ManualTrustTests(unittest.TestCase):
         self.assertEqual({p['id'] for p in result['selected_place_evidence']},set(ids))
         self.assertEqual([p['id'] for p in result['exclusions']],[ids[1]])
 
+    def test_all_saved_checks_all_nine_real_stops_and_return_on_roads(self):
+        near_airport = sorted(
+            self.eligible,
+            key=lambda p: (p['latitude'] - 33.506)**2 + (p['longitude'] - 126.492)**2,
+        )
+        ids = [p['id'] for p in near_airport[:9]]
+        body = request(ids, max_stops='all', start_minute=360, end_minute=1320)
+        result = plan_destinations(ROOT, body)
+        self.assertEqual(result['status'], 'ok')
+        self.assertEqual(result['request']['destination_ids'], ids)
+        self.assertEqual(result['request']['max_stops'], 'all')
+        self.assertCountEqual([p['poi_id'] for p in result['stops']], ids)
+        self.assertEqual(result['travel_estimate']['basis'], 'osm_road_distance')
+        self.assertEqual(len(result['route_geometry']['leg_distances_km']), 10)
+        self.assertLessEqual(result['totals']['end_arrival_minute'], body['end_minute'])
+
+        too_short = plan_destinations(ROOT, dict(body, end_minute=720))
+        self.assertEqual(too_short['status'], 'infeasible')
+        self.assertEqual(too_short['stops'], [])
+        self.assertEqual(too_short['request']['destination_ids'], ids)
+        with self.assertRaisesRegex(ValueError, '담아둔 장소 모두'):
+            plan_destinations(ROOT, dict(body, max_stops=8))
+
+    def test_all_saved_keeps_review_requirements_and_has_a_bounded_capacity(self):
+        ids = [p['id'] for p in self.eligible[:8]] + ['seongsan']
+        result = plan_destinations(ROOT, request(ids, max_stops='all'))
+        self.assertEqual(result['status'], 'needs_review')
+        self.assertEqual(result['stops'], [])
+        self.assertEqual(result['request']['destination_ids'], ids)
+        self.assertEqual([p['id'] for p in result['exclusions']], ['seongsan'])
+        self.assertIn('entrance_required', [r['code'] for r in result['exclusions'][0]['reasons']])
+
+        ids = [p['id'] for p in self.eligible[:25]]
+        with self.assertRaisesRegex(ValueError, '최대 24곳'):
+            plan_destinations(ROOT, request(ids, max_stops='all'))
+
     def test_invalid_source_receipt_cannot_become_a_successful_manual_schedule(self):
         with patch.object(trust_module,'_guide',return_value=(None,'source_receipt_changed')):
             result=plan_destinations(ROOT,request([self.safe['id']]))

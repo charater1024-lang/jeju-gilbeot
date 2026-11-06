@@ -2,6 +2,9 @@
 import math
 
 
+MAX_MANUAL_STOPS = 24
+
+
 def validate_confirmed_origin(body):
     """Reject implicit/default locations and return only confirmed origin fields."""
     if not isinstance(body, dict):

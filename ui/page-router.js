@@ -4,7 +4,7 @@
   const pages={
     '/':{title:'제주 길벗 — 나에게 맞는 속도로'},
     '/explore':{title:'지도·먹거리 | 제주 길벗',eyebrow:'FIND YOUR NEXT PLACE',heading:'가까이 있는 제주를 찾아보세요.',description:'지도에서 위치를 확인하고, 마음에 드는 관광지와 먹거리를 여행에 담아보세요.'},
-    '/planner':{title:'내 여행 | 제주 길벗',eyebrow:'YOUR DAY IN JEJU',heading:'마음에 담은 곳으로, 나만의 하루.',description:'저장한 여행지로 방문 순서를 만들고, 과거 이동 시간대도 참고해 보세요.'},
+    '/planner':{title:'내 여행 | 제주 길벗',eyebrow:'YOUR DAY IN JEJU',heading:'마음에 담은 곳으로, 나만의 하루.',description:'확인한 출발지와 시간에 맞춰 방문 순서를 만들어 보세요.'},
     '/about':{title:'데이터 안내 | 제주 길벗',eyebrow:'THE DATA BEHIND YOUR JOURNEY',heading:'우리의 추천은 어디에서 왔을까요?',description:'사용한 공개 자료와 학습 모델, 안내할 수 있는 범위를 확인하세요.'}
   };
   const anchors={top:'/',destinations:'/',regions:'/',planner:'/planner','trip-result':'/planner',mobility:'/planner','map-explorer':'/explore',restaurants:'/explore','place-explorer':'/explore',sources:'/about','model-lab':'/about',data:'/about'};
@@ -16,6 +16,7 @@
   function normalize(path){const clean=path.length>1?path.replace(/\/+$/,''):path;return clean==='/chat'||Object.hasOwn(pages,clean)?clean:null;}
   function routeForAnchor(hash){
     let id;try{id=decodeURIComponent(hash.replace(/^#/,''));}catch{return null;}
+    if(id==='assistant')id='planner-form';
     const target=document.getElementById(id);
     const route=anchors[id]||target?.closest('[data-page]')?.dataset.page;
     return route?{path:route,hash:target?'#'+encodeURIComponent(id):''}:null;
@@ -44,7 +45,7 @@
     global.dispatchEvent(new CustomEvent('jeju:pagechange',{detail:{path:current}}));
     let target=null;if(route.hash){try{target=document.getElementById(decodeURIComponent(route.hash.slice(1)));}catch{/* Ignore malformed anchors. */}}
     if(target)openParents(target);
-    if(focus){const heading=current==='/'?document.getElementById('hero-title'):document.getElementById('page-title');if(heading){heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}else main.focus({preventScroll:true});}
+    if(focus){const heading=current==='/'?document.getElementById('hero-title'):document.getElementById('page-title');const focusTarget=target||heading||main;if(!focusTarget.hasAttribute('tabindex'))focusTarget.setAttribute('tabindex','-1');focusTarget.focus({preventScroll:true});}
     if(scroll){if(target)target.scrollIntoView({behavior:'auto',block:'start'});else global.scrollTo({top:pop?(savedScroll.get(current)||0):0,behavior:'auto'});}
   }
   function navigate(raw,options={}){

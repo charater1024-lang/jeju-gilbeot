@@ -46,6 +46,25 @@ def _normalized(value) -> str:
     return re.sub(r"\s+", "", unicodedata.normalize("NFKC", str(value or "")).casefold())
 
 
+def _reference_terms(query: str) -> list[str]:
+    normalized = unicodedata.normalize("NFKC", query).casefold()
+    return list(dict.fromkeys(re.findall(r"[가-힣a-z0-9]+", normalized)))
+
+
+def _reference_profile(database: Path, profile: Path) -> dict:
+    return _checked_profile(str(database.resolve()), database.stat().st_mtime_ns, database.stat().st_size,
+                            str(profile.resolve()), profile.stat().st_mtime_ns, profile.stat().st_size)
+
+
+@lru_cache(maxsize=4)
+def _checked_profile(database: str, database_mtime: int, database_size: int,
+                     profile: str, profile_mtime: int, profile_size: int) -> dict:
+    metadata = json.loads(Path(profile).read_text(encoding="utf-8"))
+    if metadata.get("status") != "built" or metadata.get("database_sha256") != _hash(database):
+        raise ValueError("검색 자료의 SHA256이 일치하지 않습니다.")
+    return metadata
+
+
 def _tokens(value, character_ngrams=True) -> list[str]:
     words = re.findall(r"[가-힣a-z0-9]+", unicodedata.normalize("NFKC", str(value or "")).casefold())
     result = []
@@ -244,7 +263,7 @@ def _validate(body) -> dict:
     if not isinstance(region, str) or region not in REGIONS:
         raise ValueError("지원하지 않는 지역입니다.")
     radius, limit = body.get("radius_km", 15), body.get("limit", 6)
-    if isinstance(radius, bool) or not isinstance(radius, (int, float)) or not math.isfinite(radius) or not 1 <= radius <= 100:
+    if isinstance(radius, bool) or not isinstance(radius, (int, float)) or not 1 <= radius <= 100:
         raise ValueError("반경은 1~100km 사이 유한한 숫자여야 합니다.")
     if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 12:
         raise ValueError("검색 개수는 1~12 정수여야 합니다.")
@@ -256,35 +275,67 @@ def _validate(body) -> dict:
         values = []
         for key, lower, upper in [("latitude", -90, 90), ("longitude", -180, 180)]:
             value = raw.get(key)
-            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not lower <= value <= upper:
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not lower <= value <= upper:
                 raise ValueError("위도와 경도는 허용 범위 안의 유한한 숫자여야 합니다.")
             values.append(float(value))
         if raw.get("accuracy_m") is not None:
             accuracy = raw["accuracy_m"]
-            if isinstance(accuracy, bool) or not isinstance(accuracy, (int, float)) or not math.isfinite(accuracy) or not 0 <= accuracy <= 100000:
+            if isinstance(accuracy, bool) or not isinstance(accuracy, (int, float)) or not 0 <= accuracy <= 100000:
                 raise ValueError("위치 정확도는 0~100000m 사이 유한한 숫자여야 합니다.")
         location = _point(*values)
         state = "outside_jeju" if location is None else "low_accuracy" if accuracy is not None and accuracy > 5000 else "provided"
     return {"query": query.strip(), "region": region, "radius": float(radius), "limit": limit, "location": location, "location_status": state}
 
 
-def _query_vector(query: str, model: dict) -> tuple[dict, list[str], list[str]]:
+def _food_rules(query: str) -> tuple[list[str], list[str]]:
     compact = _normalized(query)
     groups = [group for group, triggers in RULE_TRIGGERS.items() if any(_normalized(value) in compact for value in triggers)]
     expanded = sorted({term for group in groups for term in RULES[group] + CUISINE_HINTS[group]})
+    return groups, expanded
+
+
+def _query_vector(query: str, model: dict) -> tuple[dict, list[str], list[str]]:
+    groups, expanded = _food_rules(query)
     terms = Counter(_tokens(query + " " + " ".join(expanded)))
     values = {model["vocabulary"][term]: (1 + math.log(count)) * model["idf"][model["vocabulary"][term]] for term, count in terms.items() if term in model["vocabulary"]}
     norm = math.sqrt(sum(value * value for value in values.values())) or 1
     return {index: value / norm for index, value in values.items()}, groups, expanded
 
 
-def discovery_recommend(root: Path, body: dict) -> dict:
+def _food_reference_clauses(query):
+    clauses = []
+    for term in _reference_terms(query):
+        groups = [group for group, values in RULE_TRIGGERS.items() if term in {_normalized(v) for v in values}]
+        words = tuple(_normalized(value) for group in groups for value in RULES[group])
+        tags = tuple(_normalized(value) for group in groups for value in CUISINE_HINTS[group])
+        clauses.append((term, words, tags))
+    return clauses
+
+
+def _food_reference_match(clauses, name, category, address, cuisine):
+    for term, words, tags in clauses:
+        if words or tags:
+            match = any(word in name or word in category for word in words) or any(tag in cuisine for tag in tags)
+        else:
+            match = term in name or term in category or term in address or term in cuisine
+        if not match:
+            return False
+    return bool(clauses)
+
+
+def discovery_recommend(root: Path, body: dict, *, learned: bool = True) -> dict:
     started = time.perf_counter()
     root = Path(root)
     request = _validate(body)
     database, model_path = root / "data_reference" / "discovery.sqlite", root / "models_discovery" / "tfidf_model.json"
-    model = _load_model(str(model_path.resolve()), model_path.stat().st_mtime_ns, str(database.resolve()), database.stat().st_mtime_ns)
-    vector, groups, expanded = _query_vector(request["query"], model)
+    if learned:
+        model = _load_model(str(model_path.resolve()), model_path.stat().st_mtime_ns, str(database.resolve()), database.stat().st_mtime_ns)
+        vector, groups, expanded = _query_vector(request["query"], model)
+    else:
+        model = _reference_profile(database, root / "data_reference" / "discovery_profile.json")
+        groups, expanded = _food_rules(request["query"])
+        vector = {}
+    reference_clauses = _food_reference_clauses(request["query"]) if not learned else []
     direct_terms = sorted({term for group in groups for term in RULE_TRIGGERS[group] if _normalized(term) in _normalized(request["query"])})
     direct_terms = [term for term in direct_terms if not any(term != other and term in other for other in direct_terms)]
     scores = {}
@@ -305,8 +356,12 @@ def discovery_recommend(root: Path, body: dict) -> dict:
         food_text = name_text + category_text
         cuisine_text = _normalized(item.get("cuisine"))
         rule_terms = sorted({term for group in groups for term in RULES[group] if _normalized(term) in food_text} | {term for group in groups for term in CUISINE_HINTS[group] if _normalized(term) in cuisine_text})
-        if request["query"] and (not rule_terms if groups else score <= 0):
-            continue
+        if request["query"]:
+            if learned and (not rule_terms if groups else score <= 0):
+                continue
+            if not learned and not _food_reference_match(reference_clauses, name_text, category_text,
+                                                        _normalized(item.get("address")), cuisine_text):
+                continue
         item.pop("doc_id")
         item["coordinate_source"] = json.loads(item["coordinate_source"]) if item["coordinate_source"] else None
         item["plan_place_id"] = item["id"] if item["source_platform"] == "openstreetmap" else item["coordinate_source"].get("place_id") if item["coordinate_source"] else None
@@ -332,8 +387,11 @@ def discovery_recommend(root: Path, body: dict) -> dict:
             tier, reason, signal = 2, "원자료 업종에 연관 검색어 " + ", ".join(category_terms) + " 일치", "related_source_category"
         elif groups:
             tier, reason, signal = 3, "공동편집 cuisine 태그의 넓은 연관어 일치 · 해당 메뉴 확인 아님", "broad_observed_cuisine_tag"
+        elif request["query"]:
+            tier = 4
+            reason, signal = ("말뭉치에서 학습한 TF-IDF 문자 관련도", "tfidf_text") if learned else ("원자료 상호·업종·주소·태그에서 검색어 확인", "source_text_match")
         else:
-            tier, reason, signal = (4, "말뭉치에서 학습한 TF-IDF 문자 관련도", "tfidf_text") if request["query"] else (0, "음식어 없음 · 위치가 있으면 직선거리순", "no_food_query")
+            tier, reason, signal = 0, "음식어 없음 · 위치가 있으면 직선거리순", "no_food_query"
         item["food_match_tier"] = tier
         item["ranking_tier"] = tier
         item["ranking_reason"] = reason
@@ -341,14 +399,20 @@ def discovery_recommend(root: Path, body: dict) -> dict:
         item["category_affinity_rule_match"] = any(item["category"] in CATEGORY_SUPPORT[group] + (["카페"] if group == "카페" else []) or any(_normalized(term) in cuisine_text for term in CUISINE_HINTS[group]) for group in groups)
         point = _point(item["latitude"], item["longitude"])
         distance = _distance(request["location"], point) if request["location"] is not None and point is not None else None
-        item.update(distance_km=round(distance, 3) if distance is not None else None, within_radius=distance <= request["radius"] if distance is not None else None, similarity_score=round(score, 6), matched_search_terms=rule_terms, menu_verified=False, current_opening_verified=False, coordinate_verified=False, requires_ferry=bool(item["requires_ferry"]), requires_access_point=bool(item["requires_access_point"]), match_reason=("상호·업종·있는 경우 cuisine 태그에서 연관 검색어 " + ", ".join(rule_terms) + " 일치. 실제 메뉴 확인은 아닙니다.") if rule_terms else "상호·업종·주소의 학습된 TF-IDF 문자 관련도입니다. 실제 메뉴 확인은 아닙니다." if request["query"] else "자료에 기록된 후보입니다. 메뉴·맛·현재 영업은 별도 확인이 필요합니다.", geographic_scope="within_radius_straight_line" if distance is not None and distance <= request["radius"] else "outside_radius" if distance is not None else "distance_unknown")
+        if rule_terms:
+            match_reason = "상호·업종·있는 경우 cuisine 태그에서 연관 검색어 " + ", ".join(rule_terms) + " 일치. 실제 메뉴 확인은 아닙니다."
+        elif request["query"]:
+            match_reason = "상호·업종·주소의 학습된 TF-IDF 문자 관련도입니다. 실제 메뉴 확인은 아닙니다." if learned else "원자료 상호·업종·주소·태그의 명시 일치입니다. 실제 메뉴 확인은 아닙니다."
+        else:
+            match_reason = "자료에 기록된 후보입니다. 메뉴·맛·현재 영업은 별도 확인이 필요합니다."
+        item.update(distance_km=round(distance, 3) if distance is not None else None, within_radius=distance <= request["radius"] if distance is not None else None, similarity_score=round(score, 6) if learned else None, matched_search_terms=rule_terms, menu_verified=False, current_opening_verified=False, coordinate_verified=False, requires_ferry=bool(item["requires_ferry"]), requires_access_point=bool(item["requires_access_point"]), match_reason=match_reason, geographic_scope="within_radius_straight_line" if distance is not None and distance <= request["radius"] else "outside_radius" if distance is not None else "distance_unknown")
         candidates.append(item)
     unmapped = [item for item in candidates if item["latitude"] is None or item["longitude"] is None]
-    relevance_key = lambda item: (item["food_match_tier"], -item["similarity_score"], item["name"], item["id"])
+    relevance_key = lambda item: (item["food_match_tier"], -(item["similarity_score"] or 0), item["name"], item["id"])
     unmapped.sort(key=relevance_key)
     if request["location"] is not None:
         mapped = [item for item in candidates if item["within_radius"] is True]
-        mapped.sort(key=lambda item: (item["food_match_tier"], item["distance_km"], -item["similarity_score"], item["name"], item["id"]))
+        mapped.sort(key=lambda item: (item["food_match_tier"], item["distance_km"], -(item["similarity_score"] or 0), item["name"], item["id"]))
         result_items = mapped[:request["limit"]]
     else:
         mapped = [item for item in candidates if item["latitude"] is not None]
@@ -373,6 +437,8 @@ def discovery_recommend(root: Path, body: dict) -> dict:
         nearby.sort(key=lambda item: (item["distance_km"], item["name"]))
         nearby = nearby[:min(6, request["limit"])]
     warnings = ["상호·업종·주소 검색 결과이며 실제 제공 메뉴·맛·개별 점포 인기도·현재 영업을 검증하지 않았습니다.", "동의어·연관어 확장은 명시적 검색 규칙이며, TF-IDF는 실제 명부에서 학습한 비지도 문자 표현입니다. 추천 정확도를 검증한 모델은 아닙니다.", "좌표가 없는 음식점은 거리 미상으로 남겼습니다. 반경 안에 있다고 보장할 수 없습니다.", "연결된 좌표도 과거 명부와 여행장소의 상호·전체주소가 일치하는 참조 위치입니다. 실제 입구와 현재 주소는 확인이 필요합니다.", "거리는 직선거리이며 도로·도보 경로·섬 이동·교통편을 확인한 결과가 아닙니다."]
+    if not learned:
+        warnings[1] = "상호·업종·주소·지도 태그의 명시적 검색어 일치와 정해진 음식 연관어 규칙을 적용합니다."
     if model.get("osm_source"):
         warnings.append("OSM 공동편집 지도 기록은 인허가 명부와 별개이며 등록·운영·메뉴를 보장하지 않습니다. cuisine 태그가 없는 업소는 메뉴를 채우지 않았습니다. node는 지도점, way/relation은 경계상자 중심일 수 있습니다. © OpenStreetMap contributors · ODbL-1.0.")
     if request["location_status"] == "outside_jeju":
@@ -381,7 +447,15 @@ def discovery_recommend(root: Path, body: dict) -> dict:
         warnings.insert(0, "제공 위치의 정확도가 낮아 거리와 반경 판단에 큰 오차가 있을 수 있습니다.")
     if not result_items and not unmapped:
         warnings.append("조건에 맞는 명부를 찾지 못했습니다. 다른 음식명이나 더 넓은 지역을 선택해 주세요.")
-    return {"status": "reference_search", "query": request["query"], "region": request["region"], "radius_km": request["radius"], "location_status": request["location_status"], "restaurants": result_items, "unmapped_restaurants": unmapped[:request["limit"]], "nearby_destinations": nearby, "nearby_basis": {"type": "restaurant_reference_coordinate", "restaurant_id": anchor_food["id"], "restaurant_name": anchor_food["name"]} if anchor and anchor_food else {"type": "provided_location"} if anchor else {"type": "unavailable"}, "counts": {"food_text_matches": len(candidates), "mapped_within_radius": len(mapped) if request["location"] is not None else None, "unmapped": len(unmapped), "mapped_outside_radius": sum(item["within_radius"] is False for item in candidates), "displayed": len(result_items), "displayed_unmapped": min(len(unmapped), request["limit"])}, "model": {"algorithm": ALGORITHM, "schema_version": VERSION, "training_documents": model["documents"], "vocabulary_terms": len(model["vocabulary"]), "learned_component": "corpus_document_frequency_idf_and_normalized_document_vectors", "rule_component": {"groups": groups, "direct_search_terms": direct_terms, "expanded_search_terms": expanded, "field_weights": model["field_weights"], "category_affinity_rules": {group: CATEGORY_SUPPORT[group] for group in groups}, "observed_cuisine_related_terms": {group: CUISINE_HINTS[group] for group in groups}}, "ranking": "direct_food_name_related_name_category_cuisine_tiers_then_distance_then_tfidf" if request["location"] is not None else "direct_food_name_related_name_category_cuisine_tiers_then_tfidf", "ranking_tiers": {"0": "상호 직접 음식어 또는 일반 분류 직접 일치", "1": "상호 연관 음식어", "2": "원자료 업종 연관어", "3": "공동편집 cuisine 넓은 태그", "4": "기타 TF-IDF 문자 관련도"}, "category_affinity_changes_ranking": False, "labeled_recommendation_accuracy_evaluated": False}, "attributions": [{"source_platform": "openstreetmap", "text": "© OpenStreetMap contributors", "license": "ODbL-1.0", "copyright_url": "https://www.openstreetmap.org/copyright", "snapshot_at": model["osm_source"]["snapshot_at"]}] if model.get("osm_source") else [], "privacy": {"precise_location_persisted": False, "request_body_echoed": False}, "warnings": warnings, "elapsed_ms": round((time.perf_counter() - started) * 1000, 2)}
+    if learned:
+        model_info = {"algorithm": ALGORITHM, "schema_version": VERSION, "training_documents": model["documents"], "vocabulary_terms": len(model["vocabulary"]), "learned_component": "corpus_document_frequency_idf_and_normalized_document_vectors", "rule_component": {"groups": groups, "direct_search_terms": direct_terms, "expanded_search_terms": expanded, "field_weights": model["field_weights"], "category_affinity_rules": {group: CATEGORY_SUPPORT[group] for group in groups}, "observed_cuisine_related_terms": {group: CUISINE_HINTS[group] for group in groups}}, "ranking": "direct_food_name_related_name_category_cuisine_tiers_then_distance_then_tfidf" if request["location"] is not None else "direct_food_name_related_name_category_cuisine_tiers_then_tfidf", "ranking_tiers": {"0": "상호 직접 음식어 또는 일반 분류 직접 일치", "1": "상호 연관 음식어", "2": "원자료 업종 연관어", "3": "공동편집 cuisine 넓은 태그", "4": "기타 TF-IDF 문자 관련도"}, "category_affinity_changes_ranking": False, "labeled_recommendation_accuracy_evaluated": False}
+    else:
+        model_info = {"algorithm": "verified_food_reference_lookup", "learned_component": None,
+                      "source_records": model["training_documents"],
+                      "rule_component": {"groups": groups, "direct_search_terms": direct_terms,
+                                         "expanded_search_terms": expanded},
+                      "ranking": "explicit_food_terms_then_distance_then_name"}
+    return {"status": "reference_search", "query": request["query"], "region": request["region"], "radius_km": request["radius"], "location_status": request["location_status"], "restaurants": result_items, "unmapped_restaurants": unmapped[:request["limit"]], "nearby_destinations": nearby, "nearby_basis": {"type": "restaurant_reference_coordinate", "restaurant_id": anchor_food["id"], "restaurant_name": anchor_food["name"]} if anchor and anchor_food else {"type": "provided_location"} if anchor else {"type": "unavailable"}, "counts": {"food_text_matches": len(candidates), "mapped_within_radius": len(mapped) if request["location"] is not None else None, "unmapped": len(unmapped), "mapped_outside_radius": sum(item["within_radius"] is False for item in candidates), "displayed": len(result_items), "displayed_unmapped": min(len(unmapped), request["limit"])}, "model": model_info, "attributions": [{"source_platform": "openstreetmap", "text": "© OpenStreetMap contributors", "license": "ODbL-1.0", "copyright_url": "https://www.openstreetmap.org/copyright", "snapshot_at": model["osm_source"]["snapshot_at"]}] if model.get("osm_source") else [], "privacy": {"precise_location_persisted": False, "request_body_echoed": False}, "warnings": warnings, "elapsed_ms": round((time.perf_counter() - started) * 1000, 2)}
 
 
 def resolve_discovery_place(root: Path, ident: str) -> dict | None:

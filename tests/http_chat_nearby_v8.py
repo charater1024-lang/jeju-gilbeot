@@ -18,7 +18,7 @@ def smoke(root,base,report_path):
     missing=ask('내 근처 관광지 추천')
     assert missing['needs_location'] and not missing['location_used'] and not missing['cards']
     checks['missing_origin_requests_consent']=True
-    nearby=ask('관광지 추천',PUBLIC_AIRPORT)
+    nearby=ask('내 근처 관광지 추천',PUBLIC_AIRPORT)
     assert nearby['location_used'] and not nearby['needs_location'] and nearby['radius_km']==20 and nearby['cards']
     assert nearby['location_source']=='device'
     assert all(isinstance(p['distance_km'],(int,float)) and 0<=p['distance_km']<=20 for p in nearby['cards'])

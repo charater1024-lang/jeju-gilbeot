@@ -14,3 +14,53 @@
 @media(max-width:600px){.planner-manual>summary{font-size:14px;padding:17px}.planner-manual .planner-layout{padding:15px}.model-goal-report{padding:0 16px}.discovery-attribution{font-size:11px!important}.discovery-card-actions{gap:10px}}
 
 .route-shared-warning{padding:14px 18px;margin:16px 0;background:#f3f5ed;border-left:3px solid #b0bd99;font-size:12px;line-height:1.8;color:#526952}.route-shared-warning p{margin:6px 0}.route-shared-warning strong{font-weight:500}
+
+.center-guide-link:focus-visible{outline:2px solid #f8f3d2;outline-offset:4px}
+.center-experience{margin-bottom:30px}.center-experience .section-heading{margin-bottom:18px}
+.center-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style-position:inside;padding:0;margin:0 0 20px}
+.center-steps li{padding:16px 18px;background:#f1f4eb;border:1px solid #d5dfce;border-radius:7px;min-width:0}
+.center-steps strong{font-size:14px}.center-steps p,.center-check p,.planner-example p{font-size:13px;color:#526952;line-height:1.8;margin:8px 0}
+.center-check{padding:13px 0;border-top:1px solid #d5dfce}.center-check summary{cursor:pointer;color:#244f55;font-weight:600;padding:5px 0}
+.observed-csv-fields{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:12px;margin:12px 0}.observed-csv-fields input,.observed-csv-fields select{max-width:100%;min-width:0}
+.planner-example{margin-bottom:17px;padding-bottom:12px;border-bottom:1px solid #d5dfce}
+@media(max-width:650px){.center-steps,.observed-csv-fields{grid-template-columns:1fr}.center-steps{gap:8px}}
+
+.trip-replan {
+  margin: 16px 0 22px;
+  padding: 14px 16px;
+  border: 1px solid #cbd9ce;
+  border-radius: 7px;
+  background: #f2f6ee;
+  color: #244f55;
+}
+.trip-replan summary { cursor: pointer; font-size: 15px; font-weight: 700; }
+.trip-replan-form { display: grid; gap: 12px; margin-top: 12px; }
+.trip-replan-form p, .trip-replan-caption { margin: 0; font-size: 13px; line-height: 1.65; }
+.trip-replan-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.trip-replan-fields .field:first-child { grid-column: 1 / -1; }
+.trip-replan-fields input, .trip-replan-fields select { width: 100%; min-width: 0; }
+.trip-replan-visited { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 0; padding: 8px 0 0; border: 0; }
+.trip-replan-visited legend { font-size: 13px; font-weight: 700; }
+.trip-replan-visited label { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; font-size: 13px; }
+.trip-replan-visited label[hidden] { display: none; }
+.trip-replan-visited input { accent-color: #244f55; }
+.trip-replan-form button { justify-self: start; min-height: 36px; }
+.trip-replan-status:not(:empty) { color: #244f55; font-weight: 600; }
+.trip-replan-caption { margin: 12px 0; color: #244f55; font-weight: 600; }
+@media (max-width: 560px) {
+  .trip-replan-fields { grid-template-columns: minmax(0, 1fr); }
+  .trip-replan-visited label { min-height: 38px; }
+}
+
+.trip-replan-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.trip-replan-return-result { display: grid; gap: 8px; padding: 12px; border: 1px solid #cbd9ce; border-radius: 5px; background: #fffefa; }
+.trip-replan-return-result h4 { margin: 0; }
+.route-undo { margin-top: 8px; }
+.trip-result .route-time, .trip-result .route-facts, .trip-result .route-facts span,
+.trip-result .result-cost-note, .trip-result .result-detail, .trip-result .result-top p { color: #4d6252; }
+.observed-csv-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.observed-csv-fields .field:first-child { grid-column: 1 / -1; }
+.observed-csv-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 650px) {
+  .observed-csv-fields { grid-template-columns: minmax(0, 1fr); }
+}

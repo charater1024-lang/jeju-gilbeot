@@ -24,7 +24,7 @@ def sha256(path):
 def check(original_transfer=False):
     manifest_path=ROOT/'TRANSFER_MANIFEST.json'
     if not original_transfer:
-        for name in ['SERVICE_MANIFEST_v20.json','SERVICE_MANIFEST_v19.json','SERVICE_MANIFEST_v18.json','SERVICE_MANIFEST_v17.json','SERVICE_MANIFEST_v16.json','SERVICE_MANIFEST_v15.json','SERVICE_MANIFEST_v14.json']:
+        for name in ['SERVICE_MANIFEST_v27.json','SERVICE_MANIFEST_v26.json','SERVICE_MANIFEST_v25.json','SERVICE_MANIFEST_v24.json','SERVICE_MANIFEST_v23.json','SERVICE_MANIFEST_v20.json','SERVICE_MANIFEST_v19.json','SERVICE_MANIFEST_v18.json','SERVICE_MANIFEST_v17.json','SERVICE_MANIFEST_v16.json','SERVICE_MANIFEST_v15.json','SERVICE_MANIFEST_v14.json']:
             if (ROOT/name).is_file():manifest_path=ROOT/name;break
     if not manifest_path.is_file():
         print(f'{manifest_path.name} is missing.',file=sys.stderr);return 1
@@ -74,10 +74,13 @@ def main():
     integrity=sub.add_parser('check');integrity.add_argument('--original-transfer',action='store_true',help='Check historical v13 transfer hashes instead of current service manifest')
     tests=sub.add_parser('test');tests.add_argument('--node');tests.add_argument('--python-only',action='store_true')
     run=sub.add_parser('run');run.add_argument('--port',type=int,default=8765)
+    run.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
     args=parser.parse_args()
     if args.command=='check':return check(args.original_transfer)
     if args.command=='test':return test(args.node,args.python_only)
     if not 1024<=args.port<=65535:parser.error('port must be 1024..65535')
+    if args.road_gpu:
+        os.environ['JEJU_ROAD_GPU'] = '1'
     from jeju_agent.server import serve
     try:serve(ROOT/'data',ROOT/'models',args.port)
     except KeyboardInterrupt:return 0

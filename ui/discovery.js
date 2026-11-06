@@ -5,21 +5,28 @@
   const formatDistance=value=>value!==null&&value!==undefined&&Number.isFinite(Number(value))?`직선 ${Number(value).toFixed(1)}km`:'거리 미확인';
   let locationUI,map,featured=[],mapPoints=[],lastPoints=[],routePoints=[],lastResponse=null,origin=null,originKind='',requestId=0;
   const pointCache=new Map();
-  let exploreTab='tourism',tourismItems=[],tourismCursor=null,tourismRequest=0,tourismBBox=null,lastGeometry=null,geometryRequest=0;
+  let exploreTab='tourism',tourismItems=[],tourismCursor=null,tourismRequest=0,tourismBBox=null,submittedTourismQuery='',lastGeometry=null,geometryRequest=0,mapViewRevision=0;
   function reveal(target,options={behavior:'smooth',block:'start'}){if(target?.tagName==='DETAILS')target.open=true;window.JejuPages?.reveal(target);target?.scrollIntoView(options);}
   function setTab(value){exploreTab=value==='food'?'food':'tourism';$('#tourism-form').hidden=exploreTab!=='tourism';$('#discovery-form').hidden=exploreTab!=='food';$('#tourism-summary').hidden=exploreTab!=='tourism';$('#tourism-results').hidden=exploreTab!=='tourism';$('#tourism-more').hidden=exploreTab!=='tourism'||!tourismCursor;$('#tourism-model-evidence').hidden=exploreTab!=='tourism';$('.food-results-wrap').hidden=exploreTab!=='food';document.querySelectorAll('[data-explore-tab]').forEach(b=>{const active=b.dataset.exploreTab===exploreTab;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});}
   async function loadTourism(replace=true,useBounds=false){
-    const ticket=++tourismRequest;if(replace){tourismItems=[];tourismCursor=null;tourismBBox=useBounds?map?.getBounds?.():null;}$('#tourism-submit').disabled=true;$('#tourism-more').disabled=true;$('#tourism-summary').textContent='학습한 관광 검색 모델로 기록을 살펴보고 있어요…';
-    const body={query:$('#tourism-query').value.trim(),region:$('#tourism-region').value,category:$('#tourism-category').value,kind:'attraction',limit:6,radius_km:Number($('#discovery-radius').value),location:origin?{latitude:origin.latitude,longitude:origin.longitude}:null,...(tourismBBox?{bbox:tourismBBox}:{}),...(!replace&&tourismCursor?{cursor:tourismCursor}:{})};
+    const query=$('#tourism-query').value.trim();
+    if(!replace&&query!==submittedTourismQuery)return loadTourism(true);
+    if(!replace&&!tourismCursor)return;
+    const viewAtRequest=mapViewRevision;
+    const ticket=++tourismRequest;if(replace){submittedTourismQuery=query;tourismItems=[];tourismCursor=null;tourismBBox=useBounds?map?.getBounds?.():null;}$('#tourism-submit').disabled=true;$('#tourism-more').disabled=true;$('#tourism-summary').textContent='검증된 관광지 명부에서 조건을 확인하고 있어요…';
+    const body={query,region:$('#tourism-region').value,category:$('#tourism-category').value,kind:'attraction',limit:6,radius_km:Number($('#discovery-radius').value),location:origin?{latitude:origin.latitude,longitude:origin.longitude}:null,...(tourismBBox?{bbox:tourismBBox}:{}),...(!replace&&tourismCursor?{cursor:tourismCursor}:{})};
     try{const response=await fetch('/api/tourism',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),cache:'no-store'});const data=await response.json();if(ticket!==tourismRequest)return;if(!response.ok)throw new Error(data.error||'관광지 검색을 확인하지 못했습니다.');
       const seen=new Set(tourismItems.map(p=>p.id));for(const point of data.items||[])if(point.source_overlap_verified===true&&!seen.has(point.id)){tourismItems.push(point);seen.add(point.id);}tourismCursor=tourismItems.length<500?data.next_cursor:null;remember(tourismItems);
       const selection=$('#tourism-category').value;$('#tourism-category').replaceChildren();const all=document.createElement('option');all.value='all';all.textContent='전체 분류';$('#tourism-category').append(all);for(const cat of data.available_categories||[]){const option=document.createElement('option');option.value=cat.value;option.textContent=`${cat.label} (${cat.count})`;$('#tourism-category').append(option);}$('#tourism-category').value=selection||'all';if(!$('#tourism-category').value)$('#tourism-category').value='all';
-      $('#tourism-summary').textContent=`교차확인 관광지 · 조건에 맞는 ${Number(data.total||0).toLocaleString('ko-KR')}개 기록 중 ${tourismItems.length}개 표시${data.radius_applied?' · 선택 위치 반경 적용':''}${tourismBBox?' · 현재 지도 범위':''}`;
+      $('#tourism-summary').textContent=`교차확인 관광지${query?` · 검색어 ‘${query}’`:''} · 조건에 맞는 ${Number(data.total||0).toLocaleString('ko-KR')}개 기록 중 ${tourismItems.length}개 표시${data.radius_applied?' · 선택 위치 반경 적용':''}${tourismBBox?' · 현재 지도 범위':''}`;
       $('#tourism-results').innerHTML=tourismItems.length?tourismItems.map(p=>card(p,'tourism')).join(''):'<p class="discovery-empty">이 조건에 맞는 기록이 없습니다. 검색어·지역·반경을 넓혀 보세요.</p>';
-      $('#tourism-more').hidden=exploreTab!=='tourism'||!tourismCursor;$('#tourism-more').textContent='관광지 6개 더 보기';
-      const m=data.model||{};$('#tourism-model-evidence').textContent=`실제 활용 모델 · 관광 TF-IDF · ${Number(m.training_rows||0).toLocaleString('ko-KR')}개 교차확인 관광지에서 학습. 검색어의 IDF와 문자 벡터 관련도를 사용하며 인기도 순위는 아닙니다. ${(data.warnings||[]).slice(0,2).join(' ')}`;
-      showPlaces(tourismItems,{label:'교차확인 관광지 탐색 결과',view:'tourism'});
+      $('#tourism-more').hidden=exploreTab!=='tourism'||!tourismCursor;updateTourismMoreLabel();
+      $('#tourism-model-evidence').textContent=`교차확인 명부의 이름·분류와 선택한 지역·거리 조건으로 조회했습니다. ${(data.warnings||[]).slice(0,2).join(' ')}`;
+      if(viewAtRequest===mapViewRevision)showPlaces(tourismItems,{label:'교차확인 관광지 탐색 결과',view:'tourism'});
     }catch(error){if(ticket===tourismRequest){$('#tourism-summary').textContent=error.message;$('#tourism-results').innerHTML='';}}finally{if(ticket===tourismRequest){$('#tourism-submit').disabled=false;$('#tourism-more').disabled=false;}}
+  }
+  function updateTourismMoreLabel(){
+    $('#tourism-more').textContent=$('#tourism-query').value.trim()===submittedTourismQuery?'관광지 6개 더 보기':'변경한 검색어로 찾기';
   }
   function modelMetricText(selected){
     if(!selected||typeof selected!=="object")return "정답 검색 성능은 아직 별도 평가하지 않았습니다.";
@@ -33,7 +40,16 @@
   async function loadModels(){
     try{
       const response=await fetch('/api/models-info',{cache:'no-store'});if(!response.ok)throw new Error();
-      const payload=await response.json(),allowed=new Set(['tourism_tfidf','food_tfidf','audience_distribution','mobility_pattern']);
+      const payload=await response.json();
+      if(payload.service_version===23){
+        const destinations={audience_distribution:'/explore#restaurants',dining_detail:'/explore#data-guide',assistant_guide_tfidf:'/planner#official-guide'};
+        $('#model-cards').innerHTML=(payload.cards||[]).filter(c=>Object.hasOwn(destinations,c.id)).map(c=>{
+          const score=Number.isFinite(c.metric?.percent)?`${c.metric.percent.toFixed(2)}% (${c.metric.hits}/${c.metric.total})`:'평가 확인 필요';
+          return `<article class="model-card"><h3>${escape(c.title)}</h3><p>${escape(c.usage)}</p><strong>${escape(score)}</strong><small>${escape(c.metric?.name||'')}</small><details><summary>평가 범위</summary><p>${escape(c.evaluation_scope)}</p></details><a class="place-map-button" href="${destinations[c.id]}">기능 열기 ↗</a></article>`;
+        }).join('');
+        return;
+      }
+      const allowed=new Set(['tourism_tfidf','food_tfidf','audience_distribution','mobility_pattern']);
       $('#model-cards').innerHTML=(payload.cards||[]).filter(c=>allowed.has(c.id)).map(c=>{
         const dates=[...new Set(Object.values(c.period||{}).flat().filter(v=>typeof v==='string').map(v=>v.slice(0,10)))];
         const unit=c.training_rows_unit||'학습 기록',metric=modelMetricText(c.metrics?.selected_test);
@@ -66,7 +82,7 @@
   function remember(points){for(const p of points)if(p&&p.id)pointCache.set(String(p.id),p);while(pointCache.size>2500)pointCache.delete(pointCache.keys().next().value);}
   function mapView(name){document.querySelectorAll('[data-map-view]').forEach(b=>{const active=b.dataset.mapView===name;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});}
   function showPlaces(points,{focus=false,label='선택한 장소 위치',view='discovery'}={}){
-    const clean=Array.isArray(points)?points.filter(validPoint).slice(0,500):[];remember(clean);mapPoints=clean;if(view!=="route"){++geometryRequest;map?.clearRoute?.();}map?.setPlaces(clean);mapView(view);
+    const clean=Array.isArray(points)?points.filter(validPoint).slice(0,500):[];remember(clean);mapPoints=clean;++mapViewRevision;if(view!=="route"){++geometryRequest;map?.clearRoute?.();}map?.setPlaces(clean);mapView(view);
     $('#map-context').textContent=`${label} · 좌표가 있는 ${clean.length}곳${clean.length?'':' · 지도에 표시할 위치가 없습니다.'}`;
     if(focus)reveal($('#map-explorer'),{behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
   }
@@ -101,7 +117,7 @@
     $('#unmapped-count').textContent=`${unknown.length}곳 표시`;
     $('#unmapped-food-results').innerHTML=unknown.map(p=>card(p)).join('');
     $('#discovery-warnings').textContent=(Array.isArray(payload.warnings)?payload.warnings:[]).join(' ');
-    $("#food-model-evidence").textContent=`실제 활용 모델 · 음식 TF-IDF · ${Number(payload.model?.training_documents||0).toLocaleString("ko-KR")}개 기록 학습. 음식어 일치 단계와 거리 정렬은 별도 규칙입니다.`;
+    $("#food-model-evidence").textContent="명부에 기록된 음식점 이름·업종·주소와 선택 조건으로 조회했습니다.";
     showPlaces(lastPoints,{label:'최근 음식 취향·거리 탐색 결과'});
   }
   async function discover(){
@@ -128,7 +144,7 @@
   function reset(){
     ++requestId;clearOrigin({message:false});pointCache.clear();remember(featured);$('#discovery-form').reset();$('#location-status').textContent='위치 권한 없이도 검색할 수 있어요. 센터 PC에서는 기준 장소를 직접 골라도 좋습니다.';
     $('#discover-submit').disabled=false;$('#discovery-results').innerHTML='';$('#unmapped-food-results').innerHTML='';$('#unmapped-food-details').hidden=true;$('#unmapped-food-details').open=false;$('#discovery-warnings').textContent='';$('#discovery-summary').textContent='음식이나 기준 장소를 고르면 연결 가능한 식당과 여행지를 찾아드려요.';
-    lastPoints=[];routePoints=[];lastResponse=null;++geometryRequest;lastGeometry=null;$("#tourism-form").reset();tourismItems=[];tourismCursor=null;map?.clearRoute?.();$("#route-geometry-status").textContent="";setTab("tourism");loadTourism(true);map?.clearUserLocation();map?.setSelectedIds([]);showPlaces(featured,{label:'대표 관광지 위치',view:'featured'});map?.disableOnline?.();
+    lastPoints=[];routePoints=[];lastResponse=null;++geometryRequest;lastGeometry=null;$("#tourism-form").reset();tourismItems=[];tourismCursor=null;map?.clearRoute?.();$("#route-geometry-status").textContent="";setTab("tourism");map?.clearUserLocation();map?.setSelectedIds([]);showPlaces(featured,{label:'대표 관광지 위치',view:'featured'});map?.disableOnline?.();loadTourism(true);
   }
   $('#discovery-form').addEventListener('submit',event=>{event.preventDefault();discover();});
   $('#use-location').addEventListener('click',geolocate);
@@ -164,7 +180,19 @@
   });
   window.addEventListener('pagehide',()=>{locationUI?.cancel();origin=null;originKind='';map?.clearUserLocation();});
   window.addEventListener('pageshow',event=>{if(event.persisted)reset();});
-  window.JejuExplore={showPlaces,reset,showRoute(){if(lastGeometry){showPlaces(routePoints,{focus:true,label:'내 일정 연결 경로',view:'route'});map?.setRoute?.(lastGeometry);}else {const result=window.JejuTripBridge?.getRoute();if(result)routeFor(result,true);else {$('#route-geometry-status').textContent='여행에 장소를 담은 뒤 경로 만들기를 눌러주세요.';reveal($('#map-explorer'),{behavior:'smooth'});}}},searchTourismFromQuery(query,region){setTab('tourism');$('#tourism-query').value=query;$('#tourism-region').value=region;loadTourism(true);reveal($('#map-explorer'),{behavior:'smooth'});}};
+  function showReturnRoute(geometry){
+    if(!geometry||!Array.isArray(geometry.coordinates)||geometry.coordinates.length<2||!map)return false;
+    ++geometryRequest;
+    map.disableOnline?.();
+    showPlaces([],{focus:true,view:'route'});
+    if(!map.setRoute({...geometry,stops:[],contains_private_location:true}))return false;
+    map.fitRoute?.();
+    $('#map-context').textContent='기존 도착지까지 돌아가는 참고 경로 · 오프라인 지도';
+    $('#route-geometry-status').textContent=`${geometry.kind==='road'?'OSM 도로 연결 참고 경로':'출발·도착 직선 연결'} · ${Number(geometry.distance_km||0).toFixed(1)}km. ${(geometry.warnings||[]).join(' ')}`;
+    return true;
+  }
+  window.JejuExplore={showPlaces,showReturnRoute,reset,showRoute(){if(lastGeometry){showPlaces(routePoints,{focus:true,label:'내 일정 연결 경로',view:'route'});map?.setRoute?.(lastGeometry);$('#route-geometry-status').textContent=`${lastGeometry.kind==='road'?'OSM 도로 연결 참고 경로':'방문 순서 직선 연결'} · ${Number(lastGeometry.distance_km||0).toFixed(1)}km. ${(lastGeometry.warnings||[]).join(' ')}`;}else {const result=window.JejuTripBridge?.getRoute();if(result)routeFor(result,true);else {$('#route-geometry-status').textContent='여행에 장소를 담은 뒤 경로 만들기를 눌러주세요.';reveal($('#map-explorer'),{behavior:'smooth'});}}},searchTourismFromQuery(query,region){setTab('tourism');$('#tourism-query').value=query;$('#tourism-region').value=region;loadTourism(true);reveal($('#map-explorer'),{behavior:'smooth'});}};
+  $('#tourism-query').addEventListener('input',updateTourismMoreLabel);
   $('#tourism-form').addEventListener('submit',event=>{event.preventDefault();loadTourism(true);});$('#tourism-more').addEventListener('click',()=>loadTourism(false));$('#tourism-bounds').addEventListener('click',()=>loadTourism(true,true));$('#tourism-region').addEventListener('change',()=>loadTourism(true));$('#tourism-category').addEventListener('change',()=>loadTourism(true));$('#tourism-kind').addEventListener('change',()=>{$('#tourism-category').value='all';loadTourism(true);});
   $('#map-create-route').addEventListener('click',async()=>{$('#map-create-route').disabled=true;$('#route-geometry-status').textContent='담은 장소의 방문 순서를 만들고 있어요…';try{const result=await window.JejuTripBridge?.createMapRoute();if(result?.status!=='ok')$('#route-geometry-status').textContent=result?.message||'시간과 장소 조건을 확인하세요.';}catch(error){$('#route-geometry-status').textContent=error.message;}finally{updateSaved(window.JejuTripBridge?.getSaved());}});
   async function init(){

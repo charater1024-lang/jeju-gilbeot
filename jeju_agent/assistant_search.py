@@ -23,6 +23,11 @@ STOP_WORDS = {
     '어떤', '있는', '좋은', '좋을까', '곳', '음식점', '식당', '맛집', '있어', '주세요',
 }
 VIEWING_WRAPPER = re.compile(r'\b(?:바라볼|살펴볼|둘러볼|볼)\s*(?:수\s*있는|만한)\b')
+PLACE_REQUEST_SUFFIX = re.compile(
+    r'(?:에대해|에대한|의|을|를)?'
+    r'(?:(?:(?:공식|관광)?소개|설명|정보)(?:를|을)?(?:알려|보여|찾아)?|추천|검색|찾아|알려|보여)'
+    r'(?:해)?(?:주세요|줘|요)?$'
+)
 THEME_TERMS = {
     '옛제주': ('전통 가옥', '생활문화', '민속', '조선', '옛 관아'),
     '옛모습': ('전통 가옥', '생활문화', '민속', '조선', '옛 관아'),
@@ -78,30 +83,83 @@ def _evidence(text, source, terms):
             'matched_terms': terms}
 
 
-def _attractions(root, terms, expansions, region, limit):
+def _attraction_result(item, trust, primary, intro, evidence, match_type):
+    return {
+        'id': item['id'], 'name': item['cross_source']['hub']['name'].strip(),
+        'kind': 'attraction', 'category': item['category'], 'region': item['region'],
+        'address': item['cross_source']['hub'].get('address'),
+        'primary_source': primary, 'matched_evidence': evidence, 'official_intro': intro,
+        'sources': trust['sources'], 'source_status': 'cross_source_verified',
+        'location_basis': 'matched_map_reference', 'automatic_eligible': trust['automatic_eligible'],
+        'visit_restrictions': trust['reasons'], 'current_opening_verified': False,
+        'limitations': trust['warnings'], 'match_type': match_type,
+        'ranking_method': ('verified_place_name_lookup' if match_type == 'exact_name'
+                           else 'hub_and_reviewed_guide_character_tfidf'),
+    }
+
+
+def _attractions(root, place_queries, terms, expansions, region, limit, include_route_restricted):
+    keys = tuple(dict.fromkeys(
+        key for query in place_queries for key in (query, PLACE_REQUEST_SUFFIX.sub('', query))
+        if len(key) >= 2
+    ))
+    exact_matches = []
+    exact_priorities = set()
     documents = []
     for item in approved_places(root):
-        if region != 'all' and item['region'] != region:
-            continue
         hub = item['cross_source']['hub']
         if hub.get('source_url') != HUB_PLACES:
             continue
+        map_name = item['cross_source']['osm'].get('name') or ''
+        names = {''.join(_words(hub['name'])), ''.join(_words(map_name))}
+        priorities = [(index, 0) for index, key in enumerate(keys) if key in names]
+        # A known place name with no displayable guide must not fall back to another place's text.
+        exact_priorities.update(priorities)
         trust = place_trust(root, item, purpose='automatic')
-        if not trust['automatic_eligible']:
+        checks = trust['checks']
+        if (checks['identity']['status'] != 'cross_source_verified'
+                or checks['official_guide']['status'] != 'official_source_record_verified'):
             continue
-        guide = item['tourism_guide']
+        sources = {source['kind']: source for source in trust['sources']}
+        guide = item.get('tourism_guide') or {}
+        guide_source = sources.get('tourism_guide')
+        if ('hub_registry' not in sources or 'map_record' not in sources or guide_source is None
+                or guide.get('source_url') != guide_source.get('url')
+                or guide.get('retrieved_at') != guide_source.get('checked_at')
+                or not guide.get('summary')):
+            continue
+        # An official page title may be a wider area or a renamed exhibition for a reviewed exception.
+        if checks['specific_review']['status'] != 'excluded_pending_recheck':
+            title = ''.join(_words(guide['source_title']))
+            priorities.extend((index, 1) for index, key in enumerate(keys) if key == title)
+            exact_priorities.update(priorities)
+        if ((region != 'all' and item['region'] != region)
+                or (not include_route_restricted and not trust['automatic_eligible'])):
+            continue
         primary = {'name': '제주데이터허브 여행장소 명부', 'url': HUB_PLACES, 'dataset_id': 1349,
                    'source_date': hub.get('source_date'), 'date_kind': 'hub_reference'}
-        secondary = {'name': guide['source_name'], 'url': guide['source_url'],
-                     'source_date': guide['retrieved_at'], 'date_kind': 'guide_review'}
+        secondary = {'name': guide_source['name'], 'url': guide_source['url'],
+                     'source_date': guide_source['checked_at'], 'date_kind': 'guide_review'}
         hub_text = ' '.join(filter(None, [hub['name'], hub.get('address')]))
+        intro = _evidence(guide['summary'], secondary, [])
+        if priorities:
+            priority = min(priorities)
+            index, alias = priority
+            text, source = (guide['source_title'], secondary) if alias else (hub_text, primary)
+            evidence = _evidence(text, source, [keys[index]])
+            exact_matches.append((priority, _attraction_result(item, trust, primary, intro, evidence, 'exact_name')))
         guide_sentences = re.split(r'(?<=[.!?])\s+', guide['summary'])
         evidence = [(hub_text, primary)] + [(sentence, secondary) for sentence in guide_sentences]
         corpus_text = f"{hub['name']} {hub_text} {guide['summary']}"
-        documents.append((item, trust, primary, evidence, corpus_text))
+        documents.append((item, trust, primary, intro, evidence, corpus_text))
+
+    if exact_priorities:
+        best = min(exact_priorities)
+        results = [result for priority, result in exact_matches if priority == best]
+        return sorted(results, key=lambda result: (result['name'], result['id']))[:limit]
 
     frequencies = Counter()
-    for _, _, _, _, corpus_text in documents:
+    for _, _, _, _, _, corpus_text in documents:
         frequencies.update(set(_tokens(corpus_text)))
     idf = {term: math.log((1 + len(documents)) / (1 + count)) + 1 for term, count in frequencies.items()}
     query_vector = _vector(' '.join(terms + expansions), idf)
@@ -109,7 +167,7 @@ def _attractions(root, terms, expansions, region, limit):
         return []
 
     ranked = []
-    for item, trust, primary, passages, corpus_text in documents:
+    for item, trust, primary, intro, passages, corpus_text in documents:
         if len(_matching_terms(terms, corpus_text)) != len(terms):
             continue
         matches = [(text, source, _matching_terms(terms + expansions, text)) for text, source in passages]
@@ -118,15 +176,9 @@ def _attractions(root, terms, expansions, region, limit):
             continue
         text, source, matched = max(matches, key=lambda match: _similarity(query_vector, match[0], idf))
         name_terms = _matching_terms(terms, item['name'])
-        ranked.append((not name_terms, -_similarity(query_vector, corpus_text, idf), item['name'], item['id'], {
-            'id': item['id'], 'name': item['name'], 'kind': 'attraction', 'category': item['category'],
-            'region': item['region'], 'address': item['cross_source']['hub'].get('address'),
-            'primary_source': primary, 'matched_evidence': _evidence(text, source, matched),
-            'sources': trust['sources'], 'source_status': 'cross_source_verified',
-            'location_basis': 'matched_map_reference', 'automatic_eligible': True,
-            'current_opening_verified': False, 'limitations': trust['warnings'],
-            'ranking_method': 'hub_and_reviewed_guide_character_tfidf',
-        }))
+        evidence = _evidence(text, source, matched)
+        ranked.append((not name_terms, -_similarity(query_vector, corpus_text, idf), item['name'], item['id'],
+                       _attraction_result(item, trust, primary, intro, evidence, 'official_guide_text')))
     return [row[-1] for row in sorted(ranked, key=lambda row: row[:4])[:limit]]
 
 
@@ -194,8 +246,8 @@ def _food(root, terms, region, limit):
     return results
 
 
-def search_assistant(root, query, limit=5, *, kind='attraction', region='all'):
-    """Search trusted visitor candidates or permit records using local TF-IDF."""
+def search_assistant(root, query, limit=5, *, kind='attraction', region='all', include_route_restricted=False):
+    """Search current verified guides or permit records. Route lookup excludes restricted places by default."""
     if not isinstance(query, str) or len(query) > 160:
         raise ValueError('장소 검색어는 160자 이내 문자열이어야 합니다.')
     if type(limit) is not int or not 1 <= limit <= 12:
@@ -204,7 +256,8 @@ def search_assistant(root, query, limit=5, *, kind='attraction', region='all'):
         raise ValueError('관광지 또는 음식점 유형을 확인하세요.')
     if not isinstance(region, str) or region not in REGIONS:
         raise ValueError('지원하지 않는 지역입니다.')
-    compact = ''.join(_words(query))
+    words = _words(query)
+    compact = ''.join(words)
     if any(marker in compact for marker in UNVERIFIABLE):
         return []
     terms = _request_terms(query, region)
@@ -212,4 +265,9 @@ def search_assistant(root, query, limit=5, *, kind='attraction', region='all'):
         return _food(Path(root), terms, region, limit) if terms else []
     expansions = list(dict.fromkeys(term for phrase, related in THEME_TERMS.items()
                                     if phrase in compact for term in related))
-    return _attractions(Path(root), terms, expansions, region, limit) if terms or expansions else []
+    if not terms and not expansions:
+        return []
+    place_queries = [compact]
+    if len(words) > 1 and words[0] in {'제주', '제주도'}:
+        place_queries.append(''.join(words[1:]))
+    return _attractions(Path(root), place_queries, terms, expansions, region, limit, include_route_restricted)

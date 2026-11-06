@@ -88,8 +88,15 @@ def _limit(value,maximum=50):
 def _region(region):
     if region not in REGIONS:raise ValueError('지원하지 않는 지역입니다.')
 
+def _search_needle(query):
+    value = str(query)
+    if '\x00' in value:
+        raise ValueError('검색어에 사용할 수 없는 문자가 들어 있습니다.')
+    return value.strip().casefold()[:100]
+
+
 def food_search(root,query='',region='all',limit=6,categories=None):
-    _region(region);limit=_limit(limit);needle=str(query).strip().casefold()[:100]
+    _region(region);limit=_limit(limit);needle=_search_needle(query)
     clauses=[];parameters=[]
     if region!='all':clauses.append('region=?');parameters.append(region)
     if needle:
@@ -129,7 +136,7 @@ def _place(row):
     return p
 
 def place_search(root,query='',region='all',limit=12):
-    _region(region);limit=_limit(limit);needle=str(query).strip().casefold()[:100]
+    _region(region);limit=_limit(limit);needle=_search_needle(query)
     if len(needle)<2:return {'items':[],'total':0,'source_date':'2025-09-18','message':'장소명 또는 주소를 두 글자 이상 입력하세요.'}
     escaped=needle.replace('\\','\\\\').replace('%','\\%').replace('_','\\_')
     where=" WHERE search_text LIKE ? ESCAPE '\\'";params=['%'+escaped+'%']

@@ -70,7 +70,7 @@ vm.runInContext(
   fragment(appSource, 'function normalizeOverlapEvidence(raw)', 'function normalizeExtraPlace(raw)') +
   fragment(appSource, 'function normalizeExtraPlace(raw)', 'function renderAudience()') +
   '\nlet detailRequest=0;\n' +
-  fragment(appSource, 'async function showRichDetail(raw)', 'async function getJSON('),
+  fragment(appSource, 'async function showRichDetail(', 'async function getJSON('),
   appContext, {filename: 'app.js:tested-functions'}
 );
 
@@ -94,7 +94,7 @@ node('#tourism-kind').value = 'attraction';
 node('#tourism-query').value = '해변';
 const controller = {
   setPlaces() {}, setSelectedIds() {}, clearUserLocation() {}, disableOnline() {},
-  clearRoute() {}, setRoads() {}, setRoute(route) { routes.push(clone(route)); }
+  clearRoute() {}, setRoads() {}, setRoute(route) { routes.push(clone(route)); return true; }
 };
 const forbiddenStorage = new Proxy({}, {get() { throw new Error('Browser storage must not be used in this test'); }});
 const context = {
@@ -128,7 +128,9 @@ const context = {
     else if (url === '/api/offline-roads') data = {lines: []};
     else if (url === '/api/models-info') data = {cards: []};
     else if (url === '/api/tourism') data = {
-      items: clone([...fixtures,rejectedFixture]), total: fixtures.length, next_cursor: null,
+      items: clone(JSON.parse(options.body).query === '성산' ? fixtures.slice(0, 1) : [...fixtures,rejectedFixture]),
+      total: JSON.parse(options.body).query === '성산' ? 1 : fixtures.length,
+      next_cursor: JSON.parse(options.body).query === '성산' ? null : 'previous-query-cursor',
       available_categories: [{value: 'beach', label: '해변', count: 2}],
       model: {training_rows: fixtures.length}, warnings: []
     };
@@ -185,6 +187,17 @@ function geometryRequests() { return requests.filter(r => r.url === '/api/route-
   }
   checks.push('tourism category, tags and description survive the actual app normalizer');
 
+  node('#tourism-query').value = '성산';
+  node('#tourism-query').listeners.input();
+  assert.equal(node('#tourism-more').textContent, '변경한 검색어로 찾기');
+  await node('#tourism-more').listeners.click();
+  const search = JSON.parse(requests.filter(r => r.url === '/api/tourism').at(-1).options.body);
+  assert.equal(search.query, '성산');
+  assert.equal(search.cursor, undefined);
+  assert.match(node('#tourism-summary').textContent, /1개 기록 중 1개 표시/);
+  assert(!node('#tourism-results').innerHTML.includes(`data-discovery-card="${fixtures[1].id}"`));
+  checks.push('editing the query starts a fresh page and does not mix old cards');
+
   await appContext.showRichDetail(clone(fixture));
   const detail = detailNode('#destination-detail').innerHTML;
   assert.match(detail, /겹친 표현 · 해변 · beach/);
@@ -193,6 +206,10 @@ function geometryRequests() { return requests.filter(r => r.url === '/api/route-
   assert.match(detail,/명부·지도 교차확인/);
   assert.match(detail,/두 자료의 좌표 차이 43m/);
   checks.push('detail modal renders object evidence and tourism save ID');
+  await appContext.showRichDetail(clone(fixture), {allowTripAdd:false});
+  const restrictedDetail = detailNode('#destination-detail').innerHTML;
+  assert.match(restrictedDetail,/방문 조건을 별도로 확인할 장소/);
+  assert(!restrictedDetail.includes('data-save='));
 
   for (const testCase of [
     {apiFlag: true, endpoints: true, expectedPrivate: true},
@@ -224,6 +241,17 @@ function geometryRequests() { return requests.filter(r => r.url === '/api/route-
     assert.equal(geometryRequests().length, calls, 'reopening uses the cached geometry');
   }
   checks.push('private-location flag retained initially and on itinerary reopen', 'explicit endpoints conservatively mark geometry private', 'public-only geometry remains nonprivate');
+
+  const itineraryGeometry = routes.at(-1);
+  const mapRequestCount = requests.length;
+  assert.equal(context.JejuExplore.showReturnRoute({kind:'road',coordinates:[[126.5,33.5],[126.51,33.51]],distance_km:1.5}), true);
+  assert.deepEqual(routes.at(-1).stops, []);
+  assert.equal(routes.at(-1).contains_private_location, true);
+  assert.match(node('#map-context').textContent, /오프라인 지도/);
+  context.JejuExplore.showRoute();
+  assert.deepEqual(routes.at(-1), itineraryGeometry);
+  assert.equal(requests.length, mapRequestCount);
+  checks.push('return-only overlay stays offline and does not replace cached itinerary geometry');
 
   assert.equal(gpsCalls, 0);
   assert(requests.every(r => r.url.startsWith('/api/')));

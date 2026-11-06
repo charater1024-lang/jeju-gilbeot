@@ -75,6 +75,13 @@
       detailPage=Math.max(0,Math.min(detailPage,Math.ceil(length/20)-1));
     }
     function detailRows(){const all=allPublicPlaces();return clusterIds.length?clusterIds.map(id=>all.find(p=>p.id===id)).filter(Boolean):all;}
+    function focusPlaceChoice(index=0){detail.querySelectorAll('.jm-place-choice')[index]?.focus?.();}
+    function changeDetailPage(delta,button){
+      const restoreFocus=document.activeElement===button;
+      detailPage+=delta;
+      renderDetail();
+      if(restoreFocus)focusPlaceChoice();
+    }
     function renderDetail(place=activePlace()){
       reconcileDetail();place=activePlace();detail.replaceChildren();detail.classList.toggle('jm-detail-expanded',Boolean(place&&expanded));
       const all=allPublicPlaces(),rows=detailRows();
@@ -83,11 +90,11 @@
       if(!clusterIds.length){wrap.open=mapListOpen;wrap.addEventListener('toggle',()=>{mapListOpen=wrap.open;});}
       wrap.append(node(clusterIds.length?'strong':'summary','jm-detail-list-title',`${clusterIds.length?'선택한 묶음':'지도에 표시된 장소 목록 보기'} ${rows.length}곳`));
       wrap.append(node('p','jm-detail-source',clusterIds.length?'이 묶음의 모든 장소를 아래에서 고르세요. 개별 안내를 열어도 전체 묶음 목록은 유지됩니다.':'지도에 표시된 모든 장소입니다. 이름을 고르면 해당 장소를 강조하고 아래에 안내합니다.'));
-      if(clusterIds.length){const resetList=node('button','jm-button jm-show-all',`전체 ${all.length}곳 목록 보기`);resetList.type='button';resetList.addEventListener('click',()=>{clusterIds=[];detailPage=0;mapListOpen=true;renderDetail();});wrap.append(resetList);}
+      if(clusterIds.length){const resetList=node('button','jm-button jm-show-all',`전체 ${all.length}곳 목록 보기`);resetList.type='button';resetList.addEventListener('click',()=>{const restoreFocus=document.activeElement===resetList;clusterIds=[];detailPage=0;mapListOpen=true;renderDetail();if(restoreFocus)focusPlaceChoice();});wrap.append(resetList);}
       const start=detailPage*20,end=Math.min(rows.length,start+20),list=node('div',clusterIds.length?'jm-cluster-list jm-place-list':'jm-place-list');
-      rows.slice(start,end).forEach(p=>{const number=all.findIndex(item=>item.id===p.id)+1,b=node('button','jm-button jm-place-choice',`#${number} ${p.name}`);b.type='button';b.setAttribute('aria-label',`지도 장소 ${number}. ${p.name} 선택`);b.setAttribute('aria-pressed',String(p.id===activeId));b.addEventListener('click',()=>selectPlace(p));list.append(b);});
+      rows.slice(start,end).forEach((p,index)=>{const number=all.findIndex(item=>item.id===p.id)+1,b=node('button','jm-button jm-place-choice',`#${number} ${p.name}`);b.type='button';b.setAttribute('aria-label',`지도 장소 ${number}. ${p.name} 선택`);b.setAttribute('aria-pressed',String(p.id===activeId));b.addEventListener('click',()=>{const restoreFocus=document.activeElement===b;selectPlace(p);if(restoreFocus)focusPlaceChoice(index);});list.append(b);});
       wrap.append(list);
-      if(rows.length>20){const pager=node('div','jm-list-pagination'),previous=node('button','jm-button jm-list-previous','이전 장소'),next=node('button','jm-button jm-list-next','다음 장소'),range=node('span','jm-detail-source',`${start+1}–${end} / ${rows.length}곳`);range.setAttribute('role','status');previous.type=next.type='button';previous.disabled=detailPage===0;next.disabled=end>=rows.length;previous.addEventListener('click',()=>{detailPage--;renderDetail();});next.addEventListener('click',()=>{detailPage++;renderDetail();});pager.append(previous,range,next);wrap.append(pager);}
+      if(rows.length>20){const pager=node('div','jm-list-pagination'),previous=node('button','jm-button jm-list-previous','이전 장소'),next=node('button','jm-button jm-list-next','다음 장소'),range=node('span','jm-detail-source',`${start+1}–${end} / ${rows.length}곳`);range.setAttribute('role','status');previous.type=next.type='button';previous.disabled=detailPage===0;next.disabled=end>=rows.length;previous.addEventListener('click',()=>changeDetailPage(-1,previous));next.addEventListener('click',()=>changeDetailPage(1,next));pager.append(previous,range,next);wrap.append(pager);}
       detail.append(wrap);
       if(!place){detail.append(node('span','jm-detail-hint','목록에서 장소를 선택하면 개별 안내와 장소 자세히를 볼 수 있습니다.'));return;}
       const selectedDetail=node('div','jm-selected-place'),text=node('div','jm-detail-text');text.append(node('strong','jm-detail-name',place.name),node('span','jm-detail-source',[place.category,place.source_name].filter(Boolean).join(' · ')),node('span','jm-detail-coordinates',`위도 ${place.latitude.toFixed(5)} · 경도 ${place.longitude.toFixed(5)}${place.distance_km!==null?` · 직선 약 ${place.distance_km.toFixed(1)} km`:''}`));selectedDetail.append(text);

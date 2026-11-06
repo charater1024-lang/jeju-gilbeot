@@ -7,10 +7,14 @@ from .catalog_store import affinity_food
 from .mobility_model import predict_mobility
 from .reference import read_json
 
-def food_insight(root,audience='resident',month=None,region='all'):
+def food_insight(root,audience='resident',month=None,region='all',*,quality_v23=False):
     root=Path(root);started=time.perf_counter()
     if month is None:month=dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).month
-    result=predict_audience(root/'models_audience'/'audience_model.json',audience,month)
+    if quality_v23:
+        from .audience_v23 import predict_audience_v23
+        result=predict_audience_v23(root,audience,month)
+    else:
+        result=predict_audience(root/'models_audience'/'audience_model.json',audience,month)
     trace=[{'agent':'집계 분석','status':'completed','detail':'원자료 집단과 8업종 안의 관측 이용건수 분포 모델을 조회했습니다.','duration_ms':round((time.perf_counter()-started)*1000,3)}]
     before=time.perf_counter()
     result['restaurants']=affinity_food(root,result['categories'],region)

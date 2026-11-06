@@ -72,6 +72,72 @@ class ChatbotTests(unittest.TestCase):
         self.assertNotIn('없습니다입니다',r['reply'])
         r=self.ask('영업시간은?',r['state']);self.assertEqual(r['intent'],'place_hours');self.assertIn('원자료',r['reply'])
 
+    def test_visible_number_after_selection_matches_returned_single_place(self):
+        search = self.ask('북부 해변 추천')
+        selected = self.ask('두 번째', search['state'])
+        numbered = self.ask('1번 전화번호 좀 알려줘', selected['state'])
+        self.assertEqual(selected['state']['choice_ids'], [selected['cards'][0]['id']])
+        self.assertEqual(numbered['intent'], 'place_phone')
+        self.assertEqual(numbered['cards'][0]['id'], selected['cards'][0]['id'])
+
+    def test_natural_field_and_region_phrasing(self):
+        for question, intent in [('성산일출봉 영업시간이 어떻게 되나요?', 'place_hours'),
+                                 ('성산일출봉 전화번호 좀 알려줘', 'place_phone'),
+                                 ('성산일출봉은 어디에 있나요?', 'place_address')]:
+            with self.subTest(question=question):
+                result = self.ask(question)
+                self.assertEqual(result['intent'], intent)
+                self.assertEqual(result['cards'][0]['id'], 'seongsan')
+        first = self.ask('북부 해변 추천')
+        next_region = self.ask('서부는 어때?', first['state'])
+        self.assertEqual(next_region['state']['region'], 'west')
+        self.assertEqual(next_region['state']['last_query'], '해변')
+
+    def test_explicit_new_search_overrides_next_page_wording(self):
+        first = self.ask('북부 흑돼지 추천')
+        second = self.ask('동부 갈치 더 추천해줘', first['state'])
+        self.assertEqual(second['state']['last_query'], '갈치')
+        self.assertEqual(second['state']['region'], 'east')
+        self.assertEqual(second['state']['offset'], 0)
+        self.assertTrue(second['cards'])
+
+    def test_unverified_recommendation_conditions_do_not_return_cards(self):
+        for question, intent in [
+            ('해변 피하고 박물관 추천', 'clarify_negation'),
+            ('해변 추천하지 마', 'clarify_negation'),
+            ('반려견 동반 카페', 'clarify_access'),
+            ('계단이 없는 박물관 추천', 'clarify_access'),
+            ('버스로 갈 수 있는 북부 해변 추천', 'clarify_transport'),
+            ('차로 10분 이내 박물관 추천', 'clarify_transport'),
+            ('내 근처 지금 영업 중인 카페 추천', 'realtime_unavailable'),
+            ('근처 지금 문 연 카페 추천', 'realtime_unavailable'),
+            ('관광지와 카페 추천', 'clarify_topics'),
+            ('북부 또는 남부 해변 추천', 'clarify_regions'),
+            ('반경 0.1km 카페 추천', 'clarify_limits'),
+            ('내 근처 1e3 km 관광지 추천', 'clarify_limits'),
+            ('반경 1,005km 카페 추천', 'clarify_limits'),
+            ('5km보다 먼 해변 추천', 'clarify_limits'),
+            ('박물관 1e2곳 추천', 'clarify_limits'),
+            ('박물관 6곳 추천', 'clarify_limits'),
+        ]:
+            with self.subTest(question=question):
+                result = self.ask(question)
+                self.assertEqual(result['intent'], intent)
+                self.assertEqual(result['cards'], [])
+                self.assertFalse(result['needs_location'])
+
+    def test_recommended_beaches_include_recorded_visit_review(self):
+        for question, name, code in [('남부 해변 추천', '선녀탕', 'recorded_access_control'),
+                                    ('서부 해변 추천', '하모해수욕장', 'recorded_beach_closure')]:
+            with self.subTest(question=question):
+                result = chat_reply(ROOT, {'message': question}, learned_search=False)
+                card = next(card for card in result['cards'] if card['name'] == name)
+                review = card['visit_review']
+                self.assertTrue(review['required'])
+                self.assertIn(code, {reason['code'] for reason in review['reasons']})
+                self.assertTrue(review['source_url'].startswith('https://www.visitjeju.net/'))
+                self.assertTrue(review['reviewed_at'])
+
     def test_region_followup_after_detail_keeps_theme(self):
         r=self.ask('북부 해변 추천');r=self.ask('두번째',r['state']);r=self.ask('서부로',r['state'])
         self.assertEqual(r['intent'],'tourism_search');self.assertEqual(r['state']['region'],'west');self.assertEqual(r['state']['last_query'],'해변');self.assertTrue(all(p['region']=='west' for p in r['cards']))
