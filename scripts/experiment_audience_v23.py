@@ -4,12 +4,9 @@ import argparse
 import hashlib
 import itertools
 import json
-import os
+import math
 from pathlib import Path
 import sys
-
-os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
-import numpy as np
 
 SOURCE = 'data_raw/hub/hub_1048_5832.csv'
 FOLDS = [('2022-06', '2022-07', '2022-12'), ('2022-12', '2023-01', '2023-06'),
@@ -47,9 +44,9 @@ def ordinal(month):
 
 
 def design(month, sign, trend):
-    angle = month * 2*np.pi/12
-    harmonics = np.column_stack((np.sin(angle), np.cos(angle), np.sin(2*angle), np.cos(2*angle)))
-    return np.column_stack((np.ones_like(month), sign, harmonics, harmonics*sign[:, None], trend, trend*sign))
+    angle = month * 2 * math.pi / 12
+    harmonics = [math.sin(angle), math.cos(angle), math.sin(2 * angle), math.cos(2 * angle)]
+    return [1., sign, *harmonics, *(value * sign for value in harmonics), trend, trend * sign]
 
 
 def sign_for(group):
@@ -60,36 +57,51 @@ def sign_for(group):
     raise ValueError('Unexpected audience group.')
 
 
-def train_candidate(rows, config):
+def train_candidate(rows, config, solve):
     # Per-group intercepts with shared seasonal effects and penalized deviations.
     end = max(ordinal(row['month']) for row in rows)
-    rows = [row for row in rows if ordinal(row['month']) > end-config['window']]
-    age = np.array([ordinal(row['month'])-end for row in rows], float)
-    month = np.array([row['calendar_month'] for row in rows], float)
-    sign = np.array([sign_for(row['audience']) for row in rows])
-    x = design(month, sign, age/12)
-    actual = np.asarray([row['shares'] for row in rows], float)
-    if config['scale'] == 'clr':
-        actual = np.log(np.maximum(actual, 1e-10))
-        actual -= actual.mean(axis=1, keepdims=True)
-    weights = 2**(age/config['half_life'])
-    penalties = [1e-9, 1e-9] + [2.]*4 + [config['seasonal_deviation_ridge']]*4 + [8., 16.]
-    coef = np.linalg.solve(x.T @ (weights[:, None]*x) + np.diag(penalties),
-                           x.T @ (weights[:, None]*actual))
+    rows = [row for row in rows if ordinal(row['month']) > end - config['window']]
+    penalties = [1e-9, 1e-9] + [2.] * 4 + [config['seasonal_deviation_ridge']] * 4 + [8., 16.]
+    gram = [[0.] * len(penalties) for _ in penalties]
+    targets = [[0.] * len(penalties) for _ in rows[0]['shares']]
+    for row in rows:
+        age = ordinal(row['month']) - end
+        features = design(row['calendar_month'], sign_for(row['audience']), age / 12)
+        actual = row['shares']
+        if config['scale'] == 'clr':
+            logs = [math.log(max(share, 1e-10)) for share in actual]
+            center = math.fsum(logs) / len(logs)
+            actual = [value - center for value in logs]
+        weight = 2 ** (age / config['half_life'])
+        for column, feature in enumerate(features):
+            weighted_feature = weight * feature
+            for other_column, other_feature in enumerate(features):
+                gram[column][other_column] += weighted_feature * other_feature
+            for target, share in zip(targets, actual):
+                target[column] += weighted_feature * share
+    for column, penalty in enumerate(penalties):
+        gram[column][column] += penalty
+    coefficients = [solve(gram, target) for target in targets]
     tables = {}
     for group in ('resident', 'tourist'):
-        future = design(np.arange(1, 13), np.full(12, sign_for(group)),
-                        np.full(12, config['forecast_months_forward']/12)) @ coef
-        if config['scale'] == 'clr':
-            future = np.exp(future - future.max(axis=1, keepdims=True))
-        future = np.maximum(future, 1e-10)
-        tables[group] = future/future.sum(axis=1, keepdims=True)
+        table = []
+        for month in range(1, 13):
+            features = design(month, sign_for(group), config['forecast_months_forward'] / 12)
+            future = [math.fsum(weight * feature for weight, feature in zip(target, features))
+                      for target in coefficients]
+            if config['scale'] == 'clr':
+                peak = max(future)
+                future = [math.exp(value - peak) for value in future]
+            positive = [max(value, 1e-10) for value in future]
+            total = math.fsum(positive)
+            table.append([value / total for value in positive])
+        tables[group] = table
     return tables
 
 
-def candidate_predictions(train, rows, config):
-    tables = train_candidate(train, config)
-    return [tables[row['audience']][row['calendar_month']-1] for row in rows]
+def candidate_predictions(audience, train, rows, config):
+    tables = train_candidate(train, config, audience._solve)
+    return [tables[row['audience']][row['calendar_month'] - 1] for row in rows]
 
 
 def incumbent_predictions(audience, train, rows):
@@ -99,10 +111,12 @@ def incumbent_predictions(audience, train, rows):
 
 
 def metrics(rows, predictions):
-    errors = np.abs(np.asarray([row['shares'] for row in rows])-np.asarray(predictions))
-    hits = int((errors <= THRESHOLD + 1e-12).sum())
-    return {'hits': hits, 'total': int(errors.size), 'percent': 100*hits/errors.size,
-            'mae_percentage_points': float(100*errors.mean())}
+    errors = [abs(actual - prediction)
+              for row, predicted in zip(rows, predictions)
+              for actual, prediction in zip(row['shares'], predicted)]
+    hits = sum(error <= THRESHOLD + 1e-12 for error in errors)
+    return {'hits': hits, 'total': len(errors), 'percent': 100 * hits / len(errors),
+            'mae_percentage_points': 100 * math.fsum(errors) / len(errors)}
 
 
 def combined_validation(audience, rows, candidate):
@@ -114,7 +128,7 @@ def combined_validation(audience, rows, candidate):
         if candidate is None:
             predicted.extend(incumbent_predictions(audience, train, validation))
         else:
-            predicted.extend(candidate_predictions(train, validation, candidate))
+            predicted.extend(candidate_predictions(audience, train, validation, candidate))
     return metrics(observed, predicted)
 
 
@@ -138,7 +152,7 @@ def selection_stage(audience, panels, audit, output):
     receipt = dict(protocol_sha256=digest(protocol), selected=selected, validation_incumbent=baseline,
                    tested_candidates=candidates, test_used_for_selection=False)
     write(output/'selection.json', receipt)
-    print(json.dumps({'selected': selected, 'baseline_validation': baseline, 'eligible': len(eligible)}, ensure_ascii=False))
+    return {'selected': selected, 'baseline_validation': baseline, 'eligible': len(eligible)}
 
 
 def test_stage(audience, panels, audit, output):
@@ -148,17 +162,16 @@ def test_stage(audience, panels, audit, output):
         raise ValueError('Frozen protocol or data does not match selection.')
     selected = receipt['selected']
     if not selected:
-        print('No eligible candidate. Test was not opened.')
-        return
+        return None
     train = [r for r in panels if r['month'] <= FIT_CUTOFF]
     test = [r for r in panels if TEST[0] <= r['month'] <= TEST[1]]
     incumbent = metrics(test, incumbent_predictions(audience, train, test))
     if incumbent['total'] != 288 or incumbent['hits'] != 252 or abs(incumbent['mae_percentage_points']-.426111)>1e-6:
         raise ValueError('1048 test cohort or comparator differs from v20.')
-    predictions = candidate_predictions(train, test, selected['config'])
+    predictions = candidate_predictions(audience, train, test, selected['config'])
     chosen = metrics(test, predictions)
     promote = chosen['percent'] >= TARGET and chosen['mae_percentage_points'] <= GUARD*incumbent['mae_percentage_points']
-    by_panel = {(r['month'], r['audience']): predicted.tolist() for r, predicted in zip(test, predictions)}
+    by_panel = {(r['month'], r['audience']): predicted for r, predicted in zip(test, predictions)}
     detailed = audience._measure(test, lambda row: by_panel[(row['month'], row['audience'])])
     cohort = [{'month': r['month'], 'audience': r['audience'], 'shares': r['shares']} for r in test]
     report = dict(protocol_sha256=digest(protocol), selection_sha256=digest(receipt), candidate=selected,
@@ -169,12 +182,9 @@ def test_stage(audience, panels, audit, output):
                   candidate_test_detail=detailed, test_status='previously_seen_retrospective_fixed_period_not_pristine_external_holdout')
     write(output/'result.json', report)
     if promote:
-        tables = train_candidate(panels, selected['config'])
-        profiles = {group: {str(month+1): share.tolist() for month, share in enumerate(table)}
+        tables = train_candidate(panels, selected['config'], audience._solve)
+        profiles = {group: {str(month): shares for month, shares in enumerate(table, 1)}
                     for group, table in tables.items()}
-        if any(not np.array_equal(np.asarray(list(profiles[group].values())), table)
-               for group, table in tables.items()):
-            raise ValueError('Monthly profile export differs from learned probabilities.')
         model = dict(schema_version=1, dataset_id='1048', algorithm='recency_weighted_pooled_seasonal_trend_ridge_composition',
                      selected_serving_model='pooled_seasonal_trend_ridge_v23',
                      categories=audience.CATEGORIES, groups=audience.GROUPS, monthly_profiles=profiles,
@@ -183,7 +193,7 @@ def test_stage(audience, panels, audit, output):
                      runtime_dependencies='python standard library only', runtime_llm=False)
         model['model_sha256'] = digest(model)
         write(output/'serving_profile.json', model)
-    print(json.dumps(report, ensure_ascii=False))
+    return report
 
 
 if __name__ == '__main__':
@@ -198,4 +208,8 @@ if __name__ == '__main__':
 
     panels, audit = audience_model.read_panels(args.root/SOURCE)
     operation = selection_stage if args.stage == 'validation' else test_stage
-    operation(audience_model, panels, audit, args.output)
+    result = operation(audience_model, panels, audit, args.output)
+    if result is None:
+        print('No eligible candidate. Test was not opened.')
+    else:
+        print(json.dumps(result, ensure_ascii=False))

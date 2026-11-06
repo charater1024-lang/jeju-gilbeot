@@ -20,13 +20,13 @@
     },
     {
       "path": ".gitattributes",
-      "bytes": 70,
-      "sha256": "3e4202e5cd70694a51142ebdf7032067cd3df08cf95028f11f370601128a03c1"
+      "bytes": 333,
+      "sha256": "e34f2e22d86ba7b992d48ebc3ac9ea0aa0f1b258b824317c238edcc9100dca84"
     },
     {
       "path": ".gitignore",
-      "bytes": 1404,
-      "sha256": "8b5ba5e1110b25e0d2c66c1ab96843fbe40fa993d0dcd908d4d6fd04d1b57243"
+      "bytes": 2295,
+      "sha256": "484c760f442570758ddfa3a353b934be798682a1a175c3f4282f8a01fb3aebf8"
     },
     {
       "path": "AGENTS.md",
@@ -50,13 +50,13 @@
     },
     {
       "path": "GITHUB_RESTORE.md",
-      "bytes": 1938,
-      "sha256": "3d21b03aa375f491034d0ff7a469c4300e33f59d8834dcf98e02c51ce32f2cbd"
+      "bytes": 2286,
+      "sha256": "213223271fa71928cfc9b8aefc8c3b8085aff33684aa4537693a678294eccaa2"
     },
     {
       "path": "README.md",
-      "bytes": 12043,
-      "sha256": "be22966aa35e7ee2d3e8f40a764b5e56dde1ed9f3e8d57572d5b3c2776883707"
+      "bytes": 12393,
+      "sha256": "c47ad60cb3ef08615e262112526ba47fea805212873f66b0ec5b6367de4a38ef"
     },
     {
       "path": "README_노트북이전.md",
@@ -150,8 +150,8 @@
     },
     {
       "path": "config/place_trust_policy_v15.json",
-      "bytes": 44024,
-      "sha256": "f9ace37bc2ad05b5381807174759e25bdcec4e39effbaf9dd627a8fb31ea66cf"
+      "bytes": 44118,
+      "sha256": "4aed558fbb1de234aea06a42f175c89bc2cb63769431f63506ddff13d8f1ce3b"
     },
     {
       "path": "config/sources.json",
@@ -1330,8 +1330,8 @@
     },
     {
       "path": "dev.py",
-      "bytes": 5466,
-      "sha256": "02a560b461393305c3922ab34f4c002bfbaf8a9e8d5df94cb30b5495888a802e"
+      "bytes": 6204,
+      "sha256": "22eca0dcf0d47c4f7adedd99ba8141f31198a78b17db5d286182576c493bb0a9"
     },
     {
       "path": "development_support/bus_v20/experiment_bus_v20.py",
@@ -3445,8 +3445,8 @@
     },
     {
       "path": "jeju_agent/place_trust.py",
-      "bytes": 16817,
-      "sha256": "29689588422121eaf545d9496dd07b3a41e60c1816d9b6d73ba9434b22f87e39"
+      "bytes": 17766,
+      "sha256": "f29c1e268542e4b59461f31ff81b576f1e37b71adb59d3377e181dbe85e921be"
     },
     {
       "path": "jeju_agent/planning_input.py",
@@ -3905,8 +3905,8 @@
     },
     {
       "path": "run_center.cmd",
-      "bytes": 280,
-      "sha256": "4d8d843f613acd17d1e0b6e4ba595a7f28a6b2557d2d5acef59d9babbedd132f"
+      "bytes": 439,
+      "sha256": "0b6e56a996d1405823d38c78067d784cdc0c2ddbb6d4907b929ffb28b4e1edc3"
     },
     {
       "path": "run_center.ps1",
@@ -4160,8 +4160,8 @@
     },
     {
       "path": "scripts/experiment_audience_v23.py",
-      "bytes": 10121,
-      "sha256": "0d38ee95ef4aa7b111dedd5b1ff966b09e5149631f71600f8cb8bc7af1230cd1"
+      "bytes": 10730,
+      "sha256": "6c6db9a6670b6e609ec1002d686d7abcc96720db117c5401c00f0de2c546c703"
     },
     {
       "path": "scripts/experiment_bus_calendar_v21.py",
@@ -4205,8 +4205,8 @@
     },
     {
       "path": "scripts/prepare_reference_data.py",
-      "bytes": 5951,
-      "sha256": "17f2414af6248539089d48aa0190061f67f84cf478db51b223581e9f730af1e2"
+      "bytes": 5960,
+      "sha256": "07fd8d0b5c2d818efb0d7856e684b5136d5952c0768538251ed2777b36401a66"
     },
     {
       "path": "scripts/report_models_v14.py",
@@ -4390,8 +4390,8 @@
     },
     {
       "path": "tests/test_model_data_edge_v27.py",
-      "bytes": 9058,
-      "sha256": "e09a36af78f3e776463f17756075657332c3b78e6324abdb5a710df4be6e5c0f"
+      "bytes": 8966,
+      "sha256": "89f4f1f1566ac5227585d13366421c8c6c976e3d0f1ec761c07f6c2030921e47"
     },
     {
       "path": "tests/test_official_guide_v27.py",
@@ -4405,13 +4405,13 @@
     },
     {
       "path": "tests/test_place_trust_v15.py",
-      "bytes": 6521,
-      "sha256": "cc4bff1f225ab2fc217306ac7ec5833a5339d337c902ab074d5c6d6a518e9af5"
+      "bytes": 7528,
+      "sha256": "9b0709e680a3c952358e929a09ceb33e13c4e3e3a8209fbd900c6b6b9ad4531a"
     },
     {
       "path": "tests/test_place_trust_v16.py",
-      "bytes": 10106,
-      "sha256": "4db82bee978763cdfec7c356e0ef91997d525ed5b1a06ffffcd441750c46357f"
+      "bytes": 10148,
+      "sha256": "596c6a6cdf4630ea1ee16ccc9ef7ac7c1de8a2306748ab30312514c789c0c6b0"
     },
     {
       "path": "tests/test_planning_input_v16.py",
@@ -4882,6 +4882,31 @@
       "path": "docs/제안서_v27/figures/guide.jpg",
       "bytes": 34773,
       "sha256": "940f393179e968083eb04af8365bdb521f905f40aa180ce252bb6c1a6a7846cd"
+    },
+    {
+      "path": "config/official_guide_proofs_v27.json",
+      "bytes": 17404,
+      "sha256": "a040229b3d9a61d6d65f0d9bba30257307fa4ac60b1a67dfb59ce1e1566631ba"
+    },
+    {
+      "path": "config/restore_sources.json",
+      "bytes": 5794,
+      "sha256": "903ee7eb93b30c7c4ba7bf65f5f959dd9e5d3e59a5e47536a003a3e5cee37b30"
+    },
+    {
+      "path": "jeju_agent/restore_models.py",
+      "bytes": 4613,
+      "sha256": "215d43f8598688ef048f0fe6731e65724bc41bb0ed1417e0160957b6fbc923c7"
+    },
+    {
+      "path": "jeju_agent/restore_service.py",
+      "bytes": 9058,
+      "sha256": "e18a6736fb6225898f5537cdd2cdd9eff2119b8150ec5cb14059a7bdf391c6af"
+    },
+    {
+      "path": "jeju_agent/restore_sources.py",
+      "bytes": 6922,
+      "sha256": "2a41f142d0dbd0d953cc80ef95bb627b0e55f80f53a1814853e777dbed994509"
     }
   ],
   "documentation_revision": "readability_and_model_evaluation_v19",

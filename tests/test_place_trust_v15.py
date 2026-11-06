@@ -1,13 +1,14 @@
 """Public real-place records and temporary metadata copies only; never GPS."""
 import copy
 from datetime import date
+import hashlib
 import json
 from pathlib import Path
 import shutil
 import tempfile
 import unittest
 
-from jeju_agent.place_trust import place_trust, load_policy, TrustPolicyError
+from jeju_agent.place_trust import GUIDE_PROOFS_PATH, place_trust, load_policy, TrustPolicyError
 from jeju_agent.tourism_access import approved_places
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -79,8 +80,7 @@ class PlaceTrustTests(unittest.TestCase):
         root=Path(folder);(root/'config').mkdir();(root/'data_reference').mkdir()
         shutil.copy2(ROOT/'config/place_trust_policy_v15.json',root/'config/place_trust_policy_v15.json')
         shutil.copy2(ROOT/'data_reference/tourism_guides_v12.json',root/'data_reference/tourism_guides_v12.json')
-        cache=root/'data_raw/tourism/v12/official_fields';cache.mkdir(parents=True)
-        shutil.copy2(ROOT/'data_raw/tourism/v12/official_fields/hamdeok.json',cache/'hamdeok.json')
+        shutil.copy2(ROOT/GUIDE_PROOFS_PATH,root/GUIDE_PROOFS_PATH)
         return root
 
     def test_missing_or_corrupt_policy_fails_closed(self):
@@ -97,9 +97,26 @@ class PlaceTrustTests(unittest.TestCase):
             path.write_text(json.dumps(data),encoding='utf-8')
             with self.assertRaises(TrustPolicyError):place_trust(root,self.places['hamdeok'],as_of=AS_OF)
 
+    def test_compact_proof_supports_a_checkout_without_source_cache(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=self.fixture(temp)
+            self.assertTrue(place_trust(root,self.places['hamdeok'],as_of=AS_OF)['eligible'])
+            (root/GUIDE_PROOFS_PATH).write_text('{}',encoding='utf-8')
+            result=place_trust(root,self.places['hamdeok'],as_of=AS_OF)
+            self.assertFalse(result['eligible'])
+            self.assertIn('source_receipt_changed',{r['code'] for r in result['reasons']})
+
     def test_changed_catalog_and_receipt_are_excluded(self):
         with tempfile.TemporaryDirectory() as temp:
             root=self.fixture(temp);cache=root/'data_raw/tourism/v12/official_fields/hamdeok.json'
+            cache.parent.mkdir(parents=True)
+            proof=json.loads((root/GUIDE_PROOFS_PATH).read_text(encoding='utf-8'))['hamdeok']
+            original=json.dumps(proof).encode('utf-8')
+            cache.write_bytes(original)
+            policy_path=root/'config/place_trust_policy_v15.json'
+            policy=json.loads(policy_path.read_text(encoding='utf-8'))
+            policy['guide_records']['hamdeok']['cache_file_sha256']=hashlib.sha256(original).hexdigest()
+            policy_path.write_text(json.dumps(policy),encoding='utf-8')
             self.assertTrue(place_trust(root,self.places['hamdeok'],as_of=AS_OF)['eligible'])
             cache.write_text('{}',encoding='utf-8')
             result=place_trust(root,self.places['hamdeok'],as_of=AS_OF)

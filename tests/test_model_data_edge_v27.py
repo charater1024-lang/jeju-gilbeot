@@ -12,7 +12,7 @@ from jeju_agent.assistant_search import search_assistant
 from jeju_agent.audience_v23 import predict_audience_v23
 from jeju_agent.dining_model import MODEL_RELATIVE, SOURCE_RELATIVE, predict_dining
 from jeju_agent.model_portfolio import digest
-from jeju_agent.place_trust import place_trust
+from jeju_agent.place_trust import GUIDE_PROOFS_PATH, place_trust
 from jeju_agent.quality_v23 import operating_evaluation
 from jeju_agent.server import operational_check
 
@@ -115,6 +115,7 @@ class ModelReadinessRegressionTests(unittest.TestCase):
         self.root = Path(directory.name)
         files = (
             'config/place_trust_policy_v15.json',
+            GUIDE_PROOFS_PATH,
             'data_reference/tourism.sqlite',
             'data_reference/tourism_guides_v12.json',
             'data_reference/model_portfolio_v20.json',
@@ -131,8 +132,6 @@ class ModelReadinessRegressionTests(unittest.TestCase):
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, target)
-        source_receipts = 'data_raw/tourism/v12/official_fields'
-        shutil.copytree(ROOT / source_receipts, self.root / source_receipts)
         self.assertEqual(predict_dining(self.root)['status'], 'historical_pattern')
 
     def assert_unready(self):

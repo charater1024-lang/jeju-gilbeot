@@ -71,11 +71,23 @@ def test(node=None,python_only=False):
 def main():
     parser=argparse.ArgumentParser(description='Jeju Gilbeot transfer verification, tests and local server')
     sub=parser.add_subparsers(dest='command',required=True)
-    integrity=sub.add_parser('check');integrity.add_argument('--original-transfer',action='store_true',help='Check historical v13 transfer hashes instead of current service manifest')
+    integrity=sub.add_parser('check')
+    mode=integrity.add_mutually_exclusive_group()
+    mode.add_argument('--original-transfer',action='store_true',help='Check historical v13 transfer hashes instead of current service manifest')
+    mode.add_argument('--service',action='store_true',help='Check assets needed for a restored service')
+    sub.add_parser('restore',help='Download pinned public inputs and rebuild operating assets')
     tests=sub.add_parser('test');tests.add_argument('--node');tests.add_argument('--python-only',action='store_true')
     run=sub.add_parser('run');run.add_argument('--port',type=int,default=8765)
     run.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
     args=parser.parse_args()
+    if args.command=='restore' or (args.command=='check' and args.service):
+        from jeju_agent.restore_service import restore_service, service_report
+        try:
+            report = restore_service(ROOT) if args.command=='restore' else service_report(ROOT)
+        except (OSError, ValueError, RuntimeError) as exc:
+            report = {'pass': False, 'failures': [str(exc)]}
+        print(json.dumps(report,ensure_ascii=False,indent=2))
+        return 0 if report['pass'] else 1
     if args.command=='check':return check(args.original_transfer)
     if args.command=='test':return test(args.node,args.python_only)
     if not 1024<=args.port<=65535:parser.error('port must be 1024..65535')

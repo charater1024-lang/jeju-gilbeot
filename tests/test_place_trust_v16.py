@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import patch
 
 from jeju_agent import place_trust as trust_module
-from jeju_agent.place_trust import TrustPolicyError, load_policy, place_trust
+from jeju_agent.place_trust import GUIDE_PROOFS_PATH, TrustPolicyError, load_policy, place_trust
 from jeju_agent.tourism_access import approved_places
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -27,7 +27,7 @@ class PolicyValidationTests(unittest.TestCase):
         root=Path(temp.name)
         for relative in ['config/place_trust_policy_v15.json',
                          'data_reference/tourism_guides_v12.json',
-                         'data_raw/tourism/v12/official_fields/hamdeok.json']:
+                         GUIDE_PROOFS_PATH]:
             target=root/relative;target.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(ROOT/relative,target)
         if mutate:self.mutate(root,mutate)
@@ -89,6 +89,7 @@ class PolicyValidationTests(unittest.TestCase):
             lambda p:p['approved_identity_sha256'].update(hamdeok='A'*64),
             lambda p:p['guide_records']['hamdeok'].update(guide_record_sha256='x'*64),
             lambda p:p['guide_records']['hamdeok'].update(cache_file_sha256=True),
+            lambda p:p.update(guide_proofs_sha256=True),
             lambda p:p['guide_records']['hamdeok'].update(original_page_sha256='a'*63),
         ]
         for index,change in enumerate(changes):

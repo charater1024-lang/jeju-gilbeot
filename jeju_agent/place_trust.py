@@ -14,6 +14,7 @@ from urllib.parse import urlsplit
 
 POLICY_ID = 'jeju_place_trust_v15'
 GUIDE_PATH = 'data_reference/tourism_guides_v12.json'
+GUIDE_PROOFS_PATH = 'config/official_guide_proofs_v27.json'
 GUIDE_HOSTS = {'visitjeju.net','www.visitjeju.net','m.visitjeju.net','korean.visitkorea.or.kr'}
 
 
@@ -91,6 +92,8 @@ def _policy(path,mtime,size):
         if not isinstance(data.get('approved_identity_sha256'),dict) or not data['approved_identity_sha256']:raise ValueError('missing candidate fingerprints')
         if not isinstance(data.get('guide_records'),dict) or not data['guide_records'] or not isinstance(data.get('automatic_exclusions'),dict):raise ValueError('missing source policy')
         if not _sha256(data.get('guide_catalog_sha256')):raise ValueError('missing guide snapshot')
+        if 'guide_proofs_sha256' in data and not _sha256(data['guide_proofs_sha256']):
+            raise ValueError('invalid compact guide proof digest')
         if any(not isinstance(k,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,120}',k) or not _sha256(v) for k,v in data['approved_identity_sha256'].items()):raise ValueError('invalid candidate fingerprints')
         for ident,entry in data['guide_records'].items():
             if ident not in data['approved_identity_sha256'] or not isinstance(entry,dict):raise ValueError('invalid source receipt')
@@ -146,6 +149,13 @@ def load_policy(root,*,as_of=None):
         raise TrustPolicyError('신뢰성 정책을 읽을 수 없어 자동 코스 생성을 중단합니다.') from exc
 
 
+@lru_cache(maxsize=4)
+def _compact_guide_proofs(raw, expected_sha256):
+    if hashlib.sha256(raw).hexdigest()!=expected_sha256:
+        return None
+    return json.loads(raw.decode('utf-8'))
+
+
 def _guide(root,ident,policy):
     """Check saved metadata receipts; a receipt is not the original page body."""
     try:
@@ -163,10 +173,19 @@ def _guide(root,ident,policy):
         if relative!=receipt['source_cache'] or guide.get('page_sha256')!=receipt['original_page_sha256'] or guide.get('retrieved_at')!=receipt['guide_reviewed_at']:return None,'source_receipt_mismatch'
         path=(root/relative).resolve();allowed=(root/'data_raw/tourism/v12/official_fields').resolve()
         if not path.is_relative_to(allowed) or path==allowed:return None,'source_receipt_path_invalid'
-        cache_raw=_file_bytes(path,100_000)
-        if hashlib.sha256(cache_raw).hexdigest()!=receipt.get('cache_file_sha256'):return None,'source_receipt_changed'
-        cache=json.loads(cache_raw.decode('utf-8'))
-        if cache.get('id')!=ident or cache.get('source_url')!=guide.get('source_url') or cache.get('page_sha256')!=guide.get('page_sha256') or cache.get('http_status')!=200:return None,'source_receipt_mismatch'
+        try:
+            cache_raw=_file_bytes(path,100_000)
+        except FileNotFoundError:
+            # Clean checkouts carry only the authenticated factual receipt fields.
+            if 'guide_proofs_sha256' not in policy:return None,'source_receipt_unavailable'
+            proof_raw=_file_bytes(root/GUIDE_PROOFS_PATH,100_000)
+            proofs=_compact_guide_proofs(proof_raw,policy['guide_proofs_sha256'])
+            if not isinstance(proofs,dict):return None,'source_receipt_changed'
+            cache=proofs.get(ident)
+        else:
+            if hashlib.sha256(cache_raw).hexdigest()!=receipt.get('cache_file_sha256'):return None,'source_receipt_changed'
+            cache=json.loads(cache_raw.decode('utf-8'))
+        if not isinstance(cache,dict) or cache.get('id')!=ident or cache.get('source_url')!=guide.get('source_url') or cache.get('page_sha256')!=guide.get('page_sha256') or cache.get('http_status')!=200:return None,'source_receipt_mismatch'
         return guide,None
     except (OSError,ValueError,TypeError,KeyError,UnicodeError):
         return None,'source_receipt_unavailable'

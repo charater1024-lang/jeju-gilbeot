@@ -1,0 +1,17 @@
+OpenStreetMap tourism and road snapshots, acquired 2026-10-28.
+© OpenStreetMap contributors.
+Database license: Open Data Commons Open Database License (ODbL) v1.0.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+This notice applies to jeju_tourism_v5.json, jeju_roads_v5.json, their source
+metadata, and the normalized derivative data_reference/osm_tourism_places.json.
+Retain attribution, the licence link, and applicable share-alike obligations
+when distributing the OSM database or derivative database. The normalized
+machine-readable dataset is supplied alongside the raw snapshots.
+
+The data is a community map snapshot. Tourism classification, opening, price,
+popularity, actual entrance, current access and traffic are not verified.
+Road geometry/topology is not a complete legal navigation engine. Turn
+restriction relations and real-time closures were not acquired.
+Queries use a fixed Jeju bounding box and never contain a user's GPS position.

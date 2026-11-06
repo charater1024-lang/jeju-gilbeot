@@ -1,0 +1,106 @@
+{
+  "status": "downloaded_and_validated",
+  "source": "OpenStreetMap via public Overpass",
+  "kind": "roads",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "requested_at": "2026-10-28T12:16:56.580968+00:00",
+  "downloaded_at": "2026-10-28T12:17:57.910838+00:00",
+  "attempts": 1,
+  "query": "[out:json][timeout:60][maxsize:268435456];\n(\n  way[\"highway\"~\"^(motorway|motorway_link|trunk|trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|unclassified|residential|service|living_street)$\"](32.9,126.0,33.7,127.0);\n  >;\n);\nout body qt;\n",
+  "query_bbox": [
+    32.9,
+    126.0,
+    33.7,
+    127.0
+  ],
+  "user_gps_in_request": false,
+  "http_status": 200,
+  "content_type": "application/json",
+  "raw_file": "data_raw/osm/jeju_roads_v5.json",
+  "raw_bytes": 34524993,
+  "raw_sha256": "eeebbcac54d8b500cb9f3452c8563774b6b73f1a94433b7a0b1c7d3c6f98f964",
+  "snapshot_at": "2026-10-28T12:16:18Z",
+  "raw_element_count": 313983,
+  "element_types": {
+    "node": 285787,
+    "way": 28196
+  },
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "copyright_url": "https://www.openstreetmap.org/copyright",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "usage_policy": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+  "automatic_runtime_refresh": false,
+  "road_way_count": 28196,
+  "coordinate_node_count": 285787,
+  "way_node_references": 328127,
+  "missing_referenced_node_count": 0,
+  "highway_counts": {
+    "service": 7372,
+    "unclassified": 2350,
+    "tertiary": 2388,
+    "residential": 12482,
+    "secondary": 2444,
+    "tertiary_link": 191,
+    "secondary_link": 889,
+    "living_street": 67,
+    "primary": 3,
+    "primary_link": 10
+  },
+  "ways_with_oneway_tag": 3567,
+  "ways_with_access_tag": 109,
+  "ways_with_motor_vehicle_tag": 16,
+  "ways_with_maxspeed_tag": 433,
+  "notes": [
+    "Raw car-road candidate geometry and topology only. Not a ready navigation graph.",
+    "Way direction, access/motor_vehicle/motorcar/vehicle, node barriers, conditional restrictions and suitability need interpretation before graph use.",
+    "No turn-restriction relations, ferry routes or pedestrian-only paths were queried. Car-road *_link classes are included to retain ramps and connecting segments.",
+    "Roads touching the bbox include all referenced nodes, which may lie slightly outside the bbox.",
+    "Closed roads, live traffic, travel speeds, current legal passability and actual entrances are not verified.",
+    "One fixed bbox snapshot; no user GPS transmitted."
+  ],
+  "coordinate_validation": {
+    "valid": 285787,
+    "invalid": 0,
+    "latitude_min": 33.113654,
+    "latitude_max": 33.5656335,
+    "longitude_min": 126.1620245,
+    "longitude_max": 126.9723305
+  },
+  "candidate_undirected_segments": 299931,
+  "candidate_undirected_components_without_access_filter": 86,
+  "candidate_largest_component_nodes_without_access_filter": 281496,
+  "candidate_top5_component_nodes_without_access_filter": [
+    281496,
+    1677,
+    655,
+    342,
+    192
+  ],
+  "oneway_tag_values": {
+    "yes": 3395,
+    "no": 169,
+    "-1": 3
+  },
+  "node_barrier_tag_values": {
+    "gate": 36,
+    "lift_gate": 9,
+    "block": 1,
+    "turnstile": 1,
+    "fence": 1,
+    "bollard": 3,
+    "kerb": 23
+  },
+  "junction_roundabout_ways": 156,
+  "access_tag_values": {
+    "private": 45,
+    "customers": 5,
+    "agricultural": 1,
+    "no": 52,
+    "yes": 2,
+    "unknown": 1,
+    "permit": 3
+  },
+  "maxspeed_observed_way_fraction": 0.015356788196907363,
+  "topology_profile_note": "Undirected candidate connectivity ignores access, oneway, barriers and turn restrictions; not a legal/routable graph."
+}

@@ -1,2 +1,9 @@
 # Preserve exact file bytes for the service SHA-256 manifest.
 * -text
+
+# Keep large OSM snapshots out of textual diffs.
+/data_raw/osm/jeju_food_overpass.json -diff
+/data_raw/osm/jeju_roads_v5.json -diff
+/data_raw/osm/jeju_tourism_v5.json -diff
+/data_reference/osm_food_places.json -diff
+/data_reference/osm_tourism_places.json -diff

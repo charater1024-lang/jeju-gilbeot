@@ -16,8 +16,8 @@ def region_for(address):
     if '서귀포시' in address or '남원읍' in address: return 'south'
     return 'north'
 
-def main():
-    raw=ROOT/'data_raw'/'hub'; out=ROOT/'data_reference';out.mkdir(exist_ok=True)
+def main(root=ROOT):
+    raw=root/'data_raw'/'hub'; out=root/'data_reference';out.mkdir(exist_ok=True)
     food=raw/'jeju_food_registry_780.csv'
     with food.open(encoding='cp949',newline='') as f: records=list(csv.DictReader(f))
     items=[];seen=set();updated=[]
@@ -64,9 +64,9 @@ def main():
                 ym=r['base_year_month']
                 w.writerow({'month':ym[:4]+'-'+ym[4:],'region':'제주 전체 집계','category':name,'value':r['use_count'],
                             'measure':'transactions','source_id':'JBDC_1048_NATIVE_FEMALE'})
-    training=train_context(path,ROOT/'models_real_context')
+    training=train_context(path,root/'models_real_context')
     last=all_months[-1];y,m=int(last[:4]),int(last[4:]);forecast_month=f'{y+(m==12):04d}-{(m%12)+1:02d}'
-    forecasts=forecast_context(ROOT/'models_real_context'/'model_context.json',forecast_month)
+    forecasts=forecast_context(root/'models_real_context'/'model_context.json',forecast_month)
     report={'source_title':'업종별 성별 카드 이용 정보','source_id':1048,
        'source_url':'https://www.jejudatahub.net/data/view/data/1048','scope_label':'제주 전체 업종별 이용건수 · 원자료 내국인 여성 구간',
        'source_filter':{'user_type':'내국인','sex':'여성'},'observation_start':all_months[0][:4]+'-'+all_months[0][4:],

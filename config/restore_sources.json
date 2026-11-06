@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "hub1047",
+      "url": "https://www.jejudatahub.net/data/view/data/1047",
+      "download_url": "https://www.jejudatahub.net/api/file?fileId=4738&id=5831",
+      "local_path": "data_raw/hub/hub_1047_5831.csv",
+      "bytes": 820690,
+      "sha256": "5d258171920565e36f9d2c7f76f07c091e00fa4aaf93a824a799372789c88ff3"
+    },
+    {
+      "id": "hub1048",
+      "url": "https://www.jejudatahub.net/data/view/data/1048",
+      "download_url": "https://www.jejudatahub.net/api/file?fileId=4739&id=5832",
+      "local_path": "data_raw/hub/hub_1048_5832.csv",
+      "bytes": 1998040,
+      "sha256": "518cd18e78141ede90cc5ee7639099282eae4c1557236e4eda6bd295b66e368d"
+    },
+    {
+      "id": "hub1349",
+      "url": "https://www.jejudatahub.net/data/view/data/1349",
+      "download_url": "https://www.jejudatahub.net/api/file?fileId=4705&id=5802",
+      "local_path": "data_raw/hub/hub_1349_5802.csv",
+      "bytes": 857771,
+      "sha256": "b729e997619b7941f3744eedf86531733700146481bc03d5f6a8569d8d36c5b7"
+    },
+    {
+      "id": "hub780_registry",
+      "url": "https://www.jejudatahub.net/data/view/data/780",
+      "download_url": "https://www.jejudatahub.net/api/file?fileId=4610&id=5724",
+      "local_path": "data_raw/hub/jeju_food_registry_780.csv",
+      "bytes": 8906430,
+      "sha256": "e96e47b9932e3f3559ec843155cf0ac67f6149e895732a5247078d777deb1dcc"
+    }
+  ],
+  "travel": {
+    "version": 1,
+    "sources": [
+      {
+        "id": "hub871",
+        "title": "제주데이터허브 올레길 위치 정보 공개 미리보기",
+        "url": "https://www.jejudatahub.net/data/view/data/871",
+        "download_url": "https://www.jejudatahub.net/api/file?fileId=2168&id=2532",
+        "source_date": "2021-11-02",
+        "retrieved_date": "2026-11-04",
+        "local_path": "data_raw/hub_v18/hub_871_preview_2532.csv",
+        "sha256": "a635d1a99635223439a1619ded7511a58c5f9ef25d7ae3c1431061ef040cd094",
+        "bytes": 2741,
+        "row_count": 19,
+        "partial": true,
+        "origin": "jeju_datahub",
+        "hub_catalog_url": "https://www.jejudatahub.net/data/view/data/871",
+        "license_note": "교육부·KERIS 연결 카탈로그 CC0 표기"
+      },
+      {
+        "id": "hub858",
+        "title": "제주데이터허브 무장애 여행지 정보(통합)",
+        "url": "https://www.jejudatahub.net/data/view/data/858",
+        "download_url": "https://www.jejudatahub.net/api/file?fileId=2118&id=2461",
+        "source_date": "2021-09-30",
+        "retrieved_date": "2026-11-04",
+        "local_path": "data_raw/hub_v18/hub_858_2461.csv",
+        "sha256": "86a12027ee3e36fc98d7caa3441e373fedceb8ecc4e3ed924e948fdcfed3b074",
+        "bytes": 9372,
+        "row_count": 120,
+        "partial": false,
+        "origin": "jeju_datahub",
+        "hub_catalog_url": "https://www.jejudatahub.net/data/view/data/858",
+        "license_note": "교육부·KERIS 연결 카탈로그 CC0 표기"
+      },
+      {
+        "id": "hub497_origin",
+        "title": "서귀포시 숲길산책로현황(허브497 연결 원출처 최신본)",
+        "url": "https://www.data.go.kr/data/3082951/fileData.do",
+        "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003100398&fileDetailSn=1",
+        "source_date": "2025-02-19",
+        "retrieved_date": "2026-11-04",
+        "local_path": "data_raw/hub_v18/public_3082951.csv",
+        "sha256": "e96bcc7dca425dfdf13ab36bea00381762e29fa326e2810d95797bd7b0ac0e77",
+        "bytes": 2123,
+        "row_count": 50,
+        "partial": false,
+        "origin": "public_origin_linked_from_hub",
+        "hub_catalog_url": "https://www.jejudatahub.net/data/view/data/497",
+        "license_note": "공공데이터포털 이용허락범위 제한 없음"
+      },
+      {
+        "id": "public15109369",
+        "title": "제주관광공사 마을편의시설(허브 외 보완 공공자료)",
+        "url": "https://www.data.go.kr/data/15109369/fileData.do",
+        "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000002663519&fileDetailSn=1",
+        "source_date": "2022-09-30",
+        "retrieved_date": "2026-11-04",
+        "local_path": "data_raw/hub_v18/public_15109369.csv",
+        "sha256": "45849f63247fcdfa24332aec2783c2a239a30cbddfab6580103495f28136786e",
+        "bytes": 734022,
+        "row_count": 2451,
+        "partial": false,
+        "origin": "public_supplement_not_confirmed_in_hub",
+        "hub_catalog_url": null,
+        "license_note": "공공데이터포털 이용허락범위 제한 없음"
+      },
+      {
+        "id": "hub784",
+        "title": "제주데이터허브 해수욕장 정보(기존 원자료)",
+        "url": "https://www.jejudatahub.net/data/view/data/784",
+        "download_url": "https://www.jejudatahub.net/api/file?fileId=4706&id=5803",
+        "source_date": "2023-12-31",
+        "retrieved_date": "기존 보관본. data_raw/DOWNLOAD_MANIFEST.json 참조",
+        "local_path": "data_raw/hub/hub_784_5803.csv",
+        "sha256": "931ae9f68891bc695930e98eae92e5ef083e0e318f985d720cf97cfe49f6719f",
+        "bytes": 5749,
+        "row_count": 88,
+        "partial": false,
+        "origin": "jeju_datahub",
+        "observation_period": "2016~2023년. 서비스 시설 비교에는 최신2023년11해변만 사용",
+        "hub_catalog_url": "https://www.jejudatahub.net/data/view/data/784",
+        "license_note": "교육부·KERIS 연결 카탈로그 CC0 표기"
+      }
+    ],
+    "uncollected_api_data": [
+      {
+        "dataset_ids": [
+          611,
+          612,
+          613,
+          614
+        ],
+        "reason": "실제 전체 API 응답 미확보. 기술문서를 관측자료로 사용하지 않음."
+      }
+    ]
+  }
+}

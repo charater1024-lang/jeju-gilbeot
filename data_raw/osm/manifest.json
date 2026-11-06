@@ -1,0 +1,67 @@
+{
+  "status": "downloaded_and_validated",
+  "requested_at": "2026-10-28T10:48:21.781050+00:00",
+  "downloaded_at": "2026-10-28T10:49:02.720176+00:00",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "http_status": 200,
+  "query": "[out:json][timeout:30][maxsize:33554432];\nnwr[\"amenity\"~\"^(restaurant|cafe|fast_food)$\"](32.9,126.0,33.7,127.0);\nout center tags;\n",
+  "query_bbox": [
+    32.9,
+    126.0,
+    33.7,
+    127.0
+  ],
+  "user_gps_in_request": false,
+  "attempts": 1,
+  "response_bytes": 2464819,
+  "response_sha256": "554c1eed694692681781877f0caa919bca5e3183df213cc104c4a2e48adf859d",
+  "response_content_type": "application/json",
+  "snapshot_at": "2026-10-28T10:47:02Z",
+  "raw_element_count": 6180,
+  "osm_type_counts": {
+    "node": 5808,
+    "way": 369,
+    "relation": 3
+  },
+  "raw_amenity_counts": {
+    "restaurant": 5508,
+    "cafe": 586,
+    "fast_food": 86
+  },
+  "usable_named_places": 6102,
+  "named_places_with_cuisine": 743,
+  "named_places_with_partial_address": 4852,
+  "skipped": {
+    "missing_name": 78
+  },
+  "normalized_file": "data_reference/osm_food_places.json",
+  "normalized_bytes": 4623615,
+  "normalized_sha256": "b6f43b9afda08485039f8fdc58c34037e433e776495170e94d7be7bab1156415",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "copyright_url": "https://www.openstreetmap.org/copyright",
+  "source_policy_url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+  "request_limit_note": "One bounded snapshot download only. Not a per-user runtime backend; no automatic refresh/retries.",
+  "fields": [
+    "id",
+    "osm_type",
+    "osm_id",
+    "name",
+    "latitude",
+    "longitude",
+    "coordinate_kind",
+    "amenity",
+    "category",
+    "cuisine",
+    "address",
+    "source_date",
+    "snapshot_at",
+    "source_name",
+    "source_url",
+    "data_license",
+    "metadata_verified",
+    "current_operation_verified",
+    "popularity_verified"
+  ]
+}

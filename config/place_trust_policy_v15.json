@@ -5,6 +5,7 @@
   "max_guide_age_days": 180,
   "guide_age_rule_definition": "공식 소개 편집 근거의 재검토 관리기한이며 현재 영업의 신뢰확률·보장기간이 아닙니다.",
   "guide_catalog_sha256": "711290e5d25794d9271115089295d1f3323e157ff196b08709bdbd971d73dd7c",
+  "guide_proofs_sha256": "a040229b3d9a61d6d65f0d9bba30257307fa4ac60b1a67dfb59ce1e1566631ba",
   "approved_identity_sha256": {
     "osm_tourism_node_5749644529": "5c5ef9bb251194fe66005431bcc582a8458a52d9545e811e3a0132159d45e8cd",
     "osm_tourism_way_375498040": "c5702d88e19ef1968dd909a1912e17a2de579fb8e94e0bfa2cb246e5760e5a40",

@@ -1,0 +1,374 @@
+{
+  "osm_tourism_node_5749644529": {
+    "id": "osm_tourism_node_5749644529",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050",
+    "page_sha256": "7852eb1bfea3ba260299565cc6cfc2d49e8460b46005c9a4ac1adc0c95bec653",
+    "http_status": 200
+  },
+  "osm_tourism_way_375498040": {
+    "id": "osm_tourism_way_375498040",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500351",
+    "page_sha256": "06d8cc3c5d8b0dabb2a47426f97e69463b299d2aed4db8a5314e07261f0bc581",
+    "http_status": 200
+  },
+  "osm_tourism_way_1075451809": {
+    "id": "osm_tourism_way_1075451809",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956",
+    "page_sha256": "0b6ff3955d0ae7f6efc9d75050b7acaded11e987c55a045bd2c124820e0b451e",
+    "http_status": 200
+  },
+  "osm_tourism_relation_9742044": {
+    "id": "osm_tourism_relation_9742044",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500477",
+    "page_sha256": "068f5faa4e8df00933cddf0821ead5dbf019b26ccfef9179287fdccae6e7c73f",
+    "http_status": 200
+  },
+  "osm_tourism_way_370264619": {
+    "id": "osm_tourism_way_370264619",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+    "page_sha256": "40a72ccf53bc7d0c40f8cab168de1da7a59d55d5ee5df73bf28a11bb221d6ad7",
+    "http_status": 200
+  },
+  "osm_tourism_node_368735470": {
+    "id": "osm_tourism_node_368735470",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500580",
+    "page_sha256": "12837629e5782a9d6fb120ab4f2ece5d8638cddb93c04b21d95fccf11463a2cb",
+    "http_status": 200
+  },
+  "osm_tourism_node_4416285697": {
+    "id": "osm_tourism_node_4416285697",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168",
+    "page_sha256": "d5de113cab82ce10560742d4a8e5700395752799bc6747bd62d9fa5a2500de8b",
+    "http_status": 200
+  },
+  "osm_tourism_node_5656357630": {
+    "id": "osm_tourism_node_5656357630",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022519",
+    "page_sha256": "469b8322e8a11a04c1b53938df957c6d4242615eaba696787067c5da8511245d",
+    "http_status": 200
+  },
+  "osm_tourism_node_5507591794": {
+    "id": "osm_tourism_node_5507591794",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500466",
+    "page_sha256": "a37589c41128c71085b2091ede6407667218f4af02d4796b154bac9d94b239c5",
+    "http_status": 200
+  },
+  "seongsan": {
+    "id": "seongsan",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349",
+    "page_sha256": "f913c50aabb20eff16cec46c50be55c3d6c5481c8b393f289badf6aa79b50965",
+    "http_status": 200
+  },
+  "osm_tourism_way_572783721": {
+    "id": "osm_tourism_way_572783721",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429",
+    "page_sha256": "06638f630e71ef4edeedf7fdf96038ac7c9a4525d208888d79c10b331ab0cc35",
+    "http_status": 200
+  },
+  "osm_tourism_way_372521658": {
+    "id": "osm_tourism_way_372521658",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001158",
+    "page_sha256": "dc2f00da32b9963e3df3e581806c05bb40a4f7ea3c4cae1823b68068cdaf69d2",
+    "http_status": 200
+  },
+  "osm_tourism_way_370342656": {
+    "id": "osm_tourism_way_370342656",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500270",
+    "page_sha256": "480466d81242b210fcc62785f2656be85625b985aca0886b40dea8deb6f56ca7",
+    "http_status": 200
+  },
+  "osm_tourism_way_375500447": {
+    "id": "osm_tourism_way_375500447",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500514",
+    "page_sha256": "ea5d51b5edf704555879e1a45eea816829d03841bdd3d6238020135eced9449c",
+    "http_status": 200
+  },
+  "osm_tourism_way_243975557": {
+    "id": "osm_tourism_way_243975557",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046",
+    "page_sha256": "53292e96f7e9b22aa6d041007f6706e630109cd2b2bcff813bdf5177a471a696",
+    "http_status": 200
+  },
+  "osm_tourism_way_592735488": {
+    "id": "osm_tourism_way_592735488",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500361",
+    "page_sha256": "5b3f0fd998aca51b4e6991f9901bee620cc85c2d6bff530a09a80371503fdbac",
+    "http_status": 200
+  },
+  "osm_tourism_way_335845433": {
+    "id": "osm_tourism_way_335845433",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500496",
+    "page_sha256": "faef6f49c9a203fd2a17e0e65343a55c94f016790bc56074a2c934659009ffe9",
+    "http_status": 200
+  },
+  "seopjikoji": {
+    "id": "seopjikoji",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500343",
+    "page_sha256": "97d5ae3fe87de03eb82bb3ec494065ce56040c9f3c7762e377a3b70af3569f6b",
+    "http_status": 200
+  },
+  "osm_tourism_way_1563942072": {
+    "id": "osm_tourism_way_1563942072",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008020",
+    "page_sha256": "4d07b09795c9edd5c2682f0a4bd91d034cdf5223bf359d935658887b6c86abfe",
+    "http_status": 200
+  },
+  "osm_tourism_way_370329624": {
+    "id": "osm_tourism_way_370329624",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500535",
+    "page_sha256": "474ece0be2b773dc8cba2f3fcf9bfb1e551138aaa2aedc80fdcb91b7addf2fa6",
+    "http_status": 200
+  },
+  "osm_tourism_way_375480941": {
+    "id": "osm_tourism_way_375480941",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+    "page_sha256": "278668660755a9980d1e7a8b69ee9e3640e832c80c902f53e1568e531a1fcdee",
+    "http_status": 200
+  },
+  "osm_tourism_way_372948141": {
+    "id": "osm_tourism_way_372948141",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500649",
+    "page_sha256": "bc03ad34b9420984466600df806055e6e9caf031f83b2295a5d77efdd0a6ffe8",
+    "http_status": 200
+  },
+  "osm_tourism_node_6731890115": {
+    "id": "osm_tourism_node_6731890115",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+    "page_sha256": "ca302513d34a5fb6e2a1c416644bda5636f5cdcc9d2ce7f7fd6848e266e660b4",
+    "http_status": 200
+  },
+  "osm_tourism_relation_20364165": {
+    "id": "osm_tourism_relation_20364165",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500067",
+    "page_sha256": "3c57b250963686cc5d3c8fecdba805f8464893729c1713bdb5051cb20f5a238e",
+    "http_status": 200
+  },
+  "osm_tourism_way_375341085": {
+    "id": "osm_tourism_way_375341085",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500099",
+    "page_sha256": "28a70ddebecfa7c5609eff4ad71d0f5c05cfcfe5f8211e607ad3ad9707efcac2",
+    "http_status": 200
+  },
+  "osm_tourism_way_1537196430": {
+    "id": "osm_tourism_way_1537196430",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500551",
+    "page_sha256": "9ae8fe5911983e334b2de4fc8cb0827b2eaed5698e2a3a9f768f308200ae3de2",
+    "http_status": 200
+  },
+  "osm_tourism_node_13931773845": {
+    "id": "osm_tourism_node_13931773845",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500545",
+    "page_sha256": "8903abc7ab9d9b2cfdc7f296331c089b4ac7033eb6836ccd5a9722223a972cbe",
+    "http_status": 200
+  },
+  "osm_tourism_node_10216545359": {
+    "id": "osm_tourism_node_10216545359",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500034",
+    "page_sha256": "6c703533dfde6bc017247d7128b69f202744d69b5c1ac79178e6204db2b9f047",
+    "http_status": 200
+  },
+  "osm_tourism_node_5658780218": {
+    "id": "osm_tourism_node_5658780218",
+    "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c",
+    "page_sha256": "9116d454871aeca300cc197206466827da01a1d474165997d6de1693aea07a0a",
+    "http_status": 200
+  },
+  "osm_tourism_node_538148519": {
+    "id": "osm_tourism_node_538148519",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500469",
+    "page_sha256": "e96e84212e45a1dafdf3c61d8d9829e9dd733a19439d5a8b0b0ec03b5051b18e",
+    "http_status": 200
+  },
+  "osm_tourism_node_368866237": {
+    "id": "osm_tourism_node_368866237",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689",
+    "page_sha256": "59197bac77dbb4a15666e95f1299f4cee45d06a86d0e9b885ba867da1ab71df6",
+    "http_status": 200
+  },
+  "osm_tourism_way_253976811": {
+    "id": "osm_tourism_way_253976811",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500005",
+    "page_sha256": "e0e2f46b625af166fe9e04c07406a6338b5ec768f2f66768d7c1c5d5a10e9b2b",
+    "http_status": 200
+  },
+  "osm_tourism_way_288933009": {
+    "id": "osm_tourism_way_288933009",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500182",
+    "page_sha256": "873836bc6a25a838a3ef877ae54cbac7a5e1695116cba89bdaa07c19f3bedacc",
+    "http_status": 200
+  },
+  "osm_tourism_way_372701554": {
+    "id": "osm_tourism_way_372701554",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386",
+    "page_sha256": "ab2e1cd82ea36da9aacf6034f113c7961fb11457867ba17a3f8672af2b447842",
+    "http_status": 200
+  },
+  "osm_tourism_way_246696661": {
+    "id": "osm_tourism_way_246696661",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500550",
+    "page_sha256": "dae2bea754203d1185d2f0132eac68f6fde5d0fb29c3050a567a3a66325f06f5",
+    "http_status": 200
+  },
+  "osm_tourism_node_3788545937": {
+    "id": "osm_tourism_node_3788545937",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187",
+    "page_sha256": "4d97d65cff1bf1d26401f4717687c9d7b308261a99ab8a5f56d375f624f1bd9b",
+    "http_status": 200
+  },
+  "osm_tourism_way_289861442": {
+    "id": "osm_tourism_way_289861442",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007344",
+    "page_sha256": "d509fd14022959a07a9422d843266f29b550cf6def898c792a75edc158d7d4a9",
+    "http_status": 200
+  },
+  "hamdeok": {
+    "id": "hamdeok",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693",
+    "page_sha256": "24f637d06ef39126de3d7f06716738130337381f180f7fd1e91cf0dca9251e11",
+    "http_status": 200
+  },
+  "osm_tourism_node_4726228301": {
+    "id": "osm_tourism_node_4726228301",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=cont_000000000500695",
+    "page_sha256": "384c54995ea8e90181cb26db7a9fc508f529169a04ff169d014a575dde0253e9",
+    "http_status": 200
+  },
+  "osm_tourism_way_250718041": {
+    "id": "osm_tourism_way_250718041",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500216",
+    "page_sha256": "fc5c43e5d2ffe2bb2b2d56191f1fea9d88694d4168cf7a899a0a9c9da4b90b14",
+    "http_status": 200
+  },
+  "osm_tourism_way_375049062": {
+    "id": "osm_tourism_way_375049062",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500509",
+    "page_sha256": "3611e3d8b0917bfe1fa16d6f16f2284a939f49b0cdf5565786ce4c4918d7066e",
+    "http_status": 200
+  },
+  "osm_tourism_way_249857724": {
+    "id": "osm_tourism_way_249857724",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500575",
+    "page_sha256": "e5f0733d9ecfc2697aafd9324c67c7ff05b1cc30540ed0331c93827e1f437b13",
+    "http_status": 200
+  },
+  "osm_tourism_node_3785584607": {
+    "id": "osm_tourism_node_3785584607",
+    "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=de00c6fc-de69-490f-95da-cb7e72538b59",
+    "page_sha256": "96b7810cb4a9e76c0c71d515d03c35e55e656df3836c48feed8b627350ce18ee",
+    "http_status": 200
+  },
+  "osm_tourism_node_569007779": {
+    "id": "osm_tourism_node_569007779",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500384",
+    "page_sha256": "966fb96e55d0754e7de98b8d935336889032218ca4c2e17760109f2e382998a1",
+    "http_status": 200
+  },
+  "osm_tourism_node_3753655821": {
+    "id": "osm_tourism_node_3753655821",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476",
+    "page_sha256": "45e52c44b6e0e9d9b90bbc57550d5959670b32bb9ee71e2c22900f65098747e2",
+    "http_status": 200
+  },
+  "osm_tourism_way_373866673": {
+    "id": "osm_tourism_way_373866673",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021169",
+    "page_sha256": "c5798a0fffe61487daf99ea0587d5808b1a04b91bb22b0ae182ae89881d4a1b9",
+    "http_status": 200
+  },
+  "cheonjiyeon": {
+    "id": "cheonjiyeon",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500618",
+    "page_sha256": "9770c2c94e3c90464c8c0320effe715bd84ecad63c24363b3966e6bc7366de92",
+    "http_status": 200
+  },
+  "osm_tourism_node_4832613086": {
+    "id": "osm_tourism_node_4832613086",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018383",
+    "page_sha256": "fc87d90f45cccec28cc79cba13f7cc5f3c5cf226822f5dcd3a11a8340b78cb49",
+    "http_status": 200
+  },
+  "osm_tourism_way_242454273": {
+    "id": "osm_tourism_way_242454273",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500604",
+    "page_sha256": "3ac79c3288f8eab9dcd4092b33788dad71f05210ab55522c2b37c0b76cbb2958",
+    "http_status": 200
+  },
+  "osulloc": {
+    "id": "osulloc",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500457",
+    "page_sha256": "6b52daecb43d08b7f692e2e8ea7c440bdd9df13d481d2c8507eccfe0697eb4a1",
+    "http_status": 200
+  },
+  "osm_tourism_way_645842845": {
+    "id": "osm_tourism_way_645842845",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500250",
+    "page_sha256": "390bd541252900602489385a3905dbc1de129bd6874c43eb298abf086249086e",
+    "http_status": 200
+  },
+  "osm_tourism_node_5874608086": {
+    "id": "osm_tourism_node_5874608086",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022724",
+    "page_sha256": "5b7f28b4398c8dd3cdfaa6131d05beb5a2373b8de68e922d279f6277f4f0d247",
+    "http_status": 200
+  },
+  "osm_tourism_node_3736657966": {
+    "id": "osm_tourism_node_3736657966",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019460",
+    "page_sha256": "3793a5e69fc4a2b1d4c1a1bac454360ce9cedfb54ff5bd8cba4815668f987425",
+    "http_status": 200
+  },
+  "osm_tourism_node_12190653939": {
+    "id": "osm_tourism_node_12190653939",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500285",
+    "page_sha256": "9a1b6b39d493ccf9571a3acdfaa9d5c41780fdb04eb8aef585e00d68e297357f",
+    "http_status": 200
+  },
+  "osm_tourism_node_5712863794": {
+    "id": "osm_tourism_node_5712863794",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500309",
+    "page_sha256": "779c2579fc727ebd6bb8f2d78fef8a358f961637bd7fd913d3a97de12c9752e8",
+    "http_status": 200
+  },
+  "osm_tourism_node_5655320217": {
+    "id": "osm_tourism_node_5655320217",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500378",
+    "page_sha256": "754e8b88a1d200e89c91df4fc090231c69ffe4e4684bbdd0257239cea99ea37f",
+    "http_status": 200
+  },
+  "osm_tourism_node_3741616919": {
+    "id": "osm_tourism_node_3741616919",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500471",
+    "page_sha256": "8bfc7ac5604e8a89ec1baec35cd843b2a70ab412bb214663584ef991fb4ae994",
+    "http_status": 200
+  },
+  "osm_tourism_way_375195356": {
+    "id": "osm_tourism_way_375195356",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019446",
+    "page_sha256": "b6c58d8fa67e4ca48a0a9daf879074d7396691ccedca05a87189d1100569c761",
+    "http_status": 200
+  },
+  "osm_tourism_way_375193739": {
+    "id": "osm_tourism_way_375193739",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500141",
+    "page_sha256": "752b06fee04fbcf3b22e2918de7b88bfee4c65fbd710137f02bb94384572ca58",
+    "http_status": 200
+  },
+  "osm_tourism_way_375169007": {
+    "id": "osm_tourism_way_375169007",
+    "source_url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=37f3a8c6-5280-45a6-be3e-cfce6f2471e6",
+    "page_sha256": "98a114729af3329909f8ab86b047ac0199540bef8109403c6cab334329791cb8",
+    "http_status": 200
+  },
+  "osm_tourism_way_583831951": {
+    "id": "osm_tourism_way_583831951",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020931",
+    "page_sha256": "be6aa8cf4e47498c9f3d7ef3859aceba715683ff60bd46ce158fa4bc111a0554",
+    "http_status": 200
+  },
+  "hyeopjae": {
+    "id": "hyeopjae",
+    "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500697",
+    "page_sha256": "f64a9998c78c2837fea0cf80c9a788aaece67f7cdf617645833ea6ebd4a252e1",
+    "http_status": 200
+  }
+}
