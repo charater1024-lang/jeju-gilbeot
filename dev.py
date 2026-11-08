@@ -86,7 +86,7 @@ def test(node=None,python_only=False):
     print(json.dumps(report,ensure_ascii=False));return 0 if result.wasSuccessful() and report['ui']['pass'] else 1
 
 def main():
-    parser=argparse.ArgumentParser(description='Jeju Gilbeot transfer verification, tests and local server')
+    parser=argparse.ArgumentParser(description='Tamra Ttara transfer verification, tests and local server')
     sub=parser.add_subparsers(dest='command',required=True)
     integrity=sub.add_parser('check')
     mode=integrity.add_mutually_exclusive_group()

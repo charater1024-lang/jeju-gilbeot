@@ -4,7 +4,7 @@
 
 |공식요구|제출위치|
 |---|---|
-|15쪽이내기획서PDF|`docs/제주길벗_최종기획서.pdf`, 별도제출PDF도제공|
+|15쪽이내기획서PDF|`docs/탐라따라_최종기획서.pdf`, 별도제출PDF도제공|
 |실행소스·모델·도구/API·데이터처리|`center_app.py`, `jeju_agent/`, `scripts/`, `models*`, `docs/IMPLEMENTATION.md`|
 |프롬프트/판단·자율범위|런타임LLM프롬프트해당없음. 규칙·준비답변·도구조정코드와 `prompts/RUNTIME_RULES.md` 공개|
 |실행환경·설치·매뉴얼·환경변수|루트README, `.env.example`, `requirements/`, Windows런타임, Ubuntu오프라인wheel|

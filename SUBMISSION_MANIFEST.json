@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "submission_id": "jeju_gilbeot_final_20261108",
+  "submission_id": "tamra_ttara_final_20261109",
   "as_of_kst": "2026-11-08",
   "entry_point": "center_app.py",
   "windows": "Windows11 x64, bundledCP313, CPU default/DirectML optional",
@@ -17,18 +17,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 23907,
-      "sha256": "117ec415ac3d57f4118428e7fc10426d464d75b562e52b950e940a74c99a9a0b"
+      "bytes": 23921,
+      "sha256": "6bf0405c0c43da355179b368503abdb10731ca8cb4bd4134b844f6563f9f40ce"
     },
     {
       "path": "center_app.py",
-      "bytes": 1937,
-      "sha256": "4d4a735abf1629d24b49f31ef5cbc3b9908fd016d435d67c23dc31877a2ab8d2"
+      "bytes": 1976,
+      "sha256": "e3cabde7a270096bf7090a662e723bcbbfbad558e2954da0ab8147012d63ecd8"
     },
     {
       "path": "config/chatbot_faq.json",
-      "bytes": 15571,
-      "sha256": "9ede36dd9b0b2b8a326d4f1ee79b3f44d975fa165d1a4ff90206db6a0495898e"
+      "bytes": 15570,
+      "sha256": "082bdcb428df04b5eb1b7da199fbc92f62dfb3ddd39b1dcba3d7503e6d4af0e0"
     },
     {
       "path": "config/download_manifest.json",
@@ -843,7 +843,7 @@
     {
       "path": "data_reference/chatbot_profile.json",
       "bytes": 2144,
-      "sha256": "5aa86203d64e1e9850660291e76ccab12914d23b73c36e9795b89c43edcadde3"
+      "sha256": "805f390c80ad05a0e697395a1eb2101c1af1f8fef541bfa58374c21b14f6ea18"
     },
     {
       "path": "data_reference/destinations.json",
@@ -942,28 +942,28 @@
     },
     {
       "path": "dev.py",
-      "bytes": 8509,
-      "sha256": "87849eb6e39bacbd9916178e61fd4572bcd6b42b3cd25bb46ed8e593ef5e3a57"
+      "bytes": 8508,
+      "sha256": "6c948afe7c615744d0436360e8d146d6188c30e18614fbf1ee784641316fca8b"
     },
     {
       "path": "docs/CONTEST_COMPLIANCE.md",
-      "bytes": 3579,
-      "sha256": "fa842fc607b26627675fd8d658ea0726334b067562f397672ab14fb378066d01"
+      "bytes": 3604,
+      "sha256": "ea132c8a99450bb960877c005e083ee7672b66625e33cac231c189189c5ffe8b"
     },
     {
       "path": "docs/DATA_USAGE.md",
-      "bytes": 6183,
-      "sha256": "8fd9f10227c33830d054cfc5371961cd40fadfcf650e433b8d46599a38c61c3c"
+      "bytes": 6231,
+      "sha256": "3c3c3540c88000d4efd9ad615615cdceec266210ff03d495594a38874a2edd03"
     },
     {
       "path": "docs/E5_MODEL_CARD.md",
-      "bytes": 3401,
-      "sha256": "0f477faf842546b3155f3a5d7f83d423928a26301d672765b44273583247ce28"
+      "bytes": 3400,
+      "sha256": "c18f813bd5c9ee09b6d55a1c1624360c59d81ab77382cb2de25332994da52ee5"
     },
     {
       "path": "docs/IMPLEMENTATION.md",
-      "bytes": 8588,
-      "sha256": "4395eeb26d2c9ec3b65c8c39a3be4601be72a994b2cbd624c771c9d551d596bd"
+      "bytes": 8666,
+      "sha256": "aeda4d2ea9e59801320720d240998c15c155c8e01d1bd3fe26635d9ebb03439d"
     },
     {
       "path": "docs/PHOTO_CREDITS.md",
@@ -1341,6 +1341,11 @@
       "sha256": "82fa1acac34def6d7b4810dbc7b19a142b140e10aac85b6088a04b0c4078c649"
     },
     {
+      "path": "docs/figures/site_home.png",
+      "bytes": 135692,
+      "sha256": "65dc07edf0a01928ca6f3b4a455e9553debc248f410a40bfff6f2502573a7c3c"
+    },
+    {
       "path": "docs/figures/tourism_quality.svg",
       "bytes": 5143,
       "sha256": "768f015067a9780d3da4a202a2c035700ee2b81b7852c11ac78da978db5cf4bf"
@@ -1662,8 +1667,8 @@
     },
     {
       "path": "docs/validation/proposal_qa.json",
-      "bytes": 3042,
-      "sha256": "d81c759764443e8a6af56f65e250d0218e81d216ec97e981463939414da6a961"
+      "bytes": 3339,
+      "sha256": "ae0d4ceaf0d97484faf5117d4a3fa6949285475ed35ff44b630d881b9cfc25b3"
     },
     {
       "path": "docs/validation/regression_summary.json",
@@ -1676,6 +1681,11 @@
       "sha256": "2d38548021a0137781a95cd9ea5c52aadbfe6787f856bb41bf71cd7aae9eb860"
     },
     {
+      "path": "docs/validation/tamra_brand_check.json",
+      "bytes": 2465,
+      "sha256": "cbb08004b2ec5c2725016c47a565dc9db0305c0754ecf6829d561e9c9ac6c3e9"
+    },
+    {
       "path": "docs/validation/ubuntu_functional_test.json",
       "bytes": 53907,
       "sha256": "490a6fadcc5e02781c695cdfd8d84a1c504977756cca20fba51473532959f933"
@@ -1686,14 +1696,14 @@
       "sha256": "2ffb3b05c12576e48f0df113e5aeab72669a720b7276d6fdbee6fac431d84916"
     },
     {
-      "path": "docs/제주길벗_최종기획서.docx",
-      "bytes": 1796158,
-      "sha256": "4ecd32676abf71c036cf1131037f19f34c35366a6c703f08c3dd7c0a2d742165"
+      "path": "docs/탐라따라_최종기획서.docx",
+      "bytes": 1823781,
+      "sha256": "8c6cb11a70d61b33f8f92a57bbb68e248c28ef21cfc61dd22ed792c449f44912"
     },
     {
-      "path": "docs/제주길벗_최종기획서.pdf",
-      "bytes": 1555538,
-      "sha256": "3515c98a381c5cf77659134bc354478ef25de019ead8065b2001175520fcbe0c"
+      "path": "docs/탐라따라_최종기획서.pdf",
+      "bytes": 1578808,
+      "sha256": "6ba83f5314aab5d3355c003dced5100665028cc7b81ece720fe5d43cac868556"
     },
     {
       "path": "examples/actual_reference_route.json",
@@ -1892,8 +1902,8 @@
     },
     {
       "path": "jeju_agent/flower_weather.py",
-      "bytes": 10903,
-      "sha256": "996ded301c244cb8b2eb58f88e000b11e061a0e830c37d3ac754a8960cc16a99"
+      "bytes": 11103,
+      "sha256": "a78e827f865d52298ae200f149084f4f33303f3dfd614a8ca69beee023ad89d8"
     },
     {
       "path": "jeju_agent/hub_insights.py",
@@ -1972,8 +1982,8 @@
     },
     {
       "path": "jeju_agent/restore_sources.py",
-      "bytes": 6922,
-      "sha256": "2a41f142d0dbd0d953cc80ef95bb627b0e55f80f53a1814853e777dbed994509"
+      "bytes": 7094,
+      "sha256": "b714e47140a5f2d8f8a00271dfb6f7f17fbee9a7da0f80782910a6680938adba"
     },
     {
       "path": "jeju_agent/retrieval_v20.py",
@@ -2987,8 +2997,8 @@
     },
     {
       "path": "tests/ui_chatbot_v6.cjs",
-      "bytes": 13345,
-      "sha256": "62099f9463400ce5fbbddc8c4d392b78123414a8c7fd62e0fe26e65cbe7cb647"
+      "bytes": 13357,
+      "sha256": "c78d1c57ef90f4f14b0d5e0e9bd2a1f890f62d5e274319562a7cfd7ca4aa5ba6"
     },
     {
       "path": "tests/ui_climate_20261107.cjs",
@@ -3022,8 +3032,8 @@
     },
     {
       "path": "tests/ui_itinerary_export.cjs",
-      "bytes": 2366,
-      "sha256": "5c585f29471cbf3eba137c4597be31286eaed77975dde206415f679462324856"
+      "bytes": 2365,
+      "sha256": "d29f6c247cc9f2795ca46e482824bd8b2f05ed7723921bf0ce1e62cbaa2d2887"
     },
     {
       "path": "tests/ui_location.cjs",
@@ -3127,8 +3137,8 @@
     },
     {
       "path": "ui/app.js",
-      "bytes": 88557,
-      "sha256": "448815874de6da45d39cd81050031bcb55398951f6c3346b8b33d43a3543e48d"
+      "bytes": 88555,
+      "sha256": "396ae1fe73cd02173cd5275fba21533adeaf4a0057bdf707ed77b64a8cc2fa52"
     },
     {
       "path": "ui/assets/cheonjiyeon.jpg",
@@ -3202,8 +3212,8 @@
     },
     {
       "path": "ui/chatbot.js",
-      "bytes": 22165,
-      "sha256": "508ef1c1ceeef5f5d6b7b294ab3e1389ebd27417d56a3c964d5b05f3006a9706"
+      "bytes": 22216,
+      "sha256": "6b28593d2334fb3d0e71cff4d4d3ba10bc39a06a52e1204197389f4c13df99a9"
     },
     {
       "path": "ui/climate-guide.css",
@@ -3217,8 +3227,8 @@
     },
     {
       "path": "ui/credits.html",
-      "bytes": 6876,
-      "sha256": "42d7ba8e07f1c8a3b4236cdeb862ec1b5118925ed3bf53788eb42c929191c0f5"
+      "bytes": 6871,
+      "sha256": "0a495078fc5788b5b6be855c809550bbc87b6afb2f34c915d1ecb454c4f284d6"
     },
     {
       "path": "ui/data-guide.css",
@@ -3277,8 +3287,8 @@
     },
     {
       "path": "ui/index.html",
-      "bytes": 51486,
-      "sha256": "6136ecf057e350c2502d833000654183426648188804273289967ecb2c303e7a"
+      "bytes": 51495,
+      "sha256": "febbfbf954d7b09ec685a74ea1f2acf57f3be2d81a694cda14d516a4d332b5af"
     },
     {
       "path": "ui/jeju-map.css",
@@ -3287,8 +3297,8 @@
     },
     {
       "path": "ui/jeju-map.js",
-      "bytes": 41518,
-      "sha256": "5d1f623863f56995a081ad0e99c377134a0121e469025f8749a29cbdaf9bb77a"
+      "bytes": 41517,
+      "sha256": "456ca59b9f55859fdb5fab23062b22d0bc4cdf1f378a13e651240b28138e4db2"
     },
     {
       "path": "ui/location-context.js",
@@ -3322,8 +3332,8 @@
     },
     {
       "path": "ui/page-router.js",
-      "bytes": 7800,
-      "sha256": "34454dcb5070cf13dd55a5aada0d3387947743550fc9199570e3f9cfde3e6c2c"
+      "bytes": 7793,
+      "sha256": "2736fac0b35e67c05c228fda09583fc6056a59feb480a9756a20d9c13e5b077e"
     },
     {
       "path": "ui/pages.css",
@@ -14966,13 +14976,13 @@
       "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
     }
   ],
-  "total_static_bytes": 1110960079,
+  "total_static_bytes": 1111150055,
   "manifest_self_excluded": true,
   "installed_venv_and_generated_caches_not_in_static_scope": true,
   "historical_test_scope": "426executed pass,22explicit historical omissions; tests/release_scope.json",
-  "proposal_pdf": "docs/제주길벗_최종기획서.pdf",
-  "documentation_revision": "final_reproducibility_check_20261108",
-  "previous_submission_zip_sha256": "d6344a2c4edcd500a718b484751d82be396744ee772239be467a30f5822fbd91",
+  "proposal_pdf": "docs/탐라따라_최종기획서.pdf",
+  "documentation_revision": "tamra_ttara_brand_20261109",
+  "previous_submission_zip_sha256": "ad340407381cf386727daa11a5a567b0c4669301101e0465f95071d0da6a7e45",
   "final_review": {
     "readme_expanded": true,
     "new_fresh_extraction_functional_checks": 49,
@@ -14981,5 +14991,12 @@
     "ui_scripts": 29,
     "js_syntax_checks": 18,
     "proposal_pages": 15
+  },
+  "project_title": "탐라따라",
+  "branding_revision": {
+    "brand": "탐라따라",
+    "english_brand": "TAMRA TTARA",
+    "date_kst": "2026-11-09",
+    "original_data_and_model_weights_preserved": true
   }
 }

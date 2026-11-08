@@ -9,7 +9,7 @@ sys.dont_write_bytecode=True
 sys.path.insert(0,str(ROOT))
 
 def main():
-    p=argparse.ArgumentParser(description='Jeju Gilbeot local center app')
+    p=argparse.ArgumentParser(description='Tamra Ttara local center app')
     p.add_argument('--port',type=int,default=8765)
     p.add_argument('--no-browser',action='store_true')
     road=p.add_mutually_exclusive_group()

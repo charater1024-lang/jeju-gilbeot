@@ -1,44 +1,45 @@
 {
-  "project_title": "제주 길벗 — 제주 공공데이터 기반 맞춤 여행 코스 추천 AI Agent",
-  "release_tag": "v2026.11.08-submission",
-  "release_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/tag/v2026.11.08-submission",
+  "project_title": "탐라따라 — 제주 공공데이터 기반 맞춤 여행 코스 추천 AI Agent",
+  "brand": "탐라따라",
+  "english_brand": "TAMRA TTARA",
+  "release_tag": "v2026.11.09-tamra-ttara",
+  "release_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/tag/v2026.11.09-tamra-ttara",
   "assets": [
     {
-      "name": "jeju_gilbeot_final_20261108.zip",
-      "original_name": "제주길벗_최종제출_20261108.zip",
-      "bytes": 550677671,
-      "sha256": "ad340407381cf386727daa11a5a567b0c4669301101e0465f95071d0da6a7e45",
-      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.08-submission/jeju_gilbeot_final_20261108.zip"
+      "name": "tamra_ttara_final_20261109.zip",
+      "original_name": "탐라따라_최종제출_20261109.zip",
+      "bytes": 550860194,
+      "sha256": "e7bb7d73e5a9fba29bb6b9aa7bae9fb366309e90ea1cad8469a3deab119105db",
+      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.09-tamra-ttara/tamra_ttara_final_20261109.zip"
     },
     {
-      "name": "jeju_gilbeot_proposal_20261108.pdf",
-      "original_name": "제주길벗_최종기획서.pdf",
-      "bytes": 1555538,
-      "sha256": "3515c98a381c5cf77659134bc354478ef25de019ead8065b2001175520fcbe0c",
-      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.08-submission/jeju_gilbeot_proposal_20261108.pdf"
+      "name": "tamra_ttara_proposal_20261109.pdf",
+      "original_name": "탐라따라_최종기획서.pdf",
+      "bytes": 1578808,
+      "sha256": "6ba83f5314aab5d3355c003dced5100665028cc7b81ece720fe5d43cac868556",
+      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.09-tamra-ttara/tamra_ttara_proposal_20261109.pdf"
     },
     {
       "name": "README_ko.md",
       "original_name": "README_실행안내.md",
-      "bytes": 23907,
-      "sha256": "117ec415ac3d57f4118428e7fc10426d464d75b562e52b950e940a74c99a9a0b",
-      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.08-submission/README_ko.md"
+      "bytes": 23921,
+      "sha256": "6bf0405c0c43da355179b368503abdb10731ca8cb4bd4134b844f6563f9f40ce",
+      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.09-tamra-ttara/README_ko.md"
     },
     {
       "name": "validation_summary.json",
-      "original_name": "최종제출_검증결과.json",
-      "bytes": 3163,
-      "sha256": "541d8a2a94864de18e4c69ac02295e9f760077bd331a61f9d6921a8248cfa0eb",
-      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.08-submission/validation_summary.json"
+      "bytes": 2665,
+      "sha256": "2c578d1334e05717d6f044ae3b91cb675ebfca473ff4ceccd3d2e07e88f6be60",
+      "download_url": "https://github.com/charater1024-lang/jeju-gilbeot/releases/download/v2026.11.09-tamra-ttara/validation_summary.json"
     }
   ],
   "source_is_subset_of_full_release": true,
   "runtime_source_paths_and_bytes_from_final_archive": true,
-  "source_file_count": 438,
-  "full_release_static_files": 2991,
+  "source_file_count": 440,
+  "full_release_static_files": 2993,
   "proposal_pages": 15,
   "runtime_llm": false,
   "manifest_scope": "SUBMISSION_MANIFEST.json refers to full Release ZIP, not this lightweight Git checkout",
-  "archive_test_evidence": "docs/validation/final_submission_check.json",
+  "previous_release_preserved": "v2026.11.08-submission",
   "source_data_model_license_notice": "docs/THIRD_PARTY_NOTICES.md"
 }

@@ -1,4 +1,4 @@
-/* Jeju Gilbeot local reference map. Leaflet 1.9.4 is an optional local SDK.
+/* Tamra Ttara local reference map. Leaflet 1.9.4 is an optional local SDK.
  * Coastline: Natural Earth 1:10m Land v5.1.1, public domain; subset provenance
  * and the unmodified SDK licence are in vendor/leaflet/. No tile prefetch.
  */

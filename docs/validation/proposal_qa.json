@@ -5,7 +5,7 @@
   "footer_page_numbers_correct": true,
   "headings": [
     {
-      "title": "제주 길벗 서비스 기획서",
+      "title": "탐라따라 서비스 기획서",
       "pages": [
         1
       ]
@@ -105,25 +105,42 @@
   "renderer": "Native Microsoft Word export then bundled Poppler144dpi",
   "canonical_renderer": "render_docx.py attempted; no bundled LibreOffice; see log",
   "visual_review": "passed_all_15_pages",
-  "as_of_kst": "2026-11-08",
+  "as_of_kst": "2026-11-09",
   "page_images_changed_since_reference": [
-    13
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
   ],
   "files": [
     {
-      "name": "제주길벗_최종기획서.pdf",
-      "bytes": 1555538,
-      "sha256": "3515c98a381c5cf77659134bc354478ef25de019ead8065b2001175520fcbe0c"
+      "name": "탐라따라_최종기획서.pdf",
+      "bytes": 1578808,
+      "sha256": "6ba83f5314aab5d3355c003dced5100665028cc7b81ece720fe5d43cac868556"
     },
     {
-      "name": "제주길벗_최종기획서.docx",
-      "bytes": 1796158,
-      "sha256": "4ecd32676abf71c036cf1131037f19f34c35366a6c703f08c3dd7c0a2d742165"
+      "name": "탐라따라_최종기획서.docx",
+      "bytes": 1823781,
+      "sha256": "8c6cb11a70d61b33f8f92a57bbb68e248c28ef21cfc61dd22ed792c449f44912"
     }
   ],
-  "visual_review_evidence": [
-    "visual_review.md",
-    "scope_review.md"
-  ],
-  "unchanged_pages_visual_evidence": "Pages1-12,14-15 are byte-identical rendered PNGs to the previously reviewed delivered PDF."
+  "brand": "탐라따라",
+  "previous_brand_absent_from_current_proposal": true,
+  "personal_equipment_specifications_absent": true,
+  "data_model_metrics_and_sources_retained": true,
+  "diagram_figures_14_unchanged": true,
+  "actual_renamed_website_cover_screenshot": true,
+  "photo_credit_and_license_links_match_new_screenshot": true,
+  "document_content_reference_date": "2026-11-08"
 }

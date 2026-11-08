@@ -1,6 +1,6 @@
 # E5 운영 모델 명세
 
-이 문서는 제주 길벗에 포함한 모델의 자체 명세입니다. Hugging Face 모델카드 전체나 상위 벤치마크 표를 복제하지 않았습니다.
+이 문서는 탐라따라에 포함한 모델의 자체 명세입니다. Hugging Face 모델카드 전체나 상위 벤치마크 표를 복제하지 않았습니다.
 
 - 모델ID: `intfloat/multilingual-e5-small`
 - 고정revision: `614241f622f53c4eeff9890bdc4f31cfecc418b3`

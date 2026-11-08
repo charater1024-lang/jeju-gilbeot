@@ -1,3 +1,5 @@
+2026-11-09 최신브랜드는 탐라따라(TAMRA TTARA)입니다. 최신기획서는 docs/탐라따라_최종기획서.pdf·docx(15쪽), 완성실행본은 [최신Release](https://github.com/charater1024-lang/jeju-gilbeot/releases/tag/v2026.11.09-tamra-ttara)입니다. UI·상담·저장일정·현행문서·패키지명을변경했으며모델/원자료·실제상호길벗식당·API/DOM/session기술식별자는보존했습니다. Git은경량소스이고실행은ReleaseZIP의 tamra_ttara폴더에서진행합니다. 아래는이전작성시점의이력입니다.
+
 2026-11-08 최종 제출 공개본 기준: 최신 코드·문서·검증은 루트README, README_실행안내.md, docs/제주길벗_최종기획서.pdf와 GitHub Release v2026.11.08-submission을 우선합니다. 15쪽·개인장비사양제외·개발환경표현을 유지합니다. Git 체크아웃은 경량 소스이며 대용량 모델·DB·Windows런타임·Linuxwheel은 최종Release ZIP에 있습니다. 실행은 완성ZIP을 새 폴더에 풀어 진행하고 과거 dev.py restore로 복원하지 않습니다. SUBMISSION_MANIFEST는 그 완성ZIP 명세입니다. 운영 LLM 없음, CPU 기본/WindowsDirectML 선택, Ubuntu24.04/Python3.12 CPU, 관광지 교차검증·위치 동의·모델 임계값·원본을 유지합니다. 과거 문서와 명세는 아래에 이력으로 보존합니다.
 
 # 제주 길벗 개발 인계

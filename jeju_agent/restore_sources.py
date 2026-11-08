@@ -59,7 +59,7 @@ def _verify_source(path, source):
 
 
 def _download_chunks(source, opener, timeout):
-    request = Request(source["download_url"], headers={"User-Agent": "JejuGilbeot-Restore/1.0"})
+    request = Request(source["download_url"], headers={"User-Agent": "TamraTtara-Restore/1.0"})
     received = 0
     with opener.open(request, timeout=timeout) as response:
         _check_url(response.geturl())

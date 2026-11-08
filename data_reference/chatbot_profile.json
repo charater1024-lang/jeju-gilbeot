@@ -27,7 +27,7 @@
     },
     "faq": {
       "path": "config/chatbot_faq.json",
-      "sha256": "9ede36dd9b0b2b8a326d4f1ee79b3f44d975fa165d1a4ff90206db6a0495898e",
+      "sha256": "082bdcb428df04b5eb1b7da199fbc92f62dfb3ddd39b1dcba3d7503e6d4af0e0",
       "rows": 26
     }
   },

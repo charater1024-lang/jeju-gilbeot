@@ -91,7 +91,7 @@ def _read_payload(point):
                        'daily': ','.join(DAILY_VARIABLES), 'wind_speed_unit': 'ms',
                        'timezone': 'Asia/Seoul', 'forecast_days': '7'})
     url = API_URL + '?' + query
-    request = Request(url, headers={'User-Agent': 'JejuGilbeot/1.0 (noncommercial forecast reference)',
+    request = Request(url, headers={'User-Agent': 'TamraTtara/1.0 (noncommercial forecast reference)',
                                    'Accept': 'application/json'})
     try:
         with _OPENER.open(request, timeout=TIMEOUT_SECONDS) as response:
