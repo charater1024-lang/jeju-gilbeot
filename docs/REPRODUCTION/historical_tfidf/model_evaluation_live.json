@@ -1,0 +1,226 @@
+{
+  "service_version": 23,
+  "date_kst": "2026-11-06",
+  "target_percent": 90,
+  "active_count": 3,
+  "models": [
+    {
+      "id": "audience_distribution",
+      "title": "집단별 8업종 소비 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1048",
+      "fixed_tolerance": 1.0,
+      "promoted": true,
+      "metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 270,
+        "total": 288,
+        "percent": 93.75
+      },
+      "error": {
+        "mae": 0.328038,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2024-01",
+        "end": "2025-06"
+      },
+      "evaluation_scope": "2024-01~2025-06의 고정 288개 관측. 기존 시험 기간을 재사용한 후향평가입니다.",
+      "baseline_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5
+      },
+      "baseline_error": {
+        "mae": 0.4261105438795293,
+        "unit": "퍼센트포인트"
+      },
+      "active": true,
+      "decision": "새 구성비 모델 적용"
+    },
+    {
+      "id": "mobility_pattern",
+      "title": "제주 전체 시간대별 일반승차",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "512",
+      "fixed_tolerance": 20,
+      "promoted": false,
+      "metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 699,
+        "total": 847,
+        "percent": 82.52656434474616
+      },
+      "error": {
+        "mae": 80.9194434273895,
+        "rmse": 161.47599382707583,
+        "wape_percent": 13.274856229987803,
+        "unit": "명/시간"
+      },
+      "test_period": {
+        "start": "2025-06-28",
+        "end": "2025-10-26"
+      },
+      "cohort": {
+        "evaluated_cells": 847,
+        "source_cells": 847
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 일별·시간대별 승차 관측값",
+      "active": false,
+      "decision": "시간대별 승차 추정 제외"
+    },
+    {
+      "id": "dining_detail",
+      "title": "세부 외식업종 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1047",
+      "fixed_tolerance": 0.25,
+      "promoted": false,
+      "metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1790,
+        "total": 1974,
+        "percent": 90.67882472137791
+      },
+      "error": {
+        "mae": 0.09719669340424895,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2023-01",
+        "end": "2024-12"
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교",
+      "active": true,
+      "decision": "검증된 구성비 모델 유지"
+    },
+    {
+      "id": "route_demand",
+      "title": "통계 노선코드별 하루 일반승차",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "561",
+      "fixed_tolerance": 20,
+      "promoted": true,
+      "metric": {
+        "name": "관측 인원 ±20% 이내",
+        "hits": 13535,
+        "total": 28092,
+        "percent": 48.18097679054535
+      },
+      "error": {
+        "mae": 4.966360529688168,
+        "rmse": 7.518629859184388,
+        "wape_percent": 27.128640097069255,
+        "unit": "명/통계코드·일"
+      },
+      "test_period": {
+        "start": "2025-06-22",
+        "end": "2025-10-19"
+      },
+      "cohort": {
+        "evaluated_cells": 28092,
+        "source_cells": 64315,
+        "evaluation_codes": 250,
+        "serving_codes": 202,
+        "cell_coverage_percent": 43.678768560988885
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 250개 통계 코드. 전체 시험 관측 중 43.68%를 평가",
+      "artifact_sha256": "4aa7f655f0e4218035401e6c918ea05751923bf0b9488e3d3a9603b27e0053d6",
+      "algorithm": "recency_weighted_route_weekday_median_v20",
+      "half_life_days": 60,
+      "active": false,
+      "decision": "통계 노선코드 승차 추정 제외"
+    },
+    {
+      "id": "tourism_tfidf",
+      "title": "관광지 TF-IDF 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": true,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 15,
+        "total": 22,
+        "percent": 68.18181818181819
+      },
+      "evaluation_scope": "검색어가 있고 명시 위치가 없는 첫 페이지의 5개 이상 결과 요청에서 기존 상위 5개만 재정렬",
+      "active": false,
+      "decision": "이름·분류·지역·거리 조건으로 조회"
+    },
+    {
+      "id": "food_tfidf",
+      "title": "음식점 TF-IDF 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": null,
+      "evaluation_scope": "검증·시험 정답 ID 132개가 겹치고 비교기의 그룹 순서·범위가 운영과 달라 별도 탐색 결과로 기록",
+      "active": false,
+      "decision": "이름·업종·주소·거리 조건으로 조회"
+    },
+    {
+      "id": "assistant_guide_tfidf",
+      "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "evaluation_scope": "출처를 확인한 도우미 가이드 검색의 작성 질의 시험",
+      "active": true,
+      "decision": "공식 소개 검색에서 사용"
+    },
+    {
+      "id": "travel_context_tfidf",
+      "title": "걷기·해변·접근성·편의시설 자료 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 13,
+        "total": 18,
+        "percent": 72.22222222222223
+      },
+      "evaluation_scope": "해변·접근성·걷기·편의시설 기록 검색의 작성 질의 시험",
+      "active": false,
+      "decision": "원문 항목과 시간 조건으로 조회"
+    },
+    {
+      "id": "assistant_intent",
+      "title": "여행 도우미 요청 종류 분류",
+      "type": "classification_and_rules",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "규칙을 포함한 기존 전체 파서 정답률",
+        "hits": 49,
+        "total": 60,
+        "percent": 81.66666666666667
+      },
+      "evaluation_scope": "6개 요청 종류의 작성 문장 60건. 분류 모델과 입력 조건을 해석하는 규칙의 합산 결과",
+      "classifier_only_metric": {
+        "name": "기존 나이브 베이즈 분류기 정답률",
+        "hits": 54,
+        "total": 60,
+        "percent": 90.0
+      },
+      "active": false,
+      "decision": "명시적인 일정 조건 입력으로 전환"
+    }
+  ],
+  "field_accuracy_proven": false,
+  "notes": [
+    "구성비 비율은 기존 허용오차 이내의 과거 관측 비율입니다.",
+    "공식 소개 검색은 출처 기반 작성 질의 22건의 평가이며, 실제 사용자의 검색 정확도는 별도 검증이 필요합니다."
+  ]
+}

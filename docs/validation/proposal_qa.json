@@ -1,0 +1,129 @@
+{
+  "pass": true,
+  "pages": 15,
+  "page_limit": 15,
+  "footer_page_numbers_correct": true,
+  "headings": [
+    {
+      "title": "제주 길벗 서비스 기획서",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "title": "제주 여행 준비를 한곳에서 돕는다",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "title": "공개 자료가 추천과 안내로 이어지는 과정",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "title": "어떤 제주 공개 자료를 사용하는가",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "title": "같은 장소인지 확인한 뒤 안내한다",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "title": "음식 이용 경향을 안정적으로 계산한다",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "title": "관심 있는 음식 분야를 찾도록 돕는다",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "title": "질문에 맞는 공식 관광 안내를 찾는다",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "title": "여행 시기의 과거 기온과 변동 폭을 보여준다",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "title": "꽃 일정과 기온을 함께 살펴본다",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "title": "저장 자료와 최신 날씨를 나누어 연결한다",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "title": "여러 기능을 이어 하루 여행 코스를 만든다",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "title": "반복 이용 비용과 GPU 상주 처리량",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "title": "시험 결과로 현재 기술을 선택했다",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "title": "출처에서 확인할 자료와 이용 안내",
+      "pages": [
+        15
+      ]
+    }
+  ],
+  "missing_text": [],
+  "figures": 15,
+  "tables": 10,
+  "read_only_inspector": true,
+  "image_mapping_correct": true,
+  "unchanged_page_text_preserved": true,
+  "page_geometry_and_styles_preserved": true,
+  "renderer": "Native Microsoft Word export then bundled Poppler144dpi",
+  "canonical_renderer": "render_docx.py attempted; no bundled LibreOffice; see log",
+  "visual_review": "passed_all_15_pages",
+  "as_of_kst": "2026-11-08",
+  "page_images_changed_since_reference": [
+    13
+  ],
+  "files": [
+    {
+      "name": "제주길벗_최종기획서.pdf",
+      "bytes": 1555538,
+      "sha256": "3515c98a381c5cf77659134bc354478ef25de019ead8065b2001175520fcbe0c"
+    },
+    {
+      "name": "제주길벗_최종기획서.docx",
+      "bytes": 1796158,
+      "sha256": "4ecd32676abf71c036cf1131037f19f34c35366a6c703f08c3dd7c0a2d742165"
+    }
+  ],
+  "visual_review_evidence": [
+    "visual_review.md",
+    "scope_review.md"
+  ],
+  "unchanged_pages_visual_evidence": "Pages1-12,14-15 are byte-identical rendered PNGs to the previously reviewed delivered PDF."
+}

@@ -15,6 +15,7 @@ function fixture(){
   vm.runInContext(fragment('function updatePlanningMode()','// V15 planner origin'),context);
   vm.runInContext(fragment('function plannerValidPoint(','// End V15 planner origin.'),context);
   vm.runInContext(fragment('function toggleSaved(','function openDialog('),context);
+  vm.runInContext(fragment('function beginGuidedPlan(', 'function showPlannerInputs('),context);
   vm.runInContext(fragment('function showPlannerInputs(', '$("#saved-to-planner").addEventListener'),context);
   vm.runInContext(fragment('$("#planner-form").addEventListener("submit"','// V3 feature declarations'),context);
   context.initPlannerOrigin();node('#planner-confirm-airport').listeners.click();

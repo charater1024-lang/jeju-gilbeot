@@ -1,0 +1,102 @@
+{
+  "protocol_sha256": "61f2dd19c8d9ce85ebf7231b4211728f7d49f799f27a110ca5b15c23029b9c7e",
+  "selection_sha256": "c9a0d8f9f6335bc1eefcef106600be1c14eaeee1ce93e1219b5f60870d0db531",
+  "candidate": {
+    "index": 70,
+    "config": {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    "validation": {
+      "hits": 264,
+      "total": 288,
+      "percent": 91.66666666666667,
+      "mae_percentage_points": 0.40099505218003273
+    },
+    "guard_pass": true
+  },
+  "incumbent_test": {
+    "hits": 252,
+    "total": 288,
+    "percent": 87.5,
+    "mae_percentage_points": 0.4261105438795293
+  },
+  "candidate_test": {
+    "hits": 270,
+    "total": 288,
+    "percent": 93.75,
+    "mae_percentage_points": 0.32803778220302227
+  },
+  "passes_gate": true,
+  "observed_period": {
+    "start": "2018-01",
+    "end": "2025-06"
+  },
+  "test_period": {
+    "start": "2024-01",
+    "end": "2025-06"
+  },
+  "test_panel_count": 36,
+  "test_cohort_sha256": "74c54a166513c846a84158bafe60cff6daae60aa979081a9fe9d2dd0e978fb41",
+  "test_fit_cutoff": "2023-12",
+  "candidate_test_detail": {
+    "mae_share": 0.00328038,
+    "mae_percentage_points": 0.328038,
+    "rmse_share": 0.00492203,
+    "cross_entropy": 1.58935828,
+    "panels": 36,
+    "category_observations": 288,
+    "p90_absolute_error_percentage_points": 0.84002,
+    "max_absolute_error_percentage_points": 2.235656,
+    "by_audience": {
+      "resident": {
+        "mae_share": 0.00387796,
+        "mae_percentage_points": 0.387796,
+        "category_observations": 144
+      },
+      "tourist": {
+        "mae_share": 0.0026828,
+        "mae_percentage_points": 0.26828,
+        "category_observations": 144
+      }
+    },
+    "by_category": {
+      "한식 음식점업": {
+        "mae_share": 0.0069894,
+        "mae_percentage_points": 0.69894
+      },
+      "중식 음식점업": {
+        "mae_share": 0.00107334,
+        "mae_percentage_points": 0.107334
+      },
+      "일식 음식점업": {
+        "mae_share": 0.0014283,
+        "mae_percentage_points": 0.14283
+      },
+      "서양식 음식점업": {
+        "mae_share": 0.00519532,
+        "mae_percentage_points": 0.519532
+      },
+      "기타 외국식 음식점업": {
+        "mae_share": 0.00047836,
+        "mae_percentage_points": 0.047836
+      },
+      "비알콜 음료점업": {
+        "mae_share": 0.00603855,
+        "mae_percentage_points": 0.603855
+      },
+      "피자 햄버거 샌드위치 및 유사 음식점업": {
+        "mae_share": 0.00316861,
+        "mae_percentage_points": 0.316861
+      },
+      "빵 및 과자류 소매업": {
+        "mae_share": 0.00187114,
+        "mae_percentage_points": 0.187114
+      }
+    }
+  },
+  "test_status": "previously_seen_retrospective_fixed_period_not_pristine_external_holdout"
+}

@@ -1,0 +1,116 @@
+body[data-page="/flowers"] .page-intro { margin-bottom: 0; padding-bottom: 24px; }
+.flower-guide { padding-bottom: 72px; }
+.flower-crosslinks { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-bottom: 15px; }
+.flower-crosslinks .climate-back { margin-bottom: 0; }
+.flower-back, .flower-text-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #315e62; font-size: 13px; }
+.flower-text-link { border-bottom: 1px solid #afc1b7; }
+.flower-intro { display: flex; align-items: center; gap: 26px; border: 1px solid #d7c9bb; background: #f4eee5; border-radius: 12px; padding: 28px 32px; }
+.flower-intro-mark { flex: 0 0 84px; display: grid; place-items: center; width: 84px; height: 94px; color: #8d6a4f; }
+.flower-intro-mark svg { width: 78px; height: 78px; stroke-width: 1.4; }
+.flower-eyebrow { font-size: 10px; letter-spacing: .17em; font-weight: 600; color: #817055; margin: 0 0 8px; }
+.flower-intro h2 { font-size: clamp(21px, 3vw, 27px); font-weight: 500; color: #2b5145; line-height: 1.5; }
+.flower-intro p:last-child { max-width: 850px; color: #626d57; margin-top: 9px; font-size: 13px; line-height: 1.95; }
+.flower-intro strong { font-weight: 600; }
+.flower-form { display: grid; grid-template-columns: 1.25fr 1.2fr 1fr auto; gap: 15px; align-items: end; padding: 26px; margin-top: 24px; border: 1px solid #d5dfd2; background: #fffefa; border-radius: 10px; }
+.flower-form label, .flower-weather-form label { display: flex; flex-direction: column; gap: 9px; font-size: 13px; font-weight: 600; color: #385742; }
+.flower-form select, .flower-weather-form select { width: 100%; min-height: 47px; padding: 10px 34px 10px 13px; border: 1px solid #c6d2c1; border-radius: 5px; color: #244f49; background-color: #fffefa; font: inherit; font-size: 14px; }
+.flower-form .button { min-height: 47px; white-space: nowrap; gap: 20px; }
+.flower-form-note { grid-column: 1 / -1; font-size: 12px; line-height: 1.8; color: #6d7764; margin: 0; }
+.flower-status-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; min-height: 61px; padding: 10px 0; }
+.flower-status { font-size: 13px; line-height: 1.9; color: #5b715e; margin: 0; }
+.flower-status.is-error { color: #9b472e; }
+.flower-retry { min-height: 40px; padding: 7px 15px; color: #285f63; background: #fffefa; border: 1px solid #bacdb5; border-radius: 5px; font-size: 13px; }
+.flower-form :disabled, .flower-weather-form :disabled { opacity: .6; cursor: not-allowed; }
+.flower-result-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 14px 28px; margin: 20px 0 18px; }
+.flower-result-head h2 { font-size: 24px; font-weight: 500; line-height: 1.5; color: #244f49; }
+.flower-result-head p { font-size: 13px; line-height: 1.85; color: #5c725e; margin-top: 7px; }
+.flower-method-tag { display: inline-flex; padding: 6px 11px; border-radius: 20px; font-size: 11px; line-height: 1.6; color: #5f684d; background: #e9eee2; white-space: nowrap; }
+.flower-suggestion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.flower-month-card { position: relative; padding: 25px; border: 1px solid #c8d5c3; border-radius: 11px; color: #244f49; background: #f2f5ec; overflow: hidden; }
+.flower-month-card:nth-child(2) { background: #f3efe5; border-color: #ddd1bc; }
+.flower-month-card:nth-child(3) { background: #edf2ee; }
+.flower-month-card::after { content: ''; position: absolute; width: 92px; height: 92px; border: 1px solid #9cb39a40; border-radius: 50%; top: -45px; right: -30px; pointer-events: none; }
+.flower-card-index { color: #6e8169; font-size: 10px; letter-spacing: .15em; margin-bottom: 13px; }
+.flower-month-card h3 { font-size: 25px; font-weight: 500; line-height: 1.4; }
+.flower-card-temperature { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; margin: 22px 0 7px; }
+.flower-card-temperature strong { font-size: 36px; line-height: 1.3; font-weight: 500; letter-spacing: -.045em; }
+.flower-card-temperature span, .flower-card-range { font-size: 11px; color: #62745f; line-height: 1.8; }
+.flower-card-range { padding-bottom: 19px; border-bottom: 1px solid #c4d1bd; }
+.flower-card-record { font-size: 12px; line-height: 1.9; margin-top: 15px; color: #476048; }
+.flower-match { display: inline-block; margin-top: 12px; padding: 4px 8px; border: 1px solid #b4c8a9; border-radius: 4px; color: #46623f; font-size: 11px; }
+.flower-match.is-outside { border-color: #d1b894; color: #8a643e; }
+.flower-rule-note { padding: 16px 0 20px; font-size: 12px; line-height: 1.95; color: #677460; }
+.flower-no-result { padding: 24px; background: #f4eee5; border: 1px solid #d7c9bb; border-radius: 8px; color: #735c42; line-height: 1.9; font-size: 13px; }
+.flower-details { margin-top: 19px; border: 1px solid #d5dfd2; background: #fffefa; border-radius: 9px; }
+.flower-details summary { padding: 19px 22px; font-size: 14px; font-weight: 600; color: #345b48; line-height: 1.8; cursor: pointer; }
+.flower-details-body { padding: 0 22px 22px; }
+.flower-note { color: #60715c; font-size: 12px; line-height: 1.95; margin: 6px 0 16px; }
+.flower-table-wrap { width: 100%; overflow-x: auto; }
+.flower-table { width: 100%; border-collapse: collapse; font-size: 12px; color: #375840; font-variant-numeric: tabular-nums; }
+.flower-table caption { padding: 5px 0 13px; text-align: left; color: #61715e; font-size: 12px; line-height: 1.8; }
+.flower-table th, .flower-table td { padding: 12px 13px; text-align: left; border-bottom: 1px solid #e0e6da; line-height: 1.8; white-space: nowrap; }
+.flower-table thead th { background: #edf2e9; color: #315641; font-weight: 600; }
+.flower-table tbody th { font-weight: 500; }
+.flower-table tr.is-month-match { background: #f1f5e9; }
+.flower-section { margin-top: 27px; padding: 27px; border: 1px solid #d5dfd2; background: #fffefa; border-radius: 10px; }
+.flower-section h3 { font-size: 19px; font-weight: 500; color: #244f49; line-height: 1.7; }
+.flower-history-grid, .flower-observation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; margin-top: 18px; }
+.flower-history-card, .flower-observation-card { padding: 18px 20px; border: 1px solid #e0e5d9; background: #fcfcf7; border-radius: 7px; }
+.flower-history-card h4, .flower-observation-card h4 { margin: 7px 0 9px; font-size: 14px; font-weight: 600; line-height: 1.8; color: #355743; }
+.flower-record-tag { display: block; color: #7a775e; font-size: 10px; letter-spacing: .05em; }
+.flower-history-card p, .flower-observation-card p { font-size: 12px; color: #60715c; line-height: 1.9; margin: 0; }
+.flower-observation-date { display: block; font-size: 21px; font-weight: 500; color: #2b5a50; margin: 6px 0; }
+.flower-link { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; color: #285f63; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; line-height: 1.7; }
+.flower-history-more { margin-top: 14px; }
+.flower-metadata-list { margin: 8px 0 0; padding-left: 19px; color: #60715c; font-size: 12px; line-height: 2; }
+.flower-limit { margin-top: 15px; padding: 13px 16px; background: #f5eddf; border-left: 3px solid #b1874b; border-radius: 3px; color: #80532f; font-size: 12px; line-height: 1.9; }
+.flower-weather { margin-top: 28px; border: 1px solid #cbd8d4; background: #edf3f0; border-radius: 11px; padding: 28px; }
+.flower-weather-heading { display: flex; align-items: flex-start; gap: 17px; }
+.flower-weather-mark { flex: 0 0 40px; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #b8ccc4; border-radius: 50%; color: #315f62; }
+.flower-weather-mark svg { width: 25px; height: 25px; stroke-width: 1.5; }
+.flower-weather-heading h2 { font-size: 20px; font-weight: 500; line-height: 1.7; color: #2b514b; }
+.flower-weather-heading p:last-child { margin-top: 6px; font-size: 12px; color: #63766a; line-height: 1.9; }
+.flower-weather-form { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin: 22px 0 14px; }
+.flower-weather-form label { flex: 1 1 260px; }
+.flower-weather-button { min-height: 47px; padding: 11px 22px; border: 1px solid #557c72; background: #f6faf6; color: #2f5c52; border-radius: 5px; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; gap: 23px; }
+.flower-weather-meta { margin-top: 20px; font-size: 12px; color: #61766b; line-height: 1.9; }
+.flower-weather .flower-table-wrap { margin-top: 13px; border: 1px solid #d5dfd2; background: #fffefa; border-radius: 6px; padding: 12px 15px; }
+.flower-weather-links { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 20px; margin-top: 10px; font-size: 12px; color: #60716b; }
+.flower-entry { display: flex; align-items: center; gap: 17px; margin-top: 13px; padding: 19px 23px; border: 1px solid #d7c9bb; border-radius: 9px; background: #f4eee5; color: #335344; }
+.flower-entry-mark { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; color: #947158; }
+.flower-entry-mark svg { width: 39px; height: 39px; stroke-width: 1.2; }
+.flower-entry strong { display: block; font-size: 16px; line-height: 1.7; }
+.flower-entry p { margin: 4px 0 0; color: #6d725a; font-size: 12px; line-height: 1.8; }
+.flower-entry > b { margin-left: auto; font-size: 23px; font-weight: 400; }
+.flower-guide :is(a,button,select,summary):focus-visible, .flower-entry:focus-visible { outline: 3px solid #ad7b37; outline-offset: 4px; }
+@media (max-width: 850px) {
+  .flower-form { grid-template-columns: 1fr 1fr; padding: 22px; }
+  .flower-form .button { width: 100%; }
+  .flower-suggestion-grid { gap: 12px; }
+  .flower-month-card { padding: 22px 18px; }
+  .flower-card-temperature strong { font-size: 31px; }
+}
+@media (max-width: 600px) {
+  .flower-intro { gap: 15px; padding: 22px; align-items: flex-start; }
+  .flower-intro-mark { flex-basis: 44px; width: 44px; height: 65px; }
+  .flower-intro-mark svg { width: 48px; height: 60px; }
+  .flower-intro h2 { font-size: 21px; }
+  .flower-intro p:last-child { font-size: 12px; }
+  .flower-form { gap: 17px 12px; padding: 20px; }
+  .flower-form select, .flower-weather-form select { font-size: 16px; }
+  .flower-suggestion-grid { grid-template-columns: 1fr; }
+  .flower-month-card { padding: 22px 24px; }
+  .flower-card-temperature { margin-top: 15px; }
+  .flower-card-temperature strong { font-size: 35px; }
+  .flower-history-grid, .flower-observation-grid { grid-template-columns: 1fr; }
+  .flower-section, .flower-weather { padding: 22px 19px; }
+  .flower-result-head h2 { font-size: 21px; }
+  .flower-weather-form { gap: 13px; }
+  .flower-weather-button { width: 100%; }
+  .flower-details summary { padding: 18px; }
+  .flower-details-body { padding: 0 16px 18px; }
+  .flower-entry { gap: 11px; padding: 18px; }
+  .flower-entry strong { font-size: 14px; }
+  .flower-entry-mark { flex-basis: 34px; width: 34px; height: 34px; }
+  .flower-entry-mark svg { width: 32px; height: 32px; }
+}

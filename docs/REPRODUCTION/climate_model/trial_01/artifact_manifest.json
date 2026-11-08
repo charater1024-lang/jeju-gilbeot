@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "files": {
+    "protocol_frozen.json": "be83e624a7cd4ea18ad29ec897af903ca260e4f1ca0979868c09ef671d9851b0",
+    "split_frozen.json": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de",
+    "selection_frozen.json": "61645bd5ab77b8f8d5a50d569f0d21048d76b0d0e7c6af4c7ddb456443fcd089",
+    "test_opened.json": "cb9ba75f435a95993a4517c8ed77c5261dd94ecb766e01fd47e7340b92823b25",
+    "selected_components_frozen.json": "321db67434fe6b4ef88f4e1eb339c96393f8a026323d0eb382b1489dd4ad614e",
+    "baseline_train_profiles.json": "033fdbe944e998a3f390fd42d04e6cf6455ff498e01f1d08a1c5765cbc943e22",
+    "evaluation.json": "a47bcb8b20fe6d86e7eaeef8d552e1576b8e3b2b4902b7ecfad067e0b28b2434",
+    "climate_model.json": "861b201726ce651788baea948a84c30158ba7491b21a81c288e339cce5cf9f94",
+    "source_manifest_sanitized.json": "1d914d49ab6df3a571279d32f6b79181b441abf3b1e8a8f2b04e68fc6756a7c7"
+  },
+  "runtime_sha256": "69e222be4e321a9cab7160a42365f54c2db5f31fdd5876002ccdaee9282d990c",
+  "source_files_sha256": {
+    "hub877_2596.csv": "620c3a424d12999447fb2a178361f44710e490163336a874225c5de9773615fd",
+    "hub877_2597.csv": "dcfc2033d75d833578b0599db6b5ecd4295216bb0be10d890ca289f2dde981e4",
+    "hub877_2598.csv": "45182d486f4ff9fce2f4c87be6e69bcc6ab4f29167ed229d8d24460e332a5a80",
+    "hub877_2599.csv": "b2c2d47d2932c80cabbb0b60e9c035684fd9bc4ded3a51690edb9dad86ce5c79"
+  },
+  "adoption_passed": true
+}

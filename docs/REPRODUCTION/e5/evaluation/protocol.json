@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "protocol_id": "jeju_semantic_gpu_eval_20261107_v1",
+  "as_of": "2026-11-07",
+  "score_blind_freeze": true,
+  "fine_tuning": {
+    "allowed_places": 40,
+    "natural_pairs": "Train place original name and source-grounded saved summary only. No authored evaluation query as training data.",
+    "exclude_source_partitions": [
+      "dev",
+      "holdout"
+    ],
+    "index_all_verified_sources_at_inference": true
+  },
+  "splits": {
+    "train_sources": 40,
+    "dev_sources": 10,
+    "holdout_sources": 12,
+    "dev_supported": 12,
+    "dev_unsupported": 6,
+    "holdout_supported": 24,
+    "holdout_unsupported": 12
+  },
+  "candidates": "Parent predeclared E5 small/base zero-shot and source40 adapted variants; any unavailable candidate is recorded, not replaced after holdout.",
+  "selection": "Use dev labels only to choose candidate and thresholds. Freeze candidate hash, threshold, source digest, settings and dev results before one holdout evaluation.",
+  "test_reuse": "Any repeated holdout-driven adjustment is exploratory and cannot be reported as the same independent holdout. Do not tune against legacy 25 either.",
+  "metrics": {
+    "hit_at_1": "Fraction of supported cases with any relevant ID at rank1.",
+    "hit_at_3": "Fraction of supported cases with any relevant ID in first3.",
+    "recall_at_3": "Mean retrieved relevant IDs in first3 divided by number of relevant IDs. With one relevant ID this equals hit_at_3.",
+    "mrr_at_3": "Mean reciprocal rank of first relevant ID within first3; zero if absent.",
+    "unsupported_false_response_count": "Unsupported cases returning any place recommendation. Explicit unsupported/help without place recommendations is safe.",
+    "latency": "Report cold and warm CPU/GPU latency, tested threads and exact hardware separately; not center field latency."
+  },
+  "comparison": "Run incumbent TF-IDF on identical dev/holdout queries, corpus, purpose and region; include_route_restricted=True for guide introductions, never interpret as automatic course eligibility.",
+  "adoption_gate": {
+    "dev_unsupported_false_response_count": 0,
+    "holdout_unsupported_false_response_count": 0,
+    "holdout_supported_hit_at_3_absolute_gain_min": 0.1,
+    "holdout_mrr_at_3_not_below_baseline": true,
+    "legacy_exact_source_scope_and_unsupported_cases_no_regression": true,
+    "source_and_policy_checks_preserved": true,
+    "local_offline_execution_or_existing_safe_fallback_required": true,
+    "note": "Accuracy gate is a developer-written functional benchmark, not evidence of real-user or future-period accuracy."
+  },
+  "scope_limits": [
+    "Queries are authored from saved editorial summaries, not collected user behaviour.",
+    "Two holdout questions per anchor place are correlated; report place count and query count separately.",
+    "Every label was checked against all62 summaries. Full compound identifying facts are required, not broad shared topic alone.",
+    "An empty label means unsupported by this corpus/endpoint, not proof that no such Jeju business/activity exists.",
+    "Guide introduction remains separate from automatic-route eligibility; restricted source places may be described without adding to a route.",
+    "Cosine/re-ranking scores are ranking scores, not calibrated confidence or current opening guarantees."
+  ],
+  "frozen_files_sha256": {
+    "source_partitions.json": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+    "dev_queries.json": "d482d7bdddfc73cc71b00d838dbde4f6322e26e7c3710595f5baa3f62e60888e",
+    "holdout_queries.json": "28d626736177a94bef2275da7006c3658dfbdbbd95ca5eac5bd453cf77537d13"
+  }
+}

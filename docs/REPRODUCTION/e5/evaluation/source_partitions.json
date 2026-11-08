@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-07",
+  "seed": "jeju-semantic-eval-20261107-v1",
+  "partition_method": "Sort sha256(seed + colon + place_id); first40 train, next10 dev, last12 holdout.",
+  "source_sha256": "711290e5d25794d9271115089295d1f3323e157ff196b08709bdbd971d73dd7c",
+  "count": 62,
+  "rows": [
+    {
+      "id": "osm_tourism_way_372521658",
+      "name": "메이즈랜드",
+      "guide_name": "메이즈랜드",
+      "summary": "제주의 돌과 바람, 해녀를 주제로 꾸민 미로공원입니다. 현무암 돌담과 나무로 이루어진 길을 따라 출구를 찾고, 주변의 조경과 조각을 함께 감상하는 체험을 할 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000001158",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_4832613086",
+      "name": "선녀탕",
+      "guide_name": "선녀탕",
+      "summary": "외돌개 인근 황우지해안의 현무암 사이에 바닷물이 드나들며 생긴 천연 해수풀 지형입니다. 확인한 공식 안내에는 낙석 위험으로 계단·물가 접근이 통제된다고 적혀 있어, 통제선을 넘지 않고 전망 구간에서 경관을 살펴보아야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018383",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osulloc",
+      "name": "오설록 티뮤지엄",
+      "guide_name": "오설록티뮤지엄",
+      "summary": "차 문화 전시와 녹차밭, 곶자왈 풍경을 함께 접하는 공간입니다. 한국과 여러 지역의 차 문화를 살펴보고 찻잎이 차로 만들어지는 과정과 차를 즐기는 방식을 알아볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500457",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "hamdeok",
+      "name": "함덕해수욕장",
+      "guide_name": "함덕해수욕장",
+      "summary": "밝은 모래사장과 맑은 바다, 곁에 솟은 서우봉이 어우러진 해변입니다. 해안 산책로와 바다를 내려다보는 풍경을 함께 즐길 수 있으며, 물놀이와 반려동물 이용 구역은 해당 시기의 공식 안내를 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_250718041",
+      "name": "박물관은살아있다",
+      "guide_name": "박물관은 살아있다",
+      "summary": "제주를 소재로 한 미디어·오브제 전시를 관람객이 직접 체험하는 실내 공간입니다. 공식 안내는 기존 ‘박물관은 살아있다’를 ‘K-아일랜드제주’로 소개하므로 방문 장소와 전시 구성을 원문에서 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500216",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_370329624",
+      "name": "제주4.3평화공원",
+      "guide_name": "제주 4 3 평화공원",
+      "summary": "제주4·3 희생자를 추모하고 그 역사를 기억하는 공간입니다. 기념관의 전시와 위령시설을 둘러보며 사건의 과정과 진상규명, 평화와 인권의 의미를 생각해 볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500535",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375498040",
+      "name": "성읍민속마을",
+      "guide_name": "성읍민속마을",
+      "summary": "초가와 돌담, 옛 관아의 흔적이 주민들의 일상과 함께 남아 있는 중산간 마을입니다. 정의현의 중심지였던 역사와 제주 전통가옥을 살펴보며 마을 길을 천천히 걸어볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500351",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_373866673",
+      "name": "세리월드",
+      "guide_name": "세리월드",
+      "summary": "서귀포 월드컵경기장 인근에서 카트·승마·미로 등의 체험을 함께 소개하는 레포츠 공간입니다. 동백나무로 조성한 미로와 여러 야외 활동을 고를 수 있으며, 체험 운영과 기상 조건은 원문에서 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021169",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_288933009",
+      "name": "만장굴",
+      "guide_name": "만장굴",
+      "summary": "거문오름 용암동굴계에 속하는 용암동굴로, 용암이 흐르고 굳으며 만든 다양한 동굴 지형을 지닌 곳입니다. 개방 구간과 정비·통제 여부가 달라질 수 있으므로 방문 전에 최신 공식 안내를 반드시 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500182",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_13931773845",
+      "name": "제주 민속자연사박물관",
+      "guide_name": "제주민속자연사박물관",
+      "summary": "제주의 자연환경과 전통 생활문화를 함께 살펴보는 박물관입니다. 화산·동식물·바다에 관한 전시와 생활도구, 가옥 및 민속 모형을 통해 섬의 자연과 사람들의 삶을 연결해 볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500545",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375169007",
+      "name": "유리의성",
+      "guide_name": "유리의성",
+      "summary": "한경면의 유리 공예 전시·체험 공간입니다. 한국관광공사의 2020년 여행기사는 유리 작품 감상과 블로잉·램프워킹 체험을 소개합니다. 과거에 작성된 안내이므로 체험 운영 여부는 방문 전 확인하세요.",
+      "source_url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=37f3a8c6-5280-45a6-be3e-cfce6f2471e6",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_1563942072",
+      "name": "어영공원",
+      "guide_name": "어영공원",
+      "summary": "용담·이호 해안도로에 마련된 바닷가 공원이자 쉼터입니다. 길을 걷다가 바다를 바라보며 쉬어가기 좋으며, 어영마을 해안의 풍경을 가까이에서 만날 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000008020",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_3736657966",
+      "name": "금오름",
+      "guide_name": "금오름",
+      "summary": "한림읍 금악마을에 자리한 오름으로, 정상의 분화구와 그 주변 능선이 주요 볼거리입니다. 정상부에서 마을과 들판을 조망할 수 있으며, 탐방 입구·통제·주차 조건은 공식 안내를 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019460",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_583831951",
+      "name": "하모해수욕장",
+      "guide_name": "하모해수욕장",
+      "summary": "모슬포와 가까운 하모해변으로, 올레 10코스와 이어지는 해안 풍경을 살펴볼 수 있는 곳입니다. 확인한 공식 안내에는 모래 유실과 드러난 암반으로 안전사고 우려가 커 해수욕장이 폐장된 것으로 기록되어 있어 물놀이 목적 방문은 주의가 필요합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020931",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_289861442",
+      "name": "이호테우해변",
+      "guide_name": "이호테우해변",
+      "summary": "붉은색과 흰색 조랑말 모양 등대가 바다 풍경의 표지가 되는 해변입니다. 모래사장과 소나무 숲, 물이 빠질 때 보이는 전통 고기잡이 시설인 원담의 모습을 함께 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000007344",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "hyeopjae",
+      "name": "협재해수욕장",
+      "guide_name": "협재 해수욕장",
+      "summary": "밝은 모래사장 앞 푸른 바다와 비양도가 어우러진 해변입니다. 금능 해변으로 이어지는 해안 풍경을 살펴볼 수 있으며, 물때에 따라 드러나는 모래사장의 모습과 바다색이 달라집니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500697",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_592735488",
+      "name": "세화 해변",
+      "guide_name": "세화해변",
+      "summary": "흰 모래와 검은 현무암, 푸른 바다가 맞닿아 있는 세화리의 작은 해변입니다. 물때에 따라 드러나는 모래사장의 모습이 달라지며, 해녀박물관과 마을 해안 풍경을 함께 살펴보기 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500361",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_645842845",
+      "name": "본태박물관",
+      "guide_name": "본태박물관",
+      "summary": "한국 전통 공예와 현대미술을 함께 살펴보는 안덕면의 문화 공간입니다. 안도 다다오가 설계한 노출 콘크리트 건축과 빛·물의 배치를 감상하며 전시 공간을 돌아볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500250",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "cheonjiyeon",
+      "name": "천지연폭포",
+      "guide_name": "천지연폭포",
+      "summary": "난대림 사이의 산책로를 따라 폭포와 깊은 못의 풍경을 만나는 곳입니다. 상록수와 물가 생태가 어우러진 공간으로, 숲과 물소리를 감상하며 서귀포의 자연을 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500618",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_538148519",
+      "name": "용두암",
+      "guide_name": "용두암",
+      "summary": "제주시 해안의 화산암이 파도와 어우러져 용의 머리를 닮은 모습을 이루는 바위입니다. 해안 산책과 함께 바위의 형태와 주변 바다 풍경을 살펴볼 수 있는 제주올레17코스의 명소입니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500469",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_3785584607",
+      "name": "거린사슴전망대",
+      "guide_name": "거린사슴전망대",
+      "summary": "거린사슴오름 기슭의 1100도로에 자리해 서귀포 시가지와 앞바다를 내려다보는 전망대입니다. 범섬·문섬 등 바다 풍경을 살피고, 소나무·삼나무·편백나무가 어우러진 주변 숲길을 함께 걸어볼 수 있습니다.",
+      "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=de00c6fc-de69-490f-95da-cb7e72538b59",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_12190653939",
+      "name": "산방산",
+      "guide_name": "산방산",
+      "summary": "사계리의 평탄한 지형 위로 큰 암벽이 솟은 제주 서남부의 산입니다. 산 아래 산방굴사와 주변 경관을 살펴볼 수 있으나 정상부 보호를 위한 출입 제한이 안내돼 있으므로 허용 탐방 구간을 원문에서 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500285",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_368735470",
+      "name": "제주 해녀박물관",
+      "guide_name": "제주해녀박물관",
+      "summary": "해녀들의 물질과 생활, 어촌 공동체의 문화를 전시로 만나는 곳입니다. 실제 사용한 도구와 생활자료를 통해 바다와 함께 살아온 제주 여성들의 삶과 해녀 항일운동의 이야기를 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500580",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_5655320217",
+      "name": "송악산",
+      "guide_name": "송악산",
+      "summary": "산방산 남쪽 바닷가에 솟아 두 겹의 분화구 지형을 지닌 화산체입니다. 올레 10코스와 이어지는 둘레길에서는 형제섬·가파도·마라도 방향의 바다를 조망할 수 있어 해안 풍경을 살피며 걷기 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500378",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375195356",
+      "name": "금능식물원",
+      "guide_name": "금능식물원",
+      "summary": "명부에는 ‘금능식물원’으로 적혀 있으나 같은 위치의 공식 관광 안내명은 ‘금능석물원’입니다. 장공익 명장이 만든 돌하르방·해녀상 등 제주 생활과 민속을 표현한 돌 조각을 정원을 따라 살펴보는 공원입니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019446",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_5656357630",
+      "name": "소머리오름",
+      "guide_name": "소머리오름",
+      "summary": "우도의 머리 부분에 해당하는 오름으로 공식 관광 안내에서는 우도봉으로 소개합니다. 바다와 맞닿은 절벽, 분화구와 섬 마을이 이어지는 화산 지형을 살펴볼 수 있는 곳입니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022519",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_5712863794",
+      "name": "새별오름",
+      "guide_name": "새별오름",
+      "summary": "애월 중산간의 풀밭 능선과 가을 억새 풍경을 만날 수 있는 오름입니다. 정상에서는 제주 서쪽 해안과 비양도를 바라볼 수 있으며, 동·서쪽 탐방로의 경사가 달라 체력에 맞는 길을 고르는 것이 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500309",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_246696661",
+      "name": "제주러브랜드",
+      "guide_name": "제주러브랜드",
+      "summary": "성을 주제로 한 현대 조각과 설치미술을 야외에서 감상하는 테마공원입니다. 작품과 조경을 함께 둘러보는 공간으로, 관람 대상과 입장 조건은 공식 안내에서 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500550",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_335845433",
+      "name": "월정리해수욕장",
+      "guide_name": "월정리 해수욕장",
+      "summary": "제주 동부 마을 앞에 펼쳐진 밝은 모래와 푸른 물빛의 해변입니다. 해안 길을 따라 바다 풍경을 감상하거나 주변 카페에서 쉬어갈 수 있으며, 물놀이는 해당 시기의 공식 운영 안내를 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500496",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_372948141",
+      "name": "탑동광장",
+      "guide_name": "탑동광장",
+      "summary": "제주 원도심의 바닷가를 따라 광장과 산책로가 이어지는 공간입니다. 탑동 해변공연장 주변의 바다 풍경을 바라보며 걷거나 도심과 해안이 맞닿은 분위기를 느껴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500649",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_5874608086",
+      "name": "피규어뮤지엄",
+      "guide_name": "피규어 뮤지엄",
+      "summary": "영화·애니메이션 속 캐릭터를 피규어로 만나는 안덕면의 실내 박물관입니다. 작은 수집품부터 사람보다 큰 조형물까지 다양한 크기의 전시를 둘러보며 캐릭터별 표현을 비교해 볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022724",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375341085",
+      "name": "넥슨컴퓨터박물관",
+      "guide_name": "넥슨컴퓨터박물관",
+      "summary": "컴퓨터와 게임이 발전해 온 과정을 전시와 기기를 통해 만나는 박물관입니다. 초기 컴퓨터와 주변 장치, 게임 문화를 함께 살펴볼 수 있으며 공식 관광 페이지에서는 넥슨뮤지엄이라는 이름으로도 안내합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500099",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375049062",
+      "name": "이중섭 미술관",
+      "guide_name": "이중섭미술관",
+      "summary": "이중섭의 서귀포 생활과 작품 세계를 소개하는 미술 공간입니다. 공식 안내에는 확충 공사에 따른 창작스튜디오 임시 전시가 안내돼 있으므로 실제 관람 장소를 원문에서 확인한 뒤 방문하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500509",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_node_4726228301",
+      "name": "헬로키티 아일랜드",
+      "guide_name": "헬로키티 아일랜드",
+      "summary": "안덕면에 있는 헬로키티 캐릭터 전시 공간입니다. 캐릭터가 변화해 온 역사와 여러 테마의 실내 전시를 둘러보며 사진을 남기고, 헬로키티의 이야기를 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=cont_000000000500695",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "seopjikoji",
+      "name": "섭지코지",
+      "guide_name": "섭지코지",
+      "summary": "성산일출봉을 배경으로 초원과 해안절벽, 선돌바위가 이어지는 곶입니다. 붉은 화산쇄설물과 기암이 드러난 해안을 따라 걸으며 제주 동부의 화산 지형과 바다 풍경을 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500343",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_1537196430",
+      "name": "제주목관아",
+      "guide_name": "제주목관아",
+      "summary": "탐라에서 조선시대까지 제주 행정의 중심이었던 관아 터입니다. 발굴조사로 확인한 건물의 흔적과 복원된 공간을 둘러보며 관덕정 일대에 이어진 옛 제주 관청의 모습을 이해할 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500551",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_253976811",
+      "name": "김녕미로공원",
+      "guide_name": "김녕미로공원",
+      "summary": "사계절 푸른 나무로 길을 만든 미로공원입니다. 나무벽 사이의 갈림길에서 출구를 찾아가는 체험을 하며 정원의 모습을 살펴볼 수 있고, 동행자와 함께 방향을 맞춰가는 재미가 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500005",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_375193739",
+      "name": "더마파크",
+      "guide_name": "더마파크",
+      "summary": "말을 주제로 한 테마공원으로, 기마공연과 승마·카트 체험 등을 관광 콘텐츠로 소개하고 있습니다. 공연 관람과 활동형 체험을 함께 살펴볼 수 있으며, 원하는 체험의 운영 여부는 방문 전 안내에서 확인하는 편이 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500141",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_relation_9742044",
+      "name": "우도",
+      "guide_name": "우도",
+      "summary": "성산 앞바다에 자리한 섬으로, 해변과 해안절벽, 우도봉을 따라 서로 다른 바다 풍경을 만날 수 있습니다. 섬 안 이동과 입도는 배편·기상 조건의 영향을 받으므로 방문할 날의 안내를 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500477",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_242454273",
+      "name": "중문색달해수욕장",
+      "guide_name": "중문색달해수욕장",
+      "summary": "중문관광단지 아래 펼쳐진 모래 해변으로, 여러 색이 섞인 모래와 검은 돌이 어우러지는 해안 풍경을 볼 수 있습니다. 파도가 비교적 잦은 곳으로 소개되므로 해변 산책과 바다 감상을 하더라도 현장 이용 안내를 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500604",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "train"
+    },
+    {
+      "id": "osm_tourism_way_249857724",
+      "name": "테디베어 뮤지엄",
+      "guide_name": "테디베어뮤지엄",
+      "summary": "중문관광단지에서 테디베어를 소재로 역사와 예술을 살펴보는 박물관입니다. 여러 나라의 곰 인형과 명화·공연을 재해석한 전시를 보고, 야외 정원과 잔디 공간도 함께 둘러볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500575",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_way_370342656",
+      "name": "비자림",
+      "guide_name": "비자림",
+      "summary": "오랜 세월 자란 비자나무와 여러 수종이 숲을 이루는 자연 공간입니다. 나무 그늘과 화산송이 길을 따라 산책하며 큰 비자나무와 숲의 생태를 살펴볼 수 있고, 구간마다 길의 상태가 다릅니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500270",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_node_5507591794",
+      "name": "용눈이오름",
+      "guide_name": "용눈이오름",
+      "summary": "둥근 능선과 여러 분화구, 계절에 따라 색이 바뀌는 초지가 어우러진 오름입니다. 부드러운 산세와 동부 오름의 풍경을 감상할 수 있으며, 출입 가능 여부와 정해진 탐방로를 확인한 뒤 방문해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500466",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_way_375500447",
+      "name": "일출랜드",
+      "guide_name": "일출랜드",
+      "summary": "미천굴을 중심으로 정원과 수변공간, 제주 전통가옥과 다양한 식물 구역을 구성한 공간입니다. 용암동굴의 모습과 식물·문화 전시를 한 동선에서 둘러볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500514",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "seongsan",
+      "name": "성산일출봉",
+      "guide_name": "성산일출봉",
+      "summary": "얕은 바다에서 일어난 화산활동으로 만들어진 분화구와 해안절벽을 볼 수 있는 곳입니다. 정상 탐방과 주변 해안 관람 동선이 구분돼 있어 체력과 방문 조건에 맞춰 화산 지형의 풍경을 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_node_3741616919",
+      "name": "용머리해안",
+      "guide_name": "용머리 해안",
+      "summary": "산방산 자락에서 바다로 뻗은 화산쇄설층이 파도에 깎이며 층층이 굽은 절벽과 바위길을 만든 해안입니다. 지층과 침식 흔적을 가까이서 관찰할 수 있지만, 만조나 높은 파도·기상 악화 때는 출입이 통제되므로 원문 안내를 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500471",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_node_6731890115",
+      "name": "사려니숲길 입구",
+      "guide_name": "사려니숲길입구",
+      "summary": "삼나무를 비롯한 여러 나무가 울창하게 자라는 사려니숲길을 만나는 지점입니다. 아래 관광 안내는 숲길 전체를 소개하므로 실제 출발 입구와 주차·반환 동선은 따로 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_way_375480941",
+      "name": "제주절물자연휴양림",
+      "guide_name": "제주절물자연휴양림",
+      "summary": "곧게 자란 삼나무와 다양한 식물이 숲을 이루는 중산간 휴양 공간입니다. 숲 그늘의 산책길을 따라 걸으며 나무와 연못의 풍경을 감상할 수 있고, 선택하는 구간에 따라 경사와 보행 조건이 달라집니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_node_569007779",
+      "name": "쇠소깍",
+      "guide_name": "쇠소깍",
+      "summary": "효돈천이 바다에 닿는 끝에서 민물과 바닷물이 만나는 깊은 물길입니다. 현무암 바위와 나무로 둘러싸인 계곡 풍경, 하구와 해안이 이어지는 모습을 함께 감상할 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500384",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_relation_20364165",
+      "name": "국립 제주 박물관",
+      "guide_name": "국립제주박물관",
+      "summary": "제주의 역사와 문화유산을 전시·보존하는 고고·역사박물관입니다. 섬에서 출토된 유물과 전시를 통해 제주의 형성과 생활, 동북아시아 문화교류 속 제주 이야기를 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500067",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "dev"
+    },
+    {
+      "id": "osm_tourism_way_243975557",
+      "name": "검멀레 해수욕장",
+      "guide_name": "검멀레 해수욕장",
+      "summary": "우도봉 아래 절벽 사이에 놓인 작은 검은 모래 해변입니다. 검은 모래와 해안 동굴이 어우러진 풍경을 볼 수 있으며, 조수와 파도에 따라 접근 조건이 달라질 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_way_1075451809",
+      "name": "스누피가든",
+      "guide_name": "스누피가든",
+      "summary": "피너츠 캐릭터의 이야기와 제주 정원을 연결한 공간입니다. 실내 테마 전시를 둘러본 뒤 야외 정원에서 만화 속 장면을 찾아 걸으며 캐릭터와 자연이 어우러진 풍경을 즐길 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_5658780218",
+      "name": "궷물오름",
+      "guide_name": "궷물오름",
+      "summary": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월읍의 오름입니다. 말굽형 분화구와 가을 억새를 살펴볼 수 있으며, 노꼬메오름 일대와 연계할 때는 출입 허용 구간과 현장 안내를 확인하세요.",
+      "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_way_370264619",
+      "name": "제주민속촌",
+      "guide_name": "제주민속촌",
+      "summary": "제주 사람들이 살아온 주거와 생활문화를 전시하는 공간입니다. 조선 말기 제주를 바탕으로 구성한 가옥과 민속자료를 둘러보며 지역의 전통과 생활 모습을 함께 이해할 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_5749644529",
+      "name": "보롬왓",
+      "guide_name": "보롬왓",
+      "summary": "메밀밭과 계절 꽃, 농장 동물의 모습을 함께 살펴보는 표선면의 농장입니다. 밭과 화원을 걸으며 쉬어갈 수 있고, 꽃의 개화와 체험 구역의 실제 운영 내용은 방문 시기에 맞춰 확인하면 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_way_372701554",
+      "name": "수목원테마파크",
+      "guide_name": "수목원 테마파크",
+      "summary": "공식 안내에서는 얼음 조형물과 착시미술, 입체영상 등을 주제로 한 실내 체험 공간으로 소개합니다. 주변 수목원길과 함께 둘러볼 수 있으며 실제 운영 중인 전시와 체험은 방문 전에 확인하는 것이 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_10216545359",
+      "name": "거문오름",
+      "guide_name": "거문오름",
+      "summary": "거문오름 용암동굴계를 만든 화산활동의 흔적과 울창한 숲을 관찰하는 오름입니다. 분화구 주변의 다양한 지형을 살펴볼 수 있으며, 탐방은 예약과 안내 등 공식 이용 조건을 확인한 뒤 계획해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500034",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_368866237",
+      "name": "한라수목원",
+      "guide_name": "한라수목원",
+      "summary": "제주 자생식물과 아열대 식물을 비롯한 다양한 수종을 관찰하는 도심 가까운 수목원입니다. 식물 전시 구역과 산책로를 따라 걸으며 제주에서 자라는 나무와 풀의 모습을 살펴볼 수 있습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_way_572783721",
+      "name": "다이나믹메이즈",
+      "guide_name": "다이나믹 메이즈",
+      "summary": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_3753655821",
+      "name": "주상절리",
+      "guide_name": "주상절리",
+      "summary": "용암이 식으며 갈라져 생긴 기둥 모양 암석이 해안을 따라 이어지는 지형입니다. 검은 돌기둥과 바다가 만나는 풍경을 전망 공간에서 살펴볼 수 있으며, 관람 가능 여부는 기상과 현장 통제 안내를 확인하세요.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_4416285697",
+      "name": "따라비오름",
+      "guide_name": "따라비오름",
+      "summary": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": false,
+      "partition": "holdout"
+    },
+    {
+      "id": "osm_tourism_node_3788545937",
+      "name": "탐라승마장",
+      "guide_name": "탐라승마장",
+      "summary": "말을 처음 접하는 방문객도 승마 체험을 알아볼 수 있는 공간입니다. 말과 교감하는 활동을 중심으로 소개되며, 체험 가능 조건과 진행 방식은 현장·운영기관 안내를 확인해야 합니다.",
+      "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187",
+      "retrieved_at": "2026-10-29",
+      "automatic_eligible": true,
+      "partition": "holdout"
+    }
+  ]
+}

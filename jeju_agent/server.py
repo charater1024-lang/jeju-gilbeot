@@ -1,4 +1,4 @@
-"""Loopback-only local UI with no external APIs or third party dependencies."""
+"""Loopback-only UI; optional packaged semantic inference never uses remote APIs."""
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import json
@@ -16,6 +16,11 @@ from .tourism import search_tourism
 from .quality_v23 import operating_evaluation as get_model_evaluation, operating_model_info as get_model_info
 from .audience_v23 import audience_status_v23, predict_audience_v23
 from .assistant_search import search_assistant
+from .semantic_search import search_semantic, SemanticModelUnavailable
+from .hub_insights import visitor_patterns, HubInsightDataError
+from .climate_guide import climate_status, climate_reference, ClimateDataError
+from .flower_seasons import flower_status, flower_seasons, FlowerDataError
+from .flower_weather import flower_weather, FlowerWeatherUnavailable
 from .roads import route_geometry
 from .place_details import place_details
 from .chatbot import chat_reply, chat_status
@@ -133,6 +138,46 @@ def serve(data_dir=None,model_dir=None,port=8765):
             url=urlsplit(self.path)
             path=unquote(url.path)
             query=parse_qs(url.query)
+            if path=='/api/compute-status':
+                from .compute_runtime import runtime_status
+                return self.json_response(runtime_status(ROOT))
+            if path in {'/api/flower-status','/api/flower-seasons'}:
+                try:
+                    flower_query=parse_qs(url.query,keep_blank_values=True)
+                    if path=='/api/flower-status':
+                        if url.query:raise ValueError('상태 조회에는 조건을 입력하지 않습니다.')
+                        return self.json_response(flower_status(ROOT))
+                    if set(flower_query)-{'flower','station','preference'} or any(len(v)!=1 for v in flower_query.values()):
+                        raise ValueError('꽃 종류·관측지점·기온 조건만 선택해 주세요. 개화일 예측 조건은 제공하지 않습니다.')
+                    return self.json_response(flower_seasons(ROOT,flower_query.get('flower',['hydrangea'])[0],flower_query.get('station',['seogwipo'])[0],flower_query.get('preference',['mild'])[0]))
+                except ValueError as exc:return self.json_response({'error':str(exc)},400)
+                except (FlowerDataError,ClimateDataError,OSError,KeyError,TypeError):
+                    return self.json_response({'error':'꽃 일정·개화 관측·기온 모델의 원본을 확인할 수 없습니다. 참고 안내를 중단했습니다.'},503)
+            if path in {'/api/climate-status','/api/climate-reference'}:
+                try:
+                    climate_query=parse_qs(url.query,keep_blank_values=True)
+                    if path=='/api/climate-status':
+                        if url.query:raise ValueError('상태 조회에는 조건을 입력하지 않습니다.')
+                        return self.json_response(climate_status(ROOT))
+                    if (set(climate_query)-{'month','day','station'} or
+                        any(len(values)!=1 for values in climate_query.values()) or
+                        not {'month','day'}<=set(climate_query)):
+                        raise ValueError('월·일과 관측지점만 선택해 주세요. 연도별 예보 기능은 제공하지 않습니다.')
+                    return self.json_response(climate_reference(ROOT,climate_query['month'][0],climate_query['day'][0],climate_query.get('station',['jeju'])[0]))
+                except ValueError as exc:
+                    return self.json_response({'error':str(exc)},400)
+                except ClimateDataError:
+                    return self.json_response({'error':'검증된 기후 모델·원본 자료를 확인할 수 없습니다. 기후 안내를 중단했습니다.'},503)
+            if path=='/api/hub-regional-patterns':
+                return self.json_response({'error':'지역 소비패턴 비교는 운영에서 제외했습니다. 관광지 방문 흐름과 공식 소개를 이용해 주세요.','code':'regional_consumption_retired','replacement':'/insights'},410)
+            if path=='/api/hub-visitor-patterns':
+                try:
+                    result=visitor_patterns(ROOT,query.get('place',[''])[0],query.get('audience',['domestic'])[0])
+                    return self.json_response(result)
+                except ValueError as exc:
+                    return self.json_response({'error':str(exc)},400)
+                except (OSError,KeyError,TypeError,ArithmeticError,HubInsightDataError):
+                    return self.json_response({'error':'제주데이터허브 확장 자료의 원본 또는 모델을 확인해 주세요.'},503)
             if path=='/api/operational-check':
                 try:
                     return self.json_response(operational_check(ROOT))
@@ -204,7 +249,7 @@ def serve(data_dir=None,model_dir=None,port=8765):
             if path=='/api/sources':
                 p=ROOT/'config'/'sources.json'
                 return self.json_response(json.loads(p.read_text(encoding='utf-8')))
-            relative='index.html' if path.rstrip('/') in {'','/planner','/explore','/chat','/about'} else path.lstrip('/')
+            relative='index.html' if path.rstrip('/') in {'','/planner','/explore','/chat','/about','/insights','/climate','/flowers'} else path.lstrip('/')
             static_root=(ROOT/'ui').resolve()
             file=(static_root/relative).resolve()
             if not file.is_relative_to(static_root) or not file.is_file() or file.suffix.lower() not in {'.html','.css','.js','.jpg','.jpeg','.png','.webp','.svg','.woff2'}:
@@ -248,13 +293,17 @@ def serve(data_dir=None,model_dir=None,port=8765):
                     self.connection.settimeout(1)
                     return self.json_response({'error':'요청 본문 전송 시간이 초과되었습니다.'},408)
                 body=json.loads(raw_body,parse_float=_finite_json_number,parse_constant=_finite_json_number)
-                if self.path not in {'/api/guide-search','/api/agent/plan','/api/plan-destinations','/api/discover','/api/tourism','/api/route-geometry','/api/chat'}: return self.json_response({'error':'지원하지 않는 경로'},404)
+                if self.path not in {'/api/guide-search','/api/semantic-guide-search','/api/agent/plan','/api/plan-destinations','/api/discover','/api/tourism','/api/route-geometry','/api/chat','/api/flower-weather'}: return self.json_response({'error':'지원하지 않는 경로'},404)
                 if not isinstance(body,dict): raise ValueError('JSON 객체가 필요합니다.')
                 return self.run_work(self.serve_post, body)
             except (ConnectionError, TimeoutError):
                 return
             except RecursionError:
                 return self.json_response({'error':'요청의 JSON 중첩이 너무 깊습니다.'},400)
+            except SemanticModelUnavailable:
+                return self.json_response({'error':'공식 소개 의미 검색의 로컬 모델 또는 실행 패키지를 확인해 주세요. 기본 소개 검색은 계속 사용할 수 있습니다.','code':'semantic_model_unavailable'},503)
+            except FlowerWeatherUnavailable:
+                return self.json_response({'error':'온라인 예보를 확인할 수 없습니다. 꽃 일정과 과거 기온 참고는 계속 이용할 수 있습니다.','code':'flower_weather_unavailable'},503)
             except TrustPolicyError:
                 return self.json_response({'error':'장소의 출처를 확인할 수 없어 코스 추천을 중단했습니다. 운영자가 출처 자료와 확인 기준을 검토한 뒤 다시 시도해 주세요.','code':'trust_policy_unavailable'},503)
             except (ValueError,KeyError,TypeError) as exc:
@@ -263,7 +312,14 @@ def serve(data_dir=None,model_dir=None,port=8765):
                 return self.json_response({'error':'실행 실패. 데이터와 모델 경로를 점검하세요.'},500)
 
         def serve_post(self, body):
+            if self.path=='/api/flower-weather':
+                if set(body)!={'place_id'}:raise ValueError('공개 예보 기준점만 선택해 주세요. 개인 위치는 전송하지 않습니다.')
+                return self.json_response(flower_weather(ROOT,body['place_id']))
             if self.path=='/api/agent/plan':return self.json_response(run_agent(ROOT,body,learned_search=False))
+            if self.path=='/api/semantic-guide-search':
+                if set(body)-{'query','region'} or body.get('region','all')!='all':
+                    raise ValueError('제주 전체의 공식 관광지 소개 검색어를 입력해 주세요.')
+                return self.json_response(search_semantic(ROOT,body.get('query',''),limit=5,include_route_restricted=True))
             if self.path=='/api/guide-search':
                 if set(body)-{'query','region'} or body.get('region','all')!='all':
                     raise ValueError('제주 전체의 공식 관광지 소개 검색어를 입력해 주세요.')

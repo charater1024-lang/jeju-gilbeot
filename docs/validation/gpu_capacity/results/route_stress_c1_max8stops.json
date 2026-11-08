@@ -1,0 +1,5154 @@
+{
+  "label": "route_stress_c1_max8stops",
+  "kind": "route_stress",
+  "concurrency": 1,
+  "waves": 32,
+  "started_ns": 1794119108073181700,
+  "ended_ns": 1794119119526280000,
+  "benchmark": {
+    "requests": 32,
+    "successes": 32,
+    "errors": 0,
+    "p50_ms": 352.06174999621,
+    "p95_ms": 396.9897999922978,
+    "max_ms": 430.5938000034075,
+    "wall_seconds": 11.45320350000111,
+    "completed_requests_per_second": 2.7939781214921138,
+    "percentile": "nearest rank ceil(.95*N)",
+    "status_counts": {
+      "200": 32
+    }
+  },
+  "memory": {
+    "interval_requested_seconds": 0.1,
+    "samples": [
+      {
+        "time_ns": 1794119108073181700,
+        "perf_counter": 99122.2640052,
+        "working_set_bytes": 2414563328,
+        "private_commit_bytes": 4014972928,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 158.578125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45908893696,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108187687300,
+        "perf_counter": 99122.3777669,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 158.65625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45909295104,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108294065300,
+        "perf_counter": 99122.4841395,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 158.75,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45909798912,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108401284300,
+        "perf_counter": 99122.5913458,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 158.859375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905592320,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108507901100,
+        "perf_counter": 99122.6980166,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 158.96875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45903015936,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108614416100,
+        "perf_counter": 99122.8046177,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.078125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905686528,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108717170000,
+        "perf_counter": 99122.9072758,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.1875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45898973184,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108826387900,
+        "perf_counter": 99123.0165128,
+        "working_set_bytes": 2414587904,
+        "private_commit_bytes": 4015026176,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.28125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899567104,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119108934031700,
+        "perf_counter": 99123.1241218,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45893984256,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109041032100,
+        "perf_counter": 99123.2310637,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.484375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45892571136,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109147706700,
+        "perf_counter": 99123.3377929,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.59375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45890932736,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109252961900,
+        "perf_counter": 99123.4431781,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.6875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45889998848,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109363727100,
+        "perf_counter": 99123.5537453,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.796875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45889069056,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109470675000,
+        "perf_counter": 99123.6606746,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 159.90625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45891354624,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109576886100,
+        "perf_counter": 99123.7669508,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015038464,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.015625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45889773568,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109682354600,
+        "perf_counter": 99123.8723623,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.09375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45889761280,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109788079900,
+        "perf_counter": 99123.9781331,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.203125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45890408448,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119109894193400,
+        "perf_counter": 99124.0842333,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.3125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45891551232,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110000512700,
+        "perf_counter": 99124.1905307,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.40625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45891350528,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110111915300,
+        "perf_counter": 99124.3020473,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.515625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896753152,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110217338600,
+        "perf_counter": 99124.407427,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899329536,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110331081800,
+        "perf_counter": 99124.5212715,
+        "working_set_bytes": 2414587904,
+        "private_commit_bytes": 4015026176,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.71875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902123008,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110434516500,
+        "perf_counter": 99124.6245858,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.8125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896155136,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110540012100,
+        "perf_counter": 99124.7301898,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 160.921875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45895417856,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110646906600,
+        "perf_counter": 99124.8370501,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015038464,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.03125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897666560,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110748516100,
+        "perf_counter": 99124.9386589,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45900472320,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110856223400,
+        "perf_counter": 99125.0463738,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.21875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45912068096,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119110962953100,
+        "perf_counter": 99125.1529584,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.328125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897216000,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111068226500,
+        "perf_counter": 99125.2582034,
+        "working_set_bytes": 2414592000,
+        "private_commit_bytes": 4015026176,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.421875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45884805120,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111173803200,
+        "perf_counter": 99125.363959,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.53125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45873364992,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111279843000,
+        "perf_counter": 99125.4699514,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.640625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45864407040,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111385724200,
+        "perf_counter": 99125.575808,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.734375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45857964032,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111491919600,
+        "perf_counter": 99125.6819593,
+        "working_set_bytes": 2414592000,
+        "private_commit_bytes": 4015026176,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.84375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45852475392,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111598332500,
+        "perf_counter": 99125.7885898,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 161.9375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45853884416,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111704202500,
+        "perf_counter": 99125.8942941,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.046875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45853171712,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111809715500,
+        "perf_counter": 99125.9997744,
+        "working_set_bytes": 2414608384,
+        "private_commit_bytes": 4015038464,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.140625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45851475968,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119111913634700,
+        "perf_counter": 99126.1037468,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.234375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899415552,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112019747700,
+        "perf_counter": 99126.2097842,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.34375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45900218368,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112133142700,
+        "perf_counter": 99126.3233252,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.453125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902778368,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112238458200,
+        "perf_counter": 99126.428537,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.546875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45903077376,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112344916200,
+        "perf_counter": 99126.5350048,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.65625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45904601088,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112450336900,
+        "perf_counter": 99126.6403421,
+        "working_set_bytes": 2414600192,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.75,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45900533760,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112551189900,
+        "perf_counter": 99126.7418102,
+        "working_set_bytes": 2414571520,
+        "private_commit_bytes": 4014972928,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.859375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897723904,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112656212700,
+        "perf_counter": 99126.8462726,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 162.953125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896552448,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112766381500,
+        "perf_counter": 99126.9563562,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.0625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896466432,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112873003300,
+        "perf_counter": 99127.0631009,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.171875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897515008,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119112978861100,
+        "perf_counter": 99127.1690146,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.25,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897674752,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113085009500,
+        "perf_counter": 99127.2751489,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.359375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896765440,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113196534100,
+        "perf_counter": 99127.3865783,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.46875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897355264,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113302303100,
+        "perf_counter": 99127.4923284,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.5625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897236480,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113413125100,
+        "perf_counter": 99127.6031814,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.671875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45896724480,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113518663400,
+        "perf_counter": 99127.7087647,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.78125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897179136,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113624267700,
+        "perf_counter": 99127.8143619,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015026176,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.890625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45898412032,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113729650500,
+        "perf_counter": 99127.9197082,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 163.96875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899067392,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113843766900,
+        "perf_counter": 99128.0339065,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.09375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899079680,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119113947764500,
+        "perf_counter": 99128.1378424,
+        "working_set_bytes": 2414612480,
+        "private_commit_bytes": 4015038464,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.1875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899317248,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114053899200,
+        "perf_counter": 99128.243902,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.28125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45900161024,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114168546900,
+        "perf_counter": 99128.3586176,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.390625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902954496,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114274117600,
+        "perf_counter": 99128.4643062,
+        "working_set_bytes": 2414612480,
+        "private_commit_bytes": 4015038464,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.5,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902774272,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114379696500,
+        "perf_counter": 99128.5698677,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.59375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45897924608,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114485647300,
+        "perf_counter": 99128.6757537,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.703125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45898698752,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114590428100,
+        "perf_counter": 99128.780599,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.796875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899063296,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114701574600,
+        "perf_counter": 99128.89179,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 164.890625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899640832,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114813817700,
+        "perf_counter": 99129.0041844,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.0,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899653120,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119114920080200,
+        "perf_counter": 99129.1102527,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.109375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899681792,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115031738900,
+        "perf_counter": 99129.2218619,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.1875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902061568,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115137784500,
+        "perf_counter": 99129.3279322,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.265625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902139392,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115243151200,
+        "perf_counter": 99129.4332709,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45902778368,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115349758200,
+        "perf_counter": 99129.5399166,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.484375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45903183872,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115453806900,
+        "perf_counter": 99129.6438735,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.578125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45900615680,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115555039700,
+        "perf_counter": 99129.7451366,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.671875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45904191488,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115660938600,
+        "perf_counter": 99129.8510088,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.78125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45903888384,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115767454400,
+        "perf_counter": 99129.957524,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905260544,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115874138500,
+        "perf_counter": 99130.0642156,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 165.984375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905244160,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119115980450100,
+        "perf_counter": 99130.1705388,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.078125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905440768,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116086898400,
+        "perf_counter": 99130.277149,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.1875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905068032,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116192660800,
+        "perf_counter": 99130.3826858,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.296875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905768448,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116297613400,
+        "perf_counter": 99130.4876363,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.40625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905784832,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116403740300,
+        "perf_counter": 99130.5938108,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.46875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45904855040,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116509818200,
+        "perf_counter": 99130.6999149,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.578125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905440768,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116616411900,
+        "perf_counter": 99130.8064522,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.6875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905711104,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116722474100,
+        "perf_counter": 99130.9124801,
+        "working_set_bytes": 2414612480,
+        "private_commit_bytes": 4015042560,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.796875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45908201472,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116830497300,
+        "perf_counter": 99131.0205531,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 166.890625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45909524480,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119116936902300,
+        "perf_counter": 99131.1269625,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.0,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45909557248,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117043431200,
+        "perf_counter": 99131.2335355,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.09375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45910077440,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117150557300,
+        "perf_counter": 99131.3406305,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.1875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45910302720,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117257130400,
+        "perf_counter": 99131.4471668,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.296875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45899579392,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117363481100,
+        "perf_counter": 99131.5535364,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.40625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45892550656,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117466119600,
+        "perf_counter": 99131.6562186,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.484375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45887664128,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117572088600,
+        "perf_counter": 99131.7622096,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.59375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45887975424,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117678585000,
+        "perf_counter": 99131.868702,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.703125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45887983616,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117788934400,
+        "perf_counter": 99131.9790999,
+        "working_set_bytes": 2414596096,
+        "private_commit_bytes": 4015030272,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.8125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45889118208,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119117896002500,
+        "perf_counter": 99132.0861964,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 167.90625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45891719168,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118001188200,
+        "perf_counter": 99132.1912702,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.015625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45891719168,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118108004600,
+        "perf_counter": 99132.2981063,
+        "working_set_bytes": 2414612480,
+        "private_commit_bytes": 4015042560,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.109375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45894246400,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118215090300,
+        "perf_counter": 99132.4051436,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.203125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45911523328,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118321413600,
+        "perf_counter": 99132.5114798,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.3125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45912018944,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118428692400,
+        "perf_counter": 99132.6187613,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.421875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45904355328,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118540837800,
+        "perf_counter": 99132.7308895,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.515625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45905977344,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118648134900,
+        "perf_counter": 99132.8382719,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45906251776,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118755917500,
+        "perf_counter": 99132.9460427,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.734375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45906792448,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118865761300,
+        "perf_counter": 99133.0558864,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.828125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45907161088,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119118972077800,
+        "perf_counter": 99133.1622475,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 168.9375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45907161088,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119077652200,
+        "perf_counter": 99133.2677594,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.046875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45909876736,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119184951500,
+        "perf_counter": 99133.3755288,
+        "working_set_bytes": 2414571520,
+        "private_commit_bytes": 4014977024,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.140625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45910544384,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119290584200,
+        "perf_counter": 99133.4806728,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.21875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45910564864,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119398541500,
+        "perf_counter": 99133.5885987,
+        "working_set_bytes": 2414604288,
+        "private_commit_bytes": 4015034368,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.328125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45906755584,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119504796500,
+        "perf_counter": 99133.69496,
+        "working_set_bytes": 2414612480,
+        "private_commit_bytes": 4015042560,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.4375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45907320832,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794119119526280000,
+        "perf_counter": 99133.7167151,
+        "working_set_bytes": 2414571520,
+        "private_commit_bytes": 4014977024,
+        "lifetime_peak_working_set_bytes": 3902488576,
+        "process_cpu_seconds": 169.453125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 45906833408,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      }
+    ],
+    "max_sampled": {
+      "working_set_bytes": 2414612480,
+      "private_commit_bytes": 4015042560,
+      "lifetime_peak_working_set_bytes": 3902488576,
+      "dedicated_bytes": 806211584,
+      "shared_gpu_ram_bytes": 588361728
+    },
+    "first": {
+      "time_ns": 1794119108073181700,
+      "perf_counter": 99122.2640052,
+      "working_set_bytes": 2414563328,
+      "private_commit_bytes": 4014972928,
+      "lifetime_peak_working_set_bytes": 3902488576,
+      "process_cpu_seconds": 158.578125,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 45908893696,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 806211584,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 806211584
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "last": {
+      "time_ns": 1794119119526280000,
+      "perf_counter": 99133.7167151,
+      "working_set_bytes": 2414571520,
+      "private_commit_bytes": 4014977024,
+      "lifetime_peak_working_set_bytes": 3902488576,
+      "process_cpu_seconds": 169.453125,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 45906833408,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 806211584,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 806211584
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "counter_errors": [],
+    "counter_observed_samples": 109,
+    "error": null,
+    "safety_limit": null,
+    "definition": "RAM WorkingSet resident physical; PrivateCommit virtual commitment; GPU Dedicated and Shared separate; sampled maxima can miss sub-sample transients; lifetime peak can predate this phase."
+  },
+  "status_before": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 973,
+      "cpu_long_query_fallbacks": 161,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 19.548,
+      "last_query_token_count": 64,
+      "cpu_fallback_may_add_resident_model": true,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 2414587904,
+      "peak_working_set_bytes": 3902488576,
+      "private_commit_bytes": 4015026176,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "status_after": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 973,
+      "cpu_long_query_fallbacks": 161,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 19.548,
+      "last_query_token_count": 64,
+      "cpu_fallback_may_add_resident_model": true,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 2414596096,
+      "peak_working_set_bytes": 3902488576,
+      "private_commit_bytes": 4015030272,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "gpu_before": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2534, 8, 46.51, 7.45",
+    "success": true
+  },
+  "gpu_after": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2534, 6, 48.05, 7.60",
+    "success": true
+  },
+  "raw_requests": [
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119108074197500,
+      "ended_ns": 1794119108441812300,
+      "ms": 367.75230000785086,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119108441812300,
+      "ended_ns": 1794119108821340500,
+      "ms": 379.50809999892954,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119108821340500,
+      "ended_ns": 1794119109218431000,
+      "ms": 396.9897999922978,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119109219420500,
+      "ended_ns": 1794119109599897800,
+      "ms": 381.0877000069013,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119109599897800,
+      "ended_ns": 1794119109952505000,
+      "ms": 352.00719999556895,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119109952505000,
+      "ended_ns": 1794119110319419100,
+      "ms": 366.6732999990927,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119110319419100,
+      "ended_ns": 1794119110673464200,
+      "ms": 354.1572999965865,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119110673464200,
+      "ended_ns": 1794119111056365800,
+      "ms": 382.50580000749324,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119111056365800,
+      "ended_ns": 1794119111486923800,
+      "ms": 430.5938000034075,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119111486923800,
+      "ended_ns": 1794119111839898600,
+      "ms": 352.116299996851,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119111839898600,
+      "ended_ns": 1794119112186247600,
+      "ms": 346.5526999934809,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119112186247600,
+      "ended_ns": 1794119112551189900,
+      "ms": 364.70659999758936,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119112551189900,
+      "ended_ns": 1794119112911915000,
+      "ms": 360.2595999982441,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119112912192400,
+      "ended_ns": 1794119113266759900,
+      "ms": 355.18249998858664,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119113266759900,
+      "ended_ns": 1794119113621355100,
+      "ms": 354.0964999992866,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119113621355100,
+      "ended_ns": 1794119113964174200,
+      "ms": 342.72579998651054,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119113964756200,
+      "ended_ns": 1794119114304110200,
+      "ms": 339.4644999934826,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119114304110200,
+      "ended_ns": 1794119114651317400,
+      "ms": 347.8559000068344,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119114652351400,
+      "ended_ns": 1794119114995604700,
+      "ms": 343.79049998824485,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119114995604700,
+      "ended_ns": 1794119115344309200,
+      "ms": 348.33680000156164,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119115344309200,
+      "ended_ns": 1794119115692951000,
+      "ms": 348.5266999923624,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119115692951000,
+      "ended_ns": 1794119116029444300,
+      "ms": 336.33849999750964,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119116029444300,
+      "ended_ns": 1794119116366952400,
+      "ms": 337.1435000008205,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119116366952400,
+      "ended_ns": 1794119116724582400,
+      "ms": 357.60319999826606,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119116724582400,
+      "ended_ns": 1794119117086385800,
+      "ms": 361.3189999887254,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119117086385800,
+      "ended_ns": 1794119117436737400,
+      "ms": 350.24949999933597,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119117436737400,
+      "ended_ns": 1794119117783565000,
+      "ms": 346.4697999879718,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119117783742500,
+      "ended_ns": 1794119118128930000,
+      "ms": 345.23179999087006,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119118128930000,
+      "ended_ns": 1794119118485033500,
+      "ms": 356.52430000482127,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119118485961900,
+      "ended_ns": 1794119118833551100,
+      "ms": 348.38650000165217,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119118834558500,
+      "ended_ns": 1794119119184951500,
+      "ms": 350.816100006341,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    },
+    {
+      "case": "auto_route8",
+      "path": "/api/agent/plan",
+      "started_ns": 1794119119184951500,
+      "ended_ns": 1794119119526280000,
+      "ms": 340.73099998931866,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ],
+        "stop_count": 8
+      }
+    }
+  ],
+  "gpu_success_delta": 0,
+  "cpu_long_fallback_delta": 0,
+  "pass": true,
+  "interactive_threshold_p95_2s": true,
+  "general_threshold_p95_5s": true
+}

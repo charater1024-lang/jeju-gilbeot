@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "evaluated_at_utc": "2026-11-07T12:54:09.262649+00:00",
+  "single_holdout_open_count": 1,
+  "protocol_sha256": "be83e624a7cd4ea18ad29ec897af903ca260e4f1ca0979868c09ef671d9851b0",
+  "split_sha256": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de",
+  "selection_sha256": "61645bd5ab77b8f8d5a50d569f0d21048d76b0d0e7c6af4c7ddb456443fcd089",
+  "test_opened_sha256": "cb9ba75f435a95993a4517c8ed77c5261dd94ecb766e01fd47e7340b92823b25",
+  "test_period": [
+    "2019-01-01",
+    "2021-10-31"
+  ],
+  "test_rows": 4140,
+  "test_unique_dates": 1035,
+  "selected_point_config": {
+    "family": "hist_gradient_boosting",
+    "loss": "absolute_error",
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 100,
+    "max_iter": 200
+  },
+  "selected_interval_config": {
+    "family": "hist_gradient_boosting",
+    "loss": "quantile",
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 200,
+    "max_iter": 250,
+    "quantiles": [
+      0.1,
+      0.9
+    ]
+  },
+  "point_test": {
+    "rows": 4140,
+    "mae_c": 1.9199917311305275,
+    "rmse_c": 2.560352750805938,
+    "bias_prediction_minus_observed_c": -0.625731417510679
+  },
+  "interval_test": {
+    "rows": 4140,
+    "coverage": 0.7657004830917874,
+    "mean_width_c": 5.69304553523563,
+    "mean_q10_q90_pinball_loss": 0.43406338982800985,
+    "q10_pinball_loss": 0.4198593095713118,
+    "q90_pinball_loss": 0.44826747008470796,
+    "unsorted_quantile_crossing_rate": 0.0
+  },
+  "baseline_test": {
+    "station_month_median": {
+      "point": {
+        "rows": 4140,
+        "mae_c": 2.121545893719807,
+        "rmse_c": 2.745343884375555,
+        "bias_prediction_minus_observed_c": -0.5859420289855074
+      },
+      "interval": {
+        "rows": 4140,
+        "coverage": 0.7765700483091788,
+        "mean_width_c": 6.3993236714975845,
+        "mean_q10_q90_pinball_loss": 0.4641787439613526,
+        "q10_pinball_loss": 0.46243864734299517,
+        "q90_pinball_loss": 0.46591884057971006,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "station_calendar_plusminus15_mean": {
+      "point": {
+        "rows": 4140,
+        "mae_c": 1.8945299807957705,
+        "rmse_c": 2.4904368847815515,
+        "bias_prediction_minus_observed_c": -0.6012903813020275
+      },
+      "interval": {
+        "rows": 4140,
+        "coverage": 0.8461352657004831,
+        "mean_width_c": 6.4700024154589375,
+        "mean_q10_q90_pinball_loss": 0.4286426328502415,
+        "q10_pinball_loss": 0.43259202898550725,
+        "q90_pinball_loss": 0.4246932367149758,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "station_calendar_plusminus15_median": {
+      "point": {
+        "rows": 4140,
+        "mae_c": 1.9031884057971014,
+        "rmse_c": 2.5168315043435143,
+        "bias_prediction_minus_observed_c": -0.5936231884057972
+      },
+      "interval": {
+        "rows": 4140,
+        "coverage": 0.8461352657004831,
+        "mean_width_c": 6.4700024154589375,
+        "mean_q10_q90_pinball_loss": 0.4286426328502415,
+        "q10_pinball_loss": 0.43259202898550725,
+        "q90_pinball_loss": 0.4246932367149758,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    }
+  },
+  "best_dev_selected_baseline": "station_calendar_plusminus15_median",
+  "mae_ratio_to_selected_baseline": 1.0088290393542978,
+  "point_mae_improvement_c": -0.0168033253334261,
+  "per_station": {
+    "jeju": {
+      "point": {
+        "rows": 1035,
+        "mae_c": 2.046915530320283,
+        "rmse_c": 2.7229385817253426,
+        "bias_prediction_minus_observed_c": -1.0078260040968492
+      },
+      "interval": {
+        "rows": 1035,
+        "coverage": 0.7555555555555555,
+        "mean_width_c": 5.8496696270099315,
+        "mean_q10_q90_pinball_loss": 0.4664852487578333,
+        "q10_pinball_loss": 0.42907158682290325,
+        "q90_pinball_loss": 0.5038989106927634,
+        "unsorted_quantile_crossing_rate": 0.0
+      },
+      "baseline_point": {
+        "rows": 1035,
+        "mae_c": 2.027487922705314,
+        "rmse_c": 2.6686944283096223,
+        "bias_prediction_minus_observed_c": -0.9391787439613527
+      }
+    },
+    "gosan": {
+      "point": {
+        "rows": 1035,
+        "mae_c": 1.9119686789093397,
+        "rmse_c": 2.5440838586774204,
+        "bias_prediction_minus_observed_c": -0.784213062950878
+      },
+      "interval": {
+        "rows": 1035,
+        "coverage": 0.7642512077294686,
+        "mean_width_c": 5.602090771987924,
+        "mean_q10_q90_pinball_loss": 0.4289990509349251,
+        "q10_pinball_loss": 0.4064118777934463,
+        "q90_pinball_loss": 0.4515862240764039,
+        "unsorted_quantile_crossing_rate": 0.0
+      },
+      "baseline_point": {
+        "rows": 1035,
+        "mae_c": 1.9011594202898552,
+        "rmse_c": 2.501878521284697,
+        "bias_prediction_minus_observed_c": -0.780096618357488
+      }
+    },
+    "seongsan": {
+      "point": {
+        "rows": 1035,
+        "mae_c": 1.9375294456043826,
+        "rmse_c": 2.6037029099366027,
+        "bias_prediction_minus_observed_c": -0.626561849071479
+      },
+      "interval": {
+        "rows": 1035,
+        "coverage": 0.770048309178744,
+        "mean_width_c": 5.867555381743237,
+        "mean_q10_q90_pinball_loss": 0.4330434294949526,
+        "q10_pinball_loss": 0.42385919345392603,
+        "q90_pinball_loss": 0.4422276655359792,
+        "unsorted_quantile_crossing_rate": 0.0
+      },
+      "baseline_point": {
+        "rows": 1035,
+        "mae_c": 1.9215458937198067,
+        "rmse_c": 2.565761180387335,
+        "bias_prediction_minus_observed_c": -0.6240579710144929
+      }
+    },
+    "seogwipo": {
+      "point": {
+        "rows": 1035,
+        "mae_c": 1.7835532696881045,
+        "rmse_c": 2.3570317756013357,
+        "bias_prediction_minus_observed_c": -0.08432475392351003
+      },
+      "interval": {
+        "rows": 1035,
+        "coverage": 0.7729468599033816,
+        "mean_width_c": 5.452866360201427,
+        "mean_q10_q90_pinball_loss": 0.4077258301243286,
+        "q10_pinball_loss": 0.42009458021497165,
+        "q90_pinball_loss": 0.39535708003368564,
+        "unsorted_quantile_crossing_rate": 0.0
+      },
+      "baseline_point": {
+        "rows": 1035,
+        "mae_c": 1.7625603864734303,
+        "rmse_c": 2.3180394222888068,
+        "bias_prediction_minus_observed_c": -0.031159420289855005
+      }
+    }
+  },
+  "per_month": {
+    "1": {
+      "point": {
+        "rows": 372,
+        "mae_c": 2.726049467690057,
+        "rmse_c": 3.630719944700472,
+        "bias_prediction_minus_observed_c": -1.3792491073735114
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.771505376344086,
+        "mean_width_c": 7.787452598260367,
+        "mean_q10_q90_pinball_loss": 0.6779634992298185,
+        "q10_pinball_loss": 0.6178351347845182,
+        "q90_pinball_loss": 0.7380918636751188,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "2": {
+      "point": {
+        "rows": 340,
+        "mae_c": 2.7927353340953447,
+        "rmse_c": 3.647551251478466,
+        "bias_prediction_minus_observed_c": -1.709276700830771
+      },
+      "interval": {
+        "rows": 340,
+        "coverage": 0.7352941176470589,
+        "mean_width_c": 7.958959522643391,
+        "mean_q10_q90_pinball_loss": 0.6555668675577712,
+        "q10_pinball_loss": 0.5995265179723066,
+        "q90_pinball_loss": 0.7116072171432357,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "3": {
+      "point": {
+        "rows": 372,
+        "mae_c": 2.4701084761523355,
+        "rmse_c": 2.915774750130101,
+        "bias_prediction_minus_observed_c": -1.7013370188213548
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.8064516129032258,
+        "mean_width_c": 7.456880899424574,
+        "mean_q10_q90_pinball_loss": 0.47657055334817033,
+        "q10_pinball_loss": 0.5495757839957777,
+        "q90_pinball_loss": 0.40356532270056295,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "4": {
+      "point": {
+        "rows": 360,
+        "mae_c": 1.6502699487697523,
+        "rmse_c": 2.113664524327307,
+        "bias_prediction_minus_observed_c": -0.19020141522605677
+      },
+      "interval": {
+        "rows": 360,
+        "coverage": 0.8222222222222222,
+        "mean_width_c": 5.4430650299306444,
+        "mean_q10_q90_pinball_loss": 0.3817548373922271,
+        "q10_pinball_loss": 0.36687450040413094,
+        "q90_pinball_loss": 0.39663517438032325,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "5": {
+      "point": {
+        "rows": 372,
+        "mae_c": 1.5118078928850942,
+        "rmse_c": 1.9594531196534688,
+        "bias_prediction_minus_observed_c": -0.6498551968956924
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.7956989247311828,
+        "mean_width_c": 4.511432521283591,
+        "mean_q10_q90_pinball_loss": 0.33362155518419634,
+        "q10_pinball_loss": 0.31162931683219697,
+        "q90_pinball_loss": 0.35561379353619577,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "6": {
+      "point": {
+        "rows": 360,
+        "mae_c": 1.2244768983807925,
+        "rmse_c": 1.5608856966169238,
+        "bias_prediction_minus_observed_c": -0.5794495423915981
+      },
+      "interval": {
+        "rows": 360,
+        "coverage": 0.7722222222222223,
+        "mean_width_c": 3.5120594212026846,
+        "mean_q10_q90_pinball_loss": 0.2770726421160947,
+        "q10_pinball_loss": 0.2485317733817324,
+        "q90_pinball_loss": 0.305613510850457,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "7": {
+      "point": {
+        "rows": 372,
+        "mae_c": 1.709774145685294,
+        "rmse_c": 2.0726315793490753,
+        "bias_prediction_minus_observed_c": 0.7435631749471501
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.6720430107526881,
+        "mean_width_c": 4.321711426568238,
+        "mean_q10_q90_pinball_loss": 0.34905205046538956,
+        "q10_pinball_loss": 0.37307824085786584,
+        "q90_pinball_loss": 0.32502586007291323,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "8": {
+      "point": {
+        "rows": 372,
+        "mae_c": 1.2593732219890796,
+        "rmse_c": 1.612627209596639,
+        "bias_prediction_minus_observed_c": -0.20946690845135102
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.8118279569892473,
+        "mean_width_c": 4.479688003826058,
+        "mean_q10_q90_pinball_loss": 0.2813096458895074,
+        "q10_pinball_loss": 0.32258485939065157,
+        "q90_pinball_loss": 0.24003443238836325,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "9": {
+      "point": {
+        "rows": 360,
+        "mae_c": 1.3662322858999842,
+        "rmse_c": 1.6797809923863551,
+        "bias_prediction_minus_observed_c": -0.22852236197841208
+      },
+      "interval": {
+        "rows": 360,
+        "coverage": 0.7305555555555555,
+        "mean_width_c": 4.2071771913202385,
+        "mean_q10_q90_pinball_loss": 0.2995095116462415,
+        "q10_pinball_loss": 0.30141004932335896,
+        "q90_pinball_loss": 0.297608973969124,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "10": {
+      "point": {
+        "rows": 372,
+        "mae_c": 1.8534311868043232,
+        "rmse_c": 2.393353112765456,
+        "bias_prediction_minus_observed_c": -0.19128894087693568
+      },
+      "interval": {
+        "rows": 372,
+        "coverage": 0.706989247311828,
+        "mean_width_c": 4.905677378523504,
+        "mean_q10_q90_pinball_loss": 0.4592992975761998,
+        "q10_pinball_loss": 0.4059038468304706,
+        "q90_pinball_loss": 0.512694748321929,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "11": {
+      "point": {
+        "rows": 240,
+        "mae_c": 2.4088971673634054,
+        "rmse_c": 3.256831871271196,
+        "bias_prediction_minus_observed_c": -1.039856858869448
+      },
+      "interval": {
+        "rows": 240,
+        "coverage": 0.8083333333333333,
+        "mean_width_c": 7.32769384549023,
+        "mean_q10_q90_pinball_loss": 0.554970986181063,
+        "q10_pinball_loss": 0.46411858500493597,
+        "q90_pinball_loss": 0.64582338735719,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "12": {
+      "point": {
+        "rows": 248,
+        "mae_c": 2.439457385862332,
+        "rmse_c": 3.0965161730891775,
+        "bias_prediction_minus_observed_c": -0.5655891208428495
+      },
+      "interval": {
+        "rows": 248,
+        "coverage": 0.7701612903225806,
+        "mean_width_c": 7.733506580653624,
+        "mean_q10_q90_pinball_loss": 0.5523692322150006,
+        "q10_pinball_loss": 0.5360899872294803,
+        "q90_pinball_loss": 0.5686484772005208,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    }
+  },
+  "per_year": {
+    "2019": {
+      "point": {
+        "rows": 1460,
+        "mae_c": 1.6303493638763826,
+        "rmse_c": 2.1420972970083296,
+        "bias_prediction_minus_observed_c": -0.5076616945542543
+      },
+      "interval": {
+        "rows": 1460,
+        "coverage": 0.8273972602739726,
+        "mean_width_c": 5.793688759171052,
+        "mean_q10_q90_pinball_loss": 0.3739010535084439,
+        "q10_pinball_loss": 0.3707487358534288,
+        "q90_pinball_loss": 0.37705337116345894,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "2020": {
+      "point": {
+        "rows": 1464,
+        "mae_c": 1.9466898623536277,
+        "rmse_c": 2.6317802113184374,
+        "bias_prediction_minus_observed_c": -0.2864902967518003
+      },
+      "interval": {
+        "rows": 1464,
+        "coverage": 0.7691256830601093,
+        "mean_width_c": 5.7991225522922925,
+        "mean_q10_q90_pinball_loss": 0.44119533055966126,
+        "q10_pinball_loss": 0.4179357142244824,
+        "q90_pinball_loss": 0.4644549468948401,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "2021": {
+      "point": {
+        "rows": 1216,
+        "mae_c": 2.235609981196672,
+        "rmse_c": 2.9103940722910457,
+        "bias_prediction_minus_observed_c": -1.1759212171055626
+      },
+      "interval": {
+        "rows": 1216,
+        "coverage": 0.6875,
+        "mean_width_c": 5.444496308330474,
+        "mean_q10_q90_pinball_loss": 0.49771129262030345,
+        "q10_pinball_loss": 0.48114021517646594,
+        "q90_pinball_loss": 0.514282370064141,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    }
+  },
+  "adoption_checks": {
+    "pooled_mae_at_most_3C": true,
+    "pooled_mae_within_2percent_of_selected_baseline": true,
+    "each_station_mae_within_10percent_of_selected_baseline": true,
+    "interval_coverage_75_to_90percent": true,
+    "mean_interval_width_at_most_12C": true
+  },
+  "adoption_passed": true,
+  "superiority_claim_authorized": false,
+  "interpretation": "Gate tests noninferiority tolerance and a usable historical distribution; do not claim accuracy improvement based on a marginal point difference.",
+  "stdlib_export_max_abs_difference": {
+    "point_model": 0.0,
+    "lower_model": 0.0,
+    "upper_model": 0.0
+  },
+  "limitations": [
+    "Historical data ends2021-10-31, model fits2000–2016 only; dev/test held out chronologically.",
+    "Station/calendar inputs cannot know a particular future day weather or precipitation.",
+    "q10/q90 describe the distribution of daily MEAN temperature, not daily max/min or a confidence interval for a climate mean.",
+    "No year feature: no climate-trend extrapolation or2026 calibration.",
+    "Four stations and adjacent dates are correlated; raw observation counts are not independent daily forecast guarantees."
+  ]
+}

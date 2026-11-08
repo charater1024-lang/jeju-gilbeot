@@ -1,0 +1,2179 @@
+{
+  "label": "semantic_short_c16",
+  "kind": "semantic_short",
+  "concurrency": 16,
+  "waves": 4,
+  "started_ns": 1794118814049432600,
+  "ended_ns": 1794118817165030300,
+  "benchmark": {
+    "requests": 64,
+    "successes": 64,
+    "errors": 0,
+    "p50_ms": 531.3199500014889,
+    "p95_ms": 821.0483000002569,
+    "max_ms": 909.4808000081684,
+    "wall_seconds": 3.115390999999363,
+    "completed_requests_per_second": 20.54316777573444,
+    "percentile": "nearest rank ceil(.95*N)",
+    "status_counts": {
+      "200": 64
+    }
+  },
+  "memory": {
+    "interval_requested_seconds": 0.1,
+    "samples": [
+      {
+        "time_ns": 1794118814049432600,
+        "perf_counter": 98828.2399582,
+        "working_set_bytes": 1907732480,
+        "private_commit_bytes": 3487158272,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 31.3125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46387523584,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814177614700,
+        "perf_counter": 98828.3681317,
+        "working_set_bytes": 1907806208,
+        "private_commit_bytes": 3487318016,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 31.3125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46401789952,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814361948400,
+        "perf_counter": 98828.5519277,
+        "working_set_bytes": 1908736000,
+        "private_commit_bytes": 3488686080,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 31.546875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46402355200,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814467198300,
+        "perf_counter": 98828.6571803,
+        "working_set_bytes": 1911156736,
+        "private_commit_bytes": 3491143680,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 31.734375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46396067840,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814573460500,
+        "perf_counter": 98828.7634392,
+        "working_set_bytes": 1908662272,
+        "private_commit_bytes": 3488514048,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 31.859375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46394298368,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814679132400,
+        "perf_counter": 98828.8691067,
+        "working_set_bytes": 1907269632,
+        "private_commit_bytes": 3486957568,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 32.078125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46398156800,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814785072300,
+        "perf_counter": 98828.9751873,
+        "working_set_bytes": 1908396032,
+        "private_commit_bytes": 3488153600,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 32.265625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46399275008,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814890104600,
+        "perf_counter": 98829.0800982,
+        "working_set_bytes": 1908162560,
+        "private_commit_bytes": 3487805440,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 32.46875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46403559424,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118814996453000,
+        "perf_counter": 98829.186441,
+        "working_set_bytes": 1906208768,
+        "private_commit_bytes": 3486089216,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 32.59375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46394507264,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815109505900,
+        "perf_counter": 98829.2994826,
+        "working_set_bytes": 1906798592,
+        "private_commit_bytes": 3486769152,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 32.84375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46395936768,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815215554700,
+        "perf_counter": 98829.4055956,
+        "working_set_bytes": 1907765248,
+        "private_commit_bytes": 3488505856,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.0,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46399795200,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815320906400,
+        "perf_counter": 98829.5108636,
+        "working_set_bytes": 1910878208,
+        "private_commit_bytes": 3490762752,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46386667520,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815426645500,
+        "perf_counter": 98829.6166268,
+        "working_set_bytes": 1910988800,
+        "private_commit_bytes": 3490861056,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.390625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46394617856,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815532698400,
+        "perf_counter": 98829.7226599,
+        "working_set_bytes": 1911078912,
+        "private_commit_bytes": 3490926592,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.5,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46394380288,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815637774900,
+        "perf_counter": 98829.8277775,
+        "working_set_bytes": 1919811584,
+        "private_commit_bytes": 3499507712,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.65625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46383009792,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815743739200,
+        "perf_counter": 98829.9337135,
+        "working_set_bytes": 1907302400,
+        "private_commit_bytes": 3486744576,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 33.859375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46394904576,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815848670600,
+        "perf_counter": 98830.0386711,
+        "working_set_bytes": 1908027392,
+        "private_commit_bytes": 3487424512,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 34.0625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46396129280,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118815954172200,
+        "perf_counter": 98830.1442192,
+        "working_set_bytes": 1918320640,
+        "private_commit_bytes": 3497758720,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 34.21875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46388727808,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816066693400,
+        "perf_counter": 98830.2567565,
+        "working_set_bytes": 1913368576,
+        "private_commit_bytes": 3493609472,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 34.375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46391537664,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816172186300,
+        "perf_counter": 98830.3621777,
+        "working_set_bytes": 1913970688,
+        "private_commit_bytes": 3494084608,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 34.609375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46385950720,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816278942800,
+        "perf_counter": 98830.4689073,
+        "working_set_bytes": 1920323584,
+        "private_commit_bytes": 3500814336,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 34.859375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46382108672,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816385321900,
+        "perf_counter": 98830.575323,
+        "working_set_bytes": 1913606144,
+        "private_commit_bytes": 3493445632,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 35.09375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46393077760,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816496946400,
+        "perf_counter": 98830.6870281,
+        "working_set_bytes": 1906470912,
+        "private_commit_bytes": 3485691904,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 35.28125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46390272000,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816599182100,
+        "perf_counter": 98830.7891658,
+        "working_set_bytes": 1907060736,
+        "private_commit_bytes": 3486371840,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 35.578125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46391517184,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816704128800,
+        "perf_counter": 98830.894181,
+        "working_set_bytes": 1909334016,
+        "private_commit_bytes": 3488665600,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 35.78125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46390476800,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816809887700,
+        "perf_counter": 98830.9998771,
+        "working_set_bytes": 1911205888,
+        "private_commit_bytes": 3490463744,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 35.921875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46388219904,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118816924178300,
+        "perf_counter": 98831.1141471,
+        "working_set_bytes": 1910661120,
+        "private_commit_bytes": 3489677312,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 36.28125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46389391360,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118817029894500,
+        "perf_counter": 98831.2199024,
+        "working_set_bytes": 1913126912,
+        "private_commit_bytes": 3492163584,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 36.4375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46389923840,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118817140147300,
+        "perf_counter": 98831.3301928,
+        "working_set_bytes": 1911275520,
+        "private_commit_bytes": 3490152448,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 36.65625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46391619584,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118817165030300,
+        "perf_counter": 98831.3551615,
+        "working_set_bytes": 1907093504,
+        "private_commit_bytes": 3485863936,
+        "lifetime_peak_working_set_bytes": 1939771392,
+        "process_cpu_seconds": 36.671875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46396895232,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 795725824,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 795725824
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      }
+    ],
+    "max_sampled": {
+      "working_set_bytes": 1920323584,
+      "private_commit_bytes": 3500814336,
+      "lifetime_peak_working_set_bytes": 1939771392,
+      "dedicated_bytes": 795725824,
+      "shared_gpu_ram_bytes": 588361728
+    },
+    "first": {
+      "time_ns": 1794118814049432600,
+      "perf_counter": 98828.2399582,
+      "working_set_bytes": 1907732480,
+      "private_commit_bytes": 3487158272,
+      "lifetime_peak_working_set_bytes": 1939771392,
+      "process_cpu_seconds": 31.3125,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46387523584,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 795725824,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 795725824
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "last": {
+      "time_ns": 1794118817165030300,
+      "perf_counter": 98831.3551615,
+      "working_set_bytes": 1907093504,
+      "private_commit_bytes": 3485863936,
+      "lifetime_peak_working_set_bytes": 1939771392,
+      "process_cpu_seconds": 36.671875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46396895232,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 795725824,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 795725824
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "counter_errors": [],
+    "counter_observed_samples": 30,
+    "error": null,
+    "safety_limit": null,
+    "definition": "RAM WorkingSet resident physical; PrivateCommit virtual commitment; GPU Dedicated and Shared separate; sampled maxima can miss sub-sample transients; lifetime peak can predate this phase."
+  },
+  "status_before": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 339,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 8.36,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1907757056,
+      "peak_working_set_bytes": 1939771392,
+      "private_commit_bytes": 3487211520,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "status_after": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 403,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 10.495,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1907118080,
+      "peak_working_set_bytes": 1939771392,
+      "private_commit_bytes": 3485917184,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "gpu_before": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2523, 53, 50.07, 18.89",
+    "success": true
+  },
+  "gpu_after": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2523, 20, 50.36, 17.61",
+    "success": true
+  },
+  "raw_requests": [
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814051436200,
+      "ended_ns": 1794118814607594400,
+      "ms": 556.9314000022132,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814051436200,
+      "ended_ns": 1794118814918104200,
+      "ms": 866.3474999921164,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814051436200,
+      "ended_ns": 1794118814658133700,
+      "ms": 606.477499997709,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814181701500,
+      "ended_ns": 1794118814948486900,
+      "ms": 766.8957999994745,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814051436200,
+      "ended_ns": 1794118814961396700,
+      "ms": 909.4808000081684,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814051436200,
+      "ended_ns": 1794118814872980500,
+      "ms": 821.0483000002569,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814052436500,
+      "ended_ns": 1794118814533687500,
+      "ms": 481.8392000015592,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814077938700,
+      "ended_ns": 1794118814564466600,
+      "ms": 486.88830000173766,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814052436500,
+      "ended_ns": 1794118814624593700,
+      "ms": 572.3624999955064,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814107106300,
+      "ended_ns": 1794118814639770700,
+      "ms": 532.7980000001844,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814118294300,
+      "ended_ns": 1794118814900104400,
+      "ms": 781.448099995032,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814091859200,
+      "ended_ns": 1794118814818036900,
+      "ms": 725.4855000064708,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814063865400,
+      "ended_ns": 1794118814936486700,
+      "ms": 872.6247000013245,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814091859200,
+      "ended_ns": 1794118814581460300,
+      "ms": 489.14560000412166,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814091859200,
+      "ended_ns": 1794118814843284700,
+      "ms": 751.7439000075683,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814088858900,
+      "ended_ns": 1794118814518521600,
+      "ms": 429.78999999468215,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815360296900,
+      "ms": 398.2984000031138,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815642783000,
+      "ms": 681.0257000033744,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814961396700,
+      "ended_ns": 1794118815570539100,
+      "ms": 608.9550000033341,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815344084400,
+      "ms": 381.1656000034418,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815376295200,
+      "ms": 413.8665999926161,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815669616400,
+      "ms": 707.9604000027757,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815299906100,
+      "ms": 337.59070000087377,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815681614000,
+      "ms": 719.9032000062289,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815397646100,
+      "ms": 435.66529999952763,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814963390500,
+      "ended_ns": 1794118815431729100,
+      "ms": 468.03560000262223,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815529361200,
+      "ms": 567.6467000012053,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814963390500,
+      "ended_ns": 1794118815606545700,
+      "ms": 643.6332000012044,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815313906000,
+      "ms": 350.9678999980679,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814962390400,
+      "ended_ns": 1794118815415646800,
+      "ms": 452.57459999993443,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814963390500,
+      "ended_ns": 1794118815695606700,
+      "ms": 732.9287000029581,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118814961396700,
+      "ended_ns": 1794118815328906800,
+      "ms": 367.3006000026362,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816093832300,
+      "ms": 397.3394999920856,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816307944800,
+      "ms": 611.3736999977846,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816226392100,
+      "ms": 529.8419000027934,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816208390200,
+      "ms": 511.2370999995619,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815697607000,
+      "ended_ns": 1794118816193390600,
+      "ms": 495.63279999711085,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816126831600,
+      "ms": 430.3844999958528,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816175187600,
+      "ms": 478.479099998367,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816417321700,
+      "ms": 720.7654000085313,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816352841100,
+      "ms": 655.775299994275,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816266690900,
+      "ms": 570.3974999923958,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815697607000,
+      "ended_ns": 1794118816390321900,
+      "ms": 692.4665000115056,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815697607000,
+      "ended_ns": 1794118816050401700,
+      "ms": 353.6030999966897,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816032902100,
+      "ms": 336.197099997662,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816070832200,
+      "ms": 374.06580000242684,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815697607000,
+      "ended_ns": 1794118816150542200,
+      "ms": 453.0248999944888,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118815696608600,
+      "ended_ns": 1794118816406321000,
+      "ms": 709.8161000030814,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816787885400,
+      "ms": 369.54669999249745,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816803888900,
+      "ms": 385.14860000577755,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816816885800,
+      "ms": 398.860400004196,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816829893500,
+      "ms": 411.67719999793917,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118817150146900,
+      "ms": 731.123600009596,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118817091776900,
+      "ms": 673.6190999945393,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118816900178000,
+      "ms": 481.16560000926256,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118817118777800,
+      "ms": 700.0327999994624,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816884416900,
+      "ms": 465.3012999915518,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118816916184800,
+      "ms": 497.84250000084285,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118817136155100,
+      "ms": 717.6160999952117,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118816991896200,
+      "ms": 572.459599992726,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118817065777800,
+      "ms": 646.3990999909583,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118816845109200,
+      "ms": 426.233800011687,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816419321800,
+      "ended_ns": 1794118816864809800,
+      "ms": 445.2318999974523,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118816418322400,
+      "ended_ns": 1794118817164036700,
+      "ms": 745.9148000052664,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    }
+  ],
+  "gpu_success_delta": 64,
+  "cpu_long_fallback_delta": 0,
+  "pass": true,
+  "interactive_threshold_p95_2s": true,
+  "general_threshold_p95_5s": true,
+  "all_short_requests_gpu_verified": true
+}

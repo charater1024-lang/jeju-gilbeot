@@ -1,0 +1,30 @@
+{
+  "config.json": {
+    "sha256": "9dab198f24c8c0879e481cf7822005d5ecbceedbacb390ffafa594e28d31bac4",
+    "bytes": 694
+  },
+  "tokenizer_config.json": {
+    "sha256": "efb5c0d09722e5fe59a462cd2a9976ee216d55b037597d997cd3fe833216da15",
+    "bytes": 418
+  },
+  "special_tokens_map.json": {
+    "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f",
+    "bytes": 280
+  },
+  "sentencepiece.bpe.model": {
+    "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+    "bytes": 5069051
+  },
+  "tokenizer.json": {
+    "sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626",
+    "bytes": 17082660
+  },
+  "README.md": {
+    "sha256": "9d129cb0b912b55c7b5378f976a9c35ae4796c80466b659ad63930d8ca090fca",
+    "bytes": 179345
+  },
+  "model.safetensors": {
+    "sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+    "bytes": 1112201288
+  }
+}

@@ -5,6 +5,9 @@
     '/':{title:'제주 길벗 — 나에게 맞는 속도로'},
     '/explore':{title:'지도·먹거리 | 제주 길벗',eyebrow:'FIND YOUR NEXT PLACE',heading:'가까이 있는 제주를 찾아보세요.',description:'지도에서 위치를 확인하고, 마음에 드는 관광지와 먹거리를 여행에 담아보세요.'},
     '/planner':{title:'내 여행 | 제주 길벗',eyebrow:'YOUR DAY IN JEJU',heading:'마음에 담은 곳으로, 나만의 하루.',description:'확인한 출발지와 시간에 맞춰 방문 순서를 만들어 보세요.'},
+    '/climate':{title:'AI 여행시기 기온 참고 | 제주 길벗',navPath:'/planner',eyebrow:'A SEASON TO DISCOVER',heading:'어느 계절의 제주를 만나고 싶나요?',description:'과거 관측을 학습한 모델로 네 관측지점의 계절별 기온 경향을 비교하세요. 현재 날씨 예보는 제공하지 않습니다.'},
+    '/flowers':{title:'꽃으로 고르는 여행 시기 | 제주 길벗',navPath:'/planner',eyebrow:'JEJU, IN BLOOM',heading:'마음에 드는 꽃으로, 계절을 골라보세요.',description:'과거 공개 꽃행사 일정과 기온 AI를 함께 비교하고, 확인된 개화 관측과 온라인 예보를 따로 살펴보세요.'},
+    '/insights':{title:'관광지 방문 흐름 | 제주 길벗',eyebrow:'JEJU, THROUGH THE DATA',heading:'계절마다 달라지는 제주의 방문 흐름.',description:'검증한 관광지의 과거 월별 입장객 수와 계절별 경향을 살펴보세요.'},
     '/about':{title:'데이터 안내 | 제주 길벗',eyebrow:'THE DATA BEHIND YOUR JOURNEY',heading:'우리의 추천은 어디에서 왔을까요?',description:'사용한 공개 자료와 학습 모델, 안내할 수 있는 범위를 확인하세요.'}
   };
   const anchors={top:'/',destinations:'/',regions:'/',planner:'/planner','trip-result':'/planner',mobility:'/planner','map-explorer':'/explore',restaurants:'/explore','place-explorer':'/explore',sources:'/about','model-lab':'/about',data:'/about'};
@@ -36,7 +39,7 @@
     if(current!==null)savedScroll.set(current,global.scrollY||0);
     current=route.path;const info=pages[current];
     sections.forEach(section=>{section.hidden=section.dataset.page!==current;});
-    nav.forEach(link=>{const active=link.dataset.pageLink===current;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
+    nav.forEach(link=>{const active=link.dataset.pageLink===(info.navPath||current);link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
     document.body.dataset.page=current;document.title=info.title;
     intro.hidden=current==='/';
     if(!intro.hidden){document.getElementById('page-eyebrow').textContent=info.eyebrow;document.getElementById('page-title').textContent=info.heading;document.getElementById('page-description').textContent=info.description;}

@@ -1,0 +1,2460 @@
+{
+  "label": "mixed_c4",
+  "kind": "mixed",
+  "concurrency": 4,
+  "waves": 16,
+  "started_ns": 1794118835589858900,
+  "ended_ns": 1794118837896603900,
+  "benchmark": {
+    "requests": 64,
+    "successes": 64,
+    "errors": 0,
+    "p50_ms": 68.89504999708151,
+    "p95_ms": 156.2258999911137,
+    "max_ms": 178.17559999821242,
+    "wall_seconds": 2.3063549999933457,
+    "completed_requests_per_second": 27.74941411889525,
+    "percentile": "nearest rank ceil(.95*N)",
+    "status_counts": {
+      "200": 64
+    }
+  },
+  "memory": {
+    "interval_requested_seconds": 0.1,
+    "samples": [
+      {
+        "time_ns": 1794118835590866100,
+        "perf_counter": 98849.7809389,
+        "working_set_bytes": 1902575616,
+        "private_commit_bytes": 3492528128,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 60.96875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46420635648,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118835695573300,
+        "perf_counter": 98849.8856107,
+        "working_set_bytes": 1902780416,
+        "private_commit_bytes": 3492814848,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.046875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46419795968,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118835802675300,
+        "perf_counter": 98849.9927792,
+        "working_set_bytes": 1905209344,
+        "private_commit_bytes": 3495292928,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.265625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46415245312,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118835908703000,
+        "perf_counter": 98850.0986842,
+        "working_set_bytes": 1902608384,
+        "private_commit_bytes": 3492585472,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46408028160,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836015428600,
+        "perf_counter": 98850.2054855,
+        "working_set_bytes": 1905811456,
+        "private_commit_bytes": 3495874560,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.53125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46401056768,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836121658200,
+        "perf_counter": 98850.3116895,
+        "working_set_bytes": 1902710784,
+        "private_commit_bytes": 3492728832,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.671875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46388461568,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836223729000,
+        "perf_counter": 98850.4138286,
+        "working_set_bytes": 1902628864,
+        "private_commit_bytes": 3492638720,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.796875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46388428800,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836329173100,
+        "perf_counter": 98850.5193396,
+        "working_set_bytes": 1902751744,
+        "private_commit_bytes": 3492745216,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 61.953125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46384926720,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836432864100,
+        "perf_counter": 98850.6229264,
+        "working_set_bytes": 1902608384,
+        "private_commit_bytes": 3492585472,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.09375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46386094080,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836539665800,
+        "perf_counter": 98850.7298041,
+        "working_set_bytes": 1905053696,
+        "private_commit_bytes": 3495104512,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.203125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46384746496,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836645971200,
+        "perf_counter": 98850.8360131,
+        "working_set_bytes": 1902641152,
+        "private_commit_bytes": 3492642816,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.375,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46383616000,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836751795600,
+        "perf_counter": 98850.9418743,
+        "working_set_bytes": 1902616576,
+        "private_commit_bytes": 3492593664,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.515625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46385278976,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836858752800,
+        "perf_counter": 98851.0488012,
+        "working_set_bytes": 1902854144,
+        "private_commit_bytes": 3492888576,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.65625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46379356160,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118836966771400,
+        "perf_counter": 98851.1568546,
+        "working_set_bytes": 1902710784,
+        "private_commit_bytes": 3492728832,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.8125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46377385984,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837078511700,
+        "perf_counter": 98851.2687172,
+        "working_set_bytes": 1902751744,
+        "private_commit_bytes": 3492831232,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 62.921875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46404857856,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837184768300,
+        "perf_counter": 98851.3748367,
+        "working_set_bytes": 1905139712,
+        "private_commit_bytes": 3495206912,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.046875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46401794048,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837296892100,
+        "perf_counter": 98851.4869662,
+        "working_set_bytes": 1902608384,
+        "private_commit_bytes": 3492585472,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.25,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46405795840,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837402215200,
+        "perf_counter": 98851.5923288,
+        "working_set_bytes": 1905811456,
+        "private_commit_bytes": 3495874560,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.390625,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46403448832,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837508586900,
+        "perf_counter": 98851.6986199,
+        "working_set_bytes": 1902710784,
+        "private_commit_bytes": 3492728832,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.546875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46408167424,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837614893500,
+        "perf_counter": 98851.8048826,
+        "working_set_bytes": 1902637056,
+        "private_commit_bytes": 3492646912,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.671875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46410891264,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837717366100,
+        "perf_counter": 98851.9073927,
+        "working_set_bytes": 1902751744,
+        "private_commit_bytes": 3492745216,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.78125,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46408921088,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837824977400,
+        "perf_counter": 98852.0150756,
+        "working_set_bytes": 1902608384,
+        "private_commit_bytes": 3492585472,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 63.96875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46404886528,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      },
+      {
+        "time_ns": 1794118837896603900,
+        "perf_counter": 98852.0868639,
+        "working_set_bytes": 1902579712,
+        "private_commit_bytes": 3492528128,
+        "lifetime_peak_working_set_bytes": 1951158272,
+        "process_cpu_seconds": 64.046875,
+        "system_ram_total_bytes": 68319547392,
+        "system_ram_available_bytes": 46408630272,
+        "gpu_counter_errors": [],
+        "dedicated_bytes": 806211584,
+        "dedicated_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 0
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 806211584
+          }
+        ],
+        "shared_gpu_ram_bytes": 588361728,
+        "shared_gpu_ram_bytes_instances": [
+          {
+            "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+            "bytes": 1753088
+          },
+          {
+            "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+            "bytes": 586608640
+          }
+        ],
+        "gpu_process_counter_observed": true
+      }
+    ],
+    "max_sampled": {
+      "working_set_bytes": 1905811456,
+      "private_commit_bytes": 3495874560,
+      "lifetime_peak_working_set_bytes": 1951158272,
+      "dedicated_bytes": 806211584,
+      "shared_gpu_ram_bytes": 588361728
+    },
+    "first": {
+      "time_ns": 1794118835590866100,
+      "perf_counter": 98849.7809389,
+      "working_set_bytes": 1902575616,
+      "private_commit_bytes": 3492528128,
+      "lifetime_peak_working_set_bytes": 1951158272,
+      "process_cpu_seconds": 60.96875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46420635648,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 806211584,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 806211584
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "last": {
+      "time_ns": 1794118837896603900,
+      "perf_counter": 98852.0868639,
+      "working_set_bytes": 1902579712,
+      "private_commit_bytes": 3492528128,
+      "lifetime_peak_working_set_bytes": 1951158272,
+      "process_cpu_seconds": 64.046875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46408630272,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 806211584,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 0
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 806211584
+        }
+      ],
+      "shared_gpu_ram_bytes": 588361728,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x000176B4_phys_0",
+          "bytes": 1753088
+        },
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 586608640
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    "counter_errors": [],
+    "counter_observed_samples": 23,
+    "error": null,
+    "safety_limit": null,
+    "definition": "RAM WorkingSet resident physical; PrivateCommit virtual commitment; GPU Dedicated and Shared separate; sampled maxima can miss sub-sample transients; lifetime peak can predate this phase."
+  },
+  "status_before": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 659,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 21.813,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1902600192,
+      "peak_working_set_bytes": 1951158272,
+      "private_commit_bytes": 3492581376,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "status_after": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 675,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 22.215,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": true,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1902604288,
+      "peak_working_set_bytes": 1951158272,
+      "private_commit_bytes": 3492581376,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "gpu_before": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2533, 47, 51.35, 13.02",
+    "success": true
+  },
+  "gpu_after": {
+    "scope": "whole_gpu_all_processes_not_service_only",
+    "raw": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2533, 43, 51.47, 8.02",
+    "success": true
+  },
+  "raw_requests": [
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118835590866100,
+      "ended_ns": 1794118835744451500,
+      "ms": 152.71650000067893,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118835591859800,
+      "ended_ns": 1794118835769237800,
+      "ms": 178.17559999821242,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118835591859800,
+      "ended_ns": 1794118835652254400,
+      "ms": 60.1269000035245,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118835591859800,
+      "ended_ns": 1794118835670852400,
+      "ms": 79.00879999215249,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118835770264700,
+      "ended_ns": 1794118835844928200,
+      "ms": 74.59679999738,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118835770264700,
+      "ended_ns": 1794118835810682300,
+      "ms": 41.0872000065865,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118835770264700,
+      "ended_ns": 1794118835926702300,
+      "ms": 156.2258999911137,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118835770264700,
+      "ended_ns": 1794118835804675800,
+      "ms": 35.28490000462625,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118835926702300,
+      "ended_ns": 1794118836046846700,
+      "ms": 119.87090000184253,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118835926702300,
+      "ended_ns": 1794118836071139600,
+      "ms": 144.51379999809433,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118835926702300,
+      "ended_ns": 1794118835931992100,
+      "ms": 5.271300004096702,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118835926702300,
+      "ended_ns": 1794118835933193400,
+      "ms": 6.874899991089478,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118836071139600,
+      "ended_ns": 1794118836147876700,
+      "ms": 76.31610000680666,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118836072132100,
+      "ended_ns": 1794118836116661700,
+      "ms": 44.69890000473242,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118836072132100,
+      "ended_ns": 1794118836215729100,
+      "ms": 143.63350000348873,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118836071139600,
+      "ended_ns": 1794118836106651800,
+      "ms": 35.684599992237054,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836215729100,
+      "ended_ns": 1794118836334748100,
+      "ms": 119.2289000027813,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836215729100,
+      "ended_ns": 1794118836309176200,
+      "ms": 93.41349999886006,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118836215729100,
+      "ended_ns": 1794118836219721700,
+      "ms": 4.023000001325272,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118836215729100,
+      "ended_ns": 1794118836220722600,
+      "ms": 5.648499995004386,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118836334748100,
+      "ended_ns": 1794118836400056500,
+      "ms": 64.57069999305531,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118836334748100,
+      "ended_ns": 1794118836354748500,
+      "ms": 19.80740000726655,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118836335740600,
+      "ended_ns": 1794118836484979900,
+      "ms": 149.6841000043787,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118836334748100,
+      "ended_ns": 1794118836368805900,
+      "ms": 33.56710000662133,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836484979900,
+      "ended_ns": 1794118836606738200,
+      "ms": 121.81250000139698,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836484979900,
+      "ended_ns": 1794118836573124800,
+      "ms": 87.63679998810403,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118836485978600,
+      "ended_ns": 1794118836489986300,
+      "ms": 4.822900009457953,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118836484979900,
+      "ended_ns": 1794118836489986300,
+      "ms": 4.794599997694604,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118836607722200,
+      "ended_ns": 1794118836696393900,
+      "ms": 88.84640000178479,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118836607722200,
+      "ended_ns": 1794118836628659700,
+      "ms": 20.7661000022199,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118836607722200,
+      "ended_ns": 1794118836765185400,
+      "ms": 157.55970000464004,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118836607722200,
+      "ended_ns": 1794118836641965700,
+      "ms": 34.84279999975115,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836765185400,
+      "ended_ns": 1794118836880322400,
+      "ms": 114.39499999687541,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118836765185400,
+      "ended_ns": 1794118836905428600,
+      "ms": 140.04929999646265,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118836765185400,
+      "ended_ns": 1794118836772178300,
+      "ms": 6.730700013577007,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118836765185400,
+      "ended_ns": 1794118836772178300,
+      "ms": 6.464799997047521,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118836905428600,
+      "ended_ns": 1794118836983502700,
+      "ms": 77.8744999988703,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118836905428600,
+      "ended_ns": 1794118836930320800,
+      "ms": 24.3588000012096,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118836906322400,
+      "ended_ns": 1794118837060781200,
+      "ms": 154.32380000129342,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118836905428600,
+      "ended_ns": 1794118836952592800,
+      "ms": 47.04979999223724,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837060781200,
+      "ended_ns": 1794118837176266300,
+      "ms": 115.06229999940842,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837060781200,
+      "ended_ns": 1794118837143849600,
+      "ms": 83.45220000774134,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118837060781200,
+      "ended_ns": 1794118837082528300,
+      "ms": 22.270300003583543,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118837060781200,
+      "ended_ns": 1794118837084527700,
+      "ms": 24.474999998346902,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118837176266300,
+      "ended_ns": 1794118837249480200,
+      "ms": 73.21940000110772,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118837176266300,
+      "ended_ns": 1794118837196774900,
+      "ms": 20.55570000084117,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118837176266300,
+      "ended_ns": 1794118837317808200,
+      "ms": 141.59559999825433,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118837176266300,
+      "ended_ns": 1794118837211777100,
+      "ms": 35.88249998574611,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837317808200,
+      "ended_ns": 1794118837430509200,
+      "ms": 112.4707999988459,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837317808200,
+      "ended_ns": 1794118837454585900,
+      "ms": 136.26579999981914,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118837317808200,
+      "ended_ns": 1794118837323900700,
+      "ms": 5.6361000024480745,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118837317808200,
+      "ended_ns": 1794118837324806700,
+      "ms": 6.410899994079955,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118837454585900,
+      "ended_ns": 1794118837528587900,
+      "ms": 73.56970000546426,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118837454585900,
+      "ended_ns": 1794118837475056100,
+      "ms": 20.13720000104513,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118837454585900,
+      "ended_ns": 1794118837598896700,
+      "ms": 144.412800000282,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118837454585900,
+      "ended_ns": 1794118837490580800,
+      "ms": 35.833300004014745,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837599886500,
+      "ended_ns": 1794118837708608600,
+      "ms": 109.28489999787416,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118837599886500,
+      "ended_ns": 1794118837733912000,
+      "ms": 133.85850000486244,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118837598896700,
+      "ended_ns": 1794118837603893600,
+      "ms": 4.5479999971576035,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118837598896700,
+      "ended_ns": 1794118837604885900,
+      "ms": 6.067100010113791,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118837733912000,
+      "ended_ns": 1794118837811986100,
+      "ms": 77.97490000666585,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118837733912000,
+      "ended_ns": 1794118837757323100,
+      "ms": 23.618499995791353,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118837733912000,
+      "ended_ns": 1794118837896603900,
+      "ms": 162.16599999461323,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118837733912000,
+      "ended_ns": 1794118837770469500,
+      "ms": 36.38150000188034,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    }
+  ],
+  "gpu_success_delta": 16,
+  "cpu_long_fallback_delta": 0,
+  "pass": true,
+  "interactive_threshold_p95_2s": true,
+  "general_threshold_p95_5s": true
+}

@@ -1,3 +1,9 @@
+# 최신 실행·개발 안내
+
+최신 제출본은 [GitHub Release](https://github.com/charater1024-lang/jeju-gilbeot/releases/tag/v2026.11.08-submission)의 전체 ZIP입니다. ZIP을 새 폴더에 풀어 루트 README를 따르세요. Windows는 `run_center.cmd`, Ubuntu24.04/Python3.12는 `bash setup_ubuntu.sh && bash run_center.sh`입니다. 모델·DB·런타임을 동봉했으므로 과거 Git 복구/restore를 실행하지 않습니다. 이 Git 저장소는 검토·개발용 소스이며, 최신 기획서는 `docs/제주길벗_최종기획서.pdf`입니다.
+
+## 이전 작성 시점의 이력
+
 # 제주 길벗 개발 인계
 
 ## v24 센터 체험과 대회 제출 검토 (2026-11-06)

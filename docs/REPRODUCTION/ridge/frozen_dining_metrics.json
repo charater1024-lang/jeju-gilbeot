@@ -1,0 +1,5559 @@
+{
+  "schema_version": 1,
+  "algorithm": "recency_weighted_seasonal_ridge_composition",
+  "source": {
+    "dataset_id": "1047",
+    "url": "https://www.jejudatahub.net/data/view/data/1047",
+    "source_sha256": "5d258171920565e36f9d2c7f76f07c091e00fa4aaf93a824a799372789c88ff3",
+    "encoding": "cp949",
+    "raw_rows": 14832,
+    "observed_months": 69,
+    "raw_subcategories": 111,
+    "model_subcategories": 94,
+    "model_parent_categories": 12,
+    "missing_months": [
+      "2023-09",
+      "2023-11",
+      "2023-12"
+    ],
+    "missing_months_imputed": 0,
+    "missing_cells_imputed": 0,
+    "used_source_rows": 12972,
+    "excluded_categories": [
+      {
+        "category": "꼬치구이전문점",
+        "parent_category": "간이주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "나이트클럽",
+        "parent_category": "유흥주점",
+        "observed_sex_month_cells": 110,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "룸살롱/단란주점",
+        "parent_category": "유흥주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "민속주점",
+        "parent_category": "간이주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "보드게임카페",
+        "parent_category": "커피/음료",
+        "observed_sex_month_cells": 77,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "빠/카페",
+        "parent_category": "유흥주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "소주방/포장마차",
+        "parent_category": "간이주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "옻닭전문",
+        "parent_category": "닭/오리요리",
+        "observed_sex_month_cells": 136,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "이자까야",
+        "parent_category": "간이주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "일반유흥주점",
+        "parent_category": "유흥주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      },
+      {
+        "category": "재첩국전문",
+        "parent_category": "한식",
+        "observed_sex_month_cells": 24,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "징기스칸요리전문",
+        "parent_category": "별식/퓨전요리",
+        "observed_sex_month_cells": 42,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "철판구이요리전문",
+        "parent_category": "별식/퓨전요리",
+        "observed_sex_month_cells": 125,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "탕수육전문점",
+        "parent_category": "중식",
+        "observed_sex_month_cells": 127,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "해물부페",
+        "parent_category": "부페",
+        "observed_sex_month_cells": 27,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "호두과자",
+        "parent_category": "제과/제빵/떡/케익",
+        "observed_sex_month_cells": 88,
+        "reason": "incomplete_sex_month_panel"
+      },
+      {
+        "category": "호프/맥주",
+        "parent_category": "간이주점",
+        "observed_sex_month_cells": 138,
+        "reason": "service_food_scope_excludes_pubs"
+      }
+    ],
+    "universe_definition": "retrospective_complete_sex_month_panel_for_food_snack_categories",
+    "universe_availability_scope": "all_observed_months_only_availability_not_error_or_values",
+    "group_scope": "male_female_aggregated_no_residency_or_region_field"
+  },
+  "observation_period": {
+    "start": "2019-01",
+    "end": "2024-12"
+  },
+  "scope": "observed_card_transaction_share_food_snack_common_panel",
+  "categories": [
+    "갈매기살",
+    "갈비/삼겹살",
+    "갈치/생선구이",
+    "게장전문",
+    "고기부페",
+    "고등어전문",
+    "곰장어전문",
+    "곱창/양구이전문",
+    "국수/만두/칼국수",
+    "굴요리전문",
+    "기사식당",
+    "기타고기요리",
+    "기타서양음식전문",
+    "낙지/오징어",
+    "냉면집",
+    "닭갈비전문",
+    "닭내장/닭발요리",
+    "닭도리탕전문",
+    "도너츠전문",
+    "도시락전문점",
+    "돈가스전문점",
+    "돌구이요리전문",
+    "돌솥/비빔밥전문점",
+    "동남아음식전문점",
+    "두부요리전문",
+    "떡/한과",
+    "떡볶이전문",
+    "라면김밥분식",
+    "막창구이",
+    "매운탕전문",
+    "민물장어전문",
+    "바닷가재/게요리전문",
+    "바베큐전문",
+    "버섯전문점",
+    "보리밥전문",
+    "복전문",
+    "부대찌개/섞어찌개",
+    "부페",
+    "불고기전문",
+    "불닭전문",
+    "사철탕전문",
+    "삼계탕전문",
+    "샌드위치/브런치/샐러드",
+    "생과일주스전문점",
+    "생선찜전문",
+    "샤브샤브전문",
+    "설렁탕집",
+    "수산물전문음식점",
+    "순대전문점",
+    "순두부전문",
+    "스낵",
+    "스테이크전문점",
+    "스파게티전문점",
+    "쌈밥전문",
+    "아구전문",
+    "아이스크림/빙수",
+    "오리고기전문",
+    "와플/파이/디저트",
+    "우동전문점",
+    "일반한식/백반",
+    "일식",
+    "전통찻집/인삼찻집",
+    "정통양식/경양식",
+    "제과점",
+    "조개구이전문",
+    "족발/보쌈전문",
+    "죽전문점",
+    "중국음식",
+    "찐빵/만두",
+    "찜닭전문점",
+    "참치전문점",
+    "초밥전문",
+    "추어탕전문",
+    "카레전문점",
+    "커피전문점",
+    "케익전문점",
+    "콩나물국밥",
+    "토스트전문",
+    "토종닭전문",
+    "파전전문",
+    "패밀리레스토랑",
+    "패스트푸드",
+    "퓨전음식전문",
+    "피자전문",
+    "한식부페",
+    "한정식전문",
+    "핫도그",
+    "해물찜/탕전문",
+    "해장국/감자탕",
+    "호떡/붕어빵",
+    "홍어전문",
+    "황태전문",
+    "횟집",
+    "후라이드/양념치킨"
+  ],
+  "parents": {
+    "꼬치구이전문점": "간이주점",
+    "민속주점": "간이주점",
+    "소주방/포장마차": "간이주점",
+    "이자까야": "간이주점",
+    "호프/맥주": "간이주점",
+    "갈매기살": "고기요리",
+    "갈비/삼겹살": "고기요리",
+    "곱창/양구이전문": "고기요리",
+    "기타고기요리": "고기요리",
+    "막창구이": "고기요리",
+    "불고기전문": "고기요리",
+    "사철탕전문": "고기요리",
+    "족발/보쌈전문": "고기요리",
+    "닭갈비전문": "닭/오리요리",
+    "닭내장/닭발요리": "닭/오리요리",
+    "닭도리탕전문": "닭/오리요리",
+    "불닭전문": "닭/오리요리",
+    "삼계탕전문": "닭/오리요리",
+    "오리고기전문": "닭/오리요리",
+    "옻닭전문": "닭/오리요리",
+    "찜닭전문점": "닭/오리요리",
+    "토종닭전문": "닭/오리요리",
+    "후라이드/양념치킨": "닭/오리요리",
+    "돌구이요리전문": "별식/퓨전요리",
+    "동남아음식전문점": "별식/퓨전요리",
+    "샤브샤브전문": "별식/퓨전요리",
+    "순대전문점": "별식/퓨전요리",
+    "죽전문점": "별식/퓨전요리",
+    "철판구이요리전문": "별식/퓨전요리",
+    "퓨전음식전문": "별식/퓨전요리",
+    "고기부페": "부페",
+    "부페": "부페",
+    "한식부페": "부페",
+    "국수/만두/칼국수": "분식",
+    "떡볶이전문": "분식",
+    "라면김밥분식": "분식",
+    "스낵": "분식",
+    "우동전문점": "분식",
+    "기타서양음식전문": "양식",
+    "돈가스전문점": "양식",
+    "바베큐전문": "양식",
+    "스테이크전문점": "양식",
+    "스파게티전문점": "양식",
+    "정통양식/경양식": "양식",
+    "카레전문점": "양식",
+    "패밀리레스토랑": "양식",
+    "나이트클럽": "유흥주점",
+    "룸살롱/단란주점": "유흥주점",
+    "빠/카페": "유흥주점",
+    "일반유흥주점": "유흥주점",
+    "갈치/생선구이": "일식/수산물",
+    "게장전문": "일식/수산물",
+    "고등어전문": "일식/수산물",
+    "곰장어전문": "일식/수산물",
+    "굴요리전문": "일식/수산물",
+    "낙지/오징어": "일식/수산물",
+    "매운탕전문": "일식/수산물",
+    "민물장어전문": "일식/수산물",
+    "바닷가재/게요리전문": "일식/수산물",
+    "복전문": "일식/수산물",
+    "생선찜전문": "일식/수산물",
+    "수산물전문음식점": "일식/수산물",
+    "아구전문": "일식/수산물",
+    "일식": "일식/수산물",
+    "조개구이전문": "일식/수산물",
+    "참치전문점": "일식/수산물",
+    "초밥전문": "일식/수산물",
+    "해물찜/탕전문": "일식/수산물",
+    "홍어전문": "일식/수산물",
+    "횟집": "일식/수산물",
+    "떡/한과": "제과/제빵/떡/케익",
+    "와플/파이/디저트": "제과/제빵/떡/케익",
+    "제과점": "제과/제빵/떡/케익",
+    "찐빵/만두": "제과/제빵/떡/케익",
+    "케익전문점": "제과/제빵/떡/케익",
+    "호두과자": "제과/제빵/떡/케익",
+    "호떡/붕어빵": "제과/제빵/떡/케익",
+    "중국음식": "중식",
+    "생과일주스전문점": "커피/음료",
+    "아이스크림/빙수": "커피/음료",
+    "전통찻집/인삼찻집": "커피/음료",
+    "커피전문점": "커피/음료",
+    "도너츠전문": "패스트푸드",
+    "도시락전문점": "패스트푸드",
+    "샌드위치/브런치/샐러드": "패스트푸드",
+    "토스트전문": "패스트푸드",
+    "패스트푸드": "패스트푸드",
+    "피자전문": "패스트푸드",
+    "핫도그": "패스트푸드",
+    "기사식당": "한식",
+    "냉면집": "한식",
+    "돌솥/비빔밥전문점": "한식",
+    "두부요리전문": "한식",
+    "버섯전문점": "한식",
+    "보리밥전문": "한식",
+    "부대찌개/섞어찌개": "한식",
+    "설렁탕집": "한식",
+    "순두부전문": "한식",
+    "쌈밥전문": "한식",
+    "일반한식/백반": "한식",
+    "재첩국전문": "한식",
+    "추어탕전문": "한식",
+    "콩나물국밥": "한식",
+    "파전전문": "한식",
+    "한정식전문": "한식",
+    "해장국/감자탕": "한식",
+    "황태전문": "한식",
+    "해물부페": "부페",
+    "탕수육전문점": "중식",
+    "보드게임카페": "커피/음료",
+    "징기스칸요리전문": "별식/퓨전요리"
+  },
+  "split": {
+    "train_start": "2019-01",
+    "train_end": "2021-12",
+    "train_months": 36,
+    "validation_start": "2022-01",
+    "validation_end": "2022-12",
+    "validation_months": 12,
+    "test_start": "2023-01",
+    "test_end": "2024-12",
+    "test_months": 21,
+    "validation_fit_scope": "training_partition_only",
+    "test_fit_scope": "training_plus_validation_for_all_comparators",
+    "serving_fit_scope": "all_observed_months_after_evaluation",
+    "evaluation_design": "retrospective_complete_panel_temporal_holdout_no_live_user_accuracy"
+  },
+  "selection": {
+    "selected_family": "direct",
+    "config": {
+      "window": 12,
+      "half_life": 6,
+      "harmonics": 2,
+      "alpha": 10.0
+    },
+    "validation_metric": "category_share_mae_percentage_points",
+    "candidate_count": 288,
+    "test_used_for_selection": false,
+    "selection_source": "2019-2021 fit and 2022 validation only",
+    "selection_sha256": "f7c7d887484c683bbf5f0606c57cf147de635d70f447126e53c0de5276abec9b"
+  },
+  "candidate_families": [
+    "direct_seasonal_ridge",
+    "hierarchical_seasonal_ridge"
+  ],
+  "validation": {
+    "model": {
+      "mae_percentage_points": 0.085917,
+      "rmse_percentage_points": 0.249052,
+      "composition_wape_percent": 8.076242,
+      "composition_wape_definition": "100 * sum(abs(actual_share - predicted_share)) / sum(actual_share)",
+      "category_observations": 1128,
+      "observed_months": 12,
+      "p90_absolute_error_percentage_points": 0.201581,
+      "max_absolute_error_percentage_points": 2.922738,
+      "top10_observed_share_categories_mae_percentage_points": 0.440839,
+      "within_tolerance": {
+        "0.25": {
+          "threshold_percentage_points": 0.25,
+          "within": 1044,
+          "total": 1128,
+          "percent": 92.553191
+        },
+        "0.5": {
+          "threshold_percentage_points": 0.5,
+          "within": 1099,
+          "total": 1128,
+          "percent": 97.429078
+        },
+        "1.0": {
+          "threshold_percentage_points": 1.0,
+          "within": 1117,
+          "total": 1128,
+          "percent": 99.024823
+        }
+      },
+      "by_category": {
+        "갈매기살": {
+          "mae_percentage_points": 0.00454,
+          "observations": 12
+        },
+        "갈비/삼겹살": {
+          "mae_percentage_points": 0.096916,
+          "observations": 12
+        },
+        "갈치/생선구이": {
+          "mae_percentage_points": 0.098222,
+          "observations": 12
+        },
+        "게장전문": {
+          "mae_percentage_points": 0.007003,
+          "observations": 12
+        },
+        "고기부페": {
+          "mae_percentage_points": 0.007029,
+          "observations": 12
+        },
+        "고등어전문": {
+          "mae_percentage_points": 0.027694,
+          "observations": 12
+        },
+        "곰장어전문": {
+          "mae_percentage_points": 0.019733,
+          "observations": 12
+        },
+        "곱창/양구이전문": {
+          "mae_percentage_points": 0.022976,
+          "observations": 12
+        },
+        "국수/만두/칼국수": {
+          "mae_percentage_points": 0.296836,
+          "observations": 12
+        },
+        "굴요리전문": {
+          "mae_percentage_points": 0.025712,
+          "observations": 12
+        },
+        "기사식당": {
+          "mae_percentage_points": 0.002903,
+          "observations": 12
+        },
+        "기타고기요리": {
+          "mae_percentage_points": 0.008698,
+          "observations": 12
+        },
+        "기타서양음식전문": {
+          "mae_percentage_points": 0.031716,
+          "observations": 12
+        },
+        "낙지/오징어": {
+          "mae_percentage_points": 0.026824,
+          "observations": 12
+        },
+        "냉면집": {
+          "mae_percentage_points": 0.081944,
+          "observations": 12
+        },
+        "닭갈비전문": {
+          "mae_percentage_points": 0.013905,
+          "observations": 12
+        },
+        "닭내장/닭발요리": {
+          "mae_percentage_points": 0.035094,
+          "observations": 12
+        },
+        "닭도리탕전문": {
+          "mae_percentage_points": 0.003191,
+          "observations": 12
+        },
+        "도너츠전문": {
+          "mae_percentage_points": 0.100702,
+          "observations": 12
+        },
+        "도시락전문점": {
+          "mae_percentage_points": 0.028888,
+          "observations": 12
+        },
+        "돈가스전문점": {
+          "mae_percentage_points": 0.159236,
+          "observations": 12
+        },
+        "돌구이요리전문": {
+          "mae_percentage_points": 0.004424,
+          "observations": 12
+        },
+        "돌솥/비빔밥전문점": {
+          "mae_percentage_points": 0.007925,
+          "observations": 12
+        },
+        "동남아음식전문점": {
+          "mae_percentage_points": 0.039201,
+          "observations": 12
+        },
+        "두부요리전문": {
+          "mae_percentage_points": 0.008893,
+          "observations": 12
+        },
+        "떡/한과": {
+          "mae_percentage_points": 0.097251,
+          "observations": 12
+        },
+        "떡볶이전문": {
+          "mae_percentage_points": 0.079379,
+          "observations": 12
+        },
+        "라면김밥분식": {
+          "mae_percentage_points": 0.285,
+          "observations": 12
+        },
+        "막창구이": {
+          "mae_percentage_points": 0.015084,
+          "observations": 12
+        },
+        "매운탕전문": {
+          "mae_percentage_points": 0.019196,
+          "observations": 12
+        },
+        "민물장어전문": {
+          "mae_percentage_points": 0.012013,
+          "observations": 12
+        },
+        "바닷가재/게요리전문": {
+          "mae_percentage_points": 0.008728,
+          "observations": 12
+        },
+        "바베큐전문": {
+          "mae_percentage_points": 0.016431,
+          "observations": 12
+        },
+        "버섯전문점": {
+          "mae_percentage_points": 0.00265,
+          "observations": 12
+        },
+        "보리밥전문": {
+          "mae_percentage_points": 0.006541,
+          "observations": 12
+        },
+        "복전문": {
+          "mae_percentage_points": 0.008222,
+          "observations": 12
+        },
+        "부대찌개/섞어찌개": {
+          "mae_percentage_points": 0.055674,
+          "observations": 12
+        },
+        "부페": {
+          "mae_percentage_points": 0.033621,
+          "observations": 12
+        },
+        "불고기전문": {
+          "mae_percentage_points": 0.023748,
+          "observations": 12
+        },
+        "불닭전문": {
+          "mae_percentage_points": 0.006967,
+          "observations": 12
+        },
+        "사철탕전문": {
+          "mae_percentage_points": 0.014086,
+          "observations": 12
+        },
+        "삼계탕전문": {
+          "mae_percentage_points": 0.035742,
+          "observations": 12
+        },
+        "샌드위치/브런치/샐러드": {
+          "mae_percentage_points": 0.158561,
+          "observations": 12
+        },
+        "생과일주스전문점": {
+          "mae_percentage_points": 0.089167,
+          "observations": 12
+        },
+        "생선찜전문": {
+          "mae_percentage_points": 0.01272,
+          "observations": 12
+        },
+        "샤브샤브전문": {
+          "mae_percentage_points": 0.018436,
+          "observations": 12
+        },
+        "설렁탕집": {
+          "mae_percentage_points": 0.057969,
+          "observations": 12
+        },
+        "수산물전문음식점": {
+          "mae_percentage_points": 0.049952,
+          "observations": 12
+        },
+        "순대전문점": {
+          "mae_percentage_points": 0.043361,
+          "observations": 12
+        },
+        "순두부전문": {
+          "mae_percentage_points": 0.054336,
+          "observations": 12
+        },
+        "스낵": {
+          "mae_percentage_points": 0.083562,
+          "observations": 12
+        },
+        "스테이크전문점": {
+          "mae_percentage_points": 0.028709,
+          "observations": 12
+        },
+        "스파게티전문점": {
+          "mae_percentage_points": 0.026177,
+          "observations": 12
+        },
+        "쌈밥전문": {
+          "mae_percentage_points": 0.011008,
+          "observations": 12
+        },
+        "아구전문": {
+          "mae_percentage_points": 0.01949,
+          "observations": 12
+        },
+        "아이스크림/빙수": {
+          "mae_percentage_points": 0.158386,
+          "observations": 12
+        },
+        "오리고기전문": {
+          "mae_percentage_points": 0.006989,
+          "observations": 12
+        },
+        "와플/파이/디저트": {
+          "mae_percentage_points": 0.110941,
+          "observations": 12
+        },
+        "우동전문점": {
+          "mae_percentage_points": 0.182108,
+          "observations": 12
+        },
+        "일반한식/백반": {
+          "mae_percentage_points": 0.478328,
+          "observations": 12
+        },
+        "일식": {
+          "mae_percentage_points": 0.137301,
+          "observations": 12
+        },
+        "전통찻집/인삼찻집": {
+          "mae_percentage_points": 0.071015,
+          "observations": 12
+        },
+        "정통양식/경양식": {
+          "mae_percentage_points": 0.172079,
+          "observations": 12
+        },
+        "제과점": {
+          "mae_percentage_points": 0.409792,
+          "observations": 12
+        },
+        "조개구이전문": {
+          "mae_percentage_points": 0.008041,
+          "observations": 12
+        },
+        "족발/보쌈전문": {
+          "mae_percentage_points": 0.057062,
+          "observations": 12
+        },
+        "죽전문점": {
+          "mae_percentage_points": 0.057931,
+          "observations": 12
+        },
+        "중국음식": {
+          "mae_percentage_points": 0.120228,
+          "observations": 12
+        },
+        "찐빵/만두": {
+          "mae_percentage_points": 0.103281,
+          "observations": 12
+        },
+        "찜닭전문점": {
+          "mae_percentage_points": 0.025677,
+          "observations": 12
+        },
+        "참치전문점": {
+          "mae_percentage_points": 0.01509,
+          "observations": 12
+        },
+        "초밥전문": {
+          "mae_percentage_points": 0.141276,
+          "observations": 12
+        },
+        "추어탕전문": {
+          "mae_percentage_points": 0.013728,
+          "observations": 12
+        },
+        "카레전문점": {
+          "mae_percentage_points": 0.019014,
+          "observations": 12
+        },
+        "커피전문점": {
+          "mae_percentage_points": 1.816062,
+          "observations": 12
+        },
+        "케익전문점": {
+          "mae_percentage_points": 0.015344,
+          "observations": 12
+        },
+        "콩나물국밥": {
+          "mae_percentage_points": 0.020105,
+          "observations": 12
+        },
+        "토스트전문": {
+          "mae_percentage_points": 0.013837,
+          "observations": 12
+        },
+        "토종닭전문": {
+          "mae_percentage_points": 0.005816,
+          "observations": 12
+        },
+        "파전전문": {
+          "mae_percentage_points": 0.005394,
+          "observations": 12
+        },
+        "패밀리레스토랑": {
+          "mae_percentage_points": 0.023937,
+          "observations": 12
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.218868,
+          "observations": 12
+        },
+        "퓨전음식전문": {
+          "mae_percentage_points": 0.007206,
+          "observations": 12
+        },
+        "피자전문": {
+          "mae_percentage_points": 0.066483,
+          "observations": 12
+        },
+        "한식부페": {
+          "mae_percentage_points": 0.014483,
+          "observations": 12
+        },
+        "한정식전문": {
+          "mae_percentage_points": 0.008245,
+          "observations": 12
+        },
+        "핫도그": {
+          "mae_percentage_points": 0.016988,
+          "observations": 12
+        },
+        "해물찜/탕전문": {
+          "mae_percentage_points": 0.024136,
+          "observations": 12
+        },
+        "해장국/감자탕": {
+          "mae_percentage_points": 0.237011,
+          "observations": 12
+        },
+        "호떡/붕어빵": {
+          "mae_percentage_points": 0.009785,
+          "observations": 12
+        },
+        "홍어전문": {
+          "mae_percentage_points": 0.008512,
+          "observations": 12
+        },
+        "황태전문": {
+          "mae_percentage_points": 0.011762,
+          "observations": 12
+        },
+        "횟집": {
+          "mae_percentage_points": 0.28066,
+          "observations": 12
+        },
+        "후라이드/양념치킨": {
+          "mae_percentage_points": 0.449352,
+          "observations": 12
+        }
+      },
+      "by_parent": {
+        "고기요리": {
+          "mae_percentage_points": 0.123757,
+          "observations": 12
+        },
+        "닭/오리요리": {
+          "mae_percentage_points": 0.508611,
+          "observations": 12
+        },
+        "별식/퓨전요리": {
+          "mae_percentage_points": 0.107236,
+          "observations": 12
+        },
+        "부페": {
+          "mae_percentage_points": 0.038581,
+          "observations": 12
+        },
+        "분식": {
+          "mae_percentage_points": 0.327606,
+          "observations": 12
+        },
+        "양식": {
+          "mae_percentage_points": 0.163838,
+          "observations": 12
+        },
+        "일식/수산물": {
+          "mae_percentage_points": 0.259012,
+          "observations": 12
+        },
+        "제과/제빵/떡/케익": {
+          "mae_percentage_points": 0.53396,
+          "observations": 12
+        },
+        "중식": {
+          "mae_percentage_points": 0.120228,
+          "observations": 12
+        },
+        "커피/음료": {
+          "mae_percentage_points": 1.779272,
+          "observations": 12
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.248069,
+          "observations": 12
+        },
+        "한식": {
+          "mae_percentage_points": 0.675063,
+          "observations": 12
+        }
+      }
+    },
+    "same_fit_mean": {
+      "mae_percentage_points": 0.141903,
+      "rmse_percentage_points": 0.45492,
+      "composition_wape_percent": 13.338858,
+      "composition_wape_definition": "100 * sum(abs(actual_share - predicted_share)) / sum(actual_share)",
+      "category_observations": 1128,
+      "observed_months": 12,
+      "p90_absolute_error_percentage_points": 0.273148,
+      "max_absolute_error_percentage_points": 4.813375,
+      "top10_observed_share_categories_mae_percentage_points": 0.781912,
+      "within_tolerance": {
+        "0.25": {
+          "threshold_percentage_points": 0.25,
+          "within": 996,
+          "total": 1128,
+          "percent": 88.297872
+        },
+        "0.5": {
+          "threshold_percentage_points": 0.5,
+          "within": 1077,
+          "total": 1128,
+          "percent": 95.478723
+        },
+        "1.0": {
+          "threshold_percentage_points": 1.0,
+          "within": 1100,
+          "total": 1128,
+          "percent": 97.51773
+        }
+      },
+      "by_category": {
+        "갈매기살": {
+          "mae_percentage_points": 0.018907,
+          "observations": 12
+        },
+        "갈비/삼겹살": {
+          "mae_percentage_points": 0.104602,
+          "observations": 12
+        },
+        "갈치/생선구이": {
+          "mae_percentage_points": 0.1953,
+          "observations": 12
+        },
+        "게장전문": {
+          "mae_percentage_points": 0.016294,
+          "observations": 12
+        },
+        "고기부페": {
+          "mae_percentage_points": 0.008004,
+          "observations": 12
+        },
+        "고등어전문": {
+          "mae_percentage_points": 0.067779,
+          "observations": 12
+        },
+        "곰장어전문": {
+          "mae_percentage_points": 0.018691,
+          "observations": 12
+        },
+        "곱창/양구이전문": {
+          "mae_percentage_points": 0.018751,
+          "observations": 12
+        },
+        "국수/만두/칼국수": {
+          "mae_percentage_points": 0.443889,
+          "observations": 12
+        },
+        "굴요리전문": {
+          "mae_percentage_points": 0.03649,
+          "observations": 12
+        },
+        "기사식당": {
+          "mae_percentage_points": 0.006145,
+          "observations": 12
+        },
+        "기타고기요리": {
+          "mae_percentage_points": 0.011841,
+          "observations": 12
+        },
+        "기타서양음식전문": {
+          "mae_percentage_points": 0.088206,
+          "observations": 12
+        },
+        "낙지/오징어": {
+          "mae_percentage_points": 0.100818,
+          "observations": 12
+        },
+        "냉면집": {
+          "mae_percentage_points": 0.112129,
+          "observations": 12
+        },
+        "닭갈비전문": {
+          "mae_percentage_points": 0.043134,
+          "observations": 12
+        },
+        "닭내장/닭발요리": {
+          "mae_percentage_points": 0.13682,
+          "observations": 12
+        },
+        "닭도리탕전문": {
+          "mae_percentage_points": 0.008265,
+          "observations": 12
+        },
+        "도너츠전문": {
+          "mae_percentage_points": 0.134934,
+          "observations": 12
+        },
+        "도시락전문점": {
+          "mae_percentage_points": 0.022593,
+          "observations": 12
+        },
+        "돈가스전문점": {
+          "mae_percentage_points": 0.158172,
+          "observations": 12
+        },
+        "돌구이요리전문": {
+          "mae_percentage_points": 0.003543,
+          "observations": 12
+        },
+        "돌솥/비빔밥전문점": {
+          "mae_percentage_points": 0.016855,
+          "observations": 12
+        },
+        "동남아음식전문점": {
+          "mae_percentage_points": 0.062198,
+          "observations": 12
+        },
+        "두부요리전문": {
+          "mae_percentage_points": 0.010679,
+          "observations": 12
+        },
+        "떡/한과": {
+          "mae_percentage_points": 0.145766,
+          "observations": 12
+        },
+        "떡볶이전문": {
+          "mae_percentage_points": 0.240611,
+          "observations": 12
+        },
+        "라면김밥분식": {
+          "mae_percentage_points": 0.296077,
+          "observations": 12
+        },
+        "막창구이": {
+          "mae_percentage_points": 0.069763,
+          "observations": 12
+        },
+        "매운탕전문": {
+          "mae_percentage_points": 0.018932,
+          "observations": 12
+        },
+        "민물장어전문": {
+          "mae_percentage_points": 0.006494,
+          "observations": 12
+        },
+        "바닷가재/게요리전문": {
+          "mae_percentage_points": 0.009662,
+          "observations": 12
+        },
+        "바베큐전문": {
+          "mae_percentage_points": 0.013893,
+          "observations": 12
+        },
+        "버섯전문점": {
+          "mae_percentage_points": 0.003627,
+          "observations": 12
+        },
+        "보리밥전문": {
+          "mae_percentage_points": 0.018377,
+          "observations": 12
+        },
+        "복전문": {
+          "mae_percentage_points": 0.009209,
+          "observations": 12
+        },
+        "부대찌개/섞어찌개": {
+          "mae_percentage_points": 0.058608,
+          "observations": 12
+        },
+        "부페": {
+          "mae_percentage_points": 0.061311,
+          "observations": 12
+        },
+        "불고기전문": {
+          "mae_percentage_points": 0.020663,
+          "observations": 12
+        },
+        "불닭전문": {
+          "mae_percentage_points": 0.011862,
+          "observations": 12
+        },
+        "사철탕전문": {
+          "mae_percentage_points": 0.020833,
+          "observations": 12
+        },
+        "삼계탕전문": {
+          "mae_percentage_points": 0.054011,
+          "observations": 12
+        },
+        "샌드위치/브런치/샐러드": {
+          "mae_percentage_points": 0.197375,
+          "observations": 12
+        },
+        "생과일주스전문점": {
+          "mae_percentage_points": 0.089642,
+          "observations": 12
+        },
+        "생선찜전문": {
+          "mae_percentage_points": 0.029808,
+          "observations": 12
+        },
+        "샤브샤브전문": {
+          "mae_percentage_points": 0.033184,
+          "observations": 12
+        },
+        "설렁탕집": {
+          "mae_percentage_points": 0.054871,
+          "observations": 12
+        },
+        "수산물전문음식점": {
+          "mae_percentage_points": 0.039389,
+          "observations": 12
+        },
+        "순대전문점": {
+          "mae_percentage_points": 0.076672,
+          "observations": 12
+        },
+        "순두부전문": {
+          "mae_percentage_points": 0.116641,
+          "observations": 12
+        },
+        "스낵": {
+          "mae_percentage_points": 0.221689,
+          "observations": 12
+        },
+        "스테이크전문점": {
+          "mae_percentage_points": 0.026094,
+          "observations": 12
+        },
+        "스파게티전문점": {
+          "mae_percentage_points": 0.037732,
+          "observations": 12
+        },
+        "쌈밥전문": {
+          "mae_percentage_points": 0.021032,
+          "observations": 12
+        },
+        "아구전문": {
+          "mae_percentage_points": 0.036323,
+          "observations": 12
+        },
+        "아이스크림/빙수": {
+          "mae_percentage_points": 0.188258,
+          "observations": 12
+        },
+        "오리고기전문": {
+          "mae_percentage_points": 0.024711,
+          "observations": 12
+        },
+        "와플/파이/디저트": {
+          "mae_percentage_points": 0.256828,
+          "observations": 12
+        },
+        "우동전문점": {
+          "mae_percentage_points": 0.136243,
+          "observations": 12
+        },
+        "일반한식/백반": {
+          "mae_percentage_points": 0.775931,
+          "observations": 12
+        },
+        "일식": {
+          "mae_percentage_points": 0.221942,
+          "observations": 12
+        },
+        "전통찻집/인삼찻집": {
+          "mae_percentage_points": 0.073828,
+          "observations": 12
+        },
+        "정통양식/경양식": {
+          "mae_percentage_points": 0.333054,
+          "observations": 12
+        },
+        "제과점": {
+          "mae_percentage_points": 0.514002,
+          "observations": 12
+        },
+        "조개구이전문": {
+          "mae_percentage_points": 0.010721,
+          "observations": 12
+        },
+        "족발/보쌈전문": {
+          "mae_percentage_points": 0.153239,
+          "observations": 12
+        },
+        "죽전문점": {
+          "mae_percentage_points": 0.035772,
+          "observations": 12
+        },
+        "중국음식": {
+          "mae_percentage_points": 0.149533,
+          "observations": 12
+        },
+        "찐빵/만두": {
+          "mae_percentage_points": 0.172366,
+          "observations": 12
+        },
+        "찜닭전문점": {
+          "mae_percentage_points": 0.011188,
+          "observations": 12
+        },
+        "참치전문점": {
+          "mae_percentage_points": 0.01728,
+          "observations": 12
+        },
+        "초밥전문": {
+          "mae_percentage_points": 0.136898,
+          "observations": 12
+        },
+        "추어탕전문": {
+          "mae_percentage_points": 0.014617,
+          "observations": 12
+        },
+        "카레전문점": {
+          "mae_percentage_points": 0.009633,
+          "observations": 12
+        },
+        "커피전문점": {
+          "mae_percentage_points": 3.783357,
+          "observations": 12
+        },
+        "케익전문점": {
+          "mae_percentage_points": 0.013575,
+          "observations": 12
+        },
+        "콩나물국밥": {
+          "mae_percentage_points": 0.05248,
+          "observations": 12
+        },
+        "토스트전문": {
+          "mae_percentage_points": 0.016758,
+          "observations": 12
+        },
+        "토종닭전문": {
+          "mae_percentage_points": 0.006823,
+          "observations": 12
+        },
+        "파전전문": {
+          "mae_percentage_points": 0.006814,
+          "observations": 12
+        },
+        "패밀리레스토랑": {
+          "mae_percentage_points": 0.025037,
+          "observations": 12
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.271825,
+          "observations": 12
+        },
+        "퓨전음식전문": {
+          "mae_percentage_points": 0.020915,
+          "observations": 12
+        },
+        "피자전문": {
+          "mae_percentage_points": 0.166344,
+          "observations": 12
+        },
+        "한식부페": {
+          "mae_percentage_points": 0.012075,
+          "observations": 12
+        },
+        "한정식전문": {
+          "mae_percentage_points": 0.005912,
+          "observations": 12
+        },
+        "핫도그": {
+          "mae_percentage_points": 0.07571,
+          "observations": 12
+        },
+        "해물찜/탕전문": {
+          "mae_percentage_points": 0.021646,
+          "observations": 12
+        },
+        "해장국/감자탕": {
+          "mae_percentage_points": 0.287982,
+          "observations": 12
+        },
+        "호떡/붕어빵": {
+          "mae_percentage_points": 0.030546,
+          "observations": 12
+        },
+        "홍어전문": {
+          "mae_percentage_points": 0.009638,
+          "observations": 12
+        },
+        "황태전문": {
+          "mae_percentage_points": 0.012287,
+          "observations": 12
+        },
+        "횟집": {
+          "mae_percentage_points": 0.205978,
+          "observations": 12
+        },
+        "후라이드/양념치킨": {
+          "mae_percentage_points": 1.191923,
+          "observations": 12
+        }
+      },
+      "by_parent": {
+        "고기요리": {
+          "mae_percentage_points": 0.266842,
+          "observations": 12
+        },
+        "닭/오리요리": {
+          "mae_percentage_points": 1.311591,
+          "observations": 12
+        },
+        "별식/퓨전요리": {
+          "mae_percentage_points": 0.09766,
+          "observations": 12
+        },
+        "부페": {
+          "mae_percentage_points": 0.073354,
+          "observations": 12
+        },
+        "분식": {
+          "mae_percentage_points": 0.450731,
+          "observations": 12
+        },
+        "양식": {
+          "mae_percentage_points": 0.159661,
+          "observations": 12
+        },
+        "일식/수산물": {
+          "mae_percentage_points": 0.21068,
+          "observations": 12
+        },
+        "제과/제빵/떡/케익": {
+          "mae_percentage_points": 0.597459,
+          "observations": 12
+        },
+        "중식": {
+          "mae_percentage_points": 0.149533,
+          "observations": 12
+        },
+        "커피/음료": {
+          "mae_percentage_points": 3.988101,
+          "observations": 12
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.324513,
+          "observations": 12
+        },
+        "한식": {
+          "mae_percentage_points": 1.15795,
+          "observations": 12
+        }
+      }
+    }
+  },
+  "test": {
+    "model": {
+      "mae_percentage_points": 0.097197,
+      "rmse_percentage_points": 0.251761,
+      "composition_wape_percent": 9.136489,
+      "composition_wape_definition": "100 * sum(abs(actual_share - predicted_share)) / sum(actual_share)",
+      "category_observations": 1974,
+      "observed_months": 21,
+      "p90_absolute_error_percentage_points": 0.231135,
+      "max_absolute_error_percentage_points": 2.32765,
+      "top10_observed_share_categories_mae_percentage_points": 0.490223,
+      "within_tolerance": {
+        "0.25": {
+          "threshold_percentage_points": 0.25,
+          "within": 1790,
+          "total": 1974,
+          "percent": 90.678825
+        },
+        "0.5": {
+          "threshold_percentage_points": 0.5,
+          "within": 1892,
+          "total": 1974,
+          "percent": 95.845998
+        },
+        "1.0": {
+          "threshold_percentage_points": 1.0,
+          "within": 1944,
+          "total": 1974,
+          "percent": 98.480243
+        }
+      },
+      "by_category": {
+        "갈매기살": {
+          "mae_percentage_points": 0.004376,
+          "observations": 21
+        },
+        "갈비/삼겹살": {
+          "mae_percentage_points": 0.277298,
+          "observations": 21
+        },
+        "갈치/생선구이": {
+          "mae_percentage_points": 0.085734,
+          "observations": 21
+        },
+        "게장전문": {
+          "mae_percentage_points": 0.007958,
+          "observations": 21
+        },
+        "고기부페": {
+          "mae_percentage_points": 0.010139,
+          "observations": 21
+        },
+        "고등어전문": {
+          "mae_percentage_points": 0.031695,
+          "observations": 21
+        },
+        "곰장어전문": {
+          "mae_percentage_points": 0.020024,
+          "observations": 21
+        },
+        "곱창/양구이전문": {
+          "mae_percentage_points": 0.047031,
+          "observations": 21
+        },
+        "국수/만두/칼국수": {
+          "mae_percentage_points": 0.190518,
+          "observations": 21
+        },
+        "굴요리전문": {
+          "mae_percentage_points": 0.021927,
+          "observations": 21
+        },
+        "기사식당": {
+          "mae_percentage_points": 0.008348,
+          "observations": 21
+        },
+        "기타고기요리": {
+          "mae_percentage_points": 0.011283,
+          "observations": 21
+        },
+        "기타서양음식전문": {
+          "mae_percentage_points": 0.01334,
+          "observations": 21
+        },
+        "낙지/오징어": {
+          "mae_percentage_points": 0.024486,
+          "observations": 21
+        },
+        "냉면집": {
+          "mae_percentage_points": 0.096477,
+          "observations": 21
+        },
+        "닭갈비전문": {
+          "mae_percentage_points": 0.021314,
+          "observations": 21
+        },
+        "닭내장/닭발요리": {
+          "mae_percentage_points": 0.017319,
+          "observations": 21
+        },
+        "닭도리탕전문": {
+          "mae_percentage_points": 0.011812,
+          "observations": 21
+        },
+        "도너츠전문": {
+          "mae_percentage_points": 0.130407,
+          "observations": 21
+        },
+        "도시락전문점": {
+          "mae_percentage_points": 0.02534,
+          "observations": 21
+        },
+        "돈가스전문점": {
+          "mae_percentage_points": 0.164551,
+          "observations": 21
+        },
+        "돌구이요리전문": {
+          "mae_percentage_points": 0.005991,
+          "observations": 21
+        },
+        "돌솥/비빔밥전문점": {
+          "mae_percentage_points": 0.01943,
+          "observations": 21
+        },
+        "동남아음식전문점": {
+          "mae_percentage_points": 0.024345,
+          "observations": 21
+        },
+        "두부요리전문": {
+          "mae_percentage_points": 0.020391,
+          "observations": 21
+        },
+        "떡/한과": {
+          "mae_percentage_points": 0.119866,
+          "observations": 21
+        },
+        "떡볶이전문": {
+          "mae_percentage_points": 0.06716,
+          "observations": 21
+        },
+        "라면김밥분식": {
+          "mae_percentage_points": 0.323248,
+          "observations": 21
+        },
+        "막창구이": {
+          "mae_percentage_points": 0.017917,
+          "observations": 21
+        },
+        "매운탕전문": {
+          "mae_percentage_points": 0.015112,
+          "observations": 21
+        },
+        "민물장어전문": {
+          "mae_percentage_points": 0.0139,
+          "observations": 21
+        },
+        "바닷가재/게요리전문": {
+          "mae_percentage_points": 0.005217,
+          "observations": 21
+        },
+        "바베큐전문": {
+          "mae_percentage_points": 0.015056,
+          "observations": 21
+        },
+        "버섯전문점": {
+          "mae_percentage_points": 0.002793,
+          "observations": 21
+        },
+        "보리밥전문": {
+          "mae_percentage_points": 0.007477,
+          "observations": 21
+        },
+        "복전문": {
+          "mae_percentage_points": 0.015161,
+          "observations": 21
+        },
+        "부대찌개/섞어찌개": {
+          "mae_percentage_points": 0.040415,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.028448,
+          "observations": 21
+        },
+        "불고기전문": {
+          "mae_percentage_points": 0.008325,
+          "observations": 21
+        },
+        "불닭전문": {
+          "mae_percentage_points": 0.015054,
+          "observations": 21
+        },
+        "사철탕전문": {
+          "mae_percentage_points": 0.011614,
+          "observations": 21
+        },
+        "삼계탕전문": {
+          "mae_percentage_points": 0.036486,
+          "observations": 21
+        },
+        "샌드위치/브런치/샐러드": {
+          "mae_percentage_points": 0.166022,
+          "observations": 21
+        },
+        "생과일주스전문점": {
+          "mae_percentage_points": 0.1071,
+          "observations": 21
+        },
+        "생선찜전문": {
+          "mae_percentage_points": 0.008898,
+          "observations": 21
+        },
+        "샤브샤브전문": {
+          "mae_percentage_points": 0.056703,
+          "observations": 21
+        },
+        "설렁탕집": {
+          "mae_percentage_points": 0.043619,
+          "observations": 21
+        },
+        "수산물전문음식점": {
+          "mae_percentage_points": 0.048807,
+          "observations": 21
+        },
+        "순대전문점": {
+          "mae_percentage_points": 0.048561,
+          "observations": 21
+        },
+        "순두부전문": {
+          "mae_percentage_points": 0.160816,
+          "observations": 21
+        },
+        "스낵": {
+          "mae_percentage_points": 0.154,
+          "observations": 21
+        },
+        "스테이크전문점": {
+          "mae_percentage_points": 0.02304,
+          "observations": 21
+        },
+        "스파게티전문점": {
+          "mae_percentage_points": 0.028969,
+          "observations": 21
+        },
+        "쌈밥전문": {
+          "mae_percentage_points": 0.010565,
+          "observations": 21
+        },
+        "아구전문": {
+          "mae_percentage_points": 0.015234,
+          "observations": 21
+        },
+        "아이스크림/빙수": {
+          "mae_percentage_points": 0.329358,
+          "observations": 21
+        },
+        "오리고기전문": {
+          "mae_percentage_points": 0.016966,
+          "observations": 21
+        },
+        "와플/파이/디저트": {
+          "mae_percentage_points": 0.036483,
+          "observations": 21
+        },
+        "우동전문점": {
+          "mae_percentage_points": 0.038568,
+          "observations": 21
+        },
+        "일반한식/백반": {
+          "mae_percentage_points": 1.155568,
+          "observations": 21
+        },
+        "일식": {
+          "mae_percentage_points": 0.151802,
+          "observations": 21
+        },
+        "전통찻집/인삼찻집": {
+          "mae_percentage_points": 0.095877,
+          "observations": 21
+        },
+        "정통양식/경양식": {
+          "mae_percentage_points": 0.40999,
+          "observations": 21
+        },
+        "제과점": {
+          "mae_percentage_points": 1.117085,
+          "observations": 21
+        },
+        "조개구이전문": {
+          "mae_percentage_points": 0.013934,
+          "observations": 21
+        },
+        "족발/보쌈전문": {
+          "mae_percentage_points": 0.014367,
+          "observations": 21
+        },
+        "죽전문점": {
+          "mae_percentage_points": 0.0366,
+          "observations": 21
+        },
+        "중국음식": {
+          "mae_percentage_points": 0.097719,
+          "observations": 21
+        },
+        "찐빵/만두": {
+          "mae_percentage_points": 0.070878,
+          "observations": 21
+        },
+        "찜닭전문점": {
+          "mae_percentage_points": 0.01434,
+          "observations": 21
+        },
+        "참치전문점": {
+          "mae_percentage_points": 0.010986,
+          "observations": 21
+        },
+        "초밥전문": {
+          "mae_percentage_points": 0.067795,
+          "observations": 21
+        },
+        "추어탕전문": {
+          "mae_percentage_points": 0.008653,
+          "observations": 21
+        },
+        "카레전문점": {
+          "mae_percentage_points": 0.013213,
+          "observations": 21
+        },
+        "커피전문점": {
+          "mae_percentage_points": 0.697986,
+          "observations": 21
+        },
+        "케익전문점": {
+          "mae_percentage_points": 0.031178,
+          "observations": 21
+        },
+        "콩나물국밥": {
+          "mae_percentage_points": 0.04161,
+          "observations": 21
+        },
+        "토스트전문": {
+          "mae_percentage_points": 0.01731,
+          "observations": 21
+        },
+        "토종닭전문": {
+          "mae_percentage_points": 0.006254,
+          "observations": 21
+        },
+        "파전전문": {
+          "mae_percentage_points": 0.008069,
+          "observations": 21
+        },
+        "패밀리레스토랑": {
+          "mae_percentage_points": 0.01609,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.222471,
+          "observations": 21
+        },
+        "퓨전음식전문": {
+          "mae_percentage_points": 0.014103,
+          "observations": 21
+        },
+        "피자전문": {
+          "mae_percentage_points": 0.066181,
+          "observations": 21
+        },
+        "한식부페": {
+          "mae_percentage_points": 0.035016,
+          "observations": 21
+        },
+        "한정식전문": {
+          "mae_percentage_points": 0.006454,
+          "observations": 21
+        },
+        "핫도그": {
+          "mae_percentage_points": 0.044561,
+          "observations": 21
+        },
+        "해물찜/탕전문": {
+          "mae_percentage_points": 0.060923,
+          "observations": 21
+        },
+        "해장국/감자탕": {
+          "mae_percentage_points": 0.460733,
+          "observations": 21
+        },
+        "호떡/붕어빵": {
+          "mae_percentage_points": 0.005424,
+          "observations": 21
+        },
+        "홍어전문": {
+          "mae_percentage_points": 0.007929,
+          "observations": 21
+        },
+        "황태전문": {
+          "mae_percentage_points": 0.011009,
+          "observations": 21
+        },
+        "횟집": {
+          "mae_percentage_points": 0.416281,
+          "observations": 21
+        },
+        "후라이드/양념치킨": {
+          "mae_percentage_points": 0.359608,
+          "observations": 21
+        }
+      },
+      "by_parent": {
+        "고기요리": {
+          "mae_percentage_points": 0.305925,
+          "observations": 21
+        },
+        "닭/오리요리": {
+          "mae_percentage_points": 0.385585,
+          "observations": 21
+        },
+        "별식/퓨전요리": {
+          "mae_percentage_points": 0.080677,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.068719,
+          "observations": 21
+        },
+        "분식": {
+          "mae_percentage_points": 0.31652,
+          "observations": 21
+        },
+        "양식": {
+          "mae_percentage_points": 0.608462,
+          "observations": 21
+        },
+        "일식/수산물": {
+          "mae_percentage_points": 0.765508,
+          "observations": 21
+        },
+        "제과/제빵/떡/케익": {
+          "mae_percentage_points": 1.289455,
+          "observations": 21
+        },
+        "중식": {
+          "mae_percentage_points": 0.097719,
+          "observations": 21
+        },
+        "커피/음료": {
+          "mae_percentage_points": 1.016537,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.2733,
+          "observations": 21
+        },
+        "한식": {
+          "mae_percentage_points": 0.597112,
+          "observations": 21
+        }
+      }
+    },
+    "same_fit_mean": {
+      "mae_percentage_points": 0.162927,
+      "rmse_percentage_points": 0.465235,
+      "composition_wape_percent": 15.315116,
+      "composition_wape_definition": "100 * sum(abs(actual_share - predicted_share)) / sum(actual_share)",
+      "category_observations": 1974,
+      "observed_months": 21,
+      "p90_absolute_error_percentage_points": 0.361768,
+      "max_absolute_error_percentage_points": 5.040683,
+      "top10_observed_share_categories_mae_percentage_points": 0.884459,
+      "within_tolerance": {
+        "0.25": {
+          "threshold_percentage_points": 0.25,
+          "within": 1700,
+          "total": 1974,
+          "percent": 86.119554
+        },
+        "0.5": {
+          "threshold_percentage_points": 0.5,
+          "within": 1832,
+          "total": 1974,
+          "percent": 92.806484
+        },
+        "1.0": {
+          "threshold_percentage_points": 1.0,
+          "within": 1910,
+          "total": 1974,
+          "percent": 96.757852
+        }
+      },
+      "by_category": {
+        "갈매기살": {
+          "mae_percentage_points": 0.013435,
+          "observations": 21
+        },
+        "갈비/삼겹살": {
+          "mae_percentage_points": 0.266914,
+          "observations": 21
+        },
+        "갈치/생선구이": {
+          "mae_percentage_points": 0.238482,
+          "observations": 21
+        },
+        "게장전문": {
+          "mae_percentage_points": 0.008004,
+          "observations": 21
+        },
+        "고기부페": {
+          "mae_percentage_points": 0.007725,
+          "observations": 21
+        },
+        "고등어전문": {
+          "mae_percentage_points": 0.036331,
+          "observations": 21
+        },
+        "곰장어전문": {
+          "mae_percentage_points": 0.01531,
+          "observations": 21
+        },
+        "곱창/양구이전문": {
+          "mae_percentage_points": 0.048356,
+          "observations": 21
+        },
+        "국수/만두/칼국수": {
+          "mae_percentage_points": 0.507598,
+          "observations": 21
+        },
+        "굴요리전문": {
+          "mae_percentage_points": 0.028231,
+          "observations": 21
+        },
+        "기사식당": {
+          "mae_percentage_points": 0.011195,
+          "observations": 21
+        },
+        "기타고기요리": {
+          "mae_percentage_points": 0.01677,
+          "observations": 21
+        },
+        "기타서양음식전문": {
+          "mae_percentage_points": 0.07676,
+          "observations": 21
+        },
+        "낙지/오징어": {
+          "mae_percentage_points": 0.099859,
+          "observations": 21
+        },
+        "냉면집": {
+          "mae_percentage_points": 0.12153,
+          "observations": 21
+        },
+        "닭갈비전문": {
+          "mae_percentage_points": 0.034861,
+          "observations": 21
+        },
+        "닭내장/닭발요리": {
+          "mae_percentage_points": 0.111507,
+          "observations": 21
+        },
+        "닭도리탕전문": {
+          "mae_percentage_points": 0.007871,
+          "observations": 21
+        },
+        "도너츠전문": {
+          "mae_percentage_points": 0.071827,
+          "observations": 21
+        },
+        "도시락전문점": {
+          "mae_percentage_points": 0.026868,
+          "observations": 21
+        },
+        "돈가스전문점": {
+          "mae_percentage_points": 0.105853,
+          "observations": 21
+        },
+        "돌구이요리전문": {
+          "mae_percentage_points": 0.006093,
+          "observations": 21
+        },
+        "돌솥/비빔밥전문점": {
+          "mae_percentage_points": 0.027947,
+          "observations": 21
+        },
+        "동남아음식전문점": {
+          "mae_percentage_points": 0.06447,
+          "observations": 21
+        },
+        "두부요리전문": {
+          "mae_percentage_points": 0.017754,
+          "observations": 21
+        },
+        "떡/한과": {
+          "mae_percentage_points": 0.16727,
+          "observations": 21
+        },
+        "떡볶이전문": {
+          "mae_percentage_points": 0.247394,
+          "observations": 21
+        },
+        "라면김밥분식": {
+          "mae_percentage_points": 0.230132,
+          "observations": 21
+        },
+        "막창구이": {
+          "mae_percentage_points": 0.032461,
+          "observations": 21
+        },
+        "매운탕전문": {
+          "mae_percentage_points": 0.024655,
+          "observations": 21
+        },
+        "민물장어전문": {
+          "mae_percentage_points": 0.017166,
+          "observations": 21
+        },
+        "바닷가재/게요리전문": {
+          "mae_percentage_points": 0.00839,
+          "observations": 21
+        },
+        "바베큐전문": {
+          "mae_percentage_points": 0.013669,
+          "observations": 21
+        },
+        "버섯전문점": {
+          "mae_percentage_points": 0.003479,
+          "observations": 21
+        },
+        "보리밥전문": {
+          "mae_percentage_points": 0.014639,
+          "observations": 21
+        },
+        "복전문": {
+          "mae_percentage_points": 0.018427,
+          "observations": 21
+        },
+        "부대찌개/섞어찌개": {
+          "mae_percentage_points": 0.038936,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.027867,
+          "observations": 21
+        },
+        "불고기전문": {
+          "mae_percentage_points": 0.009666,
+          "observations": 21
+        },
+        "불닭전문": {
+          "mae_percentage_points": 0.022205,
+          "observations": 21
+        },
+        "사철탕전문": {
+          "mae_percentage_points": 0.015257,
+          "observations": 21
+        },
+        "삼계탕전문": {
+          "mae_percentage_points": 0.053251,
+          "observations": 21
+        },
+        "샌드위치/브런치/샐러드": {
+          "mae_percentage_points": 0.334748,
+          "observations": 21
+        },
+        "생과일주스전문점": {
+          "mae_percentage_points": 0.103935,
+          "observations": 21
+        },
+        "생선찜전문": {
+          "mae_percentage_points": 0.015243,
+          "observations": 21
+        },
+        "샤브샤브전문": {
+          "mae_percentage_points": 0.082961,
+          "observations": 21
+        },
+        "설렁탕집": {
+          "mae_percentage_points": 0.086993,
+          "observations": 21
+        },
+        "수산물전문음식점": {
+          "mae_percentage_points": 0.082476,
+          "observations": 21
+        },
+        "순대전문점": {
+          "mae_percentage_points": 0.07879,
+          "observations": 21
+        },
+        "순두부전문": {
+          "mae_percentage_points": 0.112272,
+          "observations": 21
+        },
+        "스낵": {
+          "mae_percentage_points": 0.284231,
+          "observations": 21
+        },
+        "스테이크전문점": {
+          "mae_percentage_points": 0.02985,
+          "observations": 21
+        },
+        "스파게티전문점": {
+          "mae_percentage_points": 0.021816,
+          "observations": 21
+        },
+        "쌈밥전문": {
+          "mae_percentage_points": 0.026608,
+          "observations": 21
+        },
+        "아구전문": {
+          "mae_percentage_points": 0.043917,
+          "observations": 21
+        },
+        "아이스크림/빙수": {
+          "mae_percentage_points": 0.403918,
+          "observations": 21
+        },
+        "오리고기전문": {
+          "mae_percentage_points": 0.006441,
+          "observations": 21
+        },
+        "와플/파이/디저트": {
+          "mae_percentage_points": 0.232432,
+          "observations": 21
+        },
+        "우동전문점": {
+          "mae_percentage_points": 0.091219,
+          "observations": 21
+        },
+        "일반한식/백반": {
+          "mae_percentage_points": 1.5542,
+          "observations": 21
+        },
+        "일식": {
+          "mae_percentage_points": 0.331085,
+          "observations": 21
+        },
+        "전통찻집/인삼찻집": {
+          "mae_percentage_points": 0.114181,
+          "observations": 21
+        },
+        "정통양식/경양식": {
+          "mae_percentage_points": 0.666419,
+          "observations": 21
+        },
+        "제과점": {
+          "mae_percentage_points": 0.813459,
+          "observations": 21
+        },
+        "조개구이전문": {
+          "mae_percentage_points": 0.01489,
+          "observations": 21
+        },
+        "족발/보쌈전문": {
+          "mae_percentage_points": 0.115528,
+          "observations": 21
+        },
+        "죽전문점": {
+          "mae_percentage_points": 0.035669,
+          "observations": 21
+        },
+        "중국음식": {
+          "mae_percentage_points": 0.120076,
+          "observations": 21
+        },
+        "찐빵/만두": {
+          "mae_percentage_points": 0.064057,
+          "observations": 21
+        },
+        "찜닭전문점": {
+          "mae_percentage_points": 0.017477,
+          "observations": 21
+        },
+        "참치전문점": {
+          "mae_percentage_points": 0.024004,
+          "observations": 21
+        },
+        "초밥전문": {
+          "mae_percentage_points": 0.045138,
+          "observations": 21
+        },
+        "추어탕전문": {
+          "mae_percentage_points": 0.011844,
+          "observations": 21
+        },
+        "카레전문점": {
+          "mae_percentage_points": 0.016275,
+          "observations": 21
+        },
+        "커피전문점": {
+          "mae_percentage_points": 3.351765,
+          "observations": 21
+        },
+        "케익전문점": {
+          "mae_percentage_points": 0.029999,
+          "observations": 21
+        },
+        "콩나물국밥": {
+          "mae_percentage_points": 0.051976,
+          "observations": 21
+        },
+        "토스트전문": {
+          "mae_percentage_points": 0.017499,
+          "observations": 21
+        },
+        "토종닭전문": {
+          "mae_percentage_points": 0.00753,
+          "observations": 21
+        },
+        "파전전문": {
+          "mae_percentage_points": 0.010236,
+          "observations": 21
+        },
+        "패밀리레스토랑": {
+          "mae_percentage_points": 0.01705,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.26539,
+          "observations": 21
+        },
+        "퓨전음식전문": {
+          "mae_percentage_points": 0.020226,
+          "observations": 21
+        },
+        "피자전문": {
+          "mae_percentage_points": 0.137564,
+          "observations": 21
+        },
+        "한식부페": {
+          "mae_percentage_points": 0.03516,
+          "observations": 21
+        },
+        "한정식전문": {
+          "mae_percentage_points": 0.006247,
+          "observations": 21
+        },
+        "핫도그": {
+          "mae_percentage_points": 0.082532,
+          "observations": 21
+        },
+        "해물찜/탕전문": {
+          "mae_percentage_points": 0.05006,
+          "observations": 21
+        },
+        "해장국/감자탕": {
+          "mae_percentage_points": 0.474383,
+          "observations": 21
+        },
+        "호떡/붕어빵": {
+          "mae_percentage_points": 0.024788,
+          "observations": 21
+        },
+        "홍어전문": {
+          "mae_percentage_points": 0.004333,
+          "observations": 21
+        },
+        "황태전문": {
+          "mae_percentage_points": 0.0047,
+          "observations": 21
+        },
+        "횟집": {
+          "mae_percentage_points": 0.564442,
+          "observations": 21
+        },
+        "후라이드/양념치킨": {
+          "mae_percentage_points": 1.260667,
+          "observations": 21
+        }
+      },
+      "by_parent": {
+        "고기요리": {
+          "mae_percentage_points": 0.493922,
+          "observations": 21
+        },
+        "닭/오리요리": {
+          "mae_percentage_points": 1.360114,
+          "observations": 21
+        },
+        "별식/퓨전요리": {
+          "mae_percentage_points": 0.124712,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.042286,
+          "observations": 21
+        },
+        "분식": {
+          "mae_percentage_points": 0.193042,
+          "observations": 21
+        },
+        "양식": {
+          "mae_percentage_points": 0.72106,
+          "observations": 21
+        },
+        "일식/수산물": {
+          "mae_percentage_points": 0.932402,
+          "observations": 21
+        },
+        "제과/제빵/떡/케익": {
+          "mae_percentage_points": 1.108862,
+          "observations": 21
+        },
+        "중식": {
+          "mae_percentage_points": 0.120076,
+          "observations": 21
+        },
+        "커피/음료": {
+          "mae_percentage_points": 3.736695,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.274287,
+          "observations": 21
+        },
+        "한식": {
+          "mae_percentage_points": 1.21779,
+          "observations": 21
+        }
+      }
+    },
+    "same_config_recent_mean": {
+      "mae_percentage_points": 0.099718,
+      "rmse_percentage_points": 0.260332,
+      "composition_wape_percent": 9.373489,
+      "composition_wape_definition": "100 * sum(abs(actual_share - predicted_share)) / sum(actual_share)",
+      "category_observations": 1974,
+      "observed_months": 21,
+      "p90_absolute_error_percentage_points": 0.242566,
+      "max_absolute_error_percentage_points": 2.334308,
+      "top10_observed_share_categories_mae_percentage_points": 0.508548,
+      "within_tolerance": {
+        "0.25": {
+          "threshold_percentage_points": 0.25,
+          "within": 1783,
+          "total": 1974,
+          "percent": 90.324215
+        },
+        "0.5": {
+          "threshold_percentage_points": 0.5,
+          "within": 1892,
+          "total": 1974,
+          "percent": 95.845998
+        },
+        "1.0": {
+          "threshold_percentage_points": 1.0,
+          "within": 1941,
+          "total": 1974,
+          "percent": 98.328267
+        }
+      },
+      "by_category": {
+        "갈매기살": {
+          "mae_percentage_points": 0.003919,
+          "observations": 21
+        },
+        "갈비/삼겹살": {
+          "mae_percentage_points": 0.279416,
+          "observations": 21
+        },
+        "갈치/생선구이": {
+          "mae_percentage_points": 0.0833,
+          "observations": 21
+        },
+        "게장전문": {
+          "mae_percentage_points": 0.007977,
+          "observations": 21
+        },
+        "고기부페": {
+          "mae_percentage_points": 0.010106,
+          "observations": 21
+        },
+        "고등어전문": {
+          "mae_percentage_points": 0.034109,
+          "observations": 21
+        },
+        "곰장어전문": {
+          "mae_percentage_points": 0.019844,
+          "observations": 21
+        },
+        "곱창/양구이전문": {
+          "mae_percentage_points": 0.048313,
+          "observations": 21
+        },
+        "국수/만두/칼국수": {
+          "mae_percentage_points": 0.194998,
+          "observations": 21
+        },
+        "굴요리전문": {
+          "mae_percentage_points": 0.028211,
+          "observations": 21
+        },
+        "기사식당": {
+          "mae_percentage_points": 0.008287,
+          "observations": 21
+        },
+        "기타고기요리": {
+          "mae_percentage_points": 0.011732,
+          "observations": 21
+        },
+        "기타서양음식전문": {
+          "mae_percentage_points": 0.014961,
+          "observations": 21
+        },
+        "낙지/오징어": {
+          "mae_percentage_points": 0.025505,
+          "observations": 21
+        },
+        "냉면집": {
+          "mae_percentage_points": 0.122436,
+          "observations": 21
+        },
+        "닭갈비전문": {
+          "mae_percentage_points": 0.021696,
+          "observations": 21
+        },
+        "닭내장/닭발요리": {
+          "mae_percentage_points": 0.017617,
+          "observations": 21
+        },
+        "닭도리탕전문": {
+          "mae_percentage_points": 0.011898,
+          "observations": 21
+        },
+        "도너츠전문": {
+          "mae_percentage_points": 0.120623,
+          "observations": 21
+        },
+        "도시락전문점": {
+          "mae_percentage_points": 0.024936,
+          "observations": 21
+        },
+        "돈가스전문점": {
+          "mae_percentage_points": 0.149115,
+          "observations": 21
+        },
+        "돌구이요리전문": {
+          "mae_percentage_points": 0.006153,
+          "observations": 21
+        },
+        "돌솥/비빔밥전문점": {
+          "mae_percentage_points": 0.019896,
+          "observations": 21
+        },
+        "동남아음식전문점": {
+          "mae_percentage_points": 0.022814,
+          "observations": 21
+        },
+        "두부요리전문": {
+          "mae_percentage_points": 0.020057,
+          "observations": 21
+        },
+        "떡/한과": {
+          "mae_percentage_points": 0.131621,
+          "observations": 21
+        },
+        "떡볶이전문": {
+          "mae_percentage_points": 0.069334,
+          "observations": 21
+        },
+        "라면김밥분식": {
+          "mae_percentage_points": 0.327126,
+          "observations": 21
+        },
+        "막창구이": {
+          "mae_percentage_points": 0.018021,
+          "observations": 21
+        },
+        "매운탕전문": {
+          "mae_percentage_points": 0.015936,
+          "observations": 21
+        },
+        "민물장어전문": {
+          "mae_percentage_points": 0.013318,
+          "observations": 21
+        },
+        "바닷가재/게요리전문": {
+          "mae_percentage_points": 0.004746,
+          "observations": 21
+        },
+        "바베큐전문": {
+          "mae_percentage_points": 0.015998,
+          "observations": 21
+        },
+        "버섯전문점": {
+          "mae_percentage_points": 0.00294,
+          "observations": 21
+        },
+        "보리밥전문": {
+          "mae_percentage_points": 0.007509,
+          "observations": 21
+        },
+        "복전문": {
+          "mae_percentage_points": 0.015859,
+          "observations": 21
+        },
+        "부대찌개/섞어찌개": {
+          "mae_percentage_points": 0.043656,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.028867,
+          "observations": 21
+        },
+        "불고기전문": {
+          "mae_percentage_points": 0.008362,
+          "observations": 21
+        },
+        "불닭전문": {
+          "mae_percentage_points": 0.014872,
+          "observations": 21
+        },
+        "사철탕전문": {
+          "mae_percentage_points": 0.011884,
+          "observations": 21
+        },
+        "삼계탕전문": {
+          "mae_percentage_points": 0.043021,
+          "observations": 21
+        },
+        "샌드위치/브런치/샐러드": {
+          "mae_percentage_points": 0.160567,
+          "observations": 21
+        },
+        "생과일주스전문점": {
+          "mae_percentage_points": 0.114578,
+          "observations": 21
+        },
+        "생선찜전문": {
+          "mae_percentage_points": 0.009306,
+          "observations": 21
+        },
+        "샤브샤브전문": {
+          "mae_percentage_points": 0.055943,
+          "observations": 21
+        },
+        "설렁탕집": {
+          "mae_percentage_points": 0.044342,
+          "observations": 21
+        },
+        "수산물전문음식점": {
+          "mae_percentage_points": 0.045734,
+          "observations": 21
+        },
+        "순대전문점": {
+          "mae_percentage_points": 0.058401,
+          "observations": 21
+        },
+        "순두부전문": {
+          "mae_percentage_points": 0.159728,
+          "observations": 21
+        },
+        "스낵": {
+          "mae_percentage_points": 0.155157,
+          "observations": 21
+        },
+        "스테이크전문점": {
+          "mae_percentage_points": 0.023757,
+          "observations": 21
+        },
+        "스파게티전문점": {
+          "mae_percentage_points": 0.029092,
+          "observations": 21
+        },
+        "쌈밥전문": {
+          "mae_percentage_points": 0.01039,
+          "observations": 21
+        },
+        "아구전문": {
+          "mae_percentage_points": 0.015708,
+          "observations": 21
+        },
+        "아이스크림/빙수": {
+          "mae_percentage_points": 0.351548,
+          "observations": 21
+        },
+        "오리고기전문": {
+          "mae_percentage_points": 0.017294,
+          "observations": 21
+        },
+        "와플/파이/디저트": {
+          "mae_percentage_points": 0.037049,
+          "observations": 21
+        },
+        "우동전문점": {
+          "mae_percentage_points": 0.039607,
+          "observations": 21
+        },
+        "일반한식/백반": {
+          "mae_percentage_points": 1.171526,
+          "observations": 21
+        },
+        "일식": {
+          "mae_percentage_points": 0.146928,
+          "observations": 21
+        },
+        "전통찻집/인삼찻집": {
+          "mae_percentage_points": 0.095836,
+          "observations": 21
+        },
+        "정통양식/경양식": {
+          "mae_percentage_points": 0.402354,
+          "observations": 21
+        },
+        "제과점": {
+          "mae_percentage_points": 1.121795,
+          "observations": 21
+        },
+        "조개구이전문": {
+          "mae_percentage_points": 0.013252,
+          "observations": 21
+        },
+        "족발/보쌈전문": {
+          "mae_percentage_points": 0.015105,
+          "observations": 21
+        },
+        "죽전문점": {
+          "mae_percentage_points": 0.037129,
+          "observations": 21
+        },
+        "중국음식": {
+          "mae_percentage_points": 0.103484,
+          "observations": 21
+        },
+        "찐빵/만두": {
+          "mae_percentage_points": 0.072318,
+          "observations": 21
+        },
+        "찜닭전문점": {
+          "mae_percentage_points": 0.014848,
+          "observations": 21
+        },
+        "참치전문점": {
+          "mae_percentage_points": 0.01084,
+          "observations": 21
+        },
+        "초밥전문": {
+          "mae_percentage_points": 0.066943,
+          "observations": 21
+        },
+        "추어탕전문": {
+          "mae_percentage_points": 0.009814,
+          "observations": 21
+        },
+        "카레전문점": {
+          "mae_percentage_points": 0.010655,
+          "observations": 21
+        },
+        "커피전문점": {
+          "mae_percentage_points": 0.799033,
+          "observations": 21
+        },
+        "케익전문점": {
+          "mae_percentage_points": 0.031357,
+          "observations": 21
+        },
+        "콩나물국밥": {
+          "mae_percentage_points": 0.041149,
+          "observations": 21
+        },
+        "토스트전문": {
+          "mae_percentage_points": 0.017456,
+          "observations": 21
+        },
+        "토종닭전문": {
+          "mae_percentage_points": 0.007082,
+          "observations": 21
+        },
+        "파전전문": {
+          "mae_percentage_points": 0.008138,
+          "observations": 21
+        },
+        "패밀리레스토랑": {
+          "mae_percentage_points": 0.013253,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.248472,
+          "observations": 21
+        },
+        "퓨전음식전문": {
+          "mae_percentage_points": 0.014565,
+          "observations": 21
+        },
+        "피자전문": {
+          "mae_percentage_points": 0.059947,
+          "observations": 21
+        },
+        "한식부페": {
+          "mae_percentage_points": 0.03334,
+          "observations": 21
+        },
+        "한정식전문": {
+          "mae_percentage_points": 0.006381,
+          "observations": 21
+        },
+        "핫도그": {
+          "mae_percentage_points": 0.045397,
+          "observations": 21
+        },
+        "해물찜/탕전문": {
+          "mae_percentage_points": 0.061535,
+          "observations": 21
+        },
+        "해장국/감자탕": {
+          "mae_percentage_points": 0.478899,
+          "observations": 21
+        },
+        "호떡/붕어빵": {
+          "mae_percentage_points": 0.005133,
+          "observations": 21
+        },
+        "홍어전문": {
+          "mae_percentage_points": 0.008053,
+          "observations": 21
+        },
+        "황태전문": {
+          "mae_percentage_points": 0.011325,
+          "observations": 21
+        },
+        "횟집": {
+          "mae_percentage_points": 0.420227,
+          "observations": 21
+        },
+        "후라이드/양념치킨": {
+          "mae_percentage_points": 0.360726,
+          "observations": 21
+        }
+      },
+      "by_parent": {
+        "고기요리": {
+          "mae_percentage_points": 0.312685,
+          "observations": 21
+        },
+        "닭/오리요리": {
+          "mae_percentage_points": 0.384587,
+          "observations": 21
+        },
+        "별식/퓨전요리": {
+          "mae_percentage_points": 0.094972,
+          "observations": 21
+        },
+        "부페": {
+          "mae_percentage_points": 0.063545,
+          "observations": 21
+        },
+        "분식": {
+          "mae_percentage_points": 0.323508,
+          "observations": 21
+        },
+        "양식": {
+          "mae_percentage_points": 0.587455,
+          "observations": 21
+        },
+        "일식/수산물": {
+          "mae_percentage_points": 0.771582,
+          "observations": 21
+        },
+        "제과/제빵/떡/케익": {
+          "mae_percentage_points": 1.281661,
+          "observations": 21
+        },
+        "중식": {
+          "mae_percentage_points": 0.103484,
+          "observations": 21
+        },
+        "커피/음료": {
+          "mae_percentage_points": 1.162906,
+          "observations": 21
+        },
+        "패스트푸드": {
+          "mae_percentage_points": 0.276498,
+          "observations": 21
+        },
+        "한식": {
+          "mae_percentage_points": 0.631802,
+          "observations": 21
+        }
+      }
+    }
+  },
+  "improvement_vs_same_fit_mean_percent": 40.343221,
+  "candidates": [
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13861537
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.13886044
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14076296
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13776432
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.1378467
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14040624
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10297127
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10086024
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10113995
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1024169
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09999446
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10098355
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11803793
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11734044
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11841759
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11689929
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11624291
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11818335
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12793055
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12781583
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12925599
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12669114
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12667749
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12895081
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09585481
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09585481
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09585481
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09565953
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.0944821
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0954613
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09621744
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09377139
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09523712
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.0865291
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.0865291
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0865291
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.08954254
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08659372
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.08646249
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09037381
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08591747
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.08636268
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09071257
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09071257
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09071257
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09244909
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09032454
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09053059
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09342063
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08972462
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0903945
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09315608
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09315608
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09315608
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09401642
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09238136
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09291812
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09486107
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09175704
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0927339
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12486054
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12486054
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12486054
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12245685
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.1219697
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12416097
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12049451
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12079345
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12385051
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09828276
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09828276
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09828276
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10004041
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09796921
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09814052
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09997596
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09728566
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0979809
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11039244
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11039244
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11039244
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11024963
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10916367
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11009522
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1091427
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10830201
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10986718
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11752927
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11752927
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11752927
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11629037
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11549912
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11702408
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11462731
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11450532
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11680041
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14190274
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13861537
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.13886044
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14076296
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13776432
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.1378467
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14040624
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10128298
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10297127
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10086024
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10113995
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1024169
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09999446
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10098355
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11880611
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11803793
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11734044
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11841759
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11689929
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11624291
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11818335
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12988748
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12793055
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12781583
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12925599
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12669114
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12667749
+    },
+    {
+      "family": "direct",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12895081
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13815007
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.1383836
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14025618
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13728423
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.13734429
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.13989438
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10273051
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10067416
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10097211
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10221387
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09981112
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10081238
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1176286
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11691669
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11797095
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11651538
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11581517
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11773576
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1274931
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12731956
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12876027
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12622987
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12616853
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 0,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12845657
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09578619
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09578619
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09578619
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09559216
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09443442
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09540139
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09621662
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09371419
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09517959
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.0865153
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.0865153
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.0865153
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.08951321
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08661802
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.08645837
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09035862
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08592427
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.08635729
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09068056
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09068056
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09068056
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09239535
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09032497
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09051087
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09340628
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.08968804
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09037476
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09310972
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09310972
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09310972
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09394421
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.0923562
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09288012
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09485259
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09170597
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 12,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09269602
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12443639
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12443639
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12443639
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12216447
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12164138
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12373814
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12019971
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12045436
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12343164
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09817956
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09817956
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09817956
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09986279
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09786001
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09804256
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.09983378
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09716818
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.09787785
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11014166
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11014166
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11014166
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10999502
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10892229
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10984064
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10891059
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10804609
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10960472
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11718597
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11718597
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11718597
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11600345
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11518828
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11668316
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11436547
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11419031
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 24,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.1164518
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14138102
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13815007
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.1383836
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.14025618
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.13728423
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.13734429
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 0,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.13989438
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10111208
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10273051
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.10067416
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10097211
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.10221387
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.09981112
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 6,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.10081238
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11835268
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1176286
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11691669
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11797095
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.11651538
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.11581517
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 12,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.11773576
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 0,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12938257
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.1274931
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12731956
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 1,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12876027
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 1.0
+      },
+      "validation_mae_percentage_points": 0.12622987
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 10.0
+      },
+      "validation_mae_percentage_points": 0.12616853
+    },
+    {
+      "family": "hierarchical",
+      "config": {
+        "window": 36,
+        "half_life": 24,
+        "harmonics": 2,
+        "alpha": 100.0
+      },
+      "validation_mae_percentage_points": 0.12845657
+    }
+  ]
+}

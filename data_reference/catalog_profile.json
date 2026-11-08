@@ -1,0 +1,16 @@
+{
+  "food_rows": 20954,
+  "food_source_date": "2025-09-02",
+  "place_raw_rows": 5669,
+  "place_indexed_rows": 5381,
+  "excluded_missing_or_outside_main_island": 77,
+  "duplicate_rows_removed": 83,
+  "generic_itinerary_labels_removed": 128,
+  "place_source_date": "2025-09-18",
+  "source_sha256": "b729e997619b7941f3744eedf86531733700146481bc03d5f6a8569d8d36c5b7",
+  "notes": [
+    "검색 장소는 원자료 참조 좌표이며 실제 입구·운영·요금은 검증하지 않았습니다.",
+    "좌표 검수 범위는 제주 본섬 주변이며 외곽 섬이나 본섬 밖 데이터 일부는 제외했습니다.",
+    "주차·해변 시설은 실시간 정보가 아닙니다."
+  ]
+}

@@ -1,1 +1,4 @@
-# Python 3.10+ standard library only. No pip dependencies for the MVP runtime.
+# Core application uses Python standard library.
+# Windows CP313 inference dependencies are bundled under vendor/.
+# Ubuntu24.04/Python3.12: use bash setup_ubuntu.sh and requirements/linux-cpu.lock.txt.
+# Model training requirements are documented separately in docs/REPRODUCTION.md.

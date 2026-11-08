@@ -12,11 +12,17 @@ def main():
     p=argparse.ArgumentParser(description='Jeju Gilbeot local center app')
     p.add_argument('--port',type=int,default=8765)
     p.add_argument('--no-browser',action='store_true')
-    p.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
+    road=p.add_mutually_exclusive_group()
+    road.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
+    road.add_argument('--no-road-gpu',action='store_true',help='Keep road-node calculations on CPU')
+    p.add_argument('--semantic-device',choices=('auto','cpu','dml'),default='cpu',help='Center default: CPU INT8. Select auto/dml to try verified GPU execution')
+    p.add_argument('--no-model-preload',action='store_true',help='Load the optional semantic model on its first request')
     a=p.parse_args()
     if not 1024<=a.port<=65535:p.error('port must be between 1024 and 65535')
-    if a.road_gpu:
-        os.environ['JEJU_ROAD_GPU'] = '1'
+    from jeju_agent.compute_runtime import configure_compute
+    state=configure_compute(ROOT,a.semantic_device,a.road_gpu,a.no_road_gpu,not a.no_model_preload)
+    if not a.no_model_preload:
+        print('Semantic runtime: '+state['provider']+' ('+state['status']+')',flush=True)
     from jeju_agent.server import serve
     if not a.no_browser:
         import webbrowser

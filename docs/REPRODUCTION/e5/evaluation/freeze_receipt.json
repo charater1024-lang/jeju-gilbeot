@@ -1,0 +1,19 @@
+{
+  "protocol_id": "jeju_semantic_gpu_eval_20261107_v1",
+  "files_sha256": {
+    "source_partitions.json": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+    "dev_queries.json": "d482d7bdddfc73cc71b00d838dbde4f6322e26e7c3710595f5baa3f62e60888e",
+    "holdout_queries.json": "28d626736177a94bef2275da7006c3658dfbdbbd95ca5eac5bd453cf77537d13",
+    "protocol.json": "b643012c556d7aced1f0de7af70b347c21512cb313881c8cc116fec039d8ba05"
+  },
+  "source_guides_sha256": "711290e5d25794d9271115089295d1f3323e157ff196b08709bdbd971d73dd7c",
+  "model_outputs_viewed": false,
+  "total_supported_questions": 36,
+  "total_unsupported_questions": 18,
+  "total_places": 62,
+  "train_dev_holdout_places": [
+    40,
+    10,
+    12
+  ]
+}

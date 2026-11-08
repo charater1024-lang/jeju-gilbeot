@@ -1,0 +1,913 @@
+{
+  "pass": true,
+  "cpu_threads": 2,
+  "model_load_ms": 175.6640999992669,
+  "grid": [
+    {
+      "threshold": 0.72,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_node_4726228301",
+          "osm_tourism_node_3753655821"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_6731890115",
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_538148519",
+          "osm_tourism_node_3753655821",
+          "seongsan",
+          "osm_tourism_node_3788545937"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_253976811",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488",
+          "osm_tourism_node_4416285697",
+          "hyeopjae"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_way_375341085",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_way_250718041"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_way_592735488",
+          "seongsan"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554",
+          "osm_tourism_node_3788545937",
+          "osm_tourism_way_373866673"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_node_4726228301",
+          "osm_tourism_node_3753655821"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_6731890115",
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_538148519",
+          "osm_tourism_node_3753655821",
+          "seongsan",
+          "osm_tourism_node_3788545937"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_253976811",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488",
+          "osm_tourism_node_4416285697",
+          "hyeopjae"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_way_375341085",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_way_250718041"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_way_592735488",
+          "seongsan"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554",
+          "osm_tourism_node_3788545937",
+          "osm_tourism_way_373866673"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.78,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_node_4726228301",
+          "osm_tourism_node_3753655821"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_6731890115",
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_538148519",
+          "osm_tourism_node_3753655821",
+          "seongsan",
+          "osm_tourism_node_3788545937"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_253976811",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488",
+          "osm_tourism_node_4416285697",
+          "hyeopjae"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_way_375341085",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_way_250718041"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_way_592735488",
+          "seongsan"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554",
+          "osm_tourism_node_3788545937",
+          "osm_tourism_way_373866673"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_node_4726228301",
+          "osm_tourism_node_3753655821"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_6731890115",
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_538148519",
+          "osm_tourism_node_3753655821",
+          "seongsan",
+          "osm_tourism_node_3788545937"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_253976811",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488",
+          "osm_tourism_node_4416285697",
+          "hyeopjae"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_way_375341085",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_way_250718041"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_way_592735488",
+          "seongsan"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554",
+          "osm_tourism_node_3788545937",
+          "osm_tourism_way_373866673"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.82,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 1.0,
+        "hit_at_3": 1.0,
+        "mrr_at_3": 1.0,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_6731890115",
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_538148519",
+          "osm_tourism_node_3753655821",
+          "seongsan",
+          "osm_tourism_node_3788545937"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_253976811",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488",
+          "osm_tourism_node_4416285697",
+          "hyeopjae"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724",
+          "osm_tourism_way_375341085",
+          "osm_tourism_node_5874608086",
+          "osm_tourism_way_645842845",
+          "osm_tourism_way_250718041"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_way_592735488",
+          "seongsan"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554",
+          "osm_tourism_node_3788545937",
+          "osm_tourism_way_373866673"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.84,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.9166666666666666,
+        "hit_at_3": 0.9166666666666666,
+        "mrr_at_3": 0.9166666666666666,
+        "unsupported_false_responses": 1
+      },
+      "ranked_ids": [
+        [
+          "osm_tourism_way_249857724"
+        ],
+        [
+          "osm_tourism_way_370342656",
+          "osm_tourism_node_5655320217"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_node_5658780218",
+          "osm_tourism_node_3736657966"
+        ],
+        [
+          "osm_tourism_way_375500447",
+          "osm_tourism_node_538148519",
+          "osm_tourism_way_288933009",
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "seongsan",
+          "osm_tourism_node_10216545359",
+          "seopjikoji",
+          "osm_tourism_node_3741616919",
+          "osm_tourism_node_5656357630"
+        ],
+        [
+          "osm_tourism_node_3741616919"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697",
+          "osm_tourism_way_375480941",
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115"
+        ],
+        [
+          "osm_tourism_node_569007779",
+          "osm_tourism_node_4832613086",
+          "osm_tourism_way_592735488"
+        ],
+        [
+          "osm_tourism_relation_20364165",
+          "osm_tourism_way_370264619",
+          "osm_tourism_node_13931773845",
+          "osm_tourism_way_375500447",
+          "osm_tourism_way_1537196430"
+        ],
+        [
+          "osm_tourism_way_249857724"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_way_572783721",
+          "osm_tourism_way_1075451809",
+          "osm_tourism_way_372701554"
+        ],
+        []
+      ]
+    },
+    {
+      "threshold": 0.86,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.8333333333333334,
+        "hit_at_3": 0.8333333333333334,
+        "mrr_at_3": 0.8333333333333334,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [
+          "osm_tourism_way_370342656"
+        ],
+        [
+          "osm_tourism_node_5507591794",
+          "osm_tourism_node_10216545359"
+        ],
+        [
+          "osm_tourism_way_375500447"
+        ],
+        [
+          "seongsan"
+        ],
+        [
+          "osm_tourism_node_3741616919"
+        ],
+        [
+          "osm_tourism_node_6731890115",
+          "osm_tourism_node_10216545359",
+          "osm_tourism_node_4416285697"
+        ],
+        [
+          "osm_tourism_way_375480941",
+          "osm_tourism_node_6731890115"
+        ],
+        [
+          "osm_tourism_node_569007779"
+        ],
+        [
+          "osm_tourism_relation_20364165"
+        ],
+        [
+          "osm_tourism_way_249857724"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "threshold": 0.88,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.4166666666666667,
+        "hit_at_3": 0.4166666666666667,
+        "mrr_at_3": 0.4166666666666667,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [
+          "osm_tourism_way_370342656"
+        ],
+        [],
+        [],
+        [
+          "seongsan"
+        ],
+        [],
+        [
+          "osm_tourism_node_6731890115"
+        ],
+        [
+          "osm_tourism_way_375480941"
+        ],
+        [],
+        [
+          "osm_tourism_relation_20364165"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "threshold": 0.9,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.16666666666666666,
+        "hit_at_3": 0.16666666666666666,
+        "mrr_at_3": 0.16666666666666666,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [],
+        [],
+        [],
+        [
+          "seongsan"
+        ],
+        [],
+        [
+          "osm_tourism_node_6731890115"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "threshold": 0.92,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.08333333333333333,
+        "hit_at_3": 0.08333333333333333,
+        "mrr_at_3": 0.08333333333333333,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "osm_tourism_node_6731890115"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "threshold": 0.94,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.0,
+        "hit_at_3": 0.0,
+        "mrr_at_3": 0.0,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "threshold": 0.96,
+      "metrics": {
+        "supported": 12,
+        "hit_at_1": 0.0,
+        "hit_at_3": 0.0,
+        "mrr_at_3": 0.0,
+        "unsupported_false_responses": 0
+      },
+      "ranked_ids": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    }
+  ],
+  "best": {
+    "threshold": 0.86,
+    "metrics": {
+      "supported": 12,
+      "hit_at_1": 0.8333333333333334,
+      "hit_at_3": 0.8333333333333334,
+      "mrr_at_3": 0.8333333333333334,
+      "unsupported_false_responses": 0
+    },
+    "ranked_ids": [
+      [],
+      [
+        "osm_tourism_way_370342656"
+      ],
+      [
+        "osm_tourism_node_5507591794",
+        "osm_tourism_node_10216545359"
+      ],
+      [
+        "osm_tourism_way_375500447"
+      ],
+      [
+        "seongsan"
+      ],
+      [
+        "osm_tourism_node_3741616919"
+      ],
+      [
+        "osm_tourism_node_6731890115",
+        "osm_tourism_node_10216545359",
+        "osm_tourism_node_4416285697"
+      ],
+      [
+        "osm_tourism_way_375480941",
+        "osm_tourism_node_6731890115"
+      ],
+      [
+        "osm_tourism_node_569007779"
+      ],
+      [
+        "osm_tourism_relation_20364165"
+      ],
+      [
+        "osm_tourism_way_249857724"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  "baseline": {
+    "supported": 12,
+    "hit_at_1": 0.0,
+    "hit_at_3": 0.0,
+    "mrr_at_3": 0.0,
+    "unsupported_false_responses": 0
+  },
+  "actual_runtime_matches_calibration": true,
+  "onnxruntime_version": "1.31.1",
+  "numpy_version": "2.3.5",
+  "python_version": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "cpu_only_providers": [
+    "CPUExecutionProvider"
+  ]
+}

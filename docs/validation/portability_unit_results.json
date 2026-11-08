@@ -1,0 +1,17 @@
+{
+  "source_evidence_sha256": "d7040ffd00f8b156431ec948db368e85544afe7ad34c6d2888468613a1e59713",
+  "display_path_normalized": true,
+  "result": {
+    "pass": true,
+    "tests": 48,
+    "errors": 0,
+    "failures": 0,
+    "scope": "Windows unit contracts, including Linux routing and RSS fixtures; Linux native execution is separate",
+    "modules": [
+      "tests.test_submission_platform",
+      "tests.test_compute_runtime_20261107",
+      "tests.test_semantic_search_20261107",
+      "tests.test_semantic_gpu_20261107"
+    ]
+  }
+}

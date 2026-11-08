@@ -1,0 +1,20 @@
+{
+  "status": "ready",
+  "source": "© OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "source_url": "https://www.openstreetmap.org/copyright",
+  "source_sha256": "eeebbcac54d8b500cb9f3452c8563774b6b73f1a94433b7a0b1c7d3c6f98f964",
+  "snapshot_at": "2026-10-28T12:16:18Z",
+  "nodes": 284667,
+  "directed_edges": 567699,
+  "ways_used": 28083,
+  "ways_excluded": 109,
+  "barrier_nodes_excluded": 12,
+  "missing_node_references": 0,
+  "base_road_lines": 5925,
+  "limitations": [
+    "자동차용 공개 도로 연결 참고 경로입니다. 회전 제한 관계·교통 통제·현재 통행 가능 여부를 반영한 내비게이션이 아닙니다.",
+    "OSM의 일방통행·회전교차로·명시적 차량 접근 제한과 일부 노드 장벽을 반영합니다.",
+    "입구를 확인한 목적지가 아니며 가까운 도로까지 연결은 점선으로 표시합니다."
+  ]
+}

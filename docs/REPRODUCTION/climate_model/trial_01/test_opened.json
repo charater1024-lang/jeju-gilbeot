@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "open_count": 1,
+  "opened_at_utc": "2026-11-07T12:54:08.216133+00:00",
+  "selection_sha256": "61645bd5ab77b8f8d5a50d569f0d21048d76b0d0e7c6af4c7ddb456443fcd089",
+  "selected_components_sha256": "321db67434fe6b4ef88f4e1eb339c96393f8a026323d0eb382b1489dd4ad614e",
+  "protocol_sha256": "be83e624a7cd4ea18ad29ec897af903ca260e4f1ca0979868c09ef671d9851b0",
+  "split_sha256": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de"
+}

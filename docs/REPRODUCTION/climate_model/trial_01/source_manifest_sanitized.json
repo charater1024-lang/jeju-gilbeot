@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "source": {
+    "dataset_id": 877,
+    "title": "2000-2021 제주도 일간 기후 데이터",
+    "portal": "제주데이터허브",
+    "portal_url": "https://www.jejudatahub.net/data/view/data/877",
+    "metadata_api": "https://www.jejudatahub.net/api/data/view?id=877",
+    "metadata_sha256": "5023b4197d768e951d7f37f9fa2027cef09115a75b66d95870eb51804a4afd3d",
+    "owner": "고성빈",
+    "createByName": "고성빈",
+    "original_source": "기상청 기상자료개방포털",
+    "original_source_url": "https://data.kma.go.kr/cmmn/main.do",
+    "identity_note": "KMA-origin data publicly posted to the Hub by metadata owner 고성빈; not asserted to be directly produced by 제주빅데이터센터.",
+    "license_note": "Do not invent a redistribution license absent from the portal metadata.",
+    "files": [
+      {
+        "file": "hub877_2596.csv",
+        "station": "jeju",
+        "station_name": "제주",
+        "attachment_id": 2596,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2596",
+        "bytes": 609354,
+        "rows": 7975,
+        "sha256": "620c3a424d12999447fb2a178361f44710e490163336a874225c5de9773615fd"
+      },
+      {
+        "file": "hub877_2597.csv",
+        "station": "gosan",
+        "station_name": "고산",
+        "attachment_id": 2597,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2597",
+        "bytes": 636146,
+        "rows": 7975,
+        "sha256": "dcfc2033d75d833578b0599db6b5ecd4295216bb0be10d890ca289f2dde981e4"
+      },
+      {
+        "file": "hub877_2598.csv",
+        "station": "seongsan",
+        "station_name": "성산",
+        "attachment_id": 2598,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2598",
+        "bytes": 532454,
+        "rows": 7975,
+        "sha256": "45182d486f4ff9fce2f4c87be6e69bcc6ab4f29167ed229d8d24460e332a5a80"
+      },
+      {
+        "file": "hub877_2599.csv",
+        "station": "seogwipo",
+        "station_name": "서귀포",
+        "attachment_id": 2599,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2599",
+        "bytes": 559214,
+        "rows": 7975,
+        "sha256": "b2c2d47d2932c80cabbb0b60e9c035684fd9bc4ded3a51690edb9dad86ce5c79"
+      }
+    ],
+    "audit_sha256": "249a0ffc6c55ddb721bcff0ba1a0c783a015ef8bddf8e24016d7ec013e9b743a",
+    "physical_quality_audit_sha256": "b5ccd6272aab6404fe00ac6da851219d86e25d095ee7accc8ee78e258b12437e"
+  },
+  "raw_rows": 31900,
+  "retained_rows": 31900,
+  "target": "Tem_mean",
+  "feature_names": [
+    "station_jeju",
+    "station_gosan",
+    "station_seongsan",
+    "station_seogwipo",
+    "doy_sin_h1",
+    "doy_cos_h1",
+    "doy_sin_h2",
+    "doy_cos_h2",
+    "monthphase_sin",
+    "monthphase_cos"
+  ],
+  "model_training_period": [
+    "2000-01-01",
+    "2016-12-31"
+  ],
+  "reference_period": [
+    "2000-01-01",
+    "2021-10-31"
+  ],
+  "partition_counts": {
+    "train": {
+      "jeju": 6210,
+      "gosan": 6210,
+      "seongsan": 6210,
+      "seogwipo": 6210
+    },
+    "dev": {
+      "jeju": 730,
+      "gosan": 730,
+      "seongsan": 730,
+      "seogwipo": 730
+    },
+    "test": {
+      "jeju": 1035,
+      "gosan": 1035,
+      "seongsan": 1035,
+      "seogwipo": 1035
+    }
+  },
+  "deployment_allowed": true,
+  "deployment_status": "adoptable",
+  "adoption_checks": {
+    "pooled_mae_at_most_3C": true,
+    "pooled_mae_within_2percent_of_selected_baseline": true,
+    "each_station_mae_within_10percent_of_selected_baseline": true,
+    "interval_coverage_75_to_90percent": true,
+    "mean_interval_width_at_most_12C": true
+  },
+  "evaluation_summary": {
+    "test_rows": 4140,
+    "test_dates": 1035,
+    "mae_c": 1.9199917311305275,
+    "baseline_mae_c": 1.9031884057971014,
+    "mae_ratio": 1.0088290393542978,
+    "coverage": 0.7657004830917874,
+    "mean_width_c": 5.69304553523563,
+    "adoption_passed": true,
+    "superiority_claim_authorized": false
+  },
+  "current_forecast": false,
+  "rainfall_available": false
+}

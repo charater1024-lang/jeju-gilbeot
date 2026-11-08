@@ -1,0 +1,37 @@
+{
+  "seed": 20261107,
+  "max_length": 256,
+  "epochs": 3,
+  "batch_size": 4,
+  "learning_rate": 2e-05,
+  "temperature": 0.05,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "candidates": [
+    "small_pretrained",
+    "small_source40",
+    "base_pretrained",
+    "base_source40"
+  ],
+  "thresholds": [
+    0.72,
+    0.75,
+    0.78,
+    0.8,
+    0.82,
+    0.84,
+    0.86,
+    0.88,
+    0.9,
+    0.92,
+    0.94,
+    0.96
+  ],
+  "selection": "Unsupported dev false responses must be zero; maximize Hit@3, MRR@3, Hit@1, then higher threshold and smaller model.",
+  "training_data": "Only the original names and summaries from 40 source-partition=train records.",
+  "inference_documents": "All62 source records: canonical name + period + original summary.",
+  "holdout_opened": false,
+  "source_partitions_sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+  "dev_sha256": "d482d7bdddfc73cc71b00d838dbde4f6322e26e7c3710595f5baa3f62e60888e",
+  "evaluation_protocol_sha256": "b643012c556d7aced1f0de7af70b347c21512cb313881c8cc116fec039d8ba05"
+}

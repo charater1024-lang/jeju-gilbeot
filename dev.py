@@ -22,6 +22,8 @@ def sha256(path):
     return digest.hexdigest()
 
 def check(original_transfer=False):
+    if not original_transfer and (ROOT/'SUBMISSION_MANIFEST.json').is_file():
+        return subprocess.run([sys.executable,'-B',str(ROOT/'scripts'/'verify_submission.py')],cwd=ROOT).returncode
     manifest_path=ROOT/'TRANSFER_MANIFEST.json'
     if not original_transfer:
         for name in ['SERVICE_MANIFEST_v27.json','SERVICE_MANIFEST_v26.json','SERVICE_MANIFEST_v25.json','SERVICE_MANIFEST_v24.json','SERVICE_MANIFEST_v23.json','SERVICE_MANIFEST_v20.json','SERVICE_MANIFEST_v19.json','SERVICE_MANIFEST_v18.json','SERVICE_MANIFEST_v17.json','SERVICE_MANIFEST_v16.json','SERVICE_MANIFEST_v15.json','SERVICE_MANIFEST_v14.json']:
@@ -49,8 +51,23 @@ def find_node(explicit=None):
 
 def test(node=None,python_only=False):
     suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'))
+    scope_file=ROOT/'tests'/'release_scope.json'
+    scoped=[]
+    if scope_file.is_file():
+        declared={row['id']:row['reason'] for row in json.loads(scope_file.read_text(encoding='utf-8'))['skipped_checks']}
+        def leaf_cases(part):
+            for item in part:
+                if isinstance(item,unittest.TestSuite):yield from leaf_cases(item)
+                else:yield item
+        found=set()
+        for case in leaf_cases(suite):
+            if case.id() in declared:
+                def historical_skip(reason=declared[case.id()]):raise unittest.SkipTest(reason)
+                setattr(case,case._testMethodName,historical_skip)
+                found.add(case.id());scoped.append(case.id())
+        if found!=set(declared):raise ValueError('Release test scope references an unknown test')
     result=unittest.TextTestRunner(verbosity=1).run(suite)
-    report={'python':{'pass':result.wasSuccessful(),'tests':result.testsRun},'ui':{'status':'not_run'}}
+    report={'python':{'pass':result.wasSuccessful(),'tests':result.testsRun,'skipped_historical':len(result.skipped),'executed':result.testsRun-len(result.skipped),'scope_file':'tests/release_scope.json' if scoped else None},'ui':{'status':'not_run'}}
     if python_only:
         report['ui']['reason']='Explicit --python-only; UI checks were not run.'
         print(json.dumps(report,ensure_ascii=False));return 0 if result.wasSuccessful() else 1
@@ -78,8 +95,17 @@ def main():
     sub.add_parser('restore',help='Download pinned public inputs and rebuild operating assets')
     tests=sub.add_parser('test');tests.add_argument('--node');tests.add_argument('--python-only',action='store_true')
     run=sub.add_parser('run');run.add_argument('--port',type=int,default=8765)
-    run.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
+    road=run.add_mutually_exclusive_group()
+    road.add_argument('--road-gpu',action='store_true',help='Enable optional OpenCL road-node calculations')
+    road.add_argument('--no-road-gpu',action='store_true',help='Keep road-node calculations on CPU')
+    run.add_argument('--semantic-device',choices=('auto','cpu','dml'),default='cpu')
+    run.add_argument('--no-model-preload',action='store_true')
     args=parser.parse_args()
+    if (ROOT/'SUBMISSION_MANIFEST.json').is_file() and args.command=='check' and args.service:
+        return check()
+    if (ROOT/'SUBMISSION_MANIFEST.json').is_file() and args.command=='restore':
+        print(json.dumps({'pass':False,'message':'최종 제출 패키지는 자료와 모델을 동봉했습니다. 손상 시 원래 ZIP을 새 폴더에 다시 풀어 주세요. 과거 Git 복구 manifest용 restore는 이 배포본에서 실행하지 않습니다.'},ensure_ascii=False))
+        return 2
     if args.command=='restore' or (args.command=='check' and args.service):
         from jeju_agent.restore_service import restore_service, service_report
         try:
@@ -91,8 +117,9 @@ def main():
     if args.command=='check':return check(args.original_transfer)
     if args.command=='test':return test(args.node,args.python_only)
     if not 1024<=args.port<=65535:parser.error('port must be 1024..65535')
-    if args.road_gpu:
-        os.environ['JEJU_ROAD_GPU'] = '1'
+    from jeju_agent.compute_runtime import configure_compute
+    state=configure_compute(ROOT,args.semantic_device,args.road_gpu,args.no_road_gpu,not args.no_model_preload)
+    if not args.no_model_preload:print('Semantic runtime: '+state['provider']+' ('+state['status']+')',flush=True)
     from jeju_agent.server import serve
     try:serve(ROOT/'data',ROOT/'models',args.port)
     except KeyboardInterrupt:return 0

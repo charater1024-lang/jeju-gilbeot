@@ -1,0 +1,178 @@
+{
+  "service_version": 23,
+  "cards": [
+    {
+      "id": "audience_distribution",
+      "title": "집단별 8업종 소비 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1048",
+      "fixed_tolerance": 1.0,
+      "promoted": true,
+      "metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 270,
+        "total": 288,
+        "percent": 93.75
+      },
+      "error": {
+        "mae": 0.328038,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2024-01",
+        "end": "2025-06"
+      },
+      "evaluation_scope": "2024-01~2025-06의 고정 288개 관측. 기존 시험 기간을 재사용한 후향평가입니다.",
+      "baseline_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5
+      },
+      "baseline_error": {
+        "mae": 0.4261105438795293,
+        "unit": "퍼센트포인트"
+      },
+      "active": true,
+      "decision": "새 구성비 모델 적용",
+      "available": true,
+      "usage": "관광객·도민 참고 집단의 선택 월 식음료 업종 비중"
+    },
+    {
+      "id": "dining_detail",
+      "title": "세부 외식업종 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1047",
+      "fixed_tolerance": 0.25,
+      "promoted": false,
+      "metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1790,
+        "total": 1974,
+        "percent": 90.67882472137791
+      },
+      "error": {
+        "mae": 0.09719669340424895,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2023-01",
+        "end": "2024-12"
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교",
+      "active": true,
+      "decision": "검증된 구성비 모델 유지",
+      "available": true,
+      "usage": "제주 전체 세부 외식업종별 이용 비중"
+    },
+    {
+      "id": "assistant_guide_tfidf",
+      "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "evaluation_scope": "출처를 확인한 도우미 가이드 검색의 작성 질의 시험",
+      "active": true,
+      "decision": "공식 소개 검색에서 사용",
+      "available": true,
+      "usage": "출처가 확인된 공식 관광지 소개의 검색"
+    }
+  ],
+  "models": [
+    {
+      "id": "audience_distribution",
+      "title": "집단별 8업종 소비 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1048",
+      "fixed_tolerance": 1.0,
+      "promoted": true,
+      "metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 270,
+        "total": 288,
+        "percent": 93.75
+      },
+      "error": {
+        "mae": 0.328038,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2024-01",
+        "end": "2025-06"
+      },
+      "evaluation_scope": "2024-01~2025-06의 고정 288개 관측. 기존 시험 기간을 재사용한 후향평가입니다.",
+      "baseline_metric": {
+        "name": "±1퍼센트포인트 이내",
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5
+      },
+      "baseline_error": {
+        "mae": 0.4261105438795293,
+        "unit": "퍼센트포인트"
+      },
+      "active": true,
+      "decision": "새 구성비 모델 적용",
+      "available": true,
+      "usage": "관광객·도민 참고 집단의 선택 월 식음료 업종 비중"
+    },
+    {
+      "id": "dining_detail",
+      "title": "세부 외식업종 구성비",
+      "type": "regression",
+      "field_accuracy_proven": false,
+      "source_id": "1047",
+      "fixed_tolerance": 0.25,
+      "promoted": false,
+      "metric": {
+        "name": "±0.25퍼센트포인트 이내",
+        "hits": 1790,
+        "total": 1974,
+        "percent": 90.67882472137791
+      },
+      "error": {
+        "mae": 0.09719669340424895,
+        "unit": "퍼센트포인트"
+      },
+      "test_period": {
+        "start": "2023-01",
+        "end": "2024-12"
+      },
+      "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교",
+      "active": true,
+      "decision": "검증된 구성비 모델 유지",
+      "available": true,
+      "usage": "제주 전체 세부 외식업종별 이용 비중"
+    },
+    {
+      "id": "assistant_guide_tfidf",
+      "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+      "type": "retrieval",
+      "field_accuracy_proven": false,
+      "promoted": false,
+      "metric": {
+        "name": "첫 결과 적합·미지원 빈 응답",
+        "hits": 22,
+        "total": 22,
+        "percent": 100.0
+      },
+      "evaluation_scope": "출처를 확인한 도우미 가이드 검색의 작성 질의 시험",
+      "active": true,
+      "decision": "공식 소개 검색에서 사용",
+      "available": true,
+      "usage": "출처가 확인된 공식 관광지 소개의 검색"
+    }
+  ],
+  "runtime": "offline_cpu",
+  "requires_cloud": false,
+  "requires_gpu": false
+}

@@ -86,6 +86,18 @@
     }
     for (const text of [...new Set(important)]) box.append(node('p', text, 'data-guide-context'));
   }
+  function foodQueryForCategory(value) {
+    if (typeof value !== 'string') return null;
+    const category = value.trim();
+    if (category.length < 2 || category.length > 80) return null;
+    const words = {
+      '커피전문점': '커피', '일반한식/백반': '한식', '중국음식': '중식',
+      '제과점': '빵', '패스트푸드': '햄버거', '라면김밥분식': '분식',
+      '아이스크림/빙수': '아이스크림', '국수/만두/칼국수': '국수',
+      '해장국/감자탕': '해장국'
+    };
+    return words[category] || category;
+  }
   function render(data) {
     result.replaceChildren();
     const box = node('section', null, 'data-guide-result');
@@ -131,7 +143,23 @@
             const sources = (data.sources || []).filter(source => source.source_date === values[2]);
             for (const source of sources) details.append(sourceRow(source));
             cell.append(details); row.append(cell);
-          } else row.append(node('td', value ?? '확인 자료 없음'));
+          } else {
+            const cell = node('td', value ?? '확인 자료 없음');
+            const foodQuery = kind === 'dining' && index === 0 ? foodQueryForCategory(value) : null;
+            if (foodQuery) {
+              const find = node('button', '관련 음식점 찾기', 'place-map-button data-guide-food-link');
+              find.type = 'button';
+              find.setAttribute('aria-label', `${value} 관련 음식점 찾기`);
+              find.addEventListener('click', () => {
+                const opened = window.JejuExplore?.searchFoodFromQuery?.(foodQuery);
+                status.textContent = opened
+                  ? `‘${value}’의 관련 음식점 검색을 열었어요. 업종 비중은 개별 음식점의 인기·메뉴를 뜻하지 않습니다.`
+                  : '지금은 음식점 검색을 열지 못했어요. 지도·먹거리에서 관심 음식을 직접 입력해 주세요.';
+              });
+              cell.append(find);
+            }
+            row.append(cell);
+          }
         }
         row.hidden = rows.length >= 5;
         rows.push(row); body.append(row);
@@ -188,6 +216,16 @@
   for (let value = 1; value <= 12; value++) { const option = node('option', `${value}월`); option.value = String(value); month.append(option); }
   month.value = String(Number(part('month')));
   for (const tab of tabs) tab.addEventListener('click', () => select(tab.dataset.guideKind));
+  window.JejuDataGuide = Object.freeze({
+    openDining() {
+      if (kind !== 'dining') select('dining');
+      const target = byId('data-guide');
+      window.JejuPages?.reveal(target);
+      target?.scrollIntoView?.({behavior: 'smooth', block: 'start'});
+      query.focus?.({preventScroll: true});
+      return true;
+    }
+  });
   form.addEventListener('submit', load);
   for (const control of [query, day, month, duration].filter(Boolean)) control.addEventListener('input', () => { cancel(); result.replaceChildren(); status.textContent = ''; });
   window.addEventListener('jeju:reset', () => {

@@ -1,0 +1,25 @@
+[
+  {
+    "file": "docs/licenses/tokenizers-0.22.2-LICENSE.txt",
+    "official_upstream_url": "https://raw.githubusercontent.com/huggingface/tokenizers/v0.22.2/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "retrieved_date_kst": "2026-11-08"
+  },
+  {
+    "file": "docs/licenses/flatbuffers-25.12.19-LICENSE.txt",
+    "official_upstream_url": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "retrieved_date_kst": "2026-11-08"
+  },
+  {
+    "source_url": "https://raw.githubusercontent.com/microsoft/unilm/master/LICENSE",
+    "retrieved_date_kst": "2026-11-08",
+    "bytes": 1104,
+    "sha256": "904dc4d8749877f1dba1cda48200d2462dccbeb7c134d5e4ef6fa75e0198c8fe",
+    "model_card_mit_declaration_url": "https://huggingface.co/intfloat/multilingual-e5-small/raw/614241f622f53c4eeff9890bdc4f31cfecc418b3/README.md",
+    "source_link_from_model_card": "https://github.com/microsoft/unilm/tree/master/e5",
+    "unmodified_upstream_copyright": true
+  }
+]

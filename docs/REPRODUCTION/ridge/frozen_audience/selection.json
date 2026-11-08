@@ -1,0 +1,1661 @@
+{
+  "protocol_sha256": "61f2dd19c8d9ce85ebf7231b4211728f7d49f799f27a110ca5b15c23029b9c7e",
+  "selected": {
+    "index": 70,
+    "config": {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    "validation": {
+      "hits": 264,
+      "total": 288,
+      "percent": 91.66666666666667,
+      "mae_percentage_points": 0.40099505218003273
+    },
+    "guard_pass": true
+  },
+  "validation_incumbent": {
+    "hits": 242,
+    "total": 288,
+    "percent": 84.02777777777777,
+    "mae_percentage_points": 0.47118891770167537
+  },
+  "tested_candidates": [
+    {
+      "index": 0,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 239,
+        "total": 288,
+        "percent": 82.98611111111111,
+        "mae_percentage_points": 0.4687704917662205
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 1,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 240,
+        "total": 288,
+        "percent": 83.33333333333333,
+        "mae_percentage_points": 0.4701703908022843
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 2,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 247,
+        "total": 288,
+        "percent": 85.76388888888889,
+        "mae_percentage_points": 0.4480193406312743
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 3,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 245,
+        "total": 288,
+        "percent": 85.06944444444444,
+        "mae_percentage_points": 0.44935018717663194
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 4,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 249,
+        "total": 288,
+        "percent": 86.45833333333333,
+        "mae_percentage_points": 0.4291450133955443
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 5,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.4296340487811466
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 6,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 240,
+        "total": 288,
+        "percent": 83.33333333333333,
+        "mae_percentage_points": 0.4622028482990653
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 7,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 238,
+        "total": 288,
+        "percent": 82.63888888888889,
+        "mae_percentage_points": 0.46170927624142294
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 8,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.44039799256433887
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 9,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 243,
+        "total": 288,
+        "percent": 84.375,
+        "mae_percentage_points": 0.44026491477143714
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 10,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 251,
+        "total": 288,
+        "percent": 87.15277777777777,
+        "mae_percentage_points": 0.42025931361300173
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 11,
+      "config": {
+        "window": 18,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 251,
+        "total": 288,
+        "percent": 87.15277777777777,
+        "mae_percentage_points": 0.420169549946827
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 12,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.45742244240394875
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 13,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 245,
+        "total": 288,
+        "percent": 85.06944444444444,
+        "mae_percentage_points": 0.45785429112794
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 14,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.4282049119661689
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 15,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.42795705743047274
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 16,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 258,
+        "total": 288,
+        "percent": 89.58333333333333,
+        "mae_percentage_points": 0.40236183925701696
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 17,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.400670541103032
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 18,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.45079971054433166
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 19,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.45098636466755604
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 20,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 251,
+        "total": 288,
+        "percent": 87.15277777777777,
+        "mae_percentage_points": 0.42142985706308106
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 21,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 249,
+        "total": 288,
+        "percent": 86.45833333333333,
+        "mae_percentage_points": 0.4199831666091889
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 22,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 258,
+        "total": 288,
+        "percent": 89.58333333333333,
+        "mae_percentage_points": 0.39588653508240323
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 23,
+      "config": {
+        "window": 18,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.39283370508003324
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 24,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 239,
+        "total": 288,
+        "percent": 82.98611111111111,
+        "mae_percentage_points": 0.477315272690286
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 25,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 236,
+        "total": 288,
+        "percent": 81.94444444444444,
+        "mae_percentage_points": 0.4804144606856197
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 26,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 248,
+        "total": 288,
+        "percent": 86.11111111111111,
+        "mae_percentage_points": 0.4407132200218636
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 27,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 244,
+        "total": 288,
+        "percent": 84.72222222222223,
+        "mae_percentage_points": 0.4441469151357722
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 28,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.4110438807497229
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 29,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.41178585465739465
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 30,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 241,
+        "total": 288,
+        "percent": 83.68055555555556,
+        "mae_percentage_points": 0.47005358090942995
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 31,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 238,
+        "total": 288,
+        "percent": 82.63888888888889,
+        "mae_percentage_points": 0.47220481510944384
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 32,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.43236275933010115
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 33,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.4343416670262713
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 34,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.4017876347014343
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 35,
+      "config": {
+        "window": 30,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 254,
+        "total": 288,
+        "percent": 88.19444444444444,
+        "mae_percentage_points": 0.40139239690542633
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 36,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 244,
+        "total": 288,
+        "percent": 84.72222222222223,
+        "mae_percentage_points": 0.44878055812001716
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 37,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 243,
+        "total": 288,
+        "percent": 84.375,
+        "mae_percentage_points": 0.4516770269374606
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 38,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 254,
+        "total": 288,
+        "percent": 88.19444444444444,
+        "mae_percentage_points": 0.40544305836139005
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 39,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 252,
+        "total": 288,
+        "percent": 87.5,
+        "mae_percentage_points": 0.4070682758523708
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 40,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 260,
+        "total": 288,
+        "percent": 90.27777777777777,
+        "mae_percentage_points": 0.38470678483336174
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 41,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 259,
+        "total": 288,
+        "percent": 89.93055555555556,
+        "mae_percentage_points": 0.38623988802243353
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 42,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 246,
+        "total": 288,
+        "percent": 85.41666666666667,
+        "mae_percentage_points": 0.4426063123468166
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 43,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 242,
+        "total": 288,
+        "percent": 84.02777777777777,
+        "mae_percentage_points": 0.44530643909983386
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 44,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 254,
+        "total": 288,
+        "percent": 88.19444444444444,
+        "mae_percentage_points": 0.40028500444783516
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 45,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.40033872696766376
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 46,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 262,
+        "total": 288,
+        "percent": 90.97222222222223,
+        "mae_percentage_points": 0.3809200019729483
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 47,
+      "config": {
+        "window": 30,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 260,
+        "total": 288,
+        "percent": 90.27777777777777,
+        "mae_percentage_points": 0.38247057941526363
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 48,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 241,
+        "total": 288,
+        "percent": 83.68055555555556,
+        "mae_percentage_points": 0.4691326444668254
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 49,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 238,
+        "total": 288,
+        "percent": 82.63888888888889,
+        "mae_percentage_points": 0.47311605581028676
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 50,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 248,
+        "total": 288,
+        "percent": 86.11111111111111,
+        "mae_percentage_points": 0.4304322943611216
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 51,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 247,
+        "total": 288,
+        "percent": 85.76388888888889,
+        "mae_percentage_points": 0.4331879691760629
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 52,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 255,
+        "total": 288,
+        "percent": 88.54166666666667,
+        "mae_percentage_points": 0.3992206678745917
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 53,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 258,
+        "total": 288,
+        "percent": 89.58333333333333,
+        "mae_percentage_points": 0.40050172351465085
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 54,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 242,
+        "total": 288,
+        "percent": 84.02777777777777,
+        "mae_percentage_points": 0.4618948184919667
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 55,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 238,
+        "total": 288,
+        "percent": 82.63888888888889,
+        "mae_percentage_points": 0.4642844430362775
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 56,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.42129474728728206
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 57,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 249,
+        "total": 288,
+        "percent": 86.45833333333333,
+        "mae_percentage_points": 0.42323400806223527
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 58,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.39184879824549396
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 59,
+      "config": {
+        "window": 42,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 258,
+        "total": 288,
+        "percent": 89.58333333333333,
+        "mae_percentage_points": 0.39080782223004157
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 60,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 245,
+        "total": 288,
+        "percent": 85.06944444444444,
+        "mae_percentage_points": 0.4355683614229435
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 61,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 242,
+        "total": 288,
+        "percent": 84.02777777777777,
+        "mae_percentage_points": 0.4392107932934105
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 62,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.4061639204052968
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 63,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 256,
+        "total": 288,
+        "percent": 88.88888888888889,
+        "mae_percentage_points": 0.41150530717640543
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 64,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 264,
+        "total": 288,
+        "percent": 91.66666666666667,
+        "mae_percentage_points": 0.4042212399721539
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 65,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 260,
+        "total": 288,
+        "percent": 90.27777777777777,
+        "mae_percentage_points": 0.40964529395355886
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 66,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 247,
+        "total": 288,
+        "percent": 85.76388888888889,
+        "mae_percentage_points": 0.4319620817272859
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 67,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 242,
+        "total": 288,
+        "percent": 84.02777777777777,
+        "mae_percentage_points": 0.43444802031868257
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 68,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 259,
+        "total": 288,
+        "percent": 89.93055555555556,
+        "mae_percentage_points": 0.4027795836758124
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 69,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 256,
+        "total": 288,
+        "percent": 88.88888888888889,
+        "mae_percentage_points": 0.40788834513636407
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 70,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 264,
+        "total": 288,
+        "percent": 91.66666666666667,
+        "mae_percentage_points": 0.40099505218003273
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 71,
+      "config": {
+        "window": 42,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 262,
+        "total": 288,
+        "percent": 90.97222222222223,
+        "mae_percentage_points": 0.40600992793921203
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 72,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 242,
+        "total": 288,
+        "percent": 84.02777777777777,
+        "mae_percentage_points": 0.4652487172363482
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 73,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 240,
+        "total": 288,
+        "percent": 83.33333333333333,
+        "mae_percentage_points": 0.46904560361536835
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 74,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 248,
+        "total": 288,
+        "percent": 86.11111111111111,
+        "mae_percentage_points": 0.4264594004300577
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 75,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 247,
+        "total": 288,
+        "percent": 85.76388888888889,
+        "mae_percentage_points": 0.42857417209996956
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 76,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 256,
+        "total": 288,
+        "percent": 88.88888888888889,
+        "mae_percentage_points": 0.39625862878262963
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 77,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 256,
+        "total": 288,
+        "percent": 88.88888888888889,
+        "mae_percentage_points": 0.39760677336130024
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 78,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 244,
+        "total": 288,
+        "percent": 84.72222222222223,
+        "mae_percentage_points": 0.45805979383997614
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 79,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 237,
+        "total": 288,
+        "percent": 82.29166666666667,
+        "mae_percentage_points": 0.45996954118539446
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 80,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 250,
+        "total": 288,
+        "percent": 86.80555555555556,
+        "mae_percentage_points": 0.41695589423532314
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 81,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 249,
+        "total": 288,
+        "percent": 86.45833333333333,
+        "mae_percentage_points": 0.41839631474828604
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 82,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.3895717671582184
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 83,
+      "config": {
+        "window": 60,
+        "half_life": 6,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 259,
+        "total": 288,
+        "percent": 89.93055555555556,
+        "mae_percentage_points": 0.3890489632596645
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 84,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 245,
+        "total": 288,
+        "percent": 85.06944444444444,
+        "mae_percentage_points": 0.4367009612669893
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 85,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 244,
+        "total": 288,
+        "percent": 84.72222222222223,
+        "mae_percentage_points": 0.4383523449275498
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 86,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 255,
+        "total": 288,
+        "percent": 88.54166666666667,
+        "mae_percentage_points": 0.41801173254007806
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 87,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.42482440559865625
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 88,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 261,
+        "total": 288,
+        "percent": 90.625,
+        "mae_percentage_points": 0.4291073257652723
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 89,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 2.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 255,
+        "total": 288,
+        "percent": 88.54166666666667,
+        "mae_percentage_points": 0.4414946557205042
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 90,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 244,
+        "total": 288,
+        "percent": 84.72222222222223,
+        "mae_percentage_points": 0.4336495929709481
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 91,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 0.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 245,
+        "total": 288,
+        "percent": 85.06944444444444,
+        "mae_percentage_points": 0.43486848105892073
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 92,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 257,
+        "total": 288,
+        "percent": 89.23611111111111,
+        "mae_percentage_points": 0.41521448538242833
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 93,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 3.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 253,
+        "total": 288,
+        "percent": 87.84722222222223,
+        "mae_percentage_points": 0.42208738702391213
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 94,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "share"
+      },
+      "validation": {
+        "hits": 261,
+        "total": 288,
+        "percent": 90.625,
+        "mae_percentage_points": 0.425960690691638
+      },
+      "guard_pass": true
+    },
+    {
+      "index": 95,
+      "config": {
+        "window": 60,
+        "half_life": 12,
+        "seasonal_deviation_ridge": 10.0,
+        "forecast_months_forward": 6.0,
+        "scale": "clr"
+      },
+      "validation": {
+        "hits": 256,
+        "total": 288,
+        "percent": 88.88888888888889,
+        "mae_percentage_points": 0.43706543383054286
+      },
+      "guard_pass": true
+    }
+  ],
+  "test_used_for_selection": false
+}

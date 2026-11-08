@@ -1,0 +1,42 @@
+{
+  "excluded_from_final_capacity_stats": true,
+  "reason": "The test client incorrectly applied its normal max3stop validator to the separate max8stop scenario. All32 HTTPresponses were200 and all32 returned8stops. Corrected client validation accepts1..8 for the stress case; service code not changed.",
+  "http_statuses": {
+    "200": 32
+  },
+  "stop_counts": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "original_sha256": "b89cb9fc6a751fa8bd9da1e79cb78875644522d7071368bb86f4fb2eab3fff41"
+}

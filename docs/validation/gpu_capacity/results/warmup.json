@@ -1,0 +1,409 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749341239800,
+      "ended_ns": 1794118749427738000,
+      "ms": 87.0163999934448,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749450067400,
+      "ended_ns": 1794118749534014700,
+      "ms": 84.40669999981765,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749568098800,
+      "ended_ns": 1794118749654664400,
+      "ms": 86.82119999139104,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749689478000,
+      "ended_ns": 1794118749776756900,
+      "ms": 87.30980000109412,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749811170100,
+      "ended_ns": 1794118749900826700,
+      "ms": 89.02480000688229,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118749933384100,
+      "ended_ns": 1794118750019656300,
+      "ms": 86.39189999666996,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      },
+      "last_gpu_token_count": 64
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118750066123800,
+      "ended_ns": 1794118750153121500,
+      "ms": 86.88439999241382,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 0,
+        "keys": null
+      }
+    },
+    {
+      "case": "semantic",
+      "path": "/api/semantic-guide-search",
+      "started_ns": 1794118750153121500,
+      "ended_ns": 1794118750239873000,
+      "ms": 86.9210000091698,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 2,
+        "keys": null
+      }
+    },
+    {
+      "case": "1048",
+      "path": "/api/observed-reference?audience=resident&month=6",
+      "started_ns": 1794118750239873000,
+      "ended_ns": 1794118750241854500,
+      "ms": 2.2354000102495775,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "categories",
+          "observation_period",
+          "source_id"
+        ]
+      }
+    },
+    {
+      "case": "1047",
+      "path": "/api/data-guide?kind=dining&month=6",
+      "started_ns": 1794118750241854500,
+      "ended_ns": 1794118750270075900,
+      "ms": 27.77050000440795,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "columns",
+          "metrics",
+          "model",
+          "notes",
+          "rows",
+          "sources",
+          "status",
+          "summary",
+          "title"
+        ]
+      }
+    },
+    {
+      "case": "guide",
+      "path": "/api/guide-search",
+      "started_ns": 1794118750270075900,
+      "ended_ns": 1794118750329812600,
+      "ms": 59.99359999259468,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": 1,
+        "keys": null
+      }
+    },
+    {
+      "case": "climate",
+      "path": "/api/climate-reference?month=4&day=15&station=jeju",
+      "started_ns": 1794118750329812600,
+      "ended_ns": 1794118750385927000,
+      "ms": 56.14639999112114,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "available",
+          "current_forecast",
+          "default_request",
+          "estimates",
+          "limitations",
+          "llm_used",
+          "ml_applied",
+          "model",
+          "rainfall_available",
+          "reference_period",
+          "requested",
+          "runtime",
+          "schema_version",
+          "seasonality",
+          "selected",
+          "source",
+          "stations"
+        ]
+      }
+    },
+    {
+      "case": "auto_route",
+      "path": "/api/agent/plan",
+      "started_ns": 1794118750385927000,
+      "ended_ns": 1794118751186504100,
+      "ms": 800.9682999982033,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "constraint_check",
+          "data_mode",
+          "elapsed_ms",
+          "exclusions",
+          "message",
+          "model",
+          "orchestrator",
+          "planning_assumptions",
+          "privacy",
+          "request",
+          "route_geometry",
+          "selected_place_evidence",
+          "selection_mode",
+          "selection_statistics",
+          "status",
+          "stops",
+          "suggestions",
+          "totals",
+          "trace",
+          "travel_estimate",
+          "warnings"
+        ]
+      }
+    },
+    {
+      "case": "rule_chat",
+      "path": "/api/chat",
+      "started_ns": 1794118751186504100,
+      "ended_ns": 1794118751233660700,
+      "ms": 46.53890000190586,
+      "pass": true,
+      "status": 200,
+      "error": null,
+      "response_shape": {
+        "length": null,
+        "keys": [
+          "answer_source",
+          "cards",
+          "intent",
+          "llm_used",
+          "location_used",
+          "needs_location",
+          "offline",
+          "quick_replies",
+          "reply",
+          "state"
+        ]
+      }
+    }
+  ],
+  "short_only_state": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 9,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 22.328,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": false,
+      "gpu_ready": false,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU"
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1531531264,
+      "peak_working_set_bytes": 1845686272,
+      "private_commit_bytes": 2867875840,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "fully_warm_state": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 11,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 19.437,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": true,
+      "gpu_ready": false,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU",
+      "initialization_attempted": true
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1750077440,
+      "peak_working_set_bytes": 1845686272,
+      "private_commit_bytes": 3087708160,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  }
+}

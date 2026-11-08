@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-11-08T06:28:47.2954021Z",
+  "cpu": "13th Gen Intel(R) Core(TM) i9-13980HX",
+  "physical_cores": 24,
+  "logical_processors": 32,
+  "ram_bytes": 68319547392,
+  "os_caption": "Microsoft Windows 11 Home",
+  "os_version": "10.0.26300",
+  "system_free_ram_bytes": 45940191232,
+  "nvidia_smi_global": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 2537, 621.14",
+  "power_scheme": "전원 구성표 GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)",
+  "note": "GPU totals include all processes. Do not label global memory.used as serviceVRAM."
+}

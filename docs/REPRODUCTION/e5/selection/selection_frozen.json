@@ -1,0 +1,12 @@
+{
+  "candidate": "small_pretrained",
+  "candidate_record_sha256": "b3a73314e1166b51dd8416094cb3e561fa600d33bc1d2d8951eaf489bad5f5ac",
+  "candidate_path": "C:\\Users\\user\\Documents\\ChatGPT\\데이콘\\gpu_upgrade_20261107_work\\semantic\\pretrained\\small",
+  "model_id": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimension": 384,
+  "threshold_gpu_dev": 0.86,
+  "settings_sha256": "3d48e8e548618580e649f6737f2ef1d127db28ae16f74f8a7072a72e46a9161a",
+  "source_partitions_sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+  "selection_scope": "dev only; CPU quantized dev recalibration precedes holdout; no holdout opened"
+}

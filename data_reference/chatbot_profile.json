@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "prepared_answers": 27124,
+  "faq_count": 26,
+  "method": "rule_intent_and_slot_dialogue_with_source_prepared_answers_and_existing_tfidf_retrieval",
+  "llm_used": false,
+  "offline": true,
+  "data_counts": {
+    "attraction": 68,
+    "food": 27056
+  },
+  "sources": {
+    "tourism": {
+      "path": "data_reference/tourism.sqlite",
+      "sha256": "59c2af065d81287edc104796919058836ad05b74890f8538c3c0c1ccd1242119",
+      "rows": 68
+    },
+    "food_tags": {
+      "path": "data_raw/osm/jeju_food_overpass.json",
+      "sha256": "554c1eed694692681781877f0caa919bca5e3183df213cc104c4a2e48adf859d"
+    },
+    "food": {
+      "path": "data_reference/discovery.sqlite",
+      "sha256": "2b9ee1d544467c046a337be94f140939623f5f6bbfb218657cfbf80a6c59bf7b",
+      "rows": 27056
+    },
+    "faq": {
+      "path": "config/chatbot_faq.json",
+      "sha256": "9ede36dd9b0b2b8a326d4f1ee79b3f44d975fa165d1a4ff90206db6a0495898e",
+      "rows": 26
+    }
+  },
+  "database_bytes": 51412992,
+  "build_seconds": 0.743,
+  "answer_count_definition": "교차확인 관광 후보와 음식점 출처 기록별 실제 필드로 렌더링한 안내문입니다. 사람이 작성한 독립 FAQ 수나 전체 고유 장소 수가 아닙니다.",
+  "limitations": [
+    "자유 생성형 대화나 임의 질문의 완전한 이해를 제공하지 않습니다.",
+    "현재 운영·날씨·교통·잔여 주차면·메뉴·인기도를 검증하지 않습니다.",
+    "지역·테마 분류와 후속 질문 처리는 규칙이며 검색 관련도는 기존 TF-IDF 모델을 사용합니다."
+  ],
+  "privacy": {
+    "server_conversation_storage": false,
+    "external_requests": false,
+    "device_gps_used": "only_with_explicit_browser_consent",
+    "precise_location_persisted": false,
+    "precise_location_echoed": false
+  },
+  "location_recommendation": {
+    "available": true,
+    "consent_required": true,
+    "radius_km": 20,
+    "radius_range_km": [
+      1,
+      100
+    ],
+    "distance": "straight_line",
+    "unmapped_nearby_results": false
+  }
+}

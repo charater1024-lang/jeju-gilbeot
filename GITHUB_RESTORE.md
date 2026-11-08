@@ -1,3 +1,9 @@
+# 최신 실행·개발 안내
+
+최신 제출본은 [GitHub Release](https://github.com/charater1024-lang/jeju-gilbeot/releases/tag/v2026.11.08-submission)의 전체 ZIP입니다. ZIP을 새 폴더에 풀어 루트 README를 따르세요. Windows는 `run_center.cmd`, Ubuntu24.04/Python3.12는 `bash setup_ubuntu.sh && bash run_center.sh`입니다. 모델·DB·런타임을 동봉했으므로 과거 Git 복구/restore를 실행하지 않습니다. 이 Git 저장소는 검토·개발용 소스이며, 최신 기획서는 `docs/제주길벗_최종기획서.pdf`입니다.
+
+## 이전 작성 시점의 이력
+
 # GitHub에서 제주 길벗 복원하기
 
 저장소에 접근할 수 있는 Windows PC에서 Git과 Python 3.10 이상을 준비합니다. Python 3.13에서 아래 절차를 검증했습니다.
@@ -18,4 +24,4 @@ python -B dev.py check --service
 
 공식 다운로드 주소가 응답하지 않거나 첨부가 바뀌면 복원이 중단됩니다. 오류에 나온 파일과 출처를 확인한 뒤 `restore`를 다시 실행하세요. 같은 위치에 해시가 다른 파일이 있다면 해당 파일을 다른 곳에 보관한 뒤 다시 실행하세요.
 
-Codex에서 `jeju-gilbeot` 폴더를 프로젝트로 엽니다. 다른 PC에서 반영한 커밋을 가져오려면 작업 트리가 깨끗할 때 `git pull --ff-only`를 실행합니다. [서비스 사용 방법](README.md#5분-체험)
+Codex에서 `jeju-gilbeot` 폴더를 프로젝트로 엽니다. 다른 PC에서 반영한 커밋을 가져오려면 작업 트리가 깨끗할 때 `git pull --ff-only`를 실행합니다. [서비스 사용 방법](README.md#빠른-실행)

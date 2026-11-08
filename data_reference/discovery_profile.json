@@ -1,0 +1,108 @@
+{
+  "status": "built",
+  "algorithm": "corpus_fitted_tfidf_cosine_with_explicit_food_rules",
+  "training_documents": 27056,
+  "hub_permit_documents": 20954,
+  "osm_documents": 6102,
+  "osm_source": {
+    "source_path": "data_reference/osm_food_places.json",
+    "sha256": "b6f43b9afda08485039f8fdc58c34037e433e776495170e94d7be7bab1156415",
+    "documents": 6102,
+    "excluded_invalid_records": 0,
+    "cuisine_tags_present": 743,
+    "addresses_present": 4852,
+    "snapshot_at": "2026-10-28T10:47:02Z",
+    "data_license": "ODbL-1.0",
+    "attribution": "© OpenStreetMap contributors",
+    "copyright_url": "https://www.openstreetmap.org/copyright"
+  },
+  "vocabulary_terms": 59919,
+  "postings": 393149,
+  "coordinates_exact_name_full_address": 2,
+  "coordinates_standalone_osm": 6102,
+  "coordinates_unavailable": 20952,
+  "ambiguous_coordinate_matches_rejected": 0,
+  "invalid_or_outside_jeju_place_coordinates_rejected": 0,
+  "generic_place_records_rejected": 0,
+  "database_bytes": 21774336,
+  "model_bytes": 2426064,
+  "source_catalog_sha256": "58755cd22de2b623e29a0e133ee4bce785bff0e5257fdd09bcb53ea948260cc8",
+  "database_sha256": "2b9ee1d544467c046a337be94f140939623f5f6bbfb218657cfbf80a6c59bf7b",
+  "build_seconds": 2.124,
+  "rules": {
+    "흑돼지": [
+      "흑돼지",
+      "흑돈",
+      "돼지",
+      "삼겹",
+      "오겹"
+    ],
+    "갈치": [
+      "갈치",
+      "은갈치",
+      "생선조림",
+      "생선구이"
+    ],
+    "고기국수": [
+      "고기국수",
+      "국수",
+      "국시"
+    ],
+    "해산물": [
+      "해산물",
+      "해물",
+      "횟집",
+      "회센터",
+      "수산",
+      "전복"
+    ],
+    "한식": [
+      "한식"
+    ],
+    "카페": [
+      "카페",
+      "커피",
+      "coffee",
+      "cafe",
+      "커피숍",
+      "다방",
+      "전통찻집"
+    ]
+  },
+  "cuisine_related_search_rules": {
+    "흑돼지": [
+      "black_pork",
+      "pork"
+    ],
+    "갈치": [
+      "cutlassfish",
+      "hairtail"
+    ],
+    "고기국수": [
+      "noodles",
+      "korean_noodles"
+    ],
+    "해산물": [
+      "seafood",
+      "fish",
+      "sushi"
+    ],
+    "한식": [
+      "korean"
+    ],
+    "카페": [
+      "coffee",
+      "coffee_shop",
+      "cafe"
+    ]
+  },
+  "limitations": [
+    "실제 명부의 비지도 TF-IDF 표현이며 메뉴 추천 정확도를 검증한 모델이 아닙니다.",
+    "상호·업종 문자 일치는 검색 근거이며 실제 제공 메뉴·맛·인기도·현재 영업을 확인한 근거가 아닙니다.",
+    "780 인허가 기록의 좌표는 상호와 전체주소가 정규화 후 모두 일치하고 좌표가 하나로 정해진 1349 기록만 연결했습니다. 유사 상호·주소 근접·부분주소만으로 연결하지 않았습니다.",
+    "OSM은 독립 공동편집 지도 기록이며 780과 동일 업소로 병합하거나 인허가 좌표를 강제로 추가하지 않았습니다. ODbL 출처와 조건을 유지합니다.",
+    "OSM cuisine은 있는 태그만 원문 그대로 사용하며 없는 메뉴 분류를 채우지 않았습니다. 스냅샷 기준일은 개별 업소의 최신 수정일이 아닙니다.",
+    "연결된 좌표도 원자료의 대표 위치입니다. 실제 입구와 현재 주소·운영은 검증하지 않았습니다.",
+    "지리 거리는 직선거리이며 도로 경로·교통·도보 접근 가능성을 뜻하지 않습니다."
+  ]
+}

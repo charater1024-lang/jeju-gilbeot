@@ -1,0 +1,708 @@
+{
+  "source": "data_raw/hub/hub_1048_5832.csv",
+  "source_sha256": "518cd18e78141ede90cc5ee7639099282eae4c1557236e4eda6bd295b66e368d",
+  "candidate_family": "pooled season and damped level",
+  "folds": [
+    [
+      "2022-06",
+      "2022-07",
+      "2022-12"
+    ],
+    [
+      "2022-12",
+      "2023-01",
+      "2023-06"
+    ],
+    [
+      "2023-06",
+      "2023-07",
+      "2023-12"
+    ]
+  ],
+  "test": [
+    "2024-01",
+    "2025-06"
+  ],
+  "fit_cutoff": "2023-12",
+  "test_cells": 288,
+  "target_percent": 90.0,
+  "threshold_percentage_points": 1.0,
+  "test_previously_seen": true,
+  "selection": "maximize dev hit among MAE<=102% of v20",
+  "ties": "dev MAE then fixed order",
+  "candidates": [
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 18,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 30,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 42,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 6,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 2.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 0.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 3.0,
+      "scale": "clr"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "share"
+    },
+    {
+      "window": 60,
+      "half_life": 12,
+      "seasonal_deviation_ridge": 10.0,
+      "forecast_months_forward": 6.0,
+      "scale": "clr"
+    }
+  ],
+  "release": ">=90% on full fixed test, v20 MAE guard, group and month-only parity"
+}

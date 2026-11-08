@@ -6,7 +6,7 @@ set "CENTER_PYTHON=%~dp0runtime\python.exe"
 if not exist "%CENTER_PYTHON%" (
   where python.exe >nul 2>nul
   if errorlevel 1 (
-    echo Python 3.10 or later is required. See GITHUB_RESTORE.md.
+    echo Python is missing. See README.md. Extract the complete submission ZIP into a new folder.
     pause
     exit /b 1
   )

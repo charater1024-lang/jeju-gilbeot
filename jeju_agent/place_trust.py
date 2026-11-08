@@ -4,6 +4,9 @@ This policy verifies source-record integrity and candidate identity, not today's
 opening status, entrance access or navigation safety. It performs no network IO.
 """
 from datetime import date, datetime, timedelta, timezone
+from contextlib import contextmanager
+from contextvars import ContextVar
+from copy import deepcopy
 from functools import lru_cache
 import hashlib
 import json
@@ -16,6 +19,9 @@ POLICY_ID = 'jeju_place_trust_v15'
 GUIDE_PATH = 'data_reference/tourism_guides_v12.json'
 GUIDE_PROOFS_PATH = 'config/official_guide_proofs_v27.json'
 GUIDE_HOSTS = {'visitjeju.net','www.visitjeju.net','m.visitjeju.net','korean.visitkorea.or.kr'}
+_REQUEST = ContextVar('jeju_trust_request', default=None)
+_REQUEST_SEAL = object()
+_MISSING = object()
 
 
 class TrustPolicyError(ValueError):
@@ -84,9 +90,9 @@ def _policy_dates(entry,required=(),optional=()):
 
 
 @lru_cache(maxsize=4)
-def _policy(path,mtime,size):
+def _policy_data(raw):
     try:
-        data=json.loads(_bytes(path,mtime,size).decode('utf-8'))
+        data=json.loads(raw.decode('utf-8'))
         if not isinstance(data,dict) or type(data.get('schema_version')) is not int or data.get('schema_version')!=1 or data.get('policy_id')!=POLICY_ID:raise ValueError('unsupported policy')
         if not isinstance(data.get('max_guide_age_days'),int) or isinstance(data['max_guide_age_days'],bool) or not 1<=data['max_guide_age_days']<=365:raise ValueError('invalid review age')
         if not isinstance(data.get('approved_identity_sha256'),dict) or not data['approved_identity_sha256']:raise ValueError('missing candidate fingerprints')
@@ -116,6 +122,12 @@ def _policy(path,mtime,size):
         return data
     except (ValueError,KeyError,TypeError,UnicodeError) as exc:
         raise TrustPolicyError('신뢰성 정책이 손상되었거나 지원하지 않는 버전입니다. 자동 코스 생성을 중단합니다.') from exc
+
+
+@lru_cache(maxsize=4)
+def _policy(path,mtime,size):
+    # Do not expose the content-keyed parser's mutable value to legacy callers.
+    return deepcopy(_policy_data(_bytes(path,mtime,size)))
 
 
 def _reference_day(as_of):
@@ -149,6 +161,102 @@ def load_policy(root,*,as_of=None):
         raise TrustPolicyError('신뢰성 정책을 읽을 수 없어 자동 코스 생성을 중단합니다.') from exc
 
 
+class _TrustRequest:
+    """One request's verified source bytes, never a cross-request result cache."""
+    __slots__ = ('original_root','root','today','policy','allowed_receipts',
+                 '_files','_catalog','_guides','active')
+
+    def __init__(self, root, today, seal):
+        if seal is not _REQUEST_SEAL:
+            raise TrustPolicyError('요청의 출처 검사 상태를 확인하세요.')
+        self.original_root=Path(root)
+        self.root=self.original_root.resolve()
+        self.today=today
+        self._files={}
+        self._catalog=None
+        self._guides={}
+        self.active=True
+        try:
+            raw=self.read(self.root/'config/place_trust_policy_v15.json',500_000)
+            self.policy=deepcopy(_policy_data(raw))
+            _check_policy_dates(self.policy,today)
+            self.allowed_receipts=(self.root/'data_raw/tourism/v12/official_fields').resolve()
+        except (OSError,ValueError) as exc:
+            self.active=False
+            if isinstance(exc,TrustPolicyError):raise
+            raise TrustPolicyError('신뢰성 정책을 읽을 수 없어 자동 코스 생성을 중단합니다.') from exc
+
+    def accepts(self,root,as_of=None):
+        return (self.active and Path(root) in (self.original_root,self.root)
+                and (as_of is None or as_of==self.today))
+
+    def read(self,path,maximum=8_000_000):
+        """Read actual bytes once; unchanged size/mtime cannot hide new content."""
+        key=(str(path),maximum)
+        if key not in self._files:
+            try:
+                with path.open('rb') as stream:raw=stream.read(maximum+1)
+            except FileNotFoundError:
+                self._files[key]=_MISSING
+            else:
+                if len(raw)>maximum:raise ValueError('source metadata is too large')
+                self._files[key]=raw
+        value=self._files[key]
+        if value is _MISSING:raise FileNotFoundError(str(path))
+        return value
+
+    def catalog(self):
+        if self._catalog is None:
+            raw=self.read(self.root/GUIDE_PATH)
+            if hashlib.sha256(raw).hexdigest()!=self.policy['guide_catalog_sha256']:
+                return None
+            data=json.loads(raw.decode('utf-8'))
+            if not isinstance(data,dict) or not isinstance(data.get('guides',[]),list):
+                raise ValueError('invalid guide catalog')
+            index={}
+            for guide in data.get('guides',[]):
+                if not isinstance(guide,dict):raise ValueError('invalid guide record')
+                index.setdefault(guide.get('id'),guide)
+            self._catalog=index
+        return self._catalog
+
+    def guide(self,ident):
+        if ident not in self._guides:
+            self._guides[ident]=_guide_check(self.root,ident,self.policy,request=self)
+        guide,error=self._guides[ident]
+        return deepcopy(guide),error
+
+
+def _current_request(root,as_of=None):
+    request=_REQUEST.get()
+    if request is not None and (type(request) is not _TrustRequest or not request.active):
+        raise TrustPolicyError('요청의 출처 검사 상태를 확인하세요.')
+    return request if request is not None and request.accepts(root,as_of) else None
+
+
+@contextmanager
+def trust_request(root,*,as_of=None):
+    """Freeze root, KST review day and shared source reads for this request only."""
+    request=_TrustRequest(root,_reference_day(as_of),_REQUEST_SEAL)
+    token=_REQUEST.set(request)
+    try:
+        yield
+    finally:
+        _REQUEST.reset(token)
+        request.active=False
+        request._files.clear()
+        request._guides.clear()
+        request._catalog=None
+
+
+def _verified_request_guide(root,ident):
+    """Use the same authenticated guide bytes that this request's checks used."""
+    request=_current_request(root)
+    if request is None:raise TrustPolicyError('관광 소개의 요청 검사 상태를 확인하세요.')
+    guide,error=_guide(root,ident,request.policy)
+    return None if error else guide
+
+
 @lru_cache(maxsize=4)
 def _compact_guide_proofs(raw, expected_sha256):
     if hashlib.sha256(raw).hexdigest()!=expected_sha256:
@@ -157,12 +265,25 @@ def _compact_guide_proofs(raw, expected_sha256):
 
 
 def _guide(root,ident,policy):
+    request=_current_request(root)
+    if request is not None and request.policy is policy:
+        return request.guide(ident)
+    return _guide_check(root,ident,policy)
+
+
+def _guide_check(root,ident,policy,request=None):
     """Check saved metadata receipts; a receipt is not the original page body."""
     try:
-        raw=_file_bytes(root/GUIDE_PATH)
-        if hashlib.sha256(raw).hexdigest()!=policy['guide_catalog_sha256']:return None,'guide_catalog_changed'
-        data=json.loads(raw.decode('utf-8'))
-        guide=next((g for g in data.get('guides',[]) if g.get('id')==ident),None)
+        read=request.read if request is not None else _file_bytes
+        if request is not None:
+            catalog=request.catalog()
+            if catalog is None:return None,'guide_catalog_changed'
+            guide=catalog.get(ident)
+        else:
+            raw=read(root/GUIDE_PATH)
+            if hashlib.sha256(raw).hexdigest()!=policy['guide_catalog_sha256']:return None,'guide_catalog_changed'
+            data=json.loads(raw.decode('utf-8'))
+            guide=next((g for g in data.get('guides',[]) if g.get('id')==ident),None)
         receipt=policy['guide_records'].get(ident)
         if not guide or not isinstance(receipt,dict):return None,'official_guide_missing'
         if _digest(guide)!=receipt.get('guide_record_sha256'):return None,'guide_record_changed'
@@ -171,14 +292,14 @@ def _guide(root,ident,policy):
         relative=guide.get('source_cache')
         if not isinstance(relative,str):return None,'source_receipt_missing'
         if relative!=receipt['source_cache'] or guide.get('page_sha256')!=receipt['original_page_sha256'] or guide.get('retrieved_at')!=receipt['guide_reviewed_at']:return None,'source_receipt_mismatch'
-        path=(root/relative).resolve();allowed=(root/'data_raw/tourism/v12/official_fields').resolve()
+        path=(root/relative).resolve();allowed=request.allowed_receipts if request is not None else (root/'data_raw/tourism/v12/official_fields').resolve()
         if not path.is_relative_to(allowed) or path==allowed:return None,'source_receipt_path_invalid'
         try:
-            cache_raw=_file_bytes(path,100_000)
+            cache_raw=read(path,100_000)
         except FileNotFoundError:
             # Clean checkouts carry only the authenticated factual receipt fields.
             if 'guide_proofs_sha256' not in policy:return None,'source_receipt_unavailable'
-            proof_raw=_file_bytes(root/GUIDE_PROOFS_PATH,100_000)
+            proof_raw=read(root/GUIDE_PROOFS_PATH,100_000)
             proofs=_compact_guide_proofs(proof_raw,policy['guide_proofs_sha256'])
             if not isinstance(proofs,dict):return None,'source_receipt_changed'
             cache=proofs.get(ident)
@@ -194,7 +315,12 @@ def _guide(root,ident,policy):
 def place_trust(root,item,purpose='automatic',*,as_of=None):
     if purpose not in {'automatic','manual'}:raise ValueError('신뢰성 검사 목적은 automatic 또는 manual이어야 합니다.')
     if not isinstance(item,dict):raise ValueError('장소 기록 형식을 확인하세요.')
-    root=Path(root).resolve();today=_reference_day(as_of);policy=load_policy(root,as_of=today)
+    if as_of is not None:_reference_day(as_of)
+    request=_current_request(root,as_of)
+    if request is None:
+        root=Path(root).resolve();today=_reference_day(as_of);policy=load_policy(root,as_of=today)
+    else:
+        root=request.root;today=request.today;policy=request.policy
     ident=item.get('id');proof=item.get('cross_source');proof=proof if isinstance(proof,dict) else {};reasons=[];warnings=[];sources=[]
     def reject(code,message):reasons.append({'code':code,'message':message})
     from .tourism import _approved

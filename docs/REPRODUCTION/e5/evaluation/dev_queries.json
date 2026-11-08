@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-07",
+  "source_partitions_sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+  "origin": "Developer-authored, source-grounded evaluation questions before viewing candidate scores.",
+  "not_training_data": true,
+  "not_observed_user_queries": true,
+  "field_accuracy_proven": false,
+  "candidate_scores_viewed_before_freeze": false,
+  "judgement_scope": "Saved verified guide text only, with all requested identifying facts required. Displayed guide source remains mandatory.",
+  "cases": [
+    {
+      "id": "dev_supported_01",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "여러 나라의 곰 모양 인형과 명화를 재해석한 전시를 보고 싶어",
+      "anchor_id": "osm_tourism_way_249857724",
+      "anchor_name": "테디베어 뮤지엄",
+      "relevant_ids": [
+        "osm_tourism_way_249857724"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_249857724",
+          "text": "중문관광단지에서 테디베어를 소재로 역사와 예술을 살펴보는 박물관입니다. 여러 나라의 곰 인형과 명화·공연을 재해석한 전시를 보고, 야외 정원과 잔디 공간도 함께 둘러볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500575"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_02",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "오래 자란 비자나무 숲에서 화산송이로 된 길을 걸어보고 싶어",
+      "anchor_id": "osm_tourism_way_370342656",
+      "anchor_name": "비자림",
+      "relevant_ids": [
+        "osm_tourism_way_370342656"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_370342656",
+          "text": "오랜 세월 자란 비자나무와 여러 수종이 숲을 이루는 자연 공간입니다. 나무 그늘과 화산송이 길을 따라 산책하며 큰 비자나무와 숲의 생태를 살펴볼 수 있고, 구간마다 길의 상태가 다릅니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500270"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_03",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "둥근 산줄기와 분화구가 여러 개 있는 동부 오름의 소개가 궁금해",
+      "anchor_id": "osm_tourism_node_5507591794",
+      "anchor_name": "용눈이오름",
+      "relevant_ids": [
+        "osm_tourism_node_5507591794"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_5507591794",
+          "text": "둥근 능선과 여러 분화구, 계절에 따라 색이 바뀌는 초지가 어우러진 오름입니다. 부드러운 산세와 동부 오름의 풍경을 감상할 수 있으며, 출입 가능 여부와 정해진 탐방로를 확인한 뒤 방문해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500466"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_04",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "용암으로 만들어진 굴과 전통 집, 식물을 한 동선에서 볼 수 있는 장소",
+      "anchor_id": "osm_tourism_way_375500447",
+      "anchor_name": "일출랜드",
+      "relevant_ids": [
+        "osm_tourism_way_375500447"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_375500447",
+          "text": "미천굴을 중심으로 정원과 수변공간, 제주 전통가옥과 다양한 식물 구역을 구성한 공간입니다. 용암동굴의 모습과 식물·문화 전시를 한 동선에서 둘러볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500514"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_05",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "얕은 바다에서 일어난 화산활동으로 생긴 분화구와 해안 절벽을 소개해줘",
+      "anchor_id": "seongsan",
+      "anchor_name": "성산일출봉",
+      "relevant_ids": [
+        "seongsan"
+      ],
+      "evidence": [
+        {
+          "id": "seongsan",
+          "text": "얕은 바다에서 일어난 화산활동으로 만들어진 분화구와 해안절벽을 볼 수 있는 곳입니다. 정상 탐방과 주변 해안 관람 동선이 구분돼 있어 체력과 방문 조건에 맞춰 화산 지형의 풍경을 살펴볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500349"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_06",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "파도가 깎은 층층의 바위 벽에서 지층 흔적을 살펴볼 장소",
+      "anchor_id": "osm_tourism_node_3741616919",
+      "anchor_name": "용머리해안",
+      "relevant_ids": [
+        "osm_tourism_node_3741616919"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_3741616919",
+          "text": "산방산 자락에서 바다로 뻗은 화산쇄설층이 파도에 깎이며 층층이 굽은 절벽과 바위길을 만든 해안입니다. 지층과 침식 흔적을 가까이서 관찰할 수 있지만, 만조나 높은 파도·기상 악화 때는 출입이 통제되므로 원문 안내를 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500471"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_07",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "숲 전체 소개와 실제 출발 입구를 구분해야 하는 울창한 삼나무 숲길을 찾아줘",
+      "anchor_id": "osm_tourism_node_6731890115",
+      "anchor_name": "사려니숲길 입구",
+      "relevant_ids": [
+        "osm_tourism_node_6731890115"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_6731890115",
+          "text": "삼나무를 비롯한 여러 나무가 울창하게 자라는 사려니숲길을 만나는 지점입니다. 아래 관광 안내는 숲길 전체를 소개하므로 실제 출발 입구와 주차·반환 동선은 따로 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_08",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "중산간에서 삼나무 그늘길과 연못을 함께 볼 수 있는 휴양 공간",
+      "anchor_id": "osm_tourism_way_375480941",
+      "anchor_name": "제주절물자연휴양림",
+      "relevant_ids": [
+        "osm_tourism_way_375480941"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_375480941",
+          "text": "곧게 자란 삼나무와 다양한 식물이 숲을 이루는 중산간 휴양 공간입니다. 숲 그늘의 산책길을 따라 걸으며 나무와 연못의 풍경을 감상할 수 있고, 선택하는 구간에 따라 경사와 보행 조건이 달라집니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500570"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_09",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "강의 민물이 바닷물과 만나는 곳에서 현무암 계곡 풍경을 보고 싶어",
+      "anchor_id": "osm_tourism_node_569007779",
+      "anchor_name": "쇠소깍",
+      "relevant_ids": [
+        "osm_tourism_node_569007779"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_569007779",
+          "text": "효돈천이 바다에 닿는 끝에서 민물과 바닷물이 만나는 깊은 물길입니다. 현무암 바위와 나무로 둘러싸인 계곡 풍경, 하구와 해안이 이어지는 모습을 함께 감상할 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500384"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_10",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "땅속에서 나온 유물과 동북아 문화 교류로 제주 역사를 알아보고 싶어",
+      "anchor_id": "osm_tourism_relation_20364165",
+      "anchor_name": "국립 제주 박물관",
+      "relevant_ids": [
+        "osm_tourism_relation_20364165"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_relation_20364165",
+          "text": "제주의 역사와 문화유산을 전시·보존하는 고고·역사박물관입니다. 섬에서 출토된 유물과 전시를 통해 제주의 형성과 생활, 동북아시아 문화교류 속 제주 이야기를 살펴볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500067"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_11",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "곰 인형을 활용해 역사와 예술을 보여주는 박물관의 안내가 궁금해",
+      "anchor_id": "osm_tourism_way_249857724",
+      "anchor_name": "테디베어 뮤지엄",
+      "relevant_ids": [
+        "osm_tourism_way_249857724"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_249857724",
+          "text": "중문관광단지에서 테디베어를 소재로 역사와 예술을 살펴보는 박물관입니다. 여러 나라의 곰 인형과 명화·공연을 재해석한 전시를 보고, 야외 정원과 잔디 공간도 함께 둘러볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500575"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_supported_12",
+      "partition": "dev",
+      "kind": "supported",
+      "query": "나무와 검은 바위로 둘러싸인 깊은 하구를 둘러보고 싶어",
+      "anchor_id": "osm_tourism_node_569007779",
+      "anchor_name": "쇠소깍",
+      "relevant_ids": [
+        "osm_tourism_node_569007779"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_569007779",
+          "text": "효돈천이 바다에 닿는 끝에서 민물과 바닷물이 만나는 깊은 물길입니다. 현무암 바위와 나무로 둘러싸인 계곡 풍경, 하구와 해안이 이어지는 모습을 함께 감상할 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500384"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "dev_unsupported_01",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "current_operation",
+      "query": "지금 문 연 해변 근처 박물관 찾아줘",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "dev_unsupported_02",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "accessibility",
+      "query": "휠체어로 모든 구간을 혼자 이동할 수 있는 숲길",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "dev_unsupported_03",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "food_menu",
+      "query": "갈치조림을 파는 식당 소개해줘",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "dev_unsupported_04",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "outside_jeju",
+      "query": "서울에서 조선 왕궁을 구경할 곳",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "dev_unsupported_05",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "absent_topic",
+      "query": "실내 스키 슬로프와 눈썰매 체험을 소개해줘",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "dev_unsupported_06",
+      "partition": "dev",
+      "kind": "unsupported",
+      "category": "underspecified",
+      "query": "좋은 곳 추천",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    }
+  ]
+}

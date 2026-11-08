@@ -1,0 +1,383 @@
+{
+  "scope": "Selected original Ridge/HGB/E5 research code and frozen evidence; not executed or retrained during packaging",
+  "files": [
+    {
+      "source_project_relative": "scripts/experiment_audience_v23.py",
+      "submission_path": "docs/REPRODUCTION/ridge/experiment_audience_v23.py",
+      "bytes": 10730,
+      "sha256": "6c6db9a6670b6e609ec1002d686d7abcc96720db117c5401c00f0de2c546c703"
+    },
+    {
+      "source_project_relative": "scripts/train_dining.py",
+      "submission_path": "docs/REPRODUCTION/ridge/train_dining.py",
+      "bytes": 1158,
+      "sha256": "9f0883cbf974f4543bcf64d0da8e8b2cd1759ee5c423a45dd6dbed67295defa6"
+    },
+    {
+      "source_project_relative": "models_candidates_v23/audience/protocol.json",
+      "submission_path": "docs/REPRODUCTION/ridge/frozen_audience/protocol.json",
+      "bytes": 16379,
+      "sha256": "aa060796fb0747c8f4d3a0ddf0cf7e63eef6cfaf0a5c09577f52919f5e26de2e"
+    },
+    {
+      "source_project_relative": "models_candidates_v23/audience/selection.json",
+      "submission_path": "docs/REPRODUCTION/ridge/frozen_audience/selection.json",
+      "bytes": 40729,
+      "sha256": "702b1d37f105f497de1bf09a0c33763aa7f0ef754cc382e6cf8b2d7557027df3"
+    },
+    {
+      "source_project_relative": "models_candidates_v23/audience/result.json",
+      "submission_path": "docs/REPRODUCTION/ridge/frozen_audience/result.json",
+      "bytes": 2970,
+      "sha256": "0ebd7a65ebae50af1a1da606603c339a60a4fab1f62db888313458d6b5ffb8d8"
+    },
+    {
+      "source_project_relative": "models_candidates_v23/audience/serving_profile.json",
+      "submission_path": "docs/REPRODUCTION/ridge/frozen_audience/serving_profile.json",
+      "bytes": 10508,
+      "sha256": "407a94834da4ebd49e67a9d73de32146f77d8aaeb7226b0de87a33e9be641851"
+    },
+    {
+      "source_project_relative": "models_dining/dining_metrics.json",
+      "submission_path": "docs/REPRODUCTION/ridge/frozen_dining_metrics.json",
+      "bytes": 145772,
+      "sha256": "2eaceb72aa789c229c60e2e1ce22387bac31658a32fee558091fb458d3ac569e"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/prepare_climate.py",
+      "submission_path": "docs/REPRODUCTION/climate_model/prepare_climate.py",
+      "bytes": 2879,
+      "sha256": "f733502935641644f4dd1ceb3fec669e395a67e9ec16920038ae3b78c7db98b8"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/freeze_climate_protocol.py",
+      "submission_path": "docs/REPRODUCTION/climate_model/freeze_climate_protocol.py",
+      "bytes": 8538,
+      "sha256": "1fc88437e9b178a60ede94c78d5c32b28029e0d4739c93fdb52c9cb17e960f7a"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/train_climate.py",
+      "submission_path": "docs/REPRODUCTION/climate_model/train_climate.py",
+      "bytes": 17111,
+      "sha256": "acfdb386ff4f7bbd47ad7b2ac3fd1dad0936e648da4439b561b5a077cb91a8d6"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/verify_climate.py",
+      "submission_path": "docs/REPRODUCTION/climate_model/verify_climate.py",
+      "bytes": 3872,
+      "sha256": "54ac35c6b4c1e1ff95c35c4cfa6281a584a28b5ec0d158b0d0cfea0725031c85"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/climate_runtime.py",
+      "submission_path": "docs/REPRODUCTION/climate_model/climate_runtime.py",
+      "bytes": 4175,
+      "sha256": "69e222be4e321a9cab7160a42365f54c2db5f31fdd5876002ccdaee9282d990c"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/data_audit.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/data_audit.json",
+      "bytes": 2267,
+      "sha256": "3274b4d35fee298d1617c7d88552fb78eb36ee2fde26486522082eb5dea4bcec"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/artifact_manifest.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/artifact_manifest.json",
+      "bytes": 1453,
+      "sha256": "98918707e4100a7623bc9856805d98c0534268c4ee85a683c94e70bc5c6b57f5"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/baseline_train_profiles.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/baseline_train_profiles.json",
+      "bytes": 461545,
+      "sha256": "033fdbe944e998a3f390fd42d04e6cf6455ff498e01f1d08a1c5765cbc943e22"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/climate_model.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/climate_model.json",
+      "bytes": 2441764,
+      "sha256": "861b201726ce651788baea948a84c30158ba7491b21a81c288e339cce5cf9f94"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/evaluation.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/evaluation.json",
+      "bytes": 16093,
+      "sha256": "a47bcb8b20fe6d86e7eaeef8d552e1576b8e3b2b4902b7ecfad067e0b28b2434"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/protocol_frozen.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/protocol_frozen.json",
+      "bytes": 12319,
+      "sha256": "be83e624a7cd4ea18ad29ec897af903ca260e4f1ca0979868c09ef671d9851b0"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/selected_components_frozen.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/selected_components_frozen.json",
+      "bytes": 2441348,
+      "sha256": "321db67434fe6b4ef88f4e1eb339c96393f8a026323d0eb382b1489dd4ad614e"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/selection_frozen.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/selection_frozen.json",
+      "bytes": 7963,
+      "sha256": "61645bd5ab77b8f8d5a50d569f0d21048d76b0d0e7c6af4c7ddb456443fcd089"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/source_manifest_sanitized.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/source_manifest_sanitized.json",
+      "bytes": 4123,
+      "sha256": "1d914d49ab6df3a571279d32f6b79181b441abf3b1e8a8f2b04e68fc6756a7c7"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/split_frozen.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/split_frozen.json",
+      "bytes": 6543777,
+      "sha256": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/test_opened.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/test_opened.json",
+      "bytes": 472,
+      "sha256": "cb9ba75f435a95993a4517c8ed77c5261dd94ecb766e01fd47e7340b92823b25"
+    },
+    {
+      "source_project_relative": "docs/센터데이터AI_20261107/재현/climate_model/trial_01/verification.json",
+      "submission_path": "docs/REPRODUCTION/climate_model/trial_01/verification.json",
+      "bytes": 1065,
+      "sha256": "649d4e631c22f4544d82b84a600a11af7fad0199d82d44dababa1722e459c93a"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/재현/fetch_encoders.py",
+      "submission_path": "docs/REPRODUCTION/e5/research/fetch_encoders.py",
+      "bytes": 3448,
+      "sha256": "3d1d8d6936b8d5ee33219b4fadd62748c52764d81865ab60d3bb01600e6bb3f1"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/재현/README.md",
+      "submission_path": "docs/REPRODUCTION/e5/research/README.md",
+      "bytes": 2583,
+      "sha256": "dbe83a53c59ec8ed6976eecb3766e29dc6f821dfe078d9298d1a882c825b78b9"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/재현/requirements-training.txt",
+      "submission_path": "docs/REPRODUCTION/e5/research/requirements-training.txt",
+      "bytes": 574,
+      "sha256": "a3e99ef0b4a78cf3e50a44f54d1ac23eb6d6246cb39f369d5904a9c023e2bfa0"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/재현/semantic_cpu_check.py",
+      "submission_path": "docs/REPRODUCTION/e5/research/semantic_cpu_check.py",
+      "bytes": 8662,
+      "sha256": "5bda69e308822744f940b328f5009e94f09171eb420069529b8c299298566b20"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/재현/semantic_gpu_trial.py",
+      "submission_path": "docs/REPRODUCTION/e5/research/semantic_gpu_trial.py",
+      "bytes": 13123,
+      "sha256": "1107feaaa6b7532e4279891139820b0c5e81001a99cd577df88dc38585f665a4"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/source_partitions.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/source_partitions.json",
+      "bytes": 38221,
+      "sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/dev_queries.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/dev_queries.json",
+      "bytes": 15217,
+      "sha256": "d482d7bdddfc73cc71b00d838dbde4f6322e26e7c3710595f5baa3f62e60888e"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/holdout_queries.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/holdout_queries.json",
+      "bytes": 30074,
+      "sha256": "28d626736177a94bef2275da7006c3658dfbdbbd95ca5eac5bd453cf77537d13"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/protocol.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/protocol.json",
+      "bytes": 3712,
+      "sha256": "b643012c556d7aced1f0de7af70b347c21512cb313881c8cc116fec039d8ba05"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/freeze_receipt.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/freeze_receipt.json",
+      "bytes": 755,
+      "sha256": "03ec9861b4820c09eeebb0fbcee5879c257c5409060e2ebb387e5e1869de6d41"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/legacy_guide_cases.json",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/legacy_guide_cases.json",
+      "bytes": 2563,
+      "sha256": "6123b08c0e35532db5342ab6728fe2d505e07ebf0cef8564a393a84210991a6e"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/README.md",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/README.md",
+      "bytes": 3119,
+      "sha256": "bb17d355028a46ea01a53c82e9f3b9ca6c8a2fc3c455f10b649439a8bea65daf"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/freeze_queries.py",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/freeze_queries.py",
+      "bytes": 11834,
+      "sha256": "8c48605d99e55bc9a992092561888fc649e783725135e5f4698d60d3960dc536"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/freeze_catalog.py",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/freeze_catalog.py",
+      "bytes": 2093,
+      "sha256": "87d74964186eb0fc52e1e8e426859e74995787afa0bcadce57f7ac4649ad3804"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/audit_frozen_evaluation.py",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/audit_frozen_evaluation.py",
+      "bytes": 2121,
+      "sha256": "31f4f53d51f63f46f0f9ea955358dfb960d3ddfacf8dda3ada1cdc150bd1d67a"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/평가/audit_semantic_results.py",
+      "submission_path": "docs/REPRODUCTION/e5/evaluation/audit_semantic_results.py",
+      "bytes": 9250,
+      "sha256": "e0c9841a88937466ef121d368439923d51b8d17d47dfd59a4cb89b8c6b01e577"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/small_download.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/small_download.json",
+      "bytes": 198,
+      "sha256": "7a4387f02c821bdb1e7816a509d8725d895d116708f936b1487e36aee851245a"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/small_asset_hashes.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/small_asset_hashes.json",
+      "bytes": 951,
+      "sha256": "2a58f161958de213b600123503c3137bb295ff1e35cf7dac3ce4a06137086913"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/settings_frozen.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/settings_frozen.json",
+      "bytes": 1100,
+      "sha256": "3d48e8e548618580e649f6737f2ef1d127db28ae16f74f8a7072a72e46a9161a"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/selection_frozen.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/selection_frozen.json",
+      "bytes": 715,
+      "sha256": "5e02c3652345c12cc7c859b4846fb793b12388b7cbbb058885d05d5b3dceb1e3"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/small_pretrained_dev.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/small_pretrained_dev.json",
+      "bytes": 23405,
+      "sha256": "b3a73314e1166b51dd8416094cb3e561fa600d33bc1d2d8951eaf489bad5f5ac"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/cpu_dev_results.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/cpu_dev_results.json",
+      "bytes": 23674,
+      "sha256": "1a97e9921bfc8458e4bd84a94496aaee55ec5325fcf5340ed849b9a709a0caef"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/cpu_selection_frozen.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/cpu_selection_frozen.json",
+      "bytes": 935,
+      "sha256": "547be7704181bdd04d90ccb88a86f8385c93cf0ebab36481adbd9a37b6209284"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/export_receipt.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/export_receipt.json",
+      "bytes": 417,
+      "sha256": "ec4a7606a4295902b8e3cdb0f4771a838c66246749ab6355f453ba88af576a7e"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/holdout_results.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/holdout_results.json",
+      "bytes": 45842,
+      "sha256": "9330e448179134449e5b0813282a780eed8f5fc1a0b7c94414b4d4097f24a0fe"
+    },
+    {
+      "source_project_relative": "docs/GPU상주와사양_20261107/품질/model_evaluation_live.json",
+      "submission_path": "docs/REPRODUCTION/historical_tfidf/model_evaluation_live.json",
+      "bytes": 7624,
+      "sha256": "6f6bc0c0fb0a1355da9b8a1dcf7b0b10541517ae14a338ec1b3b8f09554192d0"
+    },
+    {
+      "source_project_relative": "docs/GPU상주와사양_20261107/품질/operating_quality.json",
+      "submission_path": "docs/REPRODUCTION/historical_tfidf/operating_quality.json",
+      "bytes": 10154,
+      "sha256": "c52ac6fe1d33d99935254a54b711d27c5eeaa187092db70e17221b11b93e0dbd"
+    },
+    {
+      "source_project_relative": "docs/GPU상주와사양_20261107/품질/models_info_live.json",
+      "submission_path": "docs/REPRODUCTION/historical_tfidf/models_info_live.json",
+      "bytes": 5659,
+      "sha256": "2ca0ce4b8f457c1c5e3472bcf59d67466aa6f9fa2996bc38de6dfab562bce962"
+    },
+    {
+      "source_project_relative": "docs/개선및검증_v27.md",
+      "submission_path": "docs/REPRODUCTION/historical_tfidf/기존질의와새회귀구분.md",
+      "bytes": 4992,
+      "sha256": "6524a1798f471d70047d9812d4b2f3fbf30fbf4d5608dd48d225177f751be31c"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/base_download.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/base_download.json",
+      "bytes": 196,
+      "sha256": "5dbcb44b5cb56ed45e19ac71aa482547c3243ddabacacfa210444d0be1659da3"
+    },
+    {
+      "source_project_relative": "docs/GPU모델실험_20261107/검색/base_asset_hashes.json",
+      "submission_path": "docs/REPRODUCTION/e5/selection/base_asset_hashes.json",
+      "bytes": 952,
+      "sha256": "32d302b98e19c357b33922be06a1b6a2c16acd16271ba9afa2d5a2c8343dfc1b"
+    }
+  ],
+  "current_semantic_assets": [
+    {
+      "path": "models_semantic/encoder.int8.onnx",
+      "bytes": 118269180,
+      "sha256": "87f3135651e3a93f9e50d3685776586b404e21f805e8060ef1510a4d0076eb69"
+    },
+    {
+      "path": "models_semantic/encoder.fp32.onnx",
+      "bytes": 470223896,
+      "sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54"
+    },
+    {
+      "path": "models_semantic/tokenizer.json",
+      "bytes": 17082800,
+      "sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932"
+    },
+    {
+      "path": "models_semantic/corpus.json",
+      "bytes": 756720,
+      "sha256": "f599185c4d7d6f87b001ffac84060706d71bef41870b6265f692db6b1a5d6e32"
+    },
+    {
+      "path": "models_semantic/config.json",
+      "bytes": 707,
+      "sha256": "59f700d2b4c00914d1afaa1cb406b2e1bc9bd53818aec1eccd68b51b176e46d1"
+    },
+    {
+      "path": "models_semantic/gpu_config.json",
+      "bytes": 704,
+      "sha256": "4895292b7cdfb30e04bb3480e6e905670581cd40a2b8b4865dae8f430ce3e321"
+    }
+  ],
+  "python_source_with_historical_windows_absolute_literals": [
+    "docs/REPRODUCTION/e5/evaluation/freeze_catalog.py"
+  ],
+  "full_model_card_not_copied": true,
+  "html_pages_copied": false,
+  "failed_large_weights_copied": false,
+  "excluded_bloom_collection_copied": false,
+  "tfidf_frozen22_queries_not_recovered": true,
+  "research_paths_require_separate_workspace": true,
+  "submission_reproduction_helper": {
+    "file": "docs/REPRODUCTION/collect_climate_selected.py",
+    "sha256": "afdf8e6b216792482b7f4e9c6ff13650aec696b141df3d63e4789fe7f8ba37b7",
+    "purpose": "verify or fetch only four previously used SHA-pinned Hub877 CSVs, no dataset directory access",
+    "authored_during_submission_packaging": true,
+    "default_used_by_runtime": false
+  }
+}

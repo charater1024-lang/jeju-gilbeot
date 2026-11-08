@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "hub1349_parking_1",
+      "name": "북수구 공영주차장",
+      "address": "제주특별자치도 제주시 일도1동 1230-5",
+      "latitude": 33.5146623,
+      "longitude": 126.5280413,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": true,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    },
+    {
+      "id": "hub1349_parking_2",
+      "name": "동문공설시장공영주차장",
+      "address": "제주특별자치도 제주시 일도1동 1104-2",
+      "latitude": 33.5117708,
+      "longitude": 126.5283534,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": true,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    },
+    {
+      "id": "hub1349_parking_3",
+      "name": "제주국제대학교주차장",
+      "address": "제주특별자치도 제주시 아라동 산7-5",
+      "latitude": 33.4385119,
+      "longitude": 126.570361,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": false,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    },
+    {
+      "id": "hub1349_parking_4",
+      "name": "관음사주차장",
+      "address": "제주특별자치도 제주시 산록북로 588",
+      "latitude": 33.4216139,
+      "longitude": 126.5501299,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": false,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    },
+    {
+      "id": "hub1349_parking_5",
+      "name": "연동88주차장",
+      "address": "제주특별자치도 제주시 신대로5길 14",
+      "latitude": 33.4927893,
+      "longitude": 126.4983218,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": false,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    },
+    {
+      "id": "hub1349_parking_6",
+      "name": "사려니숲길 주차장",
+      "address": "제주특별자치도 서귀포시 서성로 788",
+      "latitude": 33.3250926,
+      "longitude": 126.6640283,
+      "source_date": "2025-09-18",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "classification": "source_name_contains_parking",
+      "is_public_in_source_name": false,
+      "operating_hours": null,
+      "price_krw": null,
+      "available_spaces": null
+    }
+  ]
+}

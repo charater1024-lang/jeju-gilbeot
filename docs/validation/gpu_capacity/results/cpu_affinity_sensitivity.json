@@ -1,0 +1,21 @@
+{
+  "pid": 48008,
+  "original_mask": 4294967295,
+  "limited_mask": 4095,
+  "logical_processors_selected": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "not_center_cpu_emulation": true,
+  "restored": true
+}

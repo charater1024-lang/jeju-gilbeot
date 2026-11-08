@@ -1,0 +1,24 @@
+{
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "stdlib_only": true,
+  "source_checksums": "pass",
+  "artifact_checksums": "pass",
+  "chronological_splits": "pass",
+  "same_day_all_stations_same_partition": "pass",
+  "calendar_validity_and_feb29": "pass",
+  "all_valid_station_calendar_profiles": 1464,
+  "runtime_output_guards": "pass",
+  "model_validation_rejects_wrong_schema": "pass",
+  "model_bytes": 2441764,
+  "model_sha256": "861b201726ce651788baea948a84c30158ba7491b21a81c288e339cce5cf9f94",
+  "load_seconds_local": 0.09049070000037318,
+  "load_traced_current_mib": 3.917203903198242,
+  "load_traced_peak_mib": 11.652619361877441,
+  "single_station_query_100_runs_ms": {
+    "median": 0.2114000017172657,
+    "p95": 0.24620000476716086,
+    "max": 0.2702999991015531
+  },
+  "benchmark_limit": "Development-PC only; not measured on center i7-8700. Tracemalloc is Python allocations, not whole process RSS. This component allocates no GPU VRAM.",
+  "adoption_status": "adoptable"
+}

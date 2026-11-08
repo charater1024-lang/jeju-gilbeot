@@ -1,0 +1,14 @@
+{
+  "config_sha256": "59f700d2b4c00914d1afaa1cb406b2e1bc9bd53818aec1eccd68b51b176e46d1",
+  "model_sha256": "87f3135651e3a93f9e50d3685776586b404e21f805e8060ef1510a4d0076eb69",
+  "semantic_backend_sha256": "b1ba7bbdc00d2215a56933fd87a973decde973f2245c940cbd004362b4d7e182",
+  "corpus_sha256": "f599185c4d7d6f87b001ffac84060706d71bef41870b6265f692db6b1a5d6e32",
+  "tokenizer_sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932",
+  "evaluation_protocol_sha256": "b643012c556d7aced1f0de7af70b347c21512cb313881c8cc116fec039d8ba05",
+  "source_partitions_sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+  "dev_queries_sha256": "d482d7bdddfc73cc71b00d838dbde4f6322e26e7c3710595f5baa3f62e60888e",
+  "gpu_selection_sha256": "5e02c3652345c12cc7c859b4846fb793b12388b7cbbb058885d05d5b3dceb1e3",
+  "candidate": "small_pretrained",
+  "score_threshold": 0.86,
+  "holdout_opened": false
+}

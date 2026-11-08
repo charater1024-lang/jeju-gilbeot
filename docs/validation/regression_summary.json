@@ -1,0 +1,203 @@
+{
+  "python": {
+    "pass": true,
+    "tests": 448,
+    "skipped_historical": 22,
+    "executed": 426,
+    "scope_file": "tests/release_scope.json"
+  },
+  "ui": {
+    "status": "completed",
+    "pass": true,
+    "checks": [
+      {
+        "name": "ui_ai_actions_v28.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_ai_journey_v28.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_auto_planner_v15.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_chat_location_v8.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_chatbot_v6.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_climate_20261107.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_data_guide_v18.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_detail_guide_v12.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_flower_20261107.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_hero_names_v13.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_hub_insights_20261107.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_itinerary_export.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_location.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_location_context_v8.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_location_service_v7.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_map_cluster_v12.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_map_v5.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_ml_assistant_v17.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_model_data_edges_v27.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_observed_csv_v24.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_official_guide_examples_v28.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_official_guide_v27.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_pages_v8.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_real_only_service_v14.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_reliability_v16.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_semantic_guide_20261107.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_tourism_restore_v11.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_tourism_v5.cjs",
+        "pass": true
+      },
+      {
+        "name": "ui_trip_replan_v26.cjs",
+        "pass": true
+      },
+      {
+        "name": "syntax:ai-journey.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:app.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:assistant.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:chatbot.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:climate-guide.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:data-guide.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:discovery.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:flower-guide.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:hero-carousel.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:hub-insights.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:jeju-map.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:location-context.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:location-service.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:model-evaluation.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:observed-csv.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:official-guide.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:page-router.js",
+        "pass": true
+      },
+      {
+        "name": "syntax:trip-replan.js",
+        "pass": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "selected_at_utc": "2026-11-07T12:54:08.143503+00:00",
+  "protocol_sha256": "be83e624a7cd4ea18ad29ec897af903ca260e4f1ca0979868c09ef671d9851b0",
+  "split_sha256": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de",
+  "training_script_sha256": "acfdb386ff4f7bbd47ad7b2ac3fd1dad0936e648da4439b561b5a077cb91a8d6",
+  "selected_fit_sha256": "6696ac2e7c7ecd678bfae81af149f668eb39958edf9bdc419da7a5b63ca765ab",
+  "baseline_profiles_sha256": "033fdbe944e998a3f390fd42d04e6cf6455ff498e01f1d08a1c5765cbc943e22",
+  "versions": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "sklearn": "1.9.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "baseline_dev": {
+    "station_month_median": {
+      "point": {
+        "rows": 2920,
+        "mae_c": 2.0951712328767123,
+        "rmse_c": 2.7040399759953297,
+        "bias_prediction_minus_observed_c": -0.25167808219178095
+      },
+      "interval": {
+        "rows": 2920,
+        "coverage": 0.7760273972602739,
+        "mean_width_c": 6.520191780821918,
+        "mean_q10_q90_pinball_loss": 0.4657852739726027,
+        "q10_pinball_loss": 0.46628082191780823,
+        "q90_pinball_loss": 0.46528972602739715,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "station_calendar_plusminus15_mean": {
+      "point": {
+        "rows": 2920,
+        "mae_c": 1.919001925464932,
+        "rmse_c": 2.4949387671454777,
+        "bias_prediction_minus_observed_c": -0.2572172248158282
+      },
+      "interval": {
+        "rows": 2920,
+        "coverage": 0.836986301369863,
+        "mean_width_c": 6.58008904109589,
+        "mean_q10_q90_pinball_loss": 0.4286705479452054,
+        "q10_pinball_loss": 0.43030273972602745,
+        "q90_pinball_loss": 0.42703835616438346,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    "station_calendar_plusminus15_median": {
+      "point": {
+        "rows": 2920,
+        "mae_c": 1.9028424657534244,
+        "rmse_c": 2.4858152379572127,
+        "bias_prediction_minus_observed_c": -0.253527397260274
+      },
+      "interval": {
+        "rows": 2920,
+        "coverage": 0.836986301369863,
+        "mean_width_c": 6.58008904109589,
+        "mean_q10_q90_pinball_loss": 0.4286705479452054,
+        "q10_pinball_loss": 0.43030273972602745,
+        "q90_pinball_loss": 0.42703835616438346,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    }
+  },
+  "selected_baseline": "station_calendar_plusminus15_median",
+  "point_candidates": [
+    {
+      "index": 0,
+      "config": {
+        "family": "ridge",
+        "alpha": 1.0
+      },
+      "fit_seconds": 0.0023682999963057227,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 1.9977422456295288,
+        "rmse_c": 2.5751921455841478,
+        "bias_prediction_minus_observed_c": -0.25755688621773903
+      }
+    },
+    {
+      "index": 1,
+      "config": {
+        "family": "ridge",
+        "alpha": 100.0
+      },
+      "fit_seconds": 0.001938100002007559,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 2.004924052880398,
+        "rmse_c": 2.5841930462439535,
+        "bias_prediction_minus_observed_c": -0.2575327207528458
+      }
+    },
+    {
+      "index": 2,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 200,
+        "max_iter": 200
+      },
+      "fit_seconds": 0.1326690999994753,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 1.8735324157054125,
+        "rmse_c": 2.4418617223125283,
+        "bias_prediction_minus_observed_c": -0.2575389696205157
+      }
+    },
+    {
+      "index": 3,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      },
+      "fit_seconds": 0.18919150000147056,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 1.8725860909065613,
+        "rmse_c": 2.439711751679113,
+        "bias_prediction_minus_observed_c": -0.2574106323845112
+      }
+    },
+    {
+      "index": 4,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      },
+      "fit_seconds": 0.27608709999913117,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 1.8781783119507036,
+        "rmse_c": 2.445654444867638,
+        "bias_prediction_minus_observed_c": -0.2574972024532444
+      }
+    },
+    {
+      "index": 5,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "absolute_error",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      },
+      "fit_seconds": 0.2819517000025371,
+      "dev": {
+        "rows": 2920,
+        "mae_c": 1.8556824067358717,
+        "rmse_c": 2.427537022162323,
+        "bias_prediction_minus_observed_c": -0.2920110096227474
+      }
+    }
+  ],
+  "interval_pair_candidates": [
+    {
+      "index": 0,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 200,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      },
+      "fit_seconds": 0.551598300000478,
+      "dev": {
+        "rows": 2920,
+        "coverage": 0.772945205479452,
+        "mean_width_c": 5.793688759171052,
+        "mean_q10_q90_pinball_loss": 0.42483146756280643,
+        "q10_pinball_loss": 0.4173641128230805,
+        "q90_pinball_loss": 0.43229882230253236,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    {
+      "index": 1,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      },
+      "fit_seconds": 0.8274990999998408,
+      "dev": {
+        "rows": 2920,
+        "coverage": 0.7640410958904109,
+        "mean_width_c": 5.745773866572675,
+        "mean_q10_q90_pinball_loss": 0.42727976343539453,
+        "q10_pinball_loss": 0.4211705870438452,
+        "q90_pinball_loss": 0.43338893982694393,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    },
+    {
+      "index": 2,
+      "config": {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 100,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      },
+      "fit_seconds": 1.4164655999993556,
+      "dev": {
+        "rows": 2920,
+        "coverage": 0.7633561643835617,
+        "mean_width_c": 5.735357271022845,
+        "mean_q10_q90_pinball_loss": 0.4308024698987409,
+        "q10_pinball_loss": 0.4246182064305219,
+        "q90_pinball_loss": 0.43698673336695987,
+        "unsorted_quantile_crossing_rate": 0.0
+      }
+    }
+  ],
+  "selected_point_index": 5,
+  "selected_interval_pair_index": 0,
+  "selected_point_config": {
+    "family": "hist_gradient_boosting",
+    "loss": "absolute_error",
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 100,
+    "max_iter": 200
+  },
+  "selected_interval_config": {
+    "family": "hist_gradient_boosting",
+    "loss": "quantile",
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 200,
+    "max_iter": 250,
+    "quantiles": [
+      0.1,
+      0.9
+    ]
+  },
+  "dev_export_max_abs_difference": {
+    "point_model": 0.0,
+    "lower_model": 0.0,
+    "upper_model": 0.0
+  },
+  "test_has_been_opened": false,
+  "elapsed_fit_and_selection_seconds": 4.763022200000705,
+  "actual_estimator_fit_count": 12
+}

@@ -1,0 +1,8 @@
+{
+  "selection_sha256": "5e02c3652345c12cc7c859b4846fb793b12388b7cbbb058885d05d5b3dceb1e3",
+  "fp32_bytes": 470223896,
+  "int8_bytes": 118269180,
+  "model_sha256": "87f3135651e3a93f9e50d3685776586b404e21f805e8060ef1510a4d0076eb69",
+  "tokenizer_sha256": "cd98e5698b201ba914efb8c18b6709fa8735ab71dcad8d2b431e52e8bf68d932",
+  "note": "CPU quantized rankings must be dev-validated before holdout or deployment."
+}

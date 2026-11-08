@@ -535,6 +535,26 @@ $("#open-saved").addEventListener("click",()=>{renderSaved();openDialog($("#save
 $("#close-saved").addEventListener("click",()=>closeDialog($("#saved-dialog")));
 $("#close-destination").addEventListener("click",()=>closeDialog($("#destination-dialog")));
 $$("dialog").forEach(dialog=>{dialog.addEventListener("click",event=>{if(event.target===dialog){const bounds=dialog.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)closeDialog(dialog);}});dialog.addEventListener("close",()=>{document.body.style.overflow="";});});
+function beginGuidedPlan(mode) {
+  if (mode !== "automatic" && mode !== "saved") return false;
+  if ($("#create-trip").disabled) {
+    notify("일정을 계산하고 있어요. 결과를 확인한 뒤 방식을 바꿔 주세요.");
+    return false;
+  }
+  const automatic = mode === "automatic";
+  if ($("#route-mode-auto").checked !== automatic) {
+    $("#route-mode-auto").checked = automatic;
+    $("#route-mode-saved").checked = !automatic;
+    clearPlannerResult();
+  } else {
+    updatePlanningMode();
+  }
+  showPlannerInputs(
+    !automatic && saved.size === 0 ? "먼저 관광지나 관련 음식점에서 마음에 드는 곳을 여행에 담아 주세요." : "",
+    automatic ? "#auto-route-region" : "#route-mode-saved"
+  );
+  return true;
+}
 function showPlannerInputs(message, focusTarget) {
   const form = $("#planner-form");
   window.JejuPages?.reveal(form);
@@ -793,6 +813,7 @@ Promise.allSettled([loadDestinations(),loadRestaurants(),loadDataStatus(),loadMo
 
 // Shared travel actions; location state is held separately in tab memory.
 window.JejuTripBridge={
+  beginPlan: beginGuidedPlan,
   addPlace(raw) {
     const existing = destinations.find(item=>itemID(item)===String(raw.id));
     const point = existing || normalizeExtraPlace(raw);

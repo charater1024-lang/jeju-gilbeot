@@ -1,0 +1,103 @@
+{
+  "pass": true,
+  "as_of_kst": "2026-11-08",
+  "scope": "Final fresh-extraction check on development environment; not center hardware speed or user accuracy evaluation",
+  "input_archive_sha256": "d6344a2c4edcd500a718b484751d82be396744ee772239be467a30f5822fbd91",
+  "fresh_original_archive_crc_and_hashes_pass": true,
+  "initial_static_files_checked": 2990,
+  "python_regression": {
+    "pass": true,
+    "tests": 448,
+    "skipped_historical": 22,
+    "executed": 426,
+    "scope_file": "tests/release_scope.json"
+  },
+  "ui_behavior_scripts_pass": 29,
+  "javascript_syntax_checks_pass": 18,
+  "windows_functional": {
+    "pass": true,
+    "requests": 49,
+    "cpu_requests": 46,
+    "directml_requests": 3,
+    "cpu_semantic_names": [
+      "비자림",
+      "송악산"
+    ],
+    "directml_resident_and_real_query_verified": true,
+    "automatic_trip": {
+      "status": "ok",
+      "stops": [
+        {
+          "id": "osm_tourism_node_13931773845",
+          "name": "제주 민속자연사박물관",
+          "source_overlap_verified": true
+        },
+        {
+          "id": "osm_tourism_way_372948141",
+          "name": "탑동광장",
+          "source_overlap_verified": true
+        },
+        {
+          "id": "osm_tourism_node_538148519",
+          "name": "용두암",
+          "source_overlap_verified": true
+        }
+      ],
+      "route_kind": "road",
+      "constraint_check": {
+        "end_arrival_minute": 824,
+        "travel_cost_krw": 1735,
+        "deadline_margin_minutes": 256,
+        "budget_margin_krw": 98265,
+        "within_deadline": true,
+        "within_budget": true
+      }
+    },
+    "offline_route": {
+      "kind": "road",
+      "vertices": 470,
+      "distance_km": 6.934
+    },
+    "source_metadata": {
+      "datahub_kind_count": 11,
+      "datahub_raw_csv_count": 14
+    },
+    "owned_processes_stopped": true
+  },
+  "ubuntu": {
+    "previous_actual_ubuntu24_04_python3_12_check_retained": true,
+    "http_checks": 26,
+    "new_ubuntu_vm_execution_this_revision": false,
+    "reason": "Linux installation/runtime code, wheels, source data and models are byte-identical to the prior verified release; only README, Windows error text and validation documentation changed."
+  },
+  "windows_launchers_help_pass": true,
+  "readme_local_links_valid": true,
+  "proposal": {
+    "pages": 15,
+    "pdf_sha256": "3515c98a381c5cf77659134bc354478ef25de019ead8065b2001175520fcbe0c",
+    "all_page_visual_qa_retained": true,
+    "new_pdf_edit_this_revision": false,
+    "personal_hardware_specs_removed": true
+  },
+  "changes": [
+    "README: OS quick-start, direct integrity and regression commands, expected output, manual scenario, recovery and research reproduction",
+    "run_center.cmd: replace nonexistent recovery document in error message",
+    "Validation documentation"
+  ],
+  "model_weights_data_thresholds_and_policies_unchanged": true,
+  "real_user_gps_used": false,
+  "external_weather_api_called": false,
+  "browser_permission_automated": false,
+  "new_training_or_new_model_quality_evaluation": false,
+  "site_upload_or_final_submission_performed": false,
+  "past_22_tfidf_query_set_missing_disclosed": true,
+  "contest_latest_public_review": {
+    "posts": 28,
+    "comments_and_replies": 21,
+    "new_unanswered_question": 1,
+    "existing_official_answers_changed": false,
+    "proposal_limit_pages": 15,
+    "pdf_limit_bytes": 20971520,
+    "zip_limit_bytes": 5368709120
+  }
+}

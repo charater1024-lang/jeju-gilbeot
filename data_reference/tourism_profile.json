@@ -1,0 +1,266 @@
+{
+  "schema_version": 2,
+  "model_version": "tourism_tfidf_v1_abf8800063af",
+  "algorithm": "corpus_fitted_tourism_tfidf_cosine",
+  "training_rows": 68,
+  "training_rows_unit": "cross_source_verified_deduplicated_places",
+  "candidate_policy_id": "jeju_hub_osm_exact_name_250m_v1",
+  "source_overlap_verified": true,
+  "kind_counts": {
+    "attraction": 68
+  },
+  "source_counts": {
+    "openstreetmap": 68
+  },
+  "source_period": {
+    "osm_snapshot_at": "2026-10-28T12:14:10Z",
+    "osm_element_edit_start": "2017-10-25",
+    "osm_element_edit_end": "2026-10-14",
+    "hub_reference_date": "2025-09-18",
+    "featured_verified_on": [
+      "2026-10-26"
+    ]
+  },
+  "sources": {
+    "osm": {
+      "path": "data_reference/osm_tourism_places.json",
+      "sha256": "fc2d04393467f6a332d336fc3db66bb240c14b6f6b85ae7c81b8a4699a3d18f2",
+      "snapshot_at": "2026-10-28T12:14:10Z",
+      "data_license": "ODbL-1.0",
+      "attribution": "© OpenStreetMap contributors",
+      "copyright_url": "https://www.openstreetmap.org/copyright"
+    },
+    "osm_raw": {
+      "path": "data_raw/osm/jeju_tourism_v5.json",
+      "sha256": "c2b75b0d995538bde403169a9a22b4dde4a34e1938cb95dbeb66c6b2df637973"
+    },
+    "hub1349": {
+      "path": "data_reference/catalog.sqlite",
+      "sha256": "58755cd22de2b623e29a0e133ee4bce785bff0e5257fdd09bcb53ea948260cc8",
+      "reference_date": "2025-09-18"
+    },
+    "overlap_policy": {
+      "path": "config/tourism_overlap_policy.json",
+      "sha256": "18a5af514e39407a502b4e52f52aac51e0af5eb869d2778358b982b4239cfa2b",
+      "policy_id": "jeju_hub_osm_exact_name_250m_v1"
+    },
+    "featured": {
+      "path": "data_reference/destinations.json",
+      "sha256": "46469db1dfda2de390bfc9082e73ed007cbfecb92f68204531c2daf0b64f5d74"
+    }
+  },
+  "idf_formula": "log((1+document_count)/(1+document_frequency))+1",
+  "tf_formula": "1+log(term_count)",
+  "l2_normalized": true,
+  "trained_fields": [
+    "name",
+    "known_category",
+    "address",
+    "observed_osm_classifications",
+    "observed_osm_description_if_present"
+  ],
+  "excluded_training_fields": [
+    "curated_editorial_description",
+    "curated_editorial_browse_tags"
+  ],
+  "overlap_validation": {
+    "policy_id": "jeju_hub_osm_exact_name_250m_v1",
+    "max_distance_m": 250,
+    "input_map_records": 1138,
+    "input_hub_records": 5381,
+    "accepted_map_records": 78,
+    "accepted_tourist_places": 68,
+    "count_definition": "same-name map candidates grouped with maximum pairwise distance 250m; not certified unique tourist attractions",
+    "rejected_map_records": 1060,
+    "rejection_counts": {
+      "ambiguous_separated_map_groups": 5,
+      "exact_name_outside_250m": 41,
+      "food_or_ordinary_amenity": 1,
+      "generic_map_tag_conflicts_with_food_permit_name": 10,
+      "no_exact_hub_name": 999,
+      "ordinary_business_or_industry": 1,
+      "ordinary_man_made_feature": 1,
+      "shop": 1,
+      "transport_or_utility_infrastructure": 1
+    },
+    "food_permit_name_guard_count": 20722,
+    "curated": [
+      {
+        "id": "seongsan",
+        "name": "성산일출봉",
+        "accepted": true,
+        "canonical_id": "seongsan"
+      },
+      {
+        "id": "hyeopjae",
+        "name": "협재해수욕장",
+        "accepted": true,
+        "canonical_id": "hyeopjae"
+      },
+      {
+        "id": "hamdeok",
+        "name": "함덕해수욕장",
+        "accepted": true,
+        "canonical_id": "hamdeok"
+      },
+      {
+        "id": "hallasan",
+        "name": "한라산국립공원",
+        "accepted": false,
+        "canonical_id": null
+      },
+      {
+        "id": "saryeoni",
+        "name": "사려니숲길",
+        "accepted": false,
+        "canonical_id": null
+      },
+      {
+        "id": "cheonjiyeon",
+        "name": "천지연폭포",
+        "accepted": true,
+        "canonical_id": "cheonjiyeon"
+      },
+      {
+        "id": "jeongbang",
+        "name": "정방폭포",
+        "accepted": false,
+        "canonical_id": null
+      },
+      {
+        "id": "seopjikoji",
+        "name": "섭지코지",
+        "accepted": true,
+        "canonical_id": "seopjikoji"
+      },
+      {
+        "id": "udo",
+        "name": "우도(해양도립공원)",
+        "accepted": false,
+        "canonical_id": null
+      },
+      {
+        "id": "osulloc",
+        "name": "오설록 티 뮤지엄",
+        "accepted": true,
+        "canonical_id": "osulloc"
+      }
+    ],
+    "limitation": "허브 1349는 식당·숙박도 포함된 분류 미확인 여행장소 명부입니다. 같은 명칭의 중복 기록과 좌표·주소 불일치가 있어 명칭·250m 범위 교집합의 근거로만 사용합니다. 행의 고유 장소성·명부 주소 정확도·공식 지정 관광지·현재 운영을 보증하지 않습니다.",
+    "sources": {
+      "osm": {
+        "path": "data_reference/osm_tourism_places.json",
+        "sha256": "fc2d04393467f6a332d336fc3db66bb240c14b6f6b85ae7c81b8a4699a3d18f2",
+        "snapshot_at": "2026-10-28T12:14:10Z",
+        "data_license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyright_url": "https://www.openstreetmap.org/copyright"
+      },
+      "osm_raw": {
+        "path": "data_raw/osm/jeju_tourism_v5.json",
+        "sha256": "c2b75b0d995538bde403169a9a22b4dde4a34e1938cb95dbeb66c6b2df637973"
+      },
+      "hub1349": {
+        "path": "data_reference/catalog.sqlite",
+        "sha256": "58755cd22de2b623e29a0e133ee4bce785bff0e5257fdd09bcb53ea948260cc8",
+        "reference_date": "2025-09-18"
+      },
+      "overlap_policy": {
+        "path": "config/tourism_overlap_policy.json",
+        "sha256": "18a5af514e39407a502b4e52f52aac51e0af5eb869d2778358b982b4239cfa2b",
+        "policy_id": "jeju_hub_osm_exact_name_250m_v1"
+      },
+      "featured": {
+        "path": "data_reference/destinations.json",
+        "sha256": "46469db1dfda2de390bfc9082e73ed007cbfecb92f68204531c2daf0b64f5d74"
+      }
+    }
+  },
+  "database_sha256": "59c2af065d81287edc104796919058836ad05b74890f8538c3c0c1ccd1242119",
+  "retrieval_accuracy_evaluated": false,
+  "predicts_popularity": false,
+  "predicts_satisfaction": false,
+  "model_sha256": "9f9a946e405b5a23265760d848d177238c9419969d3d9902feecaa9cb4691ba6",
+  "status": "built",
+  "vocabulary_terms": 428,
+  "postings": 1645,
+  "database_bytes": 421888,
+  "model_bytes": 19328,
+  "build_seconds": 0.135,
+  "available_categories": [
+    {
+      "value": "공원",
+      "label": "공원",
+      "count": 5
+    },
+    {
+      "value": "관광 명소",
+      "label": "관광 명소",
+      "count": 7
+    },
+    {
+      "value": "문화",
+      "label": "문화",
+      "count": 1
+    },
+    {
+      "value": "박물관",
+      "label": "박물관",
+      "count": 12
+    },
+    {
+      "value": "산봉우리·오름",
+      "label": "산봉우리·오름",
+      "count": 10
+    },
+    {
+      "value": "오름",
+      "label": "오름",
+      "count": 1
+    },
+    {
+      "value": "전망 지점",
+      "label": "전망 지점",
+      "count": 5
+    },
+    {
+      "value": "정원",
+      "label": "정원",
+      "count": 2
+    },
+    {
+      "value": "테마파크",
+      "label": "테마파크",
+      "count": 14
+    },
+    {
+      "value": "폭포",
+      "label": "폭포",
+      "count": 1
+    },
+    {
+      "value": "해변",
+      "label": "해변",
+      "count": 9
+    },
+    {
+      "value": "해안",
+      "label": "해안",
+      "count": 1
+    }
+  ],
+  "classification_validation": {
+    "osm_accepted": 78,
+    "explicit_lodging_excluded": 0,
+    "unrecognized_classification_excluded": 15,
+    "invalid_id_or_coordinate_excluded": 0
+  },
+  "limitations": [
+    "빅데이터 명부와 지도 기록의 정규화 명칭·250m 위치가 일치하고 보수적 분류 검증을 통과한 후보만 사용합니다.",
+    "허브 1349는 식당·숙박도 포함된 분류 미확인 여행장소 명부입니다. 같은 명칭의 중복 기록과 좌표·주소 불일치가 있어 명칭·250m 범위 교집합의 근거로만 사용합니다. 행의 고유 장소성·명부 주소 정확도·공식 지정 관광지·현재 운영을 보증하지 않습니다.",
+    "동일 명칭·근접 지도 기록을 후보 그룹 한 곳으로 정리하고 명부의 복수 근거 행을 모두 보존합니다. 분리된 지도 그룹이 같은 명부 행으로 경쟁하면 제외합니다.",
+    "관광 TF-IDF는 교차확인 후보의 문자 검색 모델입니다. 인기·만족도·방문량을 예측하지 않습니다.",
+    "전체 OSM 원본 태그에서 음식점·숙박·상점·일반 시설을 검토합니다. generic 관광 태그와 음식 인허가 명칭이 충돌하면 보류합니다.",
+    "공개 좌표는 실제 입구·개방·예약·요금·도로 접근을 검증한 위치가 아닙니다."
+  ]
+}

@@ -10,7 +10,7 @@ import unicodedata
 
 from .assistant_intent import _REGIONS as REGION_ALIASES
 from .discovery import REGIONS, RULES, RULE_TRIGGERS, _load_model, _point, _query_vector, _tokens
-from .place_trust import place_trust
+from .place_trust import place_trust, trust_request, _verified_request_guide
 from .tourism_access import approved_places
 
 
@@ -122,6 +122,14 @@ def _attractions(root, place_queries, terms, expansions, region, limit, include_
             continue
         sources = {source['kind']: source for source in trust['sources']}
         guide = item.get('tourism_guide') or {}
+        verified_guide = _verified_request_guide(root,item['id']) or {}
+        # The display adapter also rejects unsafe markup and bounds its fields.
+        # Keep those checks and bind its text to this request's authenticated bytes.
+        if (guide.get('summary') != str(verified_guide.get('summary') or '').strip()
+                or guide.get('source_url') != verified_guide.get('source_url')
+                or guide.get('retrieved_at') != verified_guide.get('retrieved_at')
+                or guide.get('source_title') != str(verified_guide.get('source_title') or verified_guide.get('name') or '')[:180]):
+            continue
         guide_source = sources.get('tourism_guide')
         if ('hub_registry' not in sources or 'map_record' not in sources or guide_source is None
                 or guide.get('source_url') != guide_source.get('url')
@@ -270,4 +278,5 @@ def search_assistant(root, query, limit=5, *, kind='attraction', region='all', i
     place_queries = [compact]
     if len(words) > 1 and words[0] in {'제주', '제주도'}:
         place_queries.append(''.join(words[1:]))
-    return _attractions(Path(root), place_queries, terms, expansions, region, limit, include_route_restricted)
+    with trust_request(root):
+        return _attractions(Path(root), place_queries, terms, expansions, region, limit, include_route_restricted)

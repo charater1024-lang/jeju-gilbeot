@@ -1,0 +1,238 @@
+{
+  "pass": true,
+  "created_at_utc": "2026-11-07T10:17:33.810958+00:00",
+  "scope": "quality and code-loading audit before GPU-residency implementation; no memory measurements",
+  "core_api_active_count": 3,
+  "core_api_omits_separate_optional_semantic_and_regional_models": true,
+  "models": [
+    {
+      "id": "hub1048",
+      "algorithm": "recency_weighted_pooled_seasonal_trend_ridge_composition",
+      "active": true,
+      "serving": "verified month-profile JSON on CPU",
+      "source_observed_period": [
+        "2018-01",
+        "2025-06"
+      ],
+      "quality": {
+        "id": "audience_distribution",
+        "title": "집단별 8업종 소비 구성비",
+        "type": "regression",
+        "field_accuracy_proven": false,
+        "source_id": "1048",
+        "fixed_tolerance": 1.0,
+        "promoted": true,
+        "metric": {
+          "name": "±1퍼센트포인트 이내",
+          "hits": 270,
+          "total": 288,
+          "percent": 93.75
+        },
+        "error": {
+          "mae": 0.328038,
+          "unit": "퍼센트포인트"
+        },
+        "test_period": {
+          "start": "2024-01",
+          "end": "2025-06"
+        },
+        "evaluation_scope": "2024-01~2025-06의 고정 288개 관측. 기존 시험 기간을 재사용한 후향평가입니다.",
+        "baseline_metric": {
+          "name": "±1퍼센트포인트 이내",
+          "hits": 252,
+          "total": 288,
+          "percent": 87.5
+        },
+        "baseline_error": {
+          "mae": 0.4261105438795293,
+          "unit": "퍼센트포인트"
+        },
+        "active": true,
+        "decision": "새 구성비 모델 적용"
+      },
+      "field_accuracy_proven": false
+    },
+    {
+      "id": "hub1047",
+      "algorithm": "recency_weighted_seasonal_ridge_composition",
+      "active": true,
+      "serving": "verified 94-category month-profile JSON on CPU",
+      "quality": {
+        "id": "dining_detail",
+        "title": "세부 외식업종 구성비",
+        "type": "regression",
+        "field_accuracy_proven": false,
+        "source_id": "1047",
+        "fixed_tolerance": 0.25,
+        "promoted": false,
+        "metric": {
+          "name": "±0.25퍼센트포인트 이내",
+          "hits": 1790,
+          "total": 1974,
+          "percent": 90.67882472137791
+        },
+        "error": {
+          "mae": 0.09719669340424895,
+          "unit": "퍼센트포인트"
+        },
+        "test_period": {
+          "start": "2023-01",
+          "end": "2024-12"
+        },
+        "evaluation_scope": "이전 보고에 사용한 고정 기간의 실제 월별 구성비 관측값을 같은 적합 범위로 비교",
+        "active": true,
+        "decision": "검증된 구성비 모델 유지"
+      },
+      "field_accuracy_proven": false
+    },
+    {
+      "id": "official_guide_basic",
+      "algorithm": "explicit query retrieval with TF-IDF and rules/source verification",
+      "active": true,
+      "serving": "CPU source lookup",
+      "quality": {
+        "id": "assistant_guide_tfidf",
+        "title": "공식 소개 근거를 찾는 도우미 관광 검색",
+        "type": "retrieval",
+        "field_accuracy_proven": false,
+        "promoted": false,
+        "metric": {
+          "name": "첫 결과 적합·미지원 빈 응답",
+          "hits": 22,
+          "total": 22,
+          "percent": 100.0
+        },
+        "evaluation_scope": "출처를 확인한 도우미 가이드 검색의 작성 질의 시험",
+        "active": true,
+        "decision": "공식 소개 검색에서 사용"
+      },
+      "field_accuracy_proven": false
+    },
+    {
+      "id": "official_guide_semantic",
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "parameters": 117653760,
+      "layers": 12,
+      "embedding_dimension": 384,
+      "cpu_deployed_onnx": "INT8",
+      "cpu_model_file_bytes": 118269180,
+      "threshold": 0.86,
+      "quality": {
+        "authored_supported_questions": 24,
+        "gold_venues": 12,
+        "hit_at_1": 23,
+        "hit_at_3": 23,
+        "unsupported_questions": 12,
+        "unsupported_returned_place_cases": 0,
+        "unsupported_guard_rejections": 6,
+        "unsupported_score_rejections": 6,
+        "returned_cards": 34,
+        "compound_gold_criterion_met_cards": 23
+      },
+      "field_accuracy_proven": false,
+      "fine_tuned_jeju_weights_deployed": false,
+      "prior_cpu_timing_developer_i9_only": {
+        "warm_samples": 24,
+        "warm_p50_ms": 103.1,
+        "warm_p95_ms": 121.49,
+        "first_request_ms": 1394.51,
+        "cpu_threads": 2,
+        "baseline_p50_ms": 87.66,
+        "baseline_p95_ms": 94.38
+      }
+    },
+    {
+      "id": "regional_food",
+      "algorithm": "clr_pca_kmeans_regional_food_v1",
+      "active": true,
+      "model": {
+        "name": "CLR → PCA → KMeans 지역 소비 유형",
+        "method": "clr_pca_kmeans_regional_food_v1",
+        "cluster_count": 3,
+        "pca_dimension": 2,
+        "training_period": [
+          "2018-01",
+          "2019-12"
+        ],
+        "region_count": 39,
+        "category_count": 6
+      },
+      "observation_period": {
+        "start_month": "2020-06",
+        "end_month": "2021-05"
+      },
+      "quality": {
+        "kind": "unsupervised_time_split",
+        "classification_accuracy": null,
+        "dev_silhouette": 0.3443174235398906,
+        "holdout_silhouette": 0.3026107128273446,
+        "holdout_share_reconstruction_mae_pp": 3.9224360750853147,
+        "mean_baseline_share_reconstruction_mae_pp": 4.606733443808044,
+        "holdout_cluster_ari": 0.5777071053669851,
+        "full_clr_top3_overlap": 0.36752136752136755,
+        "note": "군집·투영의 구조 검증이며 개인 추천 정답률이나 현재 수요 예측 성능이 아닙니다."
+      },
+      "scope": "historical six-food-category consumption reference regions; not personal preference/current demand",
+      "field_accuracy_proven": false
+    }
+  ],
+  "not_deployed": [
+    {
+      "model": "Hub189/190 CatBoost GPU",
+      "gpu_fits": 13,
+      "test_cells": 1444,
+      "baseline_wape_percent": 30.85949525721144,
+      "candidate_wape_percent": 29.40813279432222,
+      "relative_wape_improvement_percent": 4.703130918999897,
+      "baseline_rmsle": 0.9769011398341443,
+      "candidate_rmsle": 1.1953738277028774,
+      "reason": "under frozen 5% WAPE improvement and RMSLE/validation-group protection gates"
+    },
+    {
+      "model": "Hub1048 GPU MLP",
+      "incumbent_mae_pp": 0.328038,
+      "candidate_mae_pp": 0.41888,
+      "reason": "error increased"
+    },
+    {
+      "model": "Hub1047 GPU MLP",
+      "incumbent_mae_pp": 0.097197,
+      "candidate_mae_pp": 0.148085,
+      "reason": "error increased"
+    }
+  ],
+  "loading_before_gpu_patch": {
+    "semantic": "CPUExecutionProvider fixed; first explicit semantic request loads model, tokenizer and session, cached maxsize2, retained for process lifetime until cache eviction/process exit",
+    "core1048": "profile/validation bundle lru_cache maxsize8; CPU profile lookup, not fitting during request",
+    "core1047": "source-verified JSON model cache maxsize4; CPU lookup, not fitting during request",
+    "regional": "33KB verified JSON projection and 39 profiles loaded/verified per request, no GPU packages",
+    "road_graph": "284667 nodes and567699 directed edges cached in Python RAM, lru_cache maxsize2 by file/mtime",
+    "road_gpu": "Windows optional OpenCL1.2 + fp64, --road-gpu / JEJU_ROAD_GPU=1; dense center-cell population sum>=3000, first CPU request starts async GPU preparation, errors/busy/unready use CPU; A-star and schedule optimization stayCPU",
+    "road_gpu_primary_node_buffer_bytes": 6832008,
+    "road_gpu_fixed_scratch_buffers_bytes": 9240,
+    "buffer_sizes_are_not_measured_process_vram": true,
+    "gtx1060_status": "Not physically tested. Code requires installed OpenCLGPU driver reporting nonzero CL_DEVICE_DOUBLE_FP_CONFIG; do not infer guarantees from GPU name."
+  },
+  "performance_cautions": [
+    "Do not combine different regression tolerance percentages/search hit rates/silhouette as one AI accuracy.",
+    "Regression percent metrics count historical cells within fixed pp thresholds; not classification accuracy or field satisfaction.",
+    "Semantic23/24 is authored question Hit@1/3, not all returned card precision, tourist preference, itinerary quality or real-user accuracy.",
+    "Regional model has low original6D-top3 retention36.75%; display raw six-category shares and label2D pattern reference.",
+    "GPU residency does not improve semantic relevance/forecast accuracy automatically; compare same frozen set after provider changes.",
+    "Published CPU/old road timings are developer-machine historical measurements, not current GPU measurements or center minimum-PC guarantees."
+  ],
+  "source_fingerprints": {
+    "jeju_agent/semantic_search.py": "b1ba7bbdc00d2215a56933fd87a973decde973f2245c940cbd004362b4d7e182",
+    "jeju_agent/roads.py": "5512d80a8055eea84f9f8735f1e97c4e060689c4363dab7e780303c53cbb454d",
+    "jeju_agent/road_gpu.py": "bbb9c13f432b2cfd6d0d3175e1db00c071a35a27d77c078c869711c53d607c0a",
+    "jeju_agent/audience_v23.py": "5ca8fb2935fa49964ecf981ba2c0db834206a8f53d205ece5868f532bcb33322",
+    "jeju_agent/dining_model.py": "eaddae3d4ddb628f7b4cbe658a300078415dc97848955c47865fbd71fb1cd83e",
+    "jeju_agent/hub_insights.py": "6872c24e21343b4c6478fad3b2de70dff07cf6f8bf69c9ea7e72bd76ace52d2f",
+    "docs/운영모델_v23.md": "11696868384ea693729191901cf97280076885b8081c267a22f1a711c478e0e4",
+    "docs/GPU모델실험_20261107/실험과적용결과.md": "3bf1d34ee8d3950886473d3efad31d13b748a5678f17735140fe7cd6d0083040",
+    "docs/허브확장_20261107/개선결과.md": "84f695ef87aed03cbb3c790b4d6fdfe2ad630c50d3089bd11c49b8b0811c2e5d"
+  },
+  "read_only": true,
+  "memory_measured": false
+}

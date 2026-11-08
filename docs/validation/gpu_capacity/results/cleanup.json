@@ -1,0 +1,8 @@
+{
+  "stopped_owned_pid": 48008,
+  "only_owned_test_server_stopped": true,
+  "process_absent": true,
+  "ended_utc": "2026-11-08T06:30:19.7955633Z",
+  "nvidia_smi_global_after": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 1768, 621.14",
+  "user_server_port_8765_touched": false
+}

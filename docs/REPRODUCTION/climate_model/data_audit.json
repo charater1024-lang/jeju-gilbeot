@@ -1,0 +1,82 @@
+{
+  "raw_rows": 31900,
+  "retained_rows": 31900,
+  "drops": {},
+  "partition_counts": {
+    "train": {
+      "jeju": 6210,
+      "gosan": 6210,
+      "seongsan": 6210,
+      "seogwipo": 6210
+    },
+    "dev": {
+      "jeju": 730,
+      "gosan": 730,
+      "seongsan": 730,
+      "seogwipo": 730
+    },
+    "test": {
+      "jeju": 1035,
+      "gosan": 1035,
+      "seongsan": 1035,
+      "seogwipo": 1035
+    }
+  },
+  "target_column": "Tem_mean",
+  "unused_columns": [
+    "Tem_max",
+    "Tem_min",
+    "Wspeed_mean",
+    "Wspeed_max",
+    "Wspeed_min",
+    "Humid_mean",
+    "Sunshine_mean",
+    "Solar_mean",
+    "Cloud_max",
+    "Cloud_min",
+    "Season"
+  ],
+  "quality_note": "Min/max used only for target consistency screen when observed; missing min/max does not impute or discard an otherwise valid mean. No zero filling.",
+  "sources": [
+    {
+      "file": "hub877_2596.csv",
+      "station": "jeju",
+      "station_name": "제주",
+      "attachment_id": 2596,
+      "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2596",
+      "bytes": 609354,
+      "rows": 7975,
+      "sha256": "620c3a424d12999447fb2a178361f44710e490163336a874225c5de9773615fd"
+    },
+    {
+      "file": "hub877_2597.csv",
+      "station": "gosan",
+      "station_name": "고산",
+      "attachment_id": 2597,
+      "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2597",
+      "bytes": 636146,
+      "rows": 7975,
+      "sha256": "dcfc2033d75d833578b0599db6b5ecd4295216bb0be10d890ca289f2dde981e4"
+    },
+    {
+      "file": "hub877_2598.csv",
+      "station": "seongsan",
+      "station_name": "성산",
+      "attachment_id": 2598,
+      "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2598",
+      "bytes": 532454,
+      "rows": 7975,
+      "sha256": "45182d486f4ff9fce2f4c87be6e69bcc6ab4f29167ed229d8d24460e332a5a80"
+    },
+    {
+      "file": "hub877_2599.csv",
+      "station": "seogwipo",
+      "station_name": "서귀포",
+      "attachment_id": 2599,
+      "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2599",
+      "bytes": 559214,
+      "rows": 7975,
+      "sha256": "b2c2d47d2932c80cabbb0b60e9c035684fd9bc4ded3a51690edb9dad86ce5c79"
+    }
+  ]
+}

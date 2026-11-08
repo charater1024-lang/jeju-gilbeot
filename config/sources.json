@@ -1,309 +1,403 @@
 {
-  "checked_at": "2026-10-28",
+  "checked_at": "2026-11-08",
   "raw_data_acquired": true,
-  "note": "실제 다운로드와 CSV 열·관측기간은 data_raw/DOWNLOAD_MANIFEST.json 참조. 미취득 API 후보는 구분하며 허브와 센터의 같은 원본은 중복 계산하지 않습니다.",
+  "note": "실제 운영11종의 출처·활용 명세. 대회 제공 허브 데이터목록 엑셀 또는 전체 허브 데이터셋 카탈로그를 포함하지 않습니다. 원문·전처리·적재 방법과 이용조건을 구분합니다.",
   "datasets": [
     {
-      "source_id": "H01",
-      "title": "내국인 관광객 지역 업종 성별 연령대별 카드 이용 데이터",
-      "verification_url": "https://www.data.go.kr/data/15094857/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/597",
-      "verification_level": "A",
-      "logical_granularity": "month_region_industry",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H02",
-      "title": "관광지 및 상업지구 이용자 유형별 카드 데이터",
-      "verification_url": "https://www.data.go.kr/data/15094889/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/604",
-      "verification_level": "A",
-      "logical_granularity": "area_user_type",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H03",
-      "title": "관광지 및 상업지구 업종별 카드 데이터",
-      "verification_url": "https://www.data.go.kr/data/15094890/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/605",
-      "verification_level": "A",
-      "logical_granularity": "area_industry",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H04",
-      "title": "관광지 및 상업지구 시간대별 카드 데이터",
-      "verification_url": "https://www.data.go.kr/data/15094892/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/607",
-      "verification_level": "A",
-      "logical_granularity": "area_time_category",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H05",
-      "title": "음식점 목록 통합",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-780",
-      "source_url": "https://www.jejudatahub.net/data/view/data/780",
-      "verification_level": "B",
-      "logical_granularity": "place_registry",
+      "source_id": "C02",
+      "dataset_id": 1048,
+      "title": "업종별 성별 카드 이용 정보",
+      "source_url": "https://www.jejudatahub.net/data/view/data/1048",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1048",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주빅데이터센터",
+      "data_period": "2018-01~2025-06",
+      "row_count": 28255,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H06",
-      "title": "버스 노선 기본정보",
-      "verification_url": "https://www.data.go.kr/data/15074254/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/611",
-      "verification_level": "A",
-      "logical_granularity": "route_registry",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H07",
-      "title": "버스 정류소 기본정보",
-      "verification_url": "https://www.data.go.kr/data/15074255/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/612",
-      "verification_level": "B",
-      "logical_granularity": "stop_registry",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H08",
-      "title": "일일 노선별 버스 이용자 정보",
-      "verification_url": "https://www.data.go.kr/data/15074260/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/614",
-      "verification_level": "A",
-      "logical_granularity": "route_day",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
-    },
-    {
-      "source_id": "H09",
-      "title": "일일 정류소별 버스 이용자 정보",
-      "verification_url": "https://www.data.go.kr/data/15074262/openapi.do",
-      "source_url": "https://www.jejudatahub.net/data/view/data/613",
-      "verification_level": "B",
-      "logical_granularity": "stop_day",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "see_source_metadata"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub/hub_1048_5832.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub/hub_1048_5832.csv",
+          "bytes": 1998040,
+          "sha256": "518cd18e78141ede90cc5ee7639099282eae4c1557236e4eda6bd295b66e368d"
+        }
+      ],
+      "bytes": 1998040,
+      "processing": "월·업종·집단별 이용건수 집계 → 8개 음식업종 구성비 → 가중 계절Ridge",
+      "usage": "월별 음식 분야 이용 경향",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1048",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
       "source_id": "C01",
+      "dataset_id": 1047,
       "title": "업종별 성별 외식업 이용 정보",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1047",
       "source_url": "https://www.jejudatahub.net/data/view/data/1047",
-      "verification_level": "B",
-      "logical_granularity": "industry_gender_unknown_period",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1047",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주빅데이터센터",
+      "data_period": "2019~2024 실제69개월",
+      "row_count": 14832,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "jeju_bigdata_center"
-    },
-    {
-      "source_id": "C02",
-      "title": "업종별 성별 카드 이용 정보",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1048",
-      "source_url": "https://www.jejudatahub.net/data/view/data/1048",
-      "verification_level": "B",
-      "logical_granularity": "industry_gender_unknown_period",
-      "access_status": "downloaded",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "jeju_bigdata_center"
-    },
-    {
-      "source_id": "C03",
-      "title": "이용자 유형별 버스정류소 이용 인원",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-743",
-      "source_url": "https://www.jejudatahub.net/data/view/data/743",
-      "verification_level": "B",
-      "logical_granularity": "stop_user_type_unknown_period",
-      "access_status": "not_acquired",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "jeju_bigdata_center"
-    },
-    {
-      "source_id": "C04",
-      "title": "일별 시간대별 버스 승차 인원",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-512",
-      "source_url": "https://www.jejudatahub.net/data/view/data/512",
-      "verification_level": "B",
-      "logical_granularity": "day_time_category",
-      "access_status": "downloaded",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "jeju_bigdata_center"
-    },
-    {
-      "source_id": "C05",
-      "title": "일별 버스 승차 인원",
-      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-561",
-      "source_url": "https://www.jejudatahub.net/data/view/data/561",
-      "verification_level": "B",
-      "logical_granularity": "day",
-      "access_status": "downloaded",
-      "data_period": null,
-      "license_status": "recheck_original",
-      "provider": "jeju_bigdata_center"
-    },
-    {
-      "source_id": "HUB_784",
-      "title": "제주특별자치도 해수욕장 정보",
-      "source_url": "https://www.jejudatahub.net/data/view/data/784",
-      "access_status": "downloaded",
-      "data_period": {
-        "field": "기준일(년)",
-        "min": "2016",
-        "max": "2023",
-        "data_reference_date_min": "2023-12-31",
-        "data_reference_date_max": "2023-12-31"
-      },
-      "license_status": "CC0_on_official_education_linked_metadata_original_terms_not_read",
-      "provider": "공공데이터포털 유통 제주 해수욕장 정보"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub/hub_1047_5831.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub/hub_1047_5831.csv",
+          "bytes": 820690,
+          "sha256": "5d258171920565e36f9d2c7f76f07c091e00fa4aaf93a824a799372789c88ff3"
+        }
+      ],
+      "bytes": 820690,
+      "processing": "성별 이용건수 합산 → 94개 외식업종 월별 구성비 → 가중 계절Ridge",
+      "usage": "세부 외식업종 이용 비중",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1047",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
       "source_id": "HUB_1349",
-      "title": "제주관광공사 제주관광정보시스템(VISIT JEJU) 여행장소",
+      "dataset_id": 1349,
+      "title": "제주관광공사 VISIT JEJU 여행장소",
       "source_url": "https://www.jejudatahub.net/data/view/data/1349",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1349",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주관광공사 / 공공데이터포털",
+      "data_period": "파일 수정일 최대2025-09-18",
+      "row_count": 5669,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": {
-        "field": "수정일시",
-        "min": "2025-09-18 00:00",
-        "max": "2025-09-18 23:59"
-      },
-      "license_status": "CC0_on_official_education_metadata_for_original_dataset_original_terms_not_read",
-      "provider": "제주관광공사 VISIT JEJU"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub/hub_1349_5802.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub/hub_1349_5802.csv",
+          "bytes": 857771,
+          "sha256": "b729e997619b7941f3744eedf86531733700146481bc03d5f6a8569d8d36c5b7"
+        }
+      ],
+      "bytes": 857771,
+      "processing": "장소명·주소·좌표·분류 정리 → OSM과 이름 정확 일치·250m 위치 교차확인",
+      "usage": "관광 후보 자격·허브 우선 표시 이름",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-1349",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
-      "source_id": "OSM-food",
-      "title": "OpenStreetMap community food POIs",
-      "source_url": "https://www.openstreetmap.org/copyright",
+      "source_id": "H05",
+      "dataset_id": 780,
+      "title": "제주특별자치도 음식점 목록 통합",
+      "source_url": "https://www.jejudatahub.net/data/view/data/780",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-780",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "LOCALDATA",
+      "data_period": "자료 기준일 최대2025-09-02",
+      "row_count": 51111,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": {
-        "snapshot_at": "2026-10-28T10:47:02Z"
-      },
-      "license_status": "ODbL-1.0; separate source and notices preserved",
-      "provider": "© OpenStreetMap contributors"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub/jeju_food_registry_780.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub/jeju_food_registry_780.csv",
+          "bytes": 8906430,
+          "sha256": "e96e47b9932e3f3559ec843155cf0ac67f6149e895732a5247078d777deb1dcc"
+        }
+      ],
+      "bytes": 8906430,
+      "processing": "인허가 이름·주소·영업상태 정리 → 20,954건 색인. 좌표는2건만 정확 이름·전체 주소 연결",
+      "usage": "허브 음식점 검색·명부 원문 근거",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-780",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
-      "source_id": "OSM-tourism",
-      "title": "OpenStreetMap 제주 관광·자연 장소 기록",
-      "source_url": "https://www.openstreetmap.org/copyright",
+      "source_id": "hub189",
+      "dataset_id": 189,
+      "title": "제주특별자치도 내국인관광지입장객수추이",
+      "source_url": "https://www.jejudatahub.net/data/view/data/189",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-189",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "관광지식정보시스템",
+      "data_period": "2009~2024",
+      "row_count": 6640,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": {
-        "snapshot_at": "2026-10-28T12:14:10Z",
-        "individual_element_edit_min": "2016-11-27T10:54:33Z",
-        "individual_element_edit_max": "2026-10-27T05:53:33Z"
-      },
-      "license_status": "ODbL-1.0; separate raw and normalized/source records and notices preserved",
-      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "provider": "© OpenStreetMap contributors",
-      "local_path": "data_reference/osm_tourism_places.json",
-      "raw_path": "data_raw/osm/jeju_tourism_v5.json",
-      "raw_sha256": "c2b75b0d995538bde403169a9a22b4dde4a34e1938cb95dbeb66c6b2df637973",
-      "source_manifest_path": "data_raw/osm/jeju_tourism_v5_manifest.json",
-      "record_count": 1138,
-      "record_count_unit": "named_normalized_osm_tourism_records"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data/hub_insights/visitor/raw_189_5788.csv",
+      "local_files": [
+        {
+          "path": "data/hub_insights/visitor/raw_189_5788.csv",
+          "bytes": 186979,
+          "sha256": "e454d271c49cbd55ed139d68c3b7311a4add6e7815b7e16de242b1f3466b1dbc"
+        }
+      ],
+      "bytes": 186979,
+      "processing": "관광지·월·내국인 입장객 집계 → 관측 달력·과거 계절 흐름",
+      "usage": "6개 명소의 과거 월별 방문 참고",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-189",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
-      "source_id": "OSM-roads",
-      "title": "OpenStreetMap 제주 차량 도로·좌표 노드 원자료",
-      "source_url": "https://www.openstreetmap.org/copyright",
+      "source_id": "hub190",
+      "dataset_id": 190,
+      "title": "제주특별자치도 외국인관광지입장객수추이",
+      "source_url": "https://www.jejudatahub.net/data/view/data/190",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-190",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "관광지식정보시스템",
+      "data_period": "2009~2024",
+      "row_count": 6226,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": {
-        "snapshot_at": "2026-10-28T12:16:18Z"
-      },
-      "license_status": "ODbL-1.0; separate raw and normalized/source records and notices preserved",
-      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
-      "provider": "© OpenStreetMap contributors",
-      "local_path": "data_raw/osm/jeju_roads_v5.json",
-      "raw_path": "data_raw/osm/jeju_roads_v5.json",
-      "raw_sha256": "eeebbcac54d8b500cb9f3452c8563774b6b73f1a94433b7a0b1c7d3c6f98f964",
-      "source_manifest_path": "data_raw/osm/jeju_roads_v5_manifest.json",
-      "record_count": 313983,
-      "record_count_unit": "osm_nodes_plus_ways"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data/hub_insights/visitor/raw_190_5787.csv",
+      "local_files": [
+        {
+          "path": "data/hub_insights/visitor/raw_190_5787.csv",
+          "bytes": 162808,
+          "sha256": "5dff2e453b523e0ad3597f1704e97c00366730623de85f64cf4a34dba4b2fddc"
+        }
+      ],
+      "bytes": 162808,
+      "processing": "관광지·월·외국인 입장객 집계 → 내국인 통계와 구분 표시",
+      "usage": "과거 월별 방문 흐름. 실시간 혼잡 예측 아님",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-190",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
+    },
+    {
+      "source_id": "hub877",
+      "dataset_id": 877,
+      "title": "2000~2021 제주도 일간 기후 데이터",
+      "source_url": "https://www.jejudatahub.net/data/view/data/877",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-877",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "기상청 생산 / 고성빈 허브 게시",
+      "data_period": "2000-01~2021-10",
+      "row_count": 31900,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
+      "access_status": "downloaded",
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": null,
+      "local_files": [
+        {
+          "path": "data_raw/hub_climate/hub877_2596.csv",
+          "bytes": 609354,
+          "sha256": "620c3a424d12999447fb2a178361f44710e490163336a874225c5de9773615fd"
+        },
+        {
+          "path": "data_raw/hub_climate/hub877_2597.csv",
+          "bytes": 636146,
+          "sha256": "dcfc2033d75d833578b0599db6b5ecd4295216bb0be10d890ca289f2dde981e4"
+        },
+        {
+          "path": "data_raw/hub_climate/hub877_2598.csv",
+          "bytes": 532454,
+          "sha256": "45182d486f4ff9fce2f4c87be6e69bcc6ab4f29167ed229d8d24460e332a5a80"
+        },
+        {
+          "path": "data_raw/hub_climate/hub877_2599.csv",
+          "bytes": 559214,
+          "sha256": "b2c2d47d2932c80cabbb0b60e9c035684fd9bc4ded3a51690edb9dad86ce5c79"
+        }
+      ],
+      "bytes": 2337168,
+      "processing": "4지점·날짜·일평균기온 → 시간 분리 → HGB 대표값·분위수 회귀",
+      "usage": "과거 계절 기온·변동 범위. 현재 예보 아님",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-877",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
+    },
+    {
+      "source_id": "hub761",
+      "dataset_id": 761,
+      "title": "제주관광공사 VISIT JEJU 축제행사콘텐츠",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-761",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주관광공사 / 공공데이터포털",
+      "data_period": "선택 꽃 일정2018-05~2025-03",
+      "row_count": 522,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
+      "access_status": "downloaded",
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub_flowers/raw_761_5792.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub_flowers/raw_761_5792.csv",
+          "bytes": 35602,
+          "sha256": "9f4f5b42dba8dbb99ea468675077328ef9e136a454d7175a0cc5ed835198720f"
+        }
+      ],
+      "bytes": 35602,
+      "processing": "공개 행사522건 → 꽃6종 과거 일정28건 확인 → 계절 기온·선호 조건 비교",
+      "usage": "과거 꽃 여행 시기 비교. 개화일 예측 아님",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-761",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
       "source_id": "V18_hub871",
-      "title": "제주데이터허브 올레길 위치 정보 공개 미리보기",
-      "verification_url": "https://www.jejudatahub.net/data/view/data/871",
+      "dataset_id": 871,
+      "title": "올레길 위치 정보 공개 미리보기",
       "source_url": "https://www.jejudatahub.net/data/view/data/871",
-      "verification_level": "B",
-      "logical_granularity": "dated_source_records",
-      "access_status": "partial_downloaded",
-      "data_period": "2021-11-02",
-      "license_status": "교육부·KERIS 연결 카탈로그 CC0 표기",
-      "provider": "jeju_datahub"
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-871",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주올레",
+      "data_period": "2021-11 공개 미리보기",
+      "row_count": 19,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
+      "access_status": "downloaded",
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub_v18/hub_871_preview_2532.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub_v18/hub_871_preview_2532.csv",
+          "bytes": 2741,
+          "sha256": "a635d1a99635223439a1619ded7511a58c5f9ef25d7ae3c1431061ef040cd094"
+        }
+      ],
+      "bytes": 2741,
+      "processing": "코스·거리·소요시간·위치 정리",
+      "usage": "걷기 코스 위치·시간 참고. 전체코스 보장 아님",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-871",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
       "source_id": "V18_hub858",
-      "title": "제주데이터허브 무장애 여행지 정보(통합)",
-      "verification_url": "https://www.jejudatahub.net/data/view/data/858",
+      "dataset_id": 858,
+      "title": "무장애 여행지 정보 통합",
       "source_url": "https://www.jejudatahub.net/data/view/data/858",
-      "verification_level": "B",
-      "logical_granularity": "dated_source_records",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-858",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "제주특별자치도",
+      "data_period": "2021-09",
+      "row_count": 120,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": "2021-09-30",
-      "license_status": "교육부·KERIS 연결 카탈로그 CC0 표기",
-      "provider": "jeju_datahub"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub_v18/hub_858_2461.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub_v18/hub_858_2461.csv",
+          "bytes": 9372,
+          "sha256": "86a12027ee3e36fc98d7caa3441e373fedceb8ecc4e3ed924e948fdcfed3b074"
+        }
+      ],
+      "bytes": 9372,
+      "processing": "공개 위치120건 → 지역·원문 항목 검색",
+      "usage": "과거 접근성 자료 참고. 현재 시설 보장 아님",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-858",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     },
     {
-      "source_id": "V18_hub497_origin",
-      "title": "서귀포시 숲길산책로현황(허브497 연결 원출처 최신본)",
-      "verification_url": "https://www.jejudatahub.net/data/view/data/497",
-      "source_url": "https://www.data.go.kr/data/3082951/fileData.do",
-      "verification_level": "B",
-      "logical_granularity": "dated_source_records",
+      "source_id": "HUB_784",
+      "dataset_id": 784,
+      "title": "제주특별자치도 해수욕장 정보",
+      "source_url": "https://www.jejudatahub.net/data/view/data/784",
+      "verification_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-784",
+      "verification_level": "public_source_files_and_provenance",
+      "distribution_platform": "제주데이터허브",
+      "provider": "공공데이터포털",
+      "data_period": "2016~2023",
+      "row_count": 88,
+      "row_count_scope": "확보 원본 기록 수, 실제 장소 수·학습 횟수와 구분",
       "access_status": "downloaded",
-      "data_period": "2025-02-19",
-      "license_status": "공공데이터포털 이용허락범위 제한 없음",
-      "provider": "public_origin_linked_from_hub"
-    },
-    {
-      "source_id": "V18_public15109369",
-      "title": "제주관광공사 마을편의시설(허브 외 보완 공공자료)",
-      "verification_url": "https://www.data.go.kr/data/15109369/fileData.do",
-      "source_url": "https://www.data.go.kr/data/15109369/fileData.do",
-      "verification_level": "B",
-      "logical_granularity": "dated_source_records",
-      "access_status": "downloaded",
-      "data_period": "2022-09-30",
-      "license_status": "공공데이터포털 이용허락범위 제한 없음",
-      "provider": "public_supplement_not_confirmed_in_hub"
+      "status": "로컬 자료 사용",
+      "included_in_zip": true,
+      "local_path": "data_raw/hub/hub_784_5803.csv",
+      "local_files": [
+        {
+          "path": "data_raw/hub/hub_784_5803.csv",
+          "bytes": 5749,
+          "sha256": "931ae9f68891bc695930e98eae92e5ef083e0e318f985d720cf97cfe49f6719f"
+        }
+      ],
+      "bytes": 5749,
+      "processing": "연도별 시설88건 → 최신2023년11해변 비교",
+      "usage": "해변 시설 비교",
+      "license_status": "education_ministry_linked_catalog_cc_zero_original_hub_field_not_verified",
+      "license_evidence_url": "https://data.edmgr.kr/dataView.do?id=jejudatahub-net-784",
+      "license_note": "교육부·KERIS 연결 카탈로그 cc-zero 표기. 원허브 별도 라이선스 필드·허가증을 확인했다고 단정하지 않음. 대회 공개원본·가공DB 제출 답변 범위와 출처·전처리 명세를 함께 기록."
     }
   ],
-  "v2_note": "허브·센터 CSV 원자료 6개 파일, API 기술문서 8개, 공식 관광지 참조 10곳과 실사진 10장을 확보했습니다.",
-  "v5_note": "대표 관광 하이라이트 10곳, OSM 관광·자연 1,138건, 허브1349 분류 미확인 참조 5,381건을 구분합니다. 합계 6,529는 중복 제거한 고유 관광지 수가 아닌 출처별 학습 기록 수입니다. OSM 관광·도로 원본과 ODbL 고지를 별도 보존하며 기존 허브·센터의 이용·배포 승인 상태는 변경하지 않았습니다.",
-  "v5_tourism_source_counts": {
-    "featured_visitjeju": 10,
-    "openstreetmap_tourism": 1138,
-    "hub1349_unclassified_reference": 5381
-  },
-  "additional_checked_at": "2026-11-04",
-  "additional_source_manifest": "data_raw/hub_v18/SOURCE_MANIFEST.json"
+  "supplemental_sources": [
+    {
+      "id": "hub497_origin",
+      "title": "서귀포시 숲길산책로현황",
+      "source_url": "https://www.data.go.kr/data/3082951/fileData.do",
+      "provider": "제주특별자치도 서귀포시",
+      "usage": "허브497이 연결한 원출처의50개 숲길 참고",
+      "local_path": "data_raw/hub_v18/public_3082951.csv",
+      "license_note": "공공데이터포털 이용허락범위 제한 없음"
+    },
+    {
+      "id": "public15109369",
+      "title": "제주관광공사 마을편의시설",
+      "source_url": "https://www.data.go.kr/data/15109369/fileData.do",
+      "provider": "제주관광공사",
+      "usage": "원본2,451건에서 비활성1건 제외한2,450건 편의시설 참고",
+      "local_path": "data_raw/hub_v18/public_15109369.csv",
+      "license_note": "공공데이터포털 이용허락범위 제한 없음"
+    },
+    {
+      "id": "osm",
+      "title": "OpenStreetMap 장소·음식점·도로 스냅샷",
+      "source_url": "https://www.openstreetmap.org/copyright",
+      "provider": "OpenStreetMap contributors",
+      "usage": "관광명부 교차확인·별도지도음식점6,102건·로컬도로경로",
+      "local_path": "data_raw/osm",
+      "license_note": "ODbL-1.0 · © OpenStreetMap contributors · 원본·가공 DB 고지 보존"
+    },
+    {
+      "id": "official_guides",
+      "title": "비짓제주·대한민국 구석구석 공식 관광 설명",
+      "source_url": "https://www.visitjeju.net/kr/",
+      "additional_url": "https://korean.visitkorea.or.kr/",
+      "provider": "제주관광공사 / 한국관광공사",
+      "usage": "비짓제주59건·한국관광공사3건 사실을 짧게 재서술한 소개62건",
+      "local_path": "data_reference/tourism_guides_v12.json",
+      "license_note": "원문 링크·확인일·사실 영수증 보존. 원문 전체·사진의 별도권리와 구분"
+    },
+    {
+      "id": "open_meteo",
+      "title": "Open-Meteo 7일 날씨 예보",
+      "source_url": "https://open-meteo.com/en/docs",
+      "provider": "Open-Meteo 및 기상모델 제공기관",
+      "usage": "공개장소좌표로 요청할 때만 외부7일 예보 조회",
+      "included_in_zip": false,
+      "license_note": "비상업 무료API 조건과 출처표기 / 데이터CC BY4.0. 상업운영은 별도조건",
+      "network_required": true
+    }
+  ],
+  "documentation": "docs/DATA_USAGE.md",
+  "catalogue_directory_included": false
 }

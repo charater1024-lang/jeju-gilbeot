@@ -8,6 +8,14 @@
   const submit = document.getElementById('official-guide-submit');
   const status = document.getElementById('official-guide-status');
   const results = document.getElementById('official-guide-results');
+  const examples = document.getElementById('official-guide-examples');
+  const semantic = document.getElementById('official-guide-semantic');
+  const exampleQueries = [
+    {query: '해안', label: '해안 풍경'},
+    {query: '화산', label: '화산 지형'},
+    {query: '전통 가옥', label: '전통 가옥'},
+    {query: '제주목관아', label: '제주목관아'},
+  ];
   const officialHosts = new Set([
     'visitjeju.net', 'www.visitjeju.net', 'm.visitjeju.net', 'jejudatahub.net',
     'www.jejudatahub.net', 'korean.visitkorea.or.kr', 'english.visitkorea.or.kr',
@@ -125,14 +133,66 @@
     status.textContent = '';
     results.replaceChildren();
   }
+  function semanticSelected() {
+    return semantic?.checked === true;
+  }
+  function updateSearchMode() {
+    submit.textContent = semanticSelected() ? '의미로 소개 찾기' : '소개 찾기';
+  }
+  semantic?.addEventListener('change', () => {
+    clearResults();
+    updateSearchMode();
+    status.textContent = semanticSelected()
+      ? 'AI 의미 검색을 선택했어요. 검색어를 입력하고 소개를 찾아보세요.'
+      : '기본 검색을 선택했어요. 장소명이나 관심 주제로 소개를 찾아보세요.';
+  });
   input.addEventListener('input', clearResults);
   window.addEventListener('jeju:reset', () => {
     form.reset();
+    if (semantic) semantic.checked = false;
+    updateSearchMode();
     clearResults();
   });
+  window.addEventListener('pagehide', clearResults);
 
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
+  function chooseExample(query) {
+    if (!exampleQueries.some(example => example.query === query)) return;
+    input.value = query;
+    input.focus?.({preventScroll: true});
+    return search();
+  }
+
+  function offerExamples() {
+    const box = element('section', '', 'official-guide-empty');
+    box.append(element('h3', '조금 더 간단한 주제나 장소명으로 찾아보세요.'));
+    box.append(element('p', '확인한 소개에서 찾을 수 있는 예시예요. 원하는 주제를 골라 다시 검색할 수 있어요.'));
+    const choices = element('div', '', 'official-guide-recovery');
+    for (const example of exampleQueries) {
+      choices.append(actionButton(example.label, () => chooseExample(example.query)));
+    }
+    box.append(choices);
+    results.append(box);
+  }
+
+  function offerBasicSearch() {
+    const box = element('section', '', 'official-guide-error');
+    box.append(element('p', '장소명이나 간단한 주제로 기본 검색을 다시 이용할 수 있어요.'));
+    box.append(actionButton('기본 검색으로 다시 찾기', () => {
+      if (!box.isConnected) return;
+      if (semantic) semantic.checked = false;
+      clearResults();
+      updateSearchMode();
+      return search();
+    }));
+    results.append(box);
+  }
+
+  examples?.addEventListener('click', event => {
+    const button = event.target.closest('[data-guide-example]');
+    if (button && examples.contains(button)) return chooseExample(button.dataset.guideExample);
+  });
+
+  async function search() {
     const query = input.value.trim();
     if (!query || query.length > 160) {
       status.textContent = '장소명 또는 관심 주제를 160자 이내로 입력해 주세요.';
@@ -140,12 +200,13 @@
     }
     request?.abort();
     const current = new AbortController();
+    const useSemantic = semanticSelected();
     request = current;
     submit.disabled = true;
     results.replaceChildren();
-    status.textContent = '관광지 소개를 찾고 있어요.';
+    status.textContent = useSemantic ? '공식 소개의 문맥에서 관련 장소를 찾고 있어요.' : '관광지 소개를 찾고 있어요.';
     try {
-      const response = await fetch('/api/guide-search', {
+      const response = await fetch(useSemantic ? '/api/semantic-guide-search' : '/api/guide-search', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({query, region: 'all'}),
@@ -153,22 +214,34 @@
       });
       const data = await response.json();
       if (request !== current) return;
-      if (!response.ok) throw new Error(typeof data?.error === 'string' ? data.error : '관광지 소개를 불러오지 못했어요.');
+      if (!response.ok) throw new Error(typeof data?.error === 'string' ? data.error
+        : useSemantic ? 'AI 의미 검색을 사용할 수 없어요. 잠시 후 다시 시도해 주세요.' : '관광지 소개를 불러오지 못했어요.');
       if (!Array.isArray(data)) throw new Error('관광지 소개 자료를 읽지 못했어요.');
       const places = data.filter(place => place?.kind === 'attraction' && place.source_status === 'cross_source_verified'
         && typeof place.id === 'string' && place.id.length > 0 && place.id.length <= 120
         && typeof place.name === 'string' && place.name.trim());
       for (const place of places) results.append(makeCard(place));
       status.textContent = places.length
-        ? `소개 근거가 연결된 장소 ${places.length}곳을 찾았어요.`
+        ? useSemantic
+          ? `공식 소개의 문맥이 비슷한 장소 ${places.length}곳을 찾았어요. 요청한 조건은 소개문과 원문에서 확인해 주세요.`
+          : `소개 근거가 연결된 장소 ${places.length}곳을 찾았어요.`
         : '확인한 소개에서 일치하는 장소를 찾지 못했어요. 다른 장소명이나 주제로 찾아보세요.';
+      if (!places.length) offerExamples();
     } catch (error) {
-      if (request === current) status.textContent = error.message || '관광지 소개를 불러오지 못했어요.';
+      if (request === current) {
+        status.textContent = error.message || '관광지 소개를 불러오지 못했어요.';
+        if (useSemantic) offerBasicSearch();
+      }
     } finally {
       if (request === current) {
         request = null;
         submit.disabled = false;
       }
     }
+  }
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    return search();
   });
+  updateSearchMode();
 })();

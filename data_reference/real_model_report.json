@@ -1,0 +1,166 @@
+{
+  "source_title": "업종별 성별 카드 이용 정보",
+  "source_id": 1048,
+  "source_url": "https://www.jejudatahub.net/data/view/data/1048",
+  "scope_label": "제주 전체 업종별 이용건수 · 원자료 내국인 여성 구간",
+  "source_filter": {
+    "user_type": "내국인",
+    "sex": "여성"
+  },
+  "observation_start": "2018-01",
+  "observation_end": "2025-06",
+  "months": 90,
+  "categories": 8,
+  "excluded_incomplete_categories": [],
+  "forecast_month": "2025-07",
+  "metrics": {
+    "scope": "region_category_month",
+    "measure": "transactions",
+    "data_provenance": "unverified",
+    "training_csv_sha256": "5fdff34680a854e234b53f0d798997406d1b052639dcc3d4701098a4387851ee",
+    "split": "last_20_percent_of_distinct_months",
+    "validation_training_through": "2023-12",
+    "validation_from": "2024-01",
+    "validation_through": "2025-06",
+    "training_rows": 576,
+    "validation_rows": 144,
+    "model": {
+      "mae": 5994.359772,
+      "wape": 0.289359,
+      "n": 144
+    },
+    "baseline": {
+      "mae": 6404.510417,
+      "wape": 0.309158,
+      "n": 144
+    },
+    "baseline_method": "training_only_same_calendar_month_mean_else_last_three_observations_mean",
+    "limitations": [
+      "출처와 이용권한은 별도 검증이 필요합니다.",
+      "지역·업종 집계 예측이며 개별 식당 인기나 음식 품질을 나타내지 않습니다."
+    ]
+  },
+  "forecasts": [
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "내항 여객 운송업",
+      "predicted_value": 3093.627,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "비알콜 음료점업",
+      "predicted_value": 24020.418,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "서양식 음식점업",
+      "predicted_value": 51211.038,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "일식 음식점업",
+      "predicted_value": 7787.883,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "자동차 임대업",
+      "predicted_value": 5626.055,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "중식 음식점업",
+      "predicted_value": 4389.16,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "한식 음식점업",
+      "predicted_value": 113457.53,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    },
+    {
+      "month": "2025-07",
+      "region": "제주 전체 집계",
+      "category": "호텔업",
+      "predicted_value": 3741.559,
+      "measure": "transactions",
+      "scope": "region_category_month",
+      "trained_through": "2025-06",
+      "horizon_months": 1,
+      "data_provenance": "unverified",
+      "source_ids": [
+        "JBDC_1048_NATIVE_FEMALE"
+      ],
+      "warnings": []
+    }
+  ],
+  "note": "실제 다운로드한 과거 소비 구간으로 학습·검증했습니다. 지역별·점포별 인기 모델이 아니며 현재 제주 인기도를 의미하지 않습니다. 특정 인구집단을 모든 여행자의 선호로 일반화하지 않습니다."
+}

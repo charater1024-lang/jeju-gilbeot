@@ -1,0 +1,735 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "id": "hub761-5792-L2",
+      "event_name": "휴애리 유럽 수국축제",
+      "start_date": "2024-07-19",
+      "end_date": "2024-09-15",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 2,
+      "source_row_sha256": "a071a3403fa8f7b548d0a90448b760cf9e08a11e6a25ff4e716e44e878f54440",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L35",
+      "event_name": "자연에 어울린 한남리 유채꽃 에코파티",
+      "start_date": "2018-05-12",
+      "end_date": "2018-05-12",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 35,
+      "source_row_sha256": "95b1762c147d8864bf04052283931af5a80a2d8683e1dd1b5d8f9f8afb1845dc",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L68",
+      "event_name": "9.81파크 <구팔일 억새바당>",
+      "start_date": "2024-10-01",
+      "end_date": "2024-11-30",
+      "flowers": [
+        "silvergrass"
+      ],
+      "source_row": 68,
+      "source_row_sha256": "f1b6b13a250ae6a4c35dd9a683d7617a46fcc7bb8c7d7a10db8216ae885d4fe2",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L70",
+      "event_name": "청초밭 동백꽃 축제",
+      "start_date": "2020-11-14",
+      "end_date": "2021-03-31",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 70,
+      "source_row_sha256": "d8459ab26e08eae859a7a069a836d4e087432017cc850322b2749437bb4d3921",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L71",
+      "event_name": "제주허브동산 겨울동백축제",
+      "start_date": "2021-11-25",
+      "end_date": "2022-01-15",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 71,
+      "source_row_sha256": "9b7d3c0d1b5f34dd2a41eed3a4e7005b858eb7f87ffe608467865516f32658e7",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L118",
+      "event_name": "제주왕벚꽃축제",
+      "start_date": "2024-03-22",
+      "end_date": "2024-03-24",
+      "flowers": [
+        "cherry"
+      ],
+      "source_row": 118,
+      "source_row_sha256": "835e1b842c155568608fa7db6c173d942d0cc27eeb7428ce2a78faa492472fae",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L139",
+      "event_name": "서귀포 유채꽃 국제걷기대회",
+      "start_date": "2024-03-23",
+      "end_date": "2024-03-24",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 139,
+      "source_row_sha256": "791ded169996752e92ba1730906b339b434d5fff690bf36ec147955678427f2b",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L158",
+      "event_name": "서홍동 웃물교 벚꽃구경",
+      "start_date": "2024-03-30",
+      "end_date": "2024-03-31",
+      "flowers": [
+        "cherry"
+      ],
+      "source_row": 158,
+      "source_row_sha256": "6cbb98013ff45328629c45523e5951579d9e259c81b58a696822f01a82d62c52",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L165",
+      "event_name": "수국과 공연이 꽃피는 혼인지 수국 축제",
+      "start_date": "2024-05-24",
+      "end_date": "2024-06-23",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 165,
+      "source_row_sha256": "c75e03893b4e0a0dd339fc6165b98b719dec5795c15ca888d2bbb54d1fdb13d6",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L199",
+      "event_name": "981 억새 바당",
+      "start_date": "2023-10-04",
+      "end_date": "2023-11-30",
+      "flowers": [
+        "silvergrass"
+      ],
+      "source_row": 199,
+      "source_row_sha256": "179f32311dc9c0235c515ac78e623fe092191a821bf62e10631a828bede7343b",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L233",
+      "event_name": "제 27회 서귀포 유채꽃 국제걷기대회",
+      "start_date": "2025-03-22",
+      "end_date": "2025-03-23",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 233,
+      "source_row_sha256": "8e0f52c5cba572626de83dda7839984cfa05b3b22cd1f7f1a8c6ef5a4463f3fa",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L257",
+      "event_name": "스누피가든 동백축제",
+      "start_date": "2023-11-20",
+      "end_date": "2024-03-31",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 257,
+      "source_row_sha256": "938b3a080e2556241ab4a687e224c516983467660f8c803fd0fcf398cc04e116",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L283",
+      "event_name": "서귀포 유채꽃 축제",
+      "start_date": "2024-03-30",
+      "end_date": "2024-03-31",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 283,
+      "source_row_sha256": "b9d2582af44f690c9246e096e358f9cf04d32ff3f6733a90b6f2ae81c11d93a9",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L290",
+      "event_name": "제주 오라 청보리 & 유채꽃 축제",
+      "start_date": "2019-04-26",
+      "end_date": "2019-05-31",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 290,
+      "source_row_sha256": "cb36c3f348562f34ec2810400bd39141547e18577560a99c28d4f8df19c1ed58",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L319",
+      "event_name": "휴애리 봄 수국축제",
+      "start_date": "2024-04-05",
+      "end_date": "2024-06-16",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 319,
+      "source_row_sha256": "70df03c693130312d20491771f0fdeb292d01823d1ee882876f8126e18e4520d",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L358",
+      "event_name": "청초밭메밀꽃축제",
+      "start_date": "2018-10-03",
+      "end_date": "2018-10-21",
+      "flowers": [
+        "buckwheat"
+      ],
+      "source_row": 358,
+      "source_row_sha256": "58ac72c4754b4d399a237b172413caf23f3c036318f1a18ae1764921c36363e1",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L366",
+      "event_name": "오라동 청보리&유채꽃 축제",
+      "start_date": "2019-04-26",
+      "end_date": "2019-05-31",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 366,
+      "source_row_sha256": "c91525a4b407b8672a7d777b52e3572f45895fa739751361a0f24b31543c9bf7",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L384",
+      "event_name": "메밀꽃을 보며 걸으며 생각하며",
+      "start_date": "2019-10-21",
+      "end_date": "2019-11-17",
+      "flowers": [
+        "buckwheat"
+      ],
+      "source_row": 384,
+      "source_row_sha256": "47b641e3f296676fb5183ed7e027c34cebc5fc4e7d32c6171901c182e04a5de9",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L391",
+      "event_name": "마노르블랑 수국축제",
+      "start_date": "2024-04-10",
+      "end_date": "2024-08-31",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 391,
+      "source_row_sha256": "a5ab13ca90bffffcb67fd2d50700fb325b6546abdff5771b4af3f7f4481eab7f",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L392",
+      "event_name": "제주민속촌 수국축제 - 초가마을 도채비꽃 한마당",
+      "start_date": "2020-06-05",
+      "end_date": "2020-06-30",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 392,
+      "source_row_sha256": "5eef515b80435226cf22c8d5ef0e695d115afb164a97db655d2747ed6d4c9955",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L443",
+      "event_name": "휴애리 동백축제",
+      "start_date": "2024-12-05",
+      "end_date": "2025-01-31",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 443,
+      "source_row_sha256": "264f3bc82f0ed0d6b5d632d66b9b74ddc22034da398dbbfeb94aa2da1531ae53",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L464",
+      "event_name": "마노르블랑 동백꽃 감귤체험 축제",
+      "start_date": "2024-12-05",
+      "end_date": "2025-01-31",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 464,
+      "source_row_sha256": "43de6c0d200d7fbbfcd3ebe0d7f92aa3070244c8c435e225674c894a2a86bd93",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L471",
+      "event_name": "상효원 동백축제 - 동백꽃길을 걷다",
+      "start_date": "2021-12-01",
+      "end_date": "2022-02-28",
+      "flowers": [
+        "camellia"
+      ],
+      "source_row": 471,
+      "source_row_sha256": "dc9fd99bbbb19e9dcbc77a4acffa7e50d39a04063584277ecad69cfcfa79cd3c",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L486",
+      "event_name": "상효원수목원 수국축제",
+      "start_date": "2023-06-03",
+      "end_date": "2023-07-09",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 486,
+      "source_row_sha256": "dba4df47fef14f66ca8eab538b75b4ea1bc6d0648868087b52eb276fd34c5dd3",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L487",
+      "event_name": "제주 한림공원 수국 축제",
+      "start_date": "2024-06-07",
+      "end_date": "2024-06-30",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 487,
+      "source_row_sha256": "49d89659a40f8bc2f5d1098370542b44995e188a0a2679b7e1c4596c0f8084aa",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L497",
+      "event_name": "휴애리 유채꽃 축제",
+      "start_date": "2023-11-07",
+      "end_date": "2024-04-30",
+      "flowers": [
+        "canola"
+      ],
+      "source_row": 497,
+      "source_row_sha256": "ee9cdb513ef18ab3cb4b16eabee0ad97a7cfb82954b47d5e771de9711b0892b4",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L499",
+      "event_name": "한림공원 왕벚꽃축제",
+      "start_date": "2023-03-24",
+      "end_date": "2023-04-08",
+      "flowers": [
+        "cherry"
+      ],
+      "source_row": 499,
+      "source_row_sha256": "6e722f0694c7ccdde654f15cc0b43930dde135f36ab7e9ca0c0487d0c2df3bde",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    },
+    {
+      "id": "hub761-5792-L515",
+      "event_name": "휴애리 여름 수국축제",
+      "start_date": "2024-06-05",
+      "end_date": "2024-07-21",
+      "flowers": [
+        "hydrangea"
+      ],
+      "source_row": 515,
+      "source_row_sha256": "638d99cf201ee527e8002f7c43e0edb7c104d83f959a2cf70460b5690b78babd",
+      "source_url": "https://www.jejudatahub.net/data/view/data/761",
+      "source_id": 761,
+      "reference_only": true,
+      "bloom_observation": false,
+      "current_event_verified": false,
+      "automatic_route_eligible": false
+    }
+  ],
+  "observations": [
+    {
+      "flower": "plum",
+      "flower_name": "매화",
+      "plant_name": "매화",
+      "year": 2025,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2025-02-17",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "forsythia",
+      "flower_name": "개나리",
+      "plant_name": "개나리",
+      "year": 2025,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2025-03-23",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "azalea",
+      "flower_name": "진달래",
+      "plant_name": "진달래",
+      "year": 2025,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2025-03-21",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "cherry",
+      "flower_name": "벚꽃",
+      "plant_name": "벚나무",
+      "year": 2025,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2025-03-26",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "plum",
+      "flower_name": "매화",
+      "plant_name": "매화",
+      "year": 2025,
+      "station_id": "189",
+      "station_name": "서귀포",
+      "phase": "개화",
+      "observed_date": "2025-02-13",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "forsythia",
+      "flower_name": "개나리",
+      "plant_name": "개나리",
+      "year": 2025,
+      "station_id": "189",
+      "station_name": "서귀포",
+      "phase": "개화",
+      "observed_date": "2025-03-22",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "azalea",
+      "flower_name": "진달래",
+      "plant_name": "진달래",
+      "year": 2025,
+      "station_id": "189",
+      "station_name": "서귀포",
+      "phase": "개화",
+      "observed_date": "2025-03-25",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "cherry",
+      "flower_name": "벚꽃",
+      "plant_name": "벚나무",
+      "year": 2025,
+      "station_id": "189",
+      "station_name": "서귀포",
+      "phase": "개화",
+      "observed_date": "2025-03-27",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=2&k=ATC202504021057282_30543dea-f7c5-45be-bda2-7671566edb40.pdf&mode=download&num=12892&ses=USER_SESSION",
+      "source_title": "기상청 공식 계절관측 발표 · 2025",
+      "future_prediction": false
+    },
+    {
+      "flower": "plum",
+      "flower_name": "매화",
+      "plant_name": "매화",
+      "year": 2026,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2026-02-04",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/flexer/html/press/2026/04/02/ATC202604021618462_541a4117-3530-4c59-adaf-e57521d60f7e.hwp.files/Sections1.html",
+      "source_title": "기상청 공식 계절관측 발표 · 2026",
+      "future_prediction": false
+    },
+    {
+      "flower": "forsythia",
+      "flower_name": "개나리",
+      "plant_name": "개나리",
+      "year": 2026,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2026-03-22",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/flexer/html/press/2026/04/02/ATC202604021618462_541a4117-3530-4c59-adaf-e57521d60f7e.hwp.files/Sections1.html",
+      "source_title": "기상청 공식 계절관측 발표 · 2026",
+      "future_prediction": false
+    },
+    {
+      "flower": "azalea",
+      "flower_name": "진달래",
+      "plant_name": "진달래",
+      "year": 2026,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2026-03-28",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/flexer/html/press/2026/04/02/ATC202604021618462_541a4117-3530-4c59-adaf-e57521d60f7e.hwp.files/Sections1.html",
+      "source_title": "기상청 공식 계절관측 발표 · 2026",
+      "future_prediction": false
+    },
+    {
+      "flower": "cherry",
+      "flower_name": "벚꽃",
+      "plant_name": "벚나무",
+      "year": 2026,
+      "station_id": "184",
+      "station_name": "제주",
+      "phase": "개화",
+      "observed_date": "2026-03-28",
+      "scope": "관측지점 표준목; 관광지 전체 만개일이 아님",
+      "source_url": "https://www.kma.go.kr/kma/flexer/html/press/2026/04/02/ATC202604021618462_541a4117-3530-4c59-adaf-e57521d60f7e.hwp.files/Sections1.html",
+      "source_title": "기상청 공식 계절관측 발표 · 2026",
+      "future_prediction": false
+    }
+  ],
+  "source_files": [
+    {
+      "path": "data_raw/hub_flowers/raw_761_5792.csv",
+      "sha256": "9f4f5b42dba8dbb99ea468675077328ef9e136a454d7175a0cc5ed835198720f"
+    },
+    {
+      "path": "data_raw/hub_flowers/metadata_761.json",
+      "sha256": "3968e58ac90a12e3bdb5a444cce4e85eb6b6786eea26361a2d19c2fad472a674"
+    },
+    {
+      "path": "data_raw/hub_flowers/audited_flower_events.json",
+      "sha256": "54b65c1decd0da9e92eff8e587d300fd8959f076ec4d30621abd0acaf28b7228"
+    },
+    {
+      "path": "data_raw/hub_flowers/verified_recent_observations.json",
+      "sha256": "d8bdbb825b95101eaf7fb1cfe33fd45a8e2fb69db28e6414ae9165d56be81f69"
+    },
+    {
+      "path": "data_raw/hub_flowers/jeju_cherry_2026.pdf",
+      "sha256": "827a845aa9b3157957ab8c87f6121ad998ab61486dc68895cb20ada2a4eb04b5"
+    },
+    {
+      "path": "data_raw/hub_flowers/jeju_spring_2025.pdf",
+      "sha256": "f4d9128c544e49213c7daa99881f40e21558726aec952aaff340e1669d0ee26c"
+    },
+    {
+      "path": "data_raw/hub_flowers/kma_spring_2026.html",
+      "sha256": "f7eae6fb041410a3085e1842e812c34910333faa0eca26326e2cd9dcd3319f23"
+    }
+  ],
+  "flowers": [
+    {
+      "id": "cherry",
+      "name": "벚꽃",
+      "event_count": 3
+    },
+    {
+      "id": "canola",
+      "name": "유채",
+      "event_count": 7
+    },
+    {
+      "id": "hydrangea",
+      "name": "수국",
+      "event_count": 8
+    },
+    {
+      "id": "camellia",
+      "name": "동백",
+      "event_count": 6
+    },
+    {
+      "id": "buckwheat",
+      "name": "메밀",
+      "event_count": 2
+    },
+    {
+      "id": "silvergrass",
+      "name": "억새",
+      "event_count": 2
+    }
+  ],
+  "event_period": [
+    "2018-05-12",
+    "2025-03-23"
+  ],
+  "sources": [
+    {
+      "id": 761,
+      "title": "제주관광공사_제주관광정보시스템(VISIT JEJU)_축제행사콘텐츠",
+      "url": "https://www.jejudatahub.net/data/view/data/761",
+      "type": "historical_public_schedule"
+    },
+    {
+      "id": "kma_season",
+      "title": "기상청 기준목 계절관측 발표",
+      "url": "https://data.kma.go.kr/data/seasonObs/seasonObsDataList.do?pgmNo=648",
+      "type": "dated_point_observations"
+    }
+  ],
+  "new_flower_model_trained": false,
+  "schedule_rows": 28,
+  "source_raw_rows": 522,
+  "bloom_observation_rows": 12
+}

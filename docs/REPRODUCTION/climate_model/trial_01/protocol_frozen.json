@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "algorithm": "calendar_station_climate_numeric_v1",
+  "trial": "climate_trial_01",
+  "frozen_at_utc": "2026-11-07T12:52:39.531392+00:00",
+  "seed": 20261107,
+  "task": {
+    "input": "Station plus month/day only.",
+    "target": "Observed daily mean temperature, Tem_mean, degrees Celsius.",
+    "service": "AI 여행시기 기후 참고: historical seasonal representative daily-mean temperature and 10th–90th conditional quantile range.",
+    "not_supported": [
+      "current/2026 weather forecast",
+      "rainfall or rain probability",
+      "daily maximum or minimum forecast",
+      "outdoor safety assessment",
+      "climate trend extrapolation",
+      "personal preference or regional consumption comparison"
+    ],
+    "reference_period": [
+      "2000-01-01",
+      "2021-10-31"
+    ]
+  },
+  "source": {
+    "dataset_id": 877,
+    "title": "2000-2021 제주도 일간 기후 데이터",
+    "portal": "제주데이터허브",
+    "portal_url": "https://www.jejudatahub.net/data/view/data/877",
+    "metadata_api": "https://www.jejudatahub.net/api/data/view?id=877",
+    "metadata_sha256": "5023b4197d768e951d7f37f9fa2027cef09115a75b66d95870eb51804a4afd3d",
+    "owner": "고성빈",
+    "createByName": "고성빈",
+    "original_source": "기상청 기상자료개방포털",
+    "original_source_url": "https://data.kma.go.kr/cmmn/main.do",
+    "identity_note": "KMA-origin data publicly posted to the Hub by metadata owner 고성빈; not asserted to be directly produced by 제주빅데이터센터.",
+    "license_note": "Do not invent a redistribution license absent from the portal metadata.",
+    "files": [
+      {
+        "file": "hub877_2596.csv",
+        "station": "jeju",
+        "station_name": "제주",
+        "attachment_id": 2596,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2596",
+        "bytes": 609354,
+        "rows": 7975,
+        "sha256": "620c3a424d12999447fb2a178361f44710e490163336a874225c5de9773615fd"
+      },
+      {
+        "file": "hub877_2597.csv",
+        "station": "gosan",
+        "station_name": "고산",
+        "attachment_id": 2597,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2597",
+        "bytes": 636146,
+        "rows": 7975,
+        "sha256": "dcfc2033d75d833578b0599db6b5ecd4295216bb0be10d890ca289f2dde981e4"
+      },
+      {
+        "file": "hub877_2598.csv",
+        "station": "seongsan",
+        "station_name": "성산",
+        "attachment_id": 2598,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2598",
+        "bytes": 532454,
+        "rows": 7975,
+        "sha256": "45182d486f4ff9fce2f4c87be6e69bcc6ab4f29167ed229d8d24460e332a5a80"
+      },
+      {
+        "file": "hub877_2599.csv",
+        "station": "seogwipo",
+        "station_name": "서귀포",
+        "attachment_id": 2599,
+        "url": "https://www.jejudatahub.net/api/file?fileId=2220&id=2599",
+        "bytes": 559214,
+        "rows": 7975,
+        "sha256": "b2c2d47d2932c80cabbb0b60e9c035684fd9bc4ded3a51690edb9dad86ce5c79"
+      }
+    ],
+    "audit_sha256": "249a0ffc6c55ddb721bcff0ba1a0c783a015ef8bddf8e24016d7ec013e9b743a",
+    "physical_quality_audit_sha256": "b5ccd6272aab6404fe00ac6da851219d86e25d095ee7accc8ee78e258b12437e"
+  },
+  "preprocessing": {
+    "runtime_file": "climate_runtime.py",
+    "runtime_sha256": "69e222be4e321a9cab7160a42365f54c2db5f31fdd5876002ccdaee9282d990c",
+    "prepare_file": "prepare_climate.py",
+    "prepare_sha256": "f733502935641644f4dd1ceb3fec669e395a67e9ec16920038ae3b78c7db98b8",
+    "target_rules": [
+      "CSV headers and values strip only, original bytes preserved",
+      "finite numeric Tem_mean in [-30,50] C required",
+      "if observed Tem_min/Tem_max contradict mean by >0.01 C, exclude row",
+      "missing/nonfinite target excluded; never fill with zero",
+      "missing min/max do not remove otherwise valid mean",
+      "duplicate station-date is a hard error",
+      "no rolling temperature, lag, observed weather, Season label or year supplied as a feature"
+    ],
+    "feature_names": [
+      "station_jeju",
+      "station_gosan",
+      "station_seongsan",
+      "station_seogwipo",
+      "doy_sin_h1",
+      "doy_cos_h1",
+      "doy_sin_h2",
+      "doy_cos_h2",
+      "monthphase_sin",
+      "monthphase_cos"
+    ],
+    "dimension": 10,
+    "station_order": [
+      "jeju",
+      "gosan",
+      "seongsan",
+      "seogwipo"
+    ],
+    "calendar": "Validate month/day using leap year 2000. Canonical non-leap day index (Jan1=0); Feb29 maps halfway between Feb28 and Mar1 at 58.5. Annual sin/cos harmonics 1 and 2 use period365.25; fractional-month sin/cos uses month lengths of year2000. Every observed year and every user input uses this same mapping; year is ignored by features.",
+    "calendar_period_days": 365.25,
+    "station_scope": "Four observed station series only; not exact conditions at every attraction."
+  },
+  "split": {
+    "file": "split_frozen.json",
+    "sha256": "17d6871fcbcaf0ce594ead323c43513b335b212ebac53489d8bdb0aedd35f3de",
+    "train": [
+      "2000-01-01",
+      "2016-12-31"
+    ],
+    "dev": [
+      "2017-01-01",
+      "2018-12-31"
+    ],
+    "test": [
+      "2019-01-01",
+      "2021-10-31"
+    ],
+    "counts": {
+      "train": {
+        "jeju": 6210,
+        "gosan": 6210,
+        "seongsan": 6210,
+        "seogwipo": 6210
+      },
+      "dev": {
+        "jeju": 730,
+        "gosan": 730,
+        "seongsan": 730,
+        "seogwipo": 730
+      },
+      "test": {
+        "jeju": 1035,
+        "gosan": 1035,
+        "seongsan": 1035,
+        "seogwipo": 1035
+      }
+    },
+    "immutable": true,
+    "no_random_split": true
+  },
+  "baselines": {
+    "fit_scope": "train only; same station and month/day information as the models, no year trend or current weather",
+    "point_candidates": [
+      "station_month_median",
+      "station_calendar_plusminus15_mean",
+      "station_calendar_plusminus15_median"
+    ],
+    "calendar_window": "circular absolute canonical-day distance <=15 using the same365.25 period",
+    "selected": "Lowest pooled dev MAE, tie earlier listed baseline. Freeze choice before test.",
+    "interval_reference": "For every baseline also report its train-observed station-month or calendar-window q10/q90, evaluated without fitting to dev/test."
+  },
+  "candidates": {
+    "point": [
+      {
+        "family": "ridge",
+        "alpha": 1.0
+      },
+      {
+        "family": "ridge",
+        "alpha": 100.0
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 200,
+        "max_iter": 200
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "squared_error",
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "absolute_error",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 200
+      }
+    ],
+    "interval_pairs": [
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 200,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 100,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "loss": "quantile",
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 100,
+        "max_iter": 250,
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      }
+    ],
+    "actual_estimator_fit_count": 12,
+    "fixed_maximum_fit_count": 12,
+    "shared_hgb": {
+      "learning_rate": 0.05,
+      "l2_regularization": 10.0,
+      "max_bins": 255,
+      "early_stopping": false,
+      "random_state": 20261107,
+      "categorical_features": null
+    },
+    "selection": {
+      "point": "Minimum pooled dev MAE, ties minimum dev RMSE, then earlier candidate.",
+      "interval_pair": "Minimum mean of dev q10/q90 pinball losses after fixed lower/upper sorting, ties closeness of coverage to0.8, then earlier pair.",
+      "fit_scope": "All estimators fit train only; no refit on dev or test.",
+      "quantile_crossing": "Sort q10/q90 per row before evaluation and serving; report the unsorted crossing rate. No test-based calibration or widening."
+    }
+  },
+  "test": {
+    "single_open_count_limit": 1,
+    "opening": "Persist selection_frozen.json and selected trained components before writing test_opened.json; only then transform/predict/score holdout.",
+    "metrics": [
+      "point_MAE_C",
+      "point_RMSE_C",
+      "point_bias_C",
+      "per_station_MAE_C",
+      "interval_coverage",
+      "mean_interval_width_C",
+      "q10_q90_mean_pinball_loss",
+      "quantile_crossing_rate",
+      "per_station_interval_coverage"
+    ],
+    "point_adoption_gate": {
+      "pooled_mae_maximum_C": 3.0,
+      "pooled_mae_ratio_to_best_dev_selected_baseline_max": 1.02,
+      "each_station_mae_ratio_to_same_baseline_max": 1.1
+    },
+    "interval_adoption_gate": {
+      "nominal_coverage": 0.8,
+      "minimum_holdout_coverage": 0.75,
+      "maximum_holdout_coverage": 0.9,
+      "maximum_mean_width_C": 12.0
+    },
+    "deployment_gate": "All point and interval gates must pass. Noninferiority within2% is not superiority and must not be advertised as accuracy improvement.",
+    "failure_policy": "Preserve research-only artifacts and raw results; no retune, repartition or candidate addition after the one holdout opening.",
+    "uncertainty": "Four station observations on the same day and consecutive days are correlated. Report monthly/yearly counts and errors, and use28-day blocked bootstrap if confidence intervals are provided; never treat rows as independent Bernoulli weather guarantees."
+  },
+  "reproducibility": {
+    "freeze_script_sha256": "1fc88437e9b178a60ede94c78d5c32b28029e0d4739c93fdb52c9cb17e960f7a",
+    "training_script_sha256": "acfdb386ff4f7bbd47ad7b2ac3fd1dad0936e648da4439b561b5a077cb91a8d6",
+    "runtime_sha256": "69e222be4e321a9cab7160a42365f54c2db5f31fdd5876002ccdaee9282d990c",
+    "preparation_sha256": "f733502935641644f4dd1ceb3fec669e395a67e9ec16920038ae3b78c7db98b8",
+    "data_audit": {
+      "raw_rows": 31900,
+      "retained_rows": 31900,
+      "drops": {},
+      "partition_counts": {
+        "train": {
+          "jeju": 6210,
+          "gosan": 6210,
+          "seongsan": 6210,
+          "seogwipo": 6210
+        },
+        "dev": {
+          "jeju": 730,
+          "gosan": 730,
+          "seongsan": 730,
+          "seogwipo": 730
+        },
+        "test": {
+          "jeju": 1035,
+          "gosan": 1035,
+          "seongsan": 1035,
+          "seogwipo": 1035
+        }
+      },
+      "target_column": "Tem_mean",
+      "unused_columns": [
+        "Tem_max",
+        "Tem_min",
+        "Wspeed_mean",
+        "Wspeed_max",
+        "Wspeed_min",
+        "Humid_mean",
+        "Sunshine_mean",
+        "Solar_mean",
+        "Cloud_max",
+        "Cloud_min",
+        "Season"
+      ],
+      "quality_note": "Min/max used only for target consistency screen when observed; missing min/max does not impute or discard an otherwise valid mean. No zero filling."
+    }
+  },
+  "deployment": {
+    "stdlib_only": true,
+    "CPU": true,
+    "GPU_required": false,
+    "live_changes_in_this_task": false,
+    "display": "Historical seasonal reference only; show data endpoint2021-10-31, station and validation coverage. The interval describes variation in daily mean temperature, not daily min/max and not confidence of the seasonal average."
+  }
+}

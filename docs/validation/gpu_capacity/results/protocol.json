@@ -1,0 +1,45 @@
+{
+  "as_of_kst": "2026-11-08",
+  "scope": "Current development PC owned loopback server, not center hardware",
+  "workloads": [
+    "GPU short semantic queries",
+    "Mixed GPU search, tabular models, climate, rule chat, automatic route",
+    "Long-query CPU fallback with GPU still resident",
+    "512 request mixed continuous load at8 outstanding"
+  ],
+  "concurrency": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "minimum_requests_per_step": 64,
+  "minimum_waves_per_step": 4,
+  "http_timeout_seconds": 30,
+  "monitor_requested_interval_seconds": 0.1,
+  "pass_rule": "HTTP200 and valid response structure, no timeout, model remains resident, no monitoring error or resource stop",
+  "latency_reporting_rules": {
+    "interactive_p95_ms": 2000,
+    "general_p95_ms": 5000,
+    "meaning": "Chosen reporting thresholds, not measured field user requirements"
+  },
+  "safety_stops": {
+    "server_ram_gib": 6,
+    "server_dedicated_vram_gib": 2,
+    "system_available_ram_min_gib": 8
+  },
+  "no_external_network": true,
+  "no_real_user_gps": true,
+  "no_model_training_or_threshold_tuning": true,
+  "server_compute_slots": 8,
+  "connection_limit": 48,
+  "gpu_encoder_session": 1,
+  "gpu_batch": 1,
+  "gpu_encoder_execution_serialized": true,
+  "no_center_throughput_conversion": true,
+  "empty_search_result_is_valid_scoped_response_not_recommendation_quality": true
+}

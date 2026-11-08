@@ -1,0 +1,13 @@
+{
+  "scope": "Additional current-device tests; not center emulation",
+  "defined_ns": 1794119107595705400,
+  "steps": [
+    "max8stop route requests at1/4/8/16 outstanding",
+    "12logicalCPU affinity sensitivity, shortGPU and mixed at4/8/16",
+    "mixed eight outstanding2048requests",
+    "15seconds no requests withGPUstillresident"
+  ],
+  "restrictions": "Only owned test service affinity changes, always restored; no system setting/model changes",
+  "fixed_gpu": "same RTX4090Laptop; this does not emulateGTX1060",
+  "memory_limits": "same6GiBWS/2GiBdedicated safety stops"
+}

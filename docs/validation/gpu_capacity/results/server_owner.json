@@ -1,0 +1,19 @@
+{
+  "pid": 48008,
+  "port": 8791,
+  "owned_test_process": true,
+  "args": [
+    "C:\\Users\\user\\Documents\\AI작업물\\제주AI빅데이터활용\\runtime\\python.exe",
+    "-B",
+    "C:\\Users\\user\\Documents\\AI작업물\\제주AI빅데이터활용\\center_app.py",
+    "--port",
+    "8791",
+    "--no-browser",
+    "--semantic-device",
+    "dml",
+    "--road-gpu"
+  ],
+  "started_time_ns": 1794118473327831200,
+  "no_real_gps": true,
+  "outbound_weather_disabled": true
+}

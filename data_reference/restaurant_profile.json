@@ -1,0 +1,13 @@
+{
+  "source_rows": 51111,
+  "active_snapshot_rows": 20954,
+  "indexed_rows": 20954,
+  "latest_row_updated": "2025-09-02",
+  "region_counts": {
+    "south": 3783,
+    "north": 10785,
+    "east": 2394,
+    "west": 3992
+  },
+  "source_url": "https://www.jejudatahub.net/data/view/data/780"
+}

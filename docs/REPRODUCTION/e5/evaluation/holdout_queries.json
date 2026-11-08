@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-07",
+  "source_partitions_sha256": "3d3a36ee363816ce74efefca700ad8d81dcf25237417296d517f8daaa925f1fc",
+  "origin": "Developer-authored, source-grounded evaluation questions before viewing candidate scores.",
+  "not_training_data": true,
+  "not_observed_user_queries": true,
+  "field_accuracy_proven": false,
+  "candidate_scores_viewed_before_freeze": false,
+  "judgement_scope": "Saved verified guide text only, with all requested identifying facts required. Displayed guide source remains mandatory.",
+  "cases": [
+    {
+      "id": "holdout_supported_01",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "검은 모래와 바다 동굴이 함께 있는 절벽 아래 작은 해변",
+      "anchor_id": "osm_tourism_way_243975557",
+      "anchor_name": "검멀레 해수욕장",
+      "relevant_ids": [
+        "osm_tourism_way_243975557"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_243975557",
+          "text": "우도봉 아래 절벽 사이에 놓인 작은 검은 모래 해변입니다. 검은 모래와 해안 동굴이 어우러진 풍경을 볼 수 있으며, 조수와 파도에 따라 접근 조건이 달라질 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_02",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "절벽 사이의 검은 모래사장에서 해안 동굴 풍경을 볼 수 있는 곳",
+      "anchor_id": "osm_tourism_way_243975557",
+      "anchor_name": "검멀레 해수욕장",
+      "relevant_ids": [
+        "osm_tourism_way_243975557"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_243975557",
+          "text": "우도봉 아래 절벽 사이에 놓인 작은 검은 모래 해변입니다. 검은 모래와 해안 동굴이 어우러진 풍경을 볼 수 있으며, 조수와 파도에 따라 접근 조건이 달라질 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_03",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "만화 속 장면들을 실내 전시와 바깥 정원에서 이어 보는 곳",
+      "anchor_id": "osm_tourism_way_1075451809",
+      "anchor_name": "스누피가든",
+      "relevant_ids": [
+        "osm_tourism_way_1075451809"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_1075451809",
+          "text": "피너츠 캐릭터의 이야기와 제주 정원을 연결한 공간입니다. 실내 테마 전시를 둘러본 뒤 야외 정원에서 만화 속 장면을 찾아 걸으며 캐릭터와 자연이 어우러진 풍경을 즐길 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_04",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "피너츠에 등장하는 캐릭터와 자연 풍경이 어우러진 정원을 찾아줘",
+      "anchor_id": "osm_tourism_way_1075451809",
+      "anchor_name": "스누피가든",
+      "relevant_ids": [
+        "osm_tourism_way_1075451809"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_1075451809",
+          "text": "피너츠 캐릭터의 이야기와 제주 정원을 연결한 공간입니다. 실내 테마 전시를 둘러본 뒤 야외 정원에서 만화 속 장면을 찾아 걸으며 캐릭터와 자연이 어우러진 풍경을 즐길 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_05",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "샘에서 이름을 따온 말발굽형 분화구와 억새가 있는 오름",
+      "anchor_id": "osm_tourism_node_5658780218",
+      "anchor_name": "궷물오름",
+      "relevant_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_5658780218",
+          "text": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월읍의 오름입니다. 말굽형 분화구와 가을 억새를 살펴볼 수 있으며, 노꼬메오름 일대와 연계할 때는 출입 허용 구간과 현장 안내를 확인하세요.",
+          "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_06",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월의 오름을 소개해줘",
+      "anchor_id": "osm_tourism_node_5658780218",
+      "anchor_name": "궷물오름",
+      "relevant_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_5658780218",
+          "text": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월읍의 오름입니다. 말굽형 분화구와 가을 억새를 살펴볼 수 있으며, 노꼬메오름 일대와 연계할 때는 출입 허용 구간과 현장 안내를 확인하세요.",
+          "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_07",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "조선 말기의 제주 집과 생활자료를 전시로 살펴보는 곳",
+      "anchor_id": "osm_tourism_way_370264619",
+      "anchor_name": "제주민속촌",
+      "relevant_ids": [
+        "osm_tourism_way_370264619"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_370264619",
+          "text": "제주 사람들이 살아온 주거와 생활문화를 전시하는 공간입니다. 조선 말기 제주를 바탕으로 구성한 가옥과 민속자료를 둘러보며 지역의 전통과 생활 모습을 함께 이해할 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_08",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "조선 말기 기준으로 꾸민 집들을 보며 제주 생활문화를 배우고 싶어",
+      "anchor_id": "osm_tourism_way_370264619",
+      "anchor_name": "제주민속촌",
+      "relevant_ids": [
+        "osm_tourism_way_370264619"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_370264619",
+          "text": "제주 사람들이 살아온 주거와 생활문화를 전시하는 공간입니다. 조선 말기 제주를 바탕으로 구성한 가옥과 민속자료를 둘러보며 지역의 전통과 생활 모습을 함께 이해할 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_09",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "메밀을 기르는 밭과 계절 꽃, 농장 동물을 함께 볼 수 있는 곳",
+      "anchor_id": "osm_tourism_node_5749644529",
+      "anchor_name": "보롬왓",
+      "relevant_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_5749644529",
+          "text": "메밀밭과 계절 꽃, 농장 동물의 모습을 함께 살펴보는 표선면의 농장입니다. 밭과 화원을 걸으며 쉬어갈 수 있고, 꽃의 개화와 체험 구역의 실제 운영 내용은 방문 시기에 맞춰 확인하면 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_10",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "표선의 농장에서 화원을 걷고 동물도 살펴보고 싶어",
+      "anchor_id": "osm_tourism_node_5749644529",
+      "anchor_name": "보롬왓",
+      "relevant_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_5749644529",
+          "text": "메밀밭과 계절 꽃, 농장 동물의 모습을 함께 살펴보는 표선면의 농장입니다. 밭과 화원을 걸으며 쉬어갈 수 있고, 꽃의 개화와 체험 구역의 실제 운영 내용은 방문 시기에 맞춰 확인하면 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_11",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "실내에서 얼음으로 만든 작품과 착시 미술, 입체 영상을 보는 곳",
+      "anchor_id": "osm_tourism_way_372701554",
+      "anchor_name": "수목원테마파크",
+      "relevant_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_372701554",
+          "text": "공식 안내에서는 얼음 조형물과 착시미술, 입체영상 등을 주제로 한 실내 체험 공간으로 소개합니다. 주변 수목원길과 함께 둘러볼 수 있으며 실제 운영 중인 전시와 체험은 방문 전에 확인하는 것이 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_12",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "얼음 조형물과 3차원 영상이 소개된 체험 공간을 찾아줘",
+      "anchor_id": "osm_tourism_way_372701554",
+      "anchor_name": "수목원테마파크",
+      "relevant_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_372701554",
+          "text": "공식 안내에서는 얼음 조형물과 착시미술, 입체영상 등을 주제로 한 실내 체험 공간으로 소개합니다. 주변 수목원길과 함께 둘러볼 수 있으며 실제 운영 중인 전시와 체험은 방문 전에 확인하는 것이 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_13",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "용암동굴들을 만든 화산의 흔적과 숲을 함께 관찰하는 오름",
+      "anchor_id": "osm_tourism_node_10216545359",
+      "anchor_name": "거문오름",
+      "relevant_ids": [
+        "osm_tourism_node_10216545359"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_10216545359",
+          "text": "거문오름 용암동굴계를 만든 화산활동의 흔적과 울창한 숲을 관찰하는 오름입니다. 분화구 주변의 다양한 지형을 살펴볼 수 있으며, 탐방은 예약과 안내 등 공식 이용 조건을 확인한 뒤 계획해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500034"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_14",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "용암동굴계의 형성과 관련된 오름에서 분화구 주변 지형과 숲을 보고 싶어",
+      "anchor_id": "osm_tourism_node_10216545359",
+      "anchor_name": "거문오름",
+      "relevant_ids": [
+        "osm_tourism_node_10216545359"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_10216545359",
+          "text": "거문오름 용암동굴계를 만든 화산활동의 흔적과 울창한 숲을 관찰하는 오름입니다. 분화구 주변의 다양한 지형을 살펴볼 수 있으며, 탐방은 예약과 안내 등 공식 이용 조건을 확인한 뒤 계획해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500034"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_15",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "도심 가까이에서 제주 토종 식물과 아열대 나무를 관찰할 수 있는 곳",
+      "anchor_id": "osm_tourism_node_368866237",
+      "anchor_name": "한라수목원",
+      "relevant_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_368866237",
+          "text": "제주 자생식물과 아열대 식물을 비롯한 다양한 수종을 관찰하는 도심 가까운 수목원입니다. 식물 전시 구역과 산책로를 따라 걸으며 제주에서 자라는 나무와 풀의 모습을 살펴볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_16",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "제주에서 자라는 나무와 풀을 전시 구역과 산책길을 따라 살펴보는 수목원",
+      "anchor_id": "osm_tourism_node_368866237",
+      "anchor_name": "한라수목원",
+      "relevant_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_368866237",
+          "text": "제주 자생식물과 아열대 식물을 비롯한 다양한 수종을 관찰하는 도심 가까운 수목원입니다. 식물 전시 구역과 산책로를 따라 걸으며 제주에서 자라는 나무와 풀의 모습을 살펴볼 수 있습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_17",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "실내 미로에서 동행자와 문제를 풀고 장애물에 도전하는 체험",
+      "anchor_id": "osm_tourism_way_572783721",
+      "anchor_name": "다이나믹메이즈",
+      "relevant_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_572783721",
+          "text": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_18",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "함께 길을 찾으며 미션을 해결하는 실내 체험 공간",
+      "anchor_id": "osm_tourism_way_572783721",
+      "anchor_name": "다이나믹메이즈",
+      "relevant_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_way_572783721",
+          "text": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_19",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "용암이 식어 갈라지면서 기둥처럼 된 바위를 바닷가에서 보고 싶어",
+      "anchor_id": "osm_tourism_node_3753655821",
+      "anchor_name": "주상절리",
+      "relevant_ids": [
+        "osm_tourism_node_3753655821"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_3753655821",
+          "text": "용암이 식으며 갈라져 생긴 기둥 모양 암석이 해안을 따라 이어지는 지형입니다. 검은 돌기둥과 바다가 만나는 풍경을 전망 공간에서 살펴볼 수 있으며, 관람 가능 여부는 기상과 현장 통제 안내를 확인하세요.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_20",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "바다와 맞닿은 검은 돌기둥을 전망 공간에서 감상할 수 있는 지형",
+      "anchor_id": "osm_tourism_node_3753655821",
+      "anchor_name": "주상절리",
+      "relevant_ids": [
+        "osm_tourism_node_3753655821"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_3753655821",
+          "text": "용암이 식으며 갈라져 생긴 기둥 모양 암석이 해안을 따라 이어지는 지형입니다. 검은 돌기둥과 바다가 만나는 풍경을 전망 공간에서 살펴볼 수 있으며, 관람 가능 여부는 기상과 현장 통제 안내를 확인하세요.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_21",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "봉우리 여러 개와 분화구가 포개진 능선에서 가을 억새 풍경을 보고 싶어",
+      "anchor_id": "osm_tourism_node_4416285697",
+      "anchor_name": "따라비오름",
+      "relevant_ids": [
+        "osm_tourism_node_4416285697"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_4416285697",
+          "text": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_22",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "부드러운 곡선을 이룬 여러 봉우리와 초지, 억새가 소개된 오름",
+      "anchor_id": "osm_tourism_node_4416285697",
+      "anchor_name": "따라비오름",
+      "relevant_ids": [
+        "osm_tourism_node_4416285697"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_4416285697",
+          "text": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_23",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "처음 말을 접하는 사람도 알아볼 수 있는 승마 체험 공간의 소개가 궁금해",
+      "anchor_id": "osm_tourism_node_3788545937",
+      "anchor_name": "탐라승마장",
+      "relevant_ids": [
+        "osm_tourism_node_3788545937"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_3788545937",
+          "text": "말을 처음 접하는 방문객도 승마 체험을 알아볼 수 있는 공간입니다. 말과 교감하는 활동을 중심으로 소개되며, 체험 가능 조건과 진행 방식은 현장·운영기관 안내를 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_supported_24",
+      "partition": "holdout",
+      "kind": "supported",
+      "query": "말과 교감하는 활동을 중심으로 안내하는 승마 장소를 찾아줘",
+      "anchor_id": "osm_tourism_node_3788545937",
+      "anchor_name": "탐라승마장",
+      "relevant_ids": [
+        "osm_tourism_node_3788545937"
+      ],
+      "evidence": [
+        {
+          "id": "osm_tourism_node_3788545937",
+          "text": "말을 처음 접하는 방문객도 승마 체험을 알아볼 수 있는 공간입니다. 말과 교감하는 활동을 중심으로 소개되며, 체험 가능 조건과 진행 방식은 현장·운영기관 안내를 확인해야 합니다.",
+          "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187"
+        }
+      ],
+      "relevance_rule": "The saved guide explicitly supports all requested identifying facts; current availability is not asserted."
+    },
+    {
+      "id": "holdout_unsupported_01",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "current_booking",
+      "query": "오늘 예약 가능한 승마 체험장",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_02",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "current_fee",
+      "query": "성산일출봉 입장료 얼마야",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_03",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "pet_permission",
+      "query": "반려동물 데리고 들어갈 수 있는 박물관",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_04",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "live_parking_distance",
+      "query": "협재해수욕장 근처 빈 주차장 알려줘",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_05",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "outside_jeju",
+      "query": "부산에서 광안대교 야경 볼 곳",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_06",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "food_menu",
+      "query": "흑돼지 구이를 먹을 식당을 찾아줘",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_07",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "absent_topic",
+      "query": "실제 우주선 발사를 관람하는 제주 관광지",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_08",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "absent_topic",
+      "query": "눈 덮인 빙하 동굴을 탐험할 수 있는 곳",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_09",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "absent_topic",
+      "query": "판다가 사는 동물원 관람 안내",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_10",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "absent_topic",
+      "query": "깊은 바다에서 잠수함을 타는 관광지",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_11",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "underspecified",
+      "query": "아무거나",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    },
+    {
+      "id": "holdout_unsupported_12",
+      "partition": "holdout",
+      "kind": "unsupported",
+      "category": "nonsensical",
+      "query": "12345",
+      "relevant_ids": [],
+      "evidence": [],
+      "expected": "empty_or_explicit_unsupported_without_place_recommendation",
+      "scope_note": "Unsupported by this verified-guide corpus/endpoint; not a claim that the activity does not exist elsewhere."
+    }
+  ]
+}

@@ -1,0 +1,1073 @@
+{
+  "experiment_completed": true,
+  "adoption_metric_gate_pass": true,
+  "baseline": {
+    "supported": 24,
+    "hit_at_1": 0.0,
+    "hit_at_3": 0.0,
+    "mrr_at_3": 0.0,
+    "unsupported_false_responses": 0
+  },
+  "semantic": {
+    "supported": 24,
+    "hit_at_1": 0.9583333333333334,
+    "hit_at_3": 0.9583333333333334,
+    "mrr_at_3": 0.9583333333333334,
+    "unsupported_false_responses": 0
+  },
+  "candidate": "small_pretrained",
+  "cpu_config_sha256": "59f700d2b4c00914d1afaa1cb406b2e1bc9bd53818aec1eccd68b51b176e46d1",
+  "holdout_queries_sha256": "28d626736177a94bef2275da7006c3658dfbdbbd95ca5eac5bd453cf77537d13",
+  "cases": [
+    {
+      "id": "holdout_supported_01",
+      "query": "검은 모래와 바다 동굴이 함께 있는 절벽 아래 작은 해변",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_243975557"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_243975557",
+        "osm_tourism_way_592735488"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 1345.7710000002407,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_243975557",
+          "name": "검멀레 해수욕장",
+          "official_intro": {
+            "text": "우도봉 아래 절벽 사이에 놓인 작은 검은 모래 해변입니다. 검은 모래와 해안 동굴이 어우러진 풍경을 볼 수 있으며, 조수와 파도에 따라 접근 조건이 달라질 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "ferry_not_supported",
+              "message": "배편과 섬 안 이동 조건이 확인되지 않아 자동 코스에서 제외합니다."
+            }
+          ]
+        },
+        {
+          "id": "osm_tourism_way_592735488",
+          "name": "세화 해변",
+          "official_intro": {
+            "text": "흰 모래와 검은 현무암, 푸른 바다가 맞닿아 있는 세화리의 작은 해변입니다. 물때에 따라 드러나는 모래사장의 모습이 달라지며, 해녀박물관과 마을 해안 풍경을 함께 살펴보기 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500361",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_02",
+      "query": "절벽 사이의 검은 모래사장에서 해안 동굴 풍경을 볼 수 있는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_243975557"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_243975557",
+        "osm_tourism_way_592735488"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 64.64249999953608,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_243975557",
+          "name": "검멀레 해수욕장",
+          "official_intro": {
+            "text": "우도봉 아래 절벽 사이에 놓인 작은 검은 모래 해변입니다. 검은 모래와 해안 동굴이 어우러진 풍경을 볼 수 있으며, 조수와 파도에 따라 접근 조건이 달라질 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500046",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "ferry_not_supported",
+              "message": "배편과 섬 안 이동 조건이 확인되지 않아 자동 코스에서 제외합니다."
+            }
+          ]
+        },
+        {
+          "id": "osm_tourism_way_592735488",
+          "name": "세화 해변",
+          "official_intro": {
+            "text": "흰 모래와 검은 현무암, 푸른 바다가 맞닿아 있는 세화리의 작은 해변입니다. 물때에 따라 드러나는 모래사장의 모습이 달라지며, 해녀박물관과 마을 해안 풍경을 함께 살펴보기 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500361",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_03",
+      "query": "만화 속 장면들을 실내 전시와 바깥 정원에서 이어 보는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_1075451809"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_1075451809",
+        "osm_tourism_node_5874608086",
+        "osm_tourism_way_572783721"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 63.12650000108988,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_1075451809",
+          "name": "스누피가든",
+          "official_intro": {
+            "text": "피너츠 캐릭터의 이야기와 제주 정원을 연결한 공간입니다. 실내 테마 전시를 둘러본 뒤 야외 정원에서 만화 속 장면을 찾아 걸으며 캐릭터와 자연이 어우러진 풍경을 즐길 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_node_5874608086",
+          "name": "피규어뮤지엄",
+          "official_intro": {
+            "text": "영화·애니메이션 속 캐릭터를 피규어로 만나는 안덕면의 실내 박물관입니다. 작은 수집품부터 사람보다 큰 조형물까지 다양한 크기의 전시를 둘러보며 캐릭터별 표현을 비교해 볼 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022724",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_way_572783721",
+          "name": "다이나믹메이즈",
+          "official_intro": {
+            "text": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_04",
+      "query": "피너츠에 등장하는 캐릭터와 자연 풍경이 어우러진 정원을 찾아줘",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_1075451809"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_1075451809"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 64.71699999929115,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_1075451809",
+          "name": "스누피가든",
+          "official_intro": {
+            "text": "피너츠 캐릭터의 이야기와 제주 정원을 연결한 공간입니다. 실내 테마 전시를 둘러본 뒤 야외 정원에서 만화 속 장면을 찾아 걸으며 캐릭터와 자연이 어우러진 풍경을 즐길 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010956",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_05",
+      "query": "샘에서 이름을 따온 말발굽형 분화구와 억새가 있는 오름",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 62.38110000049346,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_5658780218",
+          "name": "궷물오름",
+          "official_intro": {
+            "text": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월읍의 오름입니다. 말굽형 분화구와 가을 억새를 살펴볼 수 있으며, 노꼬메오름 일대와 연계할 때는 출입 허용 구간과 현장 안내를 확인하세요.",
+            "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c",
+            "source_name": "한국관광공사 대한민국 구석구석",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_06",
+      "query": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월의 오름을 소개해줘",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_5658780218"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 64.16270000045188,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_5658780218",
+          "name": "궷물오름",
+          "official_intro": {
+            "text": "동쪽 분화구에서 솟는 샘의 이름을 딴 애월읍의 오름입니다. 말굽형 분화구와 가을 억새를 살펴볼 수 있으며, 노꼬메오름 일대와 연계할 때는 출입 허용 구간과 현장 안내를 확인하세요.",
+            "source_url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9de3224d-c887-40c3-acd0-8a120371161c",
+            "source_name": "한국관광공사 대한민국 구석구석",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_07",
+      "query": "조선 말기의 제주 집과 생활자료를 전시로 살펴보는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_370264619"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_370264619",
+        "osm_tourism_node_13931773845"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 58.228199999575736,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_370264619",
+          "name": "제주민속촌",
+          "official_intro": {
+            "text": "제주 사람들이 살아온 주거와 생활문화를 전시하는 공간입니다. 조선 말기 제주를 바탕으로 구성한 가옥과 민속자료를 둘러보며 지역의 전통과 생활 모습을 함께 이해할 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_node_13931773845",
+          "name": "제주 민속자연사박물관",
+          "official_intro": {
+            "text": "제주의 자연환경과 전통 생활문화를 함께 살펴보는 박물관입니다. 화산·동식물·바다에 관한 전시와 생활도구, 가옥 및 민속 모형을 통해 섬의 자연과 사람들의 삶을 연결해 볼 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500545",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_08",
+      "query": "조선 말기 기준으로 꾸민 집들을 보며 제주 생활문화를 배우고 싶어",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_370264619"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_370264619"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 62.55869999949937,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_370264619",
+          "name": "제주민속촌",
+          "official_intro": {
+            "text": "제주 사람들이 살아온 주거와 생활문화를 전시하는 공간입니다. 조선 말기 제주를 바탕으로 구성한 가옥과 민속자료를 둘러보며 지역의 전통과 생활 모습을 함께 이해할 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500553",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_09",
+      "query": "메밀을 기르는 밭과 계절 꽃, 농장 동물을 함께 볼 수 있는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 61.53259999882721,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_5749644529",
+          "name": "보롬왓",
+          "official_intro": {
+            "text": "메밀밭과 계절 꽃, 농장 동물의 모습을 함께 살펴보는 표선면의 농장입니다. 밭과 화원을 걸으며 쉬어갈 수 있고, 꽃의 개화와 체험 구역의 실제 운영 내용은 방문 시기에 맞춰 확인하면 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_10",
+      "query": "표선의 농장에서 화원을 걷고 동물도 살펴보고 싶어",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_5749644529"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 60.004200000548735,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_5749644529",
+          "name": "보롬왓",
+          "official_intro": {
+            "text": "메밀밭과 계절 꽃, 농장 동물의 모습을 함께 살펴보는 표선면의 농장입니다. 밭과 화원을 걸으며 쉬어갈 수 있고, 꽃의 개화와 체험 구역의 실제 운영 내용은 방문 시기에 맞춰 확인하면 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020050",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_11",
+      "query": "실내에서 얼음으로 만든 작품과 착시 미술, 입체 영상을 보는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 56.88519999966957,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_372701554",
+          "name": "수목원테마파크",
+          "official_intro": {
+            "text": "공식 안내에서는 얼음 조형물과 착시미술, 입체영상 등을 주제로 한 실내 체험 공간으로 소개합니다. 주변 수목원길과 함께 둘러볼 수 있으며 실제 운영 중인 전시와 체험은 방문 전에 확인하는 것이 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_12",
+      "query": "얼음 조형물과 3차원 영상이 소개된 체험 공간을 찾아줘",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_372701554"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 59.820200000103796,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_372701554",
+          "name": "수목원테마파크",
+          "official_intro": {
+            "text": "공식 안내에서는 얼음 조형물과 착시미술, 입체영상 등을 주제로 한 실내 체험 공간으로 소개합니다. 주변 수목원길과 함께 둘러볼 수 있으며 실제 운영 중인 전시와 체험은 방문 전에 확인하는 것이 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500386",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_13",
+      "query": "용암동굴들을 만든 화산의 흔적과 숲을 함께 관찰하는 오름",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_10216545359"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_10216545359",
+        "osm_tourism_node_538148519",
+        "osm_tourism_node_4416285697"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 60.19349999951373,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_10216545359",
+          "name": "거문오름",
+          "official_intro": {
+            "text": "거문오름 용암동굴계를 만든 화산활동의 흔적과 울창한 숲을 관찰하는 오름입니다. 분화구 주변의 다양한 지형을 살펴볼 수 있으며, 탐방은 예약과 안내 등 공식 이용 조건을 확인한 뒤 계획해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500034",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        },
+        {
+          "id": "osm_tourism_node_538148519",
+          "name": "용두암",
+          "official_intro": {
+            "text": "제주시 해안의 화산암이 파도와 어우러져 용의 머리를 닮은 모습을 이루는 바위입니다. 해안 산책과 함께 바위의 형태와 주변 바다 풍경을 살펴볼 수 있는 제주올레17코스의 명소입니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500469",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_node_4416285697",
+          "name": "따라비오름",
+          "official_intro": {
+            "text": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_14",
+      "query": "용암동굴계의 형성과 관련된 오름에서 분화구 주변 지형과 숲을 보고 싶어",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_10216545359"
+      ],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.01089999932446517,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_supported_15",
+      "query": "도심 가까이에서 제주 토종 식물과 아열대 나무를 관찰할 수 있는 곳",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 59.338899998692796,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_368866237",
+          "name": "한라수목원",
+          "official_intro": {
+            "text": "제주 자생식물과 아열대 식물을 비롯한 다양한 수종을 관찰하는 도심 가까운 수목원입니다. 식물 전시 구역과 산책로를 따라 걸으며 제주에서 자라는 나무와 풀의 모습을 살펴볼 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_16",
+      "query": "제주에서 자라는 나무와 풀을 전시 구역과 산책길을 따라 살펴보는 수목원",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_368866237"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 98.81270000005316,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_368866237",
+          "name": "한라수목원",
+          "official_intro": {
+            "text": "제주 자생식물과 아열대 식물을 비롯한 다양한 수종을 관찰하는 도심 가까운 수목원입니다. 식물 전시 구역과 산책로를 따라 걸으며 제주에서 자라는 나무와 풀의 모습을 살펴볼 수 있습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_17",
+      "query": "실내 미로에서 동행자와 문제를 풀고 장애물에 도전하는 체험",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 107.2915999993711,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_572783721",
+          "name": "다이나믹메이즈",
+          "official_intro": {
+            "text": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_18",
+      "query": "함께 길을 찾으며 미션을 해결하는 실내 체험 공간",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_way_572783721"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 109.92279999845778,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_way_572783721",
+          "name": "다이나믹메이즈",
+          "official_intro": {
+            "text": "미로를 통과하며 다양한 미션과 장애물에 도전하는 실내 체험 공간입니다. 함께 방문한 사람들과 문제를 풀고 길을 찾아가는 참여형 활동이 중심이므로 이용 조건은 공식 안내에서 확인하면 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021429",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_19",
+      "query": "용암이 식어 갈라지면서 기둥처럼 된 바위를 바닷가에서 보고 싶어",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_3753655821"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_3753655821",
+        "osm_tourism_node_538148519"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 91.84520000053453,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_3753655821",
+          "name": "주상절리",
+          "official_intro": {
+            "text": "용암이 식으며 갈라져 생긴 기둥 모양 암석이 해안을 따라 이어지는 지형입니다. 검은 돌기둥과 바다가 만나는 풍경을 전망 공간에서 살펴볼 수 있으며, 관람 가능 여부는 기상과 현장 통제 안내를 확인하세요.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_node_538148519",
+          "name": "용두암",
+          "official_intro": {
+            "text": "제주시 해안의 화산암이 파도와 어우러져 용의 머리를 닮은 모습을 이루는 바위입니다. 해안 산책과 함께 바위의 형태와 주변 바다 풍경을 살펴볼 수 있는 제주올레17코스의 명소입니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500469",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_20",
+      "query": "바다와 맞닿은 검은 돌기둥을 전망 공간에서 감상할 수 있는 지형",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_3753655821"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_3753655821"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 106.91480000059528,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_3753655821",
+          "name": "주상절리",
+          "official_intro": {
+            "text": "용암이 식으며 갈라져 생긴 기둥 모양 암석이 해안을 따라 이어지는 지형입니다. 검은 돌기둥과 바다가 만나는 풍경을 전망 공간에서 살펴볼 수 있으며, 관람 가능 여부는 기상과 현장 통제 안내를 확인하세요.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020476",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_21",
+      "query": "봉우리 여러 개와 분화구가 포개진 능선에서 가을 억새 풍경을 보고 싶어",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_4416285697"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_4416285697"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 127.01770000057877,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_4416285697",
+          "name": "따라비오름",
+          "official_intro": {
+            "text": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_22",
+      "query": "부드러운 곡선을 이룬 여러 봉우리와 초지, 억새가 소개된 오름",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_4416285697"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_4416285697",
+        "osm_tourism_node_5507591794"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 120.38009999923815,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_4416285697",
+          "name": "따라비오름",
+          "official_intro": {
+            "text": "여러 봉우리와 분화구가 겹쳐 부드러운 곡선을 이루는 오름입니다. 능선을 따라 펼쳐지는 초지와 가을 억새 풍경이 특징이며, 산지 출입과 이용할 탐방로는 사전에 확인해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500168",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        },
+        {
+          "id": "osm_tourism_node_5507591794",
+          "name": "용눈이오름",
+          "official_intro": {
+            "text": "둥근 능선과 여러 분화구, 계절에 따라 색이 바뀌는 초지가 어우러진 오름입니다. 부드러운 산세와 동부 오름의 풍경을 감상할 수 있으며, 출입 가능 여부와 정해진 탐방로를 확인한 뒤 방문해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500466",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": false,
+          "visit_restrictions": [
+            {
+              "code": "entrance_required",
+              "message": "대표 좌표와 실제 탐방 입구를 구분해야 하는 장소이므로 자동 코스에서 제외합니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_23",
+      "query": "처음 말을 접하는 사람도 알아볼 수 있는 승마 체험 공간의 소개가 궁금해",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_3788545937"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_3788545937",
+        "osm_tourism_way_375193739"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 117.51300000105402,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_3788545937",
+          "name": "탐라승마장",
+          "official_intro": {
+            "text": "말을 처음 접하는 방문객도 승마 체험을 알아볼 수 있는 공간입니다. 말과 교감하는 활동을 중심으로 소개되며, 체험 가능 조건과 진행 방식은 현장·운영기관 안내를 확인해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_way_375193739",
+          "name": "더마파크",
+          "official_intro": {
+            "text": "말을 주제로 한 테마공원으로, 기마공연과 승마·카트 체험 등을 관광 콘텐츠로 소개하고 있습니다. 공연 관람과 활동형 체험을 함께 살펴볼 수 있으며, 원하는 체험의 운영 여부는 방문 전 안내에서 확인하는 편이 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500141",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_supported_24",
+      "query": "말과 교감하는 활동을 중심으로 안내하는 승마 장소를 찾아줘",
+      "kind": "supported",
+      "relevant_ids": [
+        "osm_tourism_node_3788545937"
+      ],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [
+        "osm_tourism_node_3788545937",
+        "osm_tourism_way_375193739"
+      ],
+      "baseline_ids": [],
+      "semantic_ms": 81.88499999960186,
+      "returned_sources": [
+        {
+          "id": "osm_tourism_node_3788545937",
+          "name": "탐라승마장",
+          "official_intro": {
+            "text": "말을 처음 접하는 방문객도 승마 체험을 알아볼 수 있는 공간입니다. 말과 교감하는 활동을 중심으로 소개되며, 체험 가능 조건과 진행 방식은 현장·운영기관 안내를 확인해야 합니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000015187",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        },
+        {
+          "id": "osm_tourism_way_375193739",
+          "name": "더마파크",
+          "official_intro": {
+            "text": "말을 주제로 한 테마공원으로, 기마공연과 승마·카트 체험 등을 관광 콘텐츠로 소개하고 있습니다. 공연 관람과 활동형 체험을 함께 살펴볼 수 있으며, 원하는 체험의 운영 여부는 방문 전 안내에서 확인하는 편이 좋습니다.",
+            "source_url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500141",
+            "source_name": "제주관광공사 비짓제주",
+            "retrieved_at": "2026-10-29",
+            "date_kind": "guide_review",
+            "matched_terms": []
+          },
+          "automatic_eligible": true,
+          "visit_restrictions": []
+        }
+      ]
+    },
+    {
+      "id": "holdout_unsupported_01",
+      "query": "오늘 예약 가능한 승마 체험장",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.012799999240087345,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_02",
+      "query": "성산일출봉 입장료 얼마야",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.0070000005507608876,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_03",
+      "query": "반려동물 데리고 들어갈 수 있는 박물관",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.00839999847812578,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_04",
+      "query": "협재해수욕장 근처 빈 주차장 알려줘",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.007900000127847306,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_05",
+      "query": "부산에서 광안대교 야경 볼 곳",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.0090000012278324,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_06",
+      "query": "흑돼지 구이를 먹을 식당을 찾아줘",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": false,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 0.01199999860546086,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_07",
+      "query": "실제 우주선 발사를 관람하는 제주 관광지",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 109.7953000007692,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_08",
+      "query": "눈 덮인 빙하 동굴을 탐험할 수 있는 곳",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 111.09870000109368,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_09",
+      "query": "판다가 사는 동물원 관람 안내",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 97.31829999873298,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_10",
+      "query": "깊은 바다에서 잠수함을 타는 관광지",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 90.47060000011697,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_11",
+      "query": "아무거나",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 85.24990000114485,
+      "returned_sources": []
+    },
+    {
+      "id": "holdout_unsupported_12",
+      "query": "12345",
+      "kind": "unsupported",
+      "relevant_ids": [],
+      "scope_guard_allows_query": true,
+      "semantic_ids": [],
+      "baseline_ids": [],
+      "semantic_ms": 58.94359999911103,
+      "returned_sources": []
+    }
+  ],
+  "cpu_threads": 2,
+  "latency_first_call_ms": 1345.7710000002407,
+  "scope": "Developer-authored held-out source questions; not real-user accuracy or center field latency.",
+  "real_device_gps_used": false,
+  "generated_text": false
+}

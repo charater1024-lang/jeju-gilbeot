@@ -1,0 +1,447 @@
+{
+  "owner": {
+    "pid": 48008,
+    "port": 8791,
+    "owned_test_process": true,
+    "args": [
+      "C:\\Users\\user\\Documents\\AI작업물\\제주AI빅데이터활용\\runtime\\python.exe",
+      "-B",
+      "C:\\Users\\user\\Documents\\AI작업물\\제주AI빅데이터활용\\center_app.py",
+      "--port",
+      "8791",
+      "--no-browser",
+      "--semantic-device",
+      "dml",
+      "--road-gpu"
+    ],
+    "started_time_ns": 1794118473327831200,
+    "no_real_gps": true,
+    "outbound_weather_disabled": true
+  },
+  "ready_status": {
+    "deployment_target": {
+      "profile": "center",
+      "minimum_cpu": "Intel Core i7-8700",
+      "minimum_gpu": "GTX 1060",
+      "minimum_ram_gb": 32,
+      "target_hardware_benchmarked": false
+    },
+    "requested_semantic_device": "dml",
+    "semantic": {
+      "state": "ready",
+      "gpu_ready": true,
+      "gpu_resident": true,
+      "backend": "directml_fp32",
+      "provider": "DmlExecutionProvider",
+      "reason_code": "profiled_gpu_execution",
+      "reason": "실제 DirectML 커널 실행을 확인한 모델이 GPU에 상주합니다.",
+      "model_id": "intfloat/multilingual-e5-small",
+      "model_sha256": "cf3f713592d6a68b340057834342b44812495437749855e43c9af914e739fe54",
+      "model_bytes": 470223896,
+      "max_length": 256,
+      "gpu_sequence_length": 64,
+      "fixed_batch_size": 1,
+      "initialized_ms": 2567.334,
+      "probe_ms": 4.356,
+      "successful_queries": 1,
+      "cpu_long_query_fallbacks": 0,
+      "last_execution_provider": "DmlExecutionProvider",
+      "last_execution_reason": "gpu_encoded",
+      "dml_kernel_events": 1,
+      "cpu_kernel_events": 0,
+      "dml_operations": {
+        "DmlFusedNode_0_1": 1
+      },
+      "gpu_execution_profiled": true,
+      "steady_state_profiling": false,
+      "last_query_ms": 2.138,
+      "last_query_token_count": 64,
+      "requested_device": "dml"
+    },
+    "preload": {
+      "status": "ready",
+      "provider": "DmlExecutionProvider",
+      "seconds": 2.8455,
+      "scope": "startup_result_not_current_state"
+    },
+    "road": {
+      "requested": true,
+      "graph_loaded": false,
+      "gpu_ready": false,
+      "scope": "dense_nearest_road_nodes_only_Astar_and_schedule_on_CPU"
+    },
+    "server_process_id": 48008,
+    "process_memory": {
+      "available": true,
+      "working_set_bytes": 1527812096,
+      "peak_working_set_bytes": 1845686272,
+      "private_commit_bytes": 2864480256,
+      "scope": "server_process_only_browser_and_OS_excluded",
+      "private_commit_is_not_physical_RAM": true
+    },
+    "small_tabular_models": "CPU_stdlib",
+    "retired_features": [
+      "regional_consumption_comparison"
+    ],
+    "llm_used": false,
+    "network_inference": false
+  },
+  "startup_memory_samples": [
+    {
+      "time_ns": 1794118473751020500,
+      "perf_counter": 98487.9410663,
+      "working_set_bytes": 20144128,
+      "private_commit_bytes": 11689984,
+      "lifetime_peak_working_set_bytes": 20652032,
+      "process_cpu_seconds": 0.046875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 48307757056,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118474370635300,
+      "perf_counter": 98488.5605935,
+      "working_set_bytes": 48988160,
+      "private_commit_bytes": 836517888,
+      "lifetime_peak_working_set_bytes": 49426432,
+      "process_cpu_seconds": 0.359375,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 48288108544,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118474471307700,
+      "perf_counter": 98488.661354,
+      "working_set_bytes": 298483712,
+      "private_commit_bytes": 1319378944,
+      "lifetime_peak_working_set_bytes": 298483712,
+      "process_cpu_seconds": 0.46875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 48038096896,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118474571959500,
+      "perf_counter": 98488.7619332,
+      "working_set_bytes": 553009152,
+      "private_commit_bytes": 1336541184,
+      "lifetime_peak_working_set_bytes": 575926272,
+      "process_cpu_seconds": 0.5625,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 47782363136,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118474672353900,
+      "perf_counter": 98488.862408,
+      "working_set_bytes": 553009152,
+      "private_commit_bytes": 1336541184,
+      "lifetime_peak_working_set_bytes": 575926272,
+      "process_cpu_seconds": 0.671875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 47782768640,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118474772774600,
+      "perf_counter": 98488.9628288,
+      "working_set_bytes": 623710208,
+      "private_commit_bytes": 1463918592,
+      "lifetime_peak_working_set_bytes": 623710208,
+      "process_cpu_seconds": 0.765625,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 47708758016,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": null,
+      "dedicated_bytes_instances": [],
+      "shared_gpu_ram_bytes": null,
+      "shared_gpu_ram_bytes_instances": [],
+      "gpu_process_counter_observed": false
+    },
+    {
+      "time_ns": 1794118475385774600,
+      "perf_counter": 98489.5757436,
+      "working_set_bytes": 1310380032,
+      "private_commit_bytes": 2114514944,
+      "lifetime_peak_working_set_bytes": 1759350784,
+      "process_cpu_seconds": 1.59375,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 47048433664,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 2543616,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 2543616
+        }
+      ],
+      "shared_gpu_ram_bytes": 1200128,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 1200128
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118475486457800,
+      "perf_counter": 98489.6764074,
+      "working_set_bytes": 1323945984,
+      "private_commit_bytes": 2138759168,
+      "lifetime_peak_working_set_bytes": 1759350784,
+      "process_cpu_seconds": 1.78125,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 47035199488,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 11902976,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 11902976
+        }
+      ],
+      "shared_gpu_ram_bytes": 7938048,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 7938048
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118475586830900,
+      "perf_counter": 98489.7768182,
+      "working_set_bytes": 1680793600,
+      "private_commit_bytes": 2549821440,
+      "lifetime_peak_working_set_bytes": 1759350784,
+      "process_cpu_seconds": 1.9375,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46661763072,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 19308544,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 19308544
+        }
+      ],
+      "shared_gpu_ram_bytes": 23982080,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 23982080
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118475687180800,
+      "perf_counter": 98489.8771447,
+      "working_set_bytes": 1360609280,
+      "private_commit_bytes": 2172616704,
+      "lifetime_peak_working_set_bytes": 1759350784,
+      "process_cpu_seconds": 2.078125,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46975832064,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 19308544,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 19308544
+        }
+      ],
+      "shared_gpu_ram_bytes": 23990272,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 23990272
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118475787921900,
+      "perf_counter": 98489.9778659,
+      "working_set_bytes": 1383260160,
+      "private_commit_bytes": 2196647936,
+      "lifetime_peak_working_set_bytes": 1759350784,
+      "process_cpu_seconds": 2.09375,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46961594368,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 19308544,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 19308544
+        }
+      ],
+      "shared_gpu_ram_bytes": 23990272,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 23990272
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118476403576800,
+      "perf_counter": 98490.5935603,
+      "working_set_bytes": 1520230400,
+      "private_commit_bytes": 2859495424,
+      "lifetime_peak_working_set_bytes": 1845686272,
+      "process_cpu_seconds": 2.390625,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46825816064,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 576098304,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 576098304
+        }
+      ],
+      "shared_gpu_ram_bytes": 509014016,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 509014016
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118476504393400,
+      "perf_counter": 98490.6944474,
+      "working_set_bytes": 1520271360,
+      "private_commit_bytes": 2859544576,
+      "lifetime_peak_working_set_bytes": 1845686272,
+      "process_cpu_seconds": 2.390625,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46825881600,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 576098304,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 576098304
+        }
+      ],
+      "shared_gpu_ram_bytes": 509014016,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 509014016
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118476604885300,
+      "perf_counter": 98490.7950307,
+      "working_set_bytes": 1521922048,
+      "private_commit_bytes": 2860621824,
+      "lifetime_peak_working_set_bytes": 1845686272,
+      "process_cpu_seconds": 2.40625,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46824431616,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 576098304,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 576098304
+        }
+      ],
+      "shared_gpu_ram_bytes": 509014016,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 509014016
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118476705565300,
+      "perf_counter": 98490.8956075,
+      "working_set_bytes": 1525977088,
+      "private_commit_bytes": 2863706112,
+      "lifetime_peak_working_set_bytes": 1845686272,
+      "process_cpu_seconds": 2.46875,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46821736448,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 576098304,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 576098304
+        }
+      ],
+      "shared_gpu_ram_bytes": 509014016,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 509014016
+        }
+      ],
+      "gpu_process_counter_observed": true
+    },
+    {
+      "time_ns": 1794118476806043400,
+      "perf_counter": 98490.9961431,
+      "working_set_bytes": 1527660544,
+      "private_commit_bytes": 2864422912,
+      "lifetime_peak_working_set_bytes": 1845686272,
+      "process_cpu_seconds": 2.484375,
+      "system_ram_total_bytes": 68319547392,
+      "system_ram_available_bytes": 46818926592,
+      "gpu_counter_errors": [],
+      "dedicated_bytes": 576098304,
+      "dedicated_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 576098304
+        }
+      ],
+      "shared_gpu_ram_bytes": 509014016,
+      "shared_gpu_ram_bytes_instances": [
+        {
+          "instance": "pid_48008_luid_0x00000000_0x01FEECCB_phys_0",
+          "bytes": 509014016
+        }
+      ],
+      "gpu_process_counter_observed": true
+    }
+  ]
+}
